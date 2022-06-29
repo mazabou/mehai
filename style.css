@@ -1,0 +1,17 @@
+
+.section{
+    max-width:50em;
+    margin: auto;
+}
+
+.navbar{
+    padding-bottom: 1rem;
+}
+
+.title {
+    font-size:1.5rem;
+}
+
+.name {
+    padding-left: 10px;
+}
