@@ -13,5 +13,15 @@
 }
 
 .name {
-    padding-left: 10px;
+    margin-bottom: 2em ;
+}
+
+.conferencetitle {
+    margin-top: 0.2em ;
+    margin-bottom: 0.5em ;
+}
+
+.bio {
+    margin-top: 2em ;
+    margin-bottom: 2em ;
 }
