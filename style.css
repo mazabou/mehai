@@ -47,3 +47,13 @@
 .is-size-55 {
     font-size: 1.15rem;
 }
+
+.padded_block {
+    margin-bottom: 1.5rem;
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+}
+
+.bottom_padding {
+    margin-bottom: 1.5rem;
+}
