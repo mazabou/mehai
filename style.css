@@ -57,3 +57,8 @@
 .bottom_padding {
     margin-bottom: 1.5rem;
 }
+
+.resume_block {
+    margin-bottom: 3rem;
+    text-align:left;
+}
