@@ -101,6 +101,7 @@
             <p class="conferencetitle">bioRxiv, Jul 2022.</p>
             <a href="https://www.biorxiv.org/content/10.1101/2022.07.10.499487v1.full.pdf" target="_blank" rel="noopener noreferrer"> <i class="fa fa-file-pdf"></i> Paper </a> &nbsp;
             <a href="https://www.biorxiv.org/content/10.1101/2022.07.10.499487v1" target="_blank" rel="noopener noreferrer"> <i class="fa fa-desktop"></i> bioRxiv </a>
+            <button class="js-modal-trigger ghostbutton" style="font-size: 1rem;" data-target="lolcat-cite"> <a><i class="fa-solid fa-quote-right"></i> Cite</a></button>
         </div>
     </div>
 
@@ -109,6 +110,32 @@
         <div class="modal-card">
             <section class="modal-card-body">
                 <b>Abstract:</b> Cell type is hypothesized to be a key determinant of the role of a neuron within a circuit. However, it is unknown whether a neuron’s transcriptomic type influences the timing of its activity in the intact brain. In other words, can transcriptomic cell type be extracted from the time series of a neuron’s activity? To address this question, we developed a new deep learning architecture that learns features of interevent intervals across multiple timescales (milliseconds to >30 min). We show that transcriptomic cell class information is robustly embedded in the timing of single neuron activity recorded in the intact brain of behaving animals (calcium imaging and extracellular electrophysiology), as well as in a bio-realistic model of visual cortex. In contrast, we were unable to reliably extract cell identity from summary measures of rate, variance, and interevent interval statistics. We applied our analyses to the question of whether transcriptomic subtypes of excitatory neurons represent functionally distinct classes. In the calcium imaging dataset, which contains a diverse set of excitatory Cre lines, we found that a subset of excitatory cell types are computationally distinguishable based upon their Cre lines, and that excitatory types can be classified with higher accuracy when considering their cortical layer and projection class. Here we address the fundamental question of whether a neuron, within a complex cortical network, embeds a fingerprint of its transcriptomic identity into its activity. Our results reveal robust computational fingerprints for transcriptomic types and classes across diverse contexts, defined over multiple timescales.
+            </section>
+        </div>
+    </div>
+
+    <div id="lolcat-cite" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Cite this paper</p>
+                <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                BibTex
+<pre><code>@article {Schneider2022.07.10.499487,
+	author = {Schneider, Aidan and Azabou, Mehdi and McDougall-Vigier, Louis and Parks, David and Ensley, Sahara and Bhaskaran-Nair, Kiran and Nowakowski, Tom and Dyer, Eva L. and Hengen, Keith B.},
+	title = {Transcriptomic cell type structures in vivo neuronal activity across multiple time scales},
+	elocation-id = {2022.07.10.499487},
+	year = {2022},
+	doi = {10.1101/2022.07.10.499487},
+	publisher = {Cold Spring Harbor Laboratory},
+	URL = {https://www.biorxiv.org/content/early/2022/07/11/2022.07.10.499487},
+	eprint = {https://www.biorxiv.org/content/early/2022/07/11/2022.07.10.499487.full.pdf},
+	journal = {bioRxiv}
+}</code></pre>
+                APA
+<pre><code>Schneider, A., Azabou, M., McDougall-Vigier, L., Parks, D. B., Ensley, S., Bhaskaran-Nair, K., Nowakowski, T., Dyer, E. L. & Hengen, K. B. (2022). Transcriptomic cell type structures in vivo neuronal activity across multiple time scales. <i>bioRxiv.</i></code></pre>
             </section>
         </div>
     </div>
@@ -169,7 +196,7 @@
             <p class="conferencetitle">arXiv:2206.06131, Jun 2022</p>
             <a href="https://arxiv.org/pdf/2206.06131.pdf" target="_blank" rel="noopener noreferrer"> <i class="fa fa-file-pdf"></i> Paper </a>&nbsp;
             <a href="https://arxiv.org/abs/2206.06131" target="_blank" rel="noopener noreferrer"> <i class="fa fa-desktop"></i> arXiv </a>
-
+            <button class="js-modal-trigger ghostbutton" style="font-size: 1rem;" data-target="forest-trans-cite"> <a><i class="fa-solid fa-quote-right"></i> Cite</a></button>
         </div>
     </div>
 
@@ -178,6 +205,31 @@
         <div class="modal-card">
             <section class="modal-card-body">
                 <b>Abstract:</b> Complex time-varying systems are often studied by abstracting away from the dynamics of individual components to build a model of the population-level dynamics from the start. However, when building a population-level description, it can be easy to lose sight of each individual and how each contributes to the larger picture. In this paper, we present a novel transformer architecture for learning from time-varying data that builds descriptions of both the individual as well as the collective population dynamics. Rather than combining all of our data into our model at the onset, we develop a separable architecture that operates on individual time-series first before passing them forward; this induces a permutation-invariance property and can be used to transfer across systems of different size and order. After demonstrating that our model can be applied to successfully recover complex interactions and dynamics in many-body systems, we apply our approach to populations of neurons in the nervous system. On neural activity datasets, we show that our multi-scale transformer not only yields robust decoding performance, but also provides impressive performance in transfer. Our results show that it is possible to learn from neurons in one animal's brain and transfer the model on neurons in a different animal's brain, with interpretable neuron correspondence across sets and animals. This finding opens up a new path to decode from and represent large collections of neurons.
+            </section>
+        </div>
+    </div>
+
+    <div id="forest-trans-cite" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Cite this paper</p>
+                <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                BibTex
+<pre><code>@misc{https://doi.org/10.48550/arxiv.2206.06131,
+  doi = {10.48550/ARXIV.2206.06131},
+  url = {https://arxiv.org/abs/2206.06131},
+  author = {Liu, Ran and Azabou, Mehdi and Dabagia, Max and Xiao, Jingyun and Dyer, Eva L.},
+  keywords = {Neurons and Cognition (q-bio.NC), Machine Learning (cs.LG), FOS: Biological sciences, FOS: Biological sciences, FOS: Computer and information sciences, FOS: Computer and information sciences},
+  title = {Seeing the forest and the tree: Building representations of both individual and collective dynamics with transformers},
+  publisher = {arXiv},
+  year = {2022},
+  copyright = {Creative Commons Attribution 4.0 International}
+}</code></pre>
+                APA
+<pre><code>Liu, R., Azabou, M., Dabagia, M., Xiao, J., & Dyer, E. L. (2022). Seeing the forest and the tree: Building representations of both individual and collective dynamics with transformers. <i>arXiv preprint</i> arXiv:2206.06131.</code></pre>
             </section>
         </div>
     </div>
@@ -239,6 +291,7 @@
             <a href="https://mtneuro.github.io" target="_blank" rel="noopener noreferrer"> <i class="fa-solid fa-globe"></i> Website  </a>&nbsp;
             <a href="https://openreview.net/pdf?id=5xuowSQ17vy" target="_blank" rel="noopener noreferrer"> <i class="fa fa-file-pdf"></i> Paper </a>&nbsp;
             <a href="https://openreview.net/forum?id=5xuowSQ17vy" target="_blank" rel="noopener noreferrer"> <i class="fa fa-desktop"></i> OpenReview </a>
+            <button class="js-modal-trigger ghostbutton" style="font-size: 1rem;" data-target="quesada-22-cite"> <a><i class="fa-solid fa-quote-right"></i> Cite</a></button>
         </div>
     </div>
 
@@ -247,6 +300,25 @@
         <div class="modal-card">
             <section class="modal-card-body">
                 <b>Abstract:</b> There are multiple scales of abstraction from which we can describe the same image, depending on whether we are focusing on fine-grained details or a more global attribute of the image. In brain mapping, learning to automatically parse  images to build representations of both small-scale features (e.g., the presence of cells or blood vessels) and global properties of an image (e.g., source brain region) is a crucial and open challenge. However, most existing datasets and benchmarks for neuroanatomy consider only a single downstream task at a time. We introduce a new dataset, annotations, and multiple downstream tasks that provide diverse ways to readout information about brain structure and architecture from the same image. Our multi-task neuroimaging benchmark (MTNeuro) is built on volumetric, micrometer-resolution X-ray microtomography imaging of a large thalamocortical section of mouse brain, encompassing multiple cortical and subcortical regions, that reveals dense reconstructions of the underlying microstructure (i.e., cell bodies, vasculature, and axons). We generated a number of different prediction challenges and evaluated several supervised and self-supervised models for brain-region prediction and pixel-level semantic segmentation of microstructures.  Our experiments not only highlight the rich heterogeneity of this dataset, but also provide insights into how self-supervised approaches can be used to learn representations that  capture multiple attributes of a single image and perform well on a variety of downstream tasks.  Datasets, code, and pre-trained baseline models are provided at: https://mtneuro.github.io/.
+            </section>
+        </div>
+    </div>
+
+    <div id="quesada-22-cite" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Cite this paper</p>
+                <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                BibTex
+<pre><code>@article{quesadamtneuro,
+  title={MTNeuro: A Benchmark for Evaluating Representations of Brain Structure Across Multiple Levels of Abstraction},
+  author={Quesada, Jorge and Sathidevi, Lakshmi and Liu, Ran and Ahad, Nauman and Jackson, Joy M and Azabou, Mehdi and Xiao, Jingyun and Liding, Chris and Urzay, Carolina and Gray-Roncal, William and Johnson, Erik Christopher, Dyer, Eva L.}
+}</code></pre>
+                APA
+<pre><code>Quesada, J., Sathidevi, L., Liu, R., Ahad, N., Jackson, J. M., Azabou, M., Xiao, J. and Liding, C. and Urzay, C. and Gray-Roncal, W. and Johnson, E. C. & Dyer, E. L. MTNeuro: A Benchmark for Evaluating Representations of Brain Structure Across Multiple Levels of Abstraction.</code></pre>
             </section>
         </div>
     </div>
@@ -303,6 +375,8 @@
             <a href="./assets/bams_poster.pdf" target="_blank" rel="noopener noreferrer"> <i class="fa-solid fa-person-chalkboard"></i> Poster </a> &nbsp;
             <a href="./assets/bams_slides.pdf" target="_blank" rel="noopener noreferrer"> <i class="fa-solid fa-person-chalkboard"></i> Slides </a> &nbsp;
             <a href="https://arxiv.org/abs/2206.07041" target="_blank" rel="noopener noreferrer"> <i class="fa fa-desktop"></i> arXiv </a>
+            <button class="js-modal-trigger ghostbutton" style="font-size: 1rem;" data-target="bams-cite"> <a><i class="fa-solid fa-quote-right"></i> Cite</a></button>
+
         </div>
     </div>
 
@@ -311,6 +385,27 @@
         <div class="modal-card">
             <section class="modal-card-body">
                 <b>Abstract:</b> Natural behavior consists of dynamics that are both unpredictable, can switch suddenly, and unfold over many different timescales. While some success has been found in building representations of behavior under constrained or simplified task-based conditions, many of these models cannot be applied to free and naturalistic settings due to the fact that they assume a single scale of temporal dynamics. In this work, we introduce Bootstrap Across Multiple Scales (BAMS), a multi-scale representation learning model for behavior: we combine a pooling module that aggregates features extracted over encoders with different temporal receptive fields, and design a set of latent objectives to bootstrap the representations in each respective space to encourage disentanglement across different timescales. We first apply our method on a dataset of quadrupeds navigating in different terrain types, and show that our model captures the temporal complexity of behavior. We then apply our method to the MABe 2022 Multi-agent behavior challenge, where our model ranks 3rd overall and 1st on two subtasks, and show the importance of incorporating multi-timescales when analyzing behavior.
+            </section>
+        </div>
+    </div>
+
+    <div id="bams-cite" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Cite this paper</p>
+                <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                BibTex
+<pre><code>@article{azabou2022learning,
+  title={Learning Behavior Representations Through Multi-Timescale Bootstrapping},
+  author={Azabou, Mehdi and Mendelson, Michael and Sorokin, Maks and Thakoor, Shantanu and Ahad, Nauman and Urzay, Carolina and Dyer, Eva L},
+  journal={arXiv preprint arXiv:2206.07041},
+  year={2022}
+}</code></pre>
+                APA
+ <pre><code>Azabou, M., Mendelson, M., Sorokin, M., Thakoor, S., Ahad, N., Urzay, C., & Dyer, E. L. (2022). Learning Behavior Representations Through Multi-Timescale Bootstrapping. <i>arXiv preprint</i> arXiv:2206.07041.</code></pre>
             </section>
         </div>
     </div>
@@ -366,7 +461,8 @@
             <a href="https://github.com/nerdslab/bgrl" target="_blank" rel="noopener noreferrer"> <i class="fa fa-github"></i> Code </a> &nbsp;
             <a href="https://iclr.cc/media/iclr-2022/Slides/6390.pdf" target="_blank" rel="noopener noreferrer"> <i class="fa-solid fa-person-chalkboard"></i> Slides </a> &nbsp;
             <a href="https://openreview.net/forum?id=0UXT6PpRpW" target="_blank" rel="noopener noreferrer"> <i class="fa fa-desktop"></i> OpenReview </a> &nbsp;
-            <a href="https://arxiv.org/abs/2102.06514" target="_blank" rel="noopener noreferrer"> <i class="fa fa-desktop"></i> arXiv </a>
+            <a href="https://arxiv.org/abs/2102.06514" target="_blank" rel="noopener noreferrer"> <i class="fa fa-desktop"></i> arXiv</a>
+            <button class="js-modal-trigger ghostbutton" style="font-size: 1rem;" data-target="bgrl-cite"> <a><i class="fa-solid fa-quote-right"></i> Cite</a></button>
         </div>
     </div>
 
@@ -375,6 +471,29 @@
         <div class="modal-card">
             <section class="modal-card-body">
                 <b>Abstract:</b> Self-supervised learning provides a promising path towards eliminating the need for costly label information in representation learning on graphs. However, to achieve state-of-the-art performance, methods often need large numbers of negative examples and rely on complex augmentations. This can be prohibitively expensive, especially for large graphs. To address these challenges, we introduce Bootstrapped Graph Latents (BGRL) - a graph representation learning method that learns by predicting alternative augmentations of the input. BGRL uses only simple augmentations and alleviates the need for contrasting with negative examples, and is thus scalable by design. BGRL outperforms or matches prior methods on several established benchmarks, while achieving a 2-10x reduction in memory costs. Furthermore, we show that BGRL can be scaled up to extremely large graphs with hundreds of millions of nodes in the semi-supervised regime - achieving state-of-the-art performance and improving over supervised baselines where representations are shaped only through label information. In particular, our solution centered on BGRL constituted one of the winning entries to the Open Graph Benchmark - Large Scale Challenge at KDD Cup 2021, on a graph orders of magnitudes larger than all previously available benchmarks, thus demonstrating the scalability and effectiveness of our approach.
+            </section>
+        </div>
+    </div>
+
+    <div id="bgrl-cite" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Cite this paper</p>
+                <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                BibTex
+                <pre><code>@inproceedings{
+thakoor2022largescale,
+title={Large-Scale Representation Learning on Graphs via Bootstrapping},
+author={Shantanu Thakoor and Corentin Tallec and Mohammad Gheshlaghi Azar and Mehdi Azabou and Eva L Dyer and Remi Munos and Petar Veli{\v{c}}kovi{\'c} and Michal Valko},
+booktitle={International Conference on Learning Representations},
+year={2022},
+url={https://openreview.net/forum?id=0UXT6PpRpW}
+}</code></pre>
+                APA
+                <pre><code>Thakoor, S., Tallec, C., Azar, M. G., Azabou, M., Dyer, E. L., Munos, R., Veli{\v{c}}kovi{\'c}, P., & Valko, M. (2021). Large-scale representation learning on graphs via bootstrapping. <i>International Conference on Learning Representations</i>.</code></pre>
             </section>
         </div>
     </div>
@@ -451,6 +570,7 @@
             <a href="https://papers.nips.cc/paper/2021/hash/58182b82110146887c02dbd78719e3d5-Abstract.html" target="_blank" rel="noopener noreferrer"> <i class="fa fa-desktop"></i> NeurIPS Proceedings </a>&nbsp;
             <a href="https://openreview.net/forum?id=ZRPRjfAF3yd" target="_blank" rel="noopener noreferrer"> <i class="fa fa-desktop"></i> OpenReview </a>&nbsp;
             <a href="https://arxiv.org/abs/2111.02338" target="_blank" rel="noopener noreferrer"> <i class="fa fa-desktop"></i> arXiv </a>
+            <button class="js-modal-trigger ghostbutton" style="font-size: 1rem;" data-target="swap-vae-cite"> <a><i class="fa-solid fa-quote-right"></i> Cite</a></button>
         </div>
     </div>
 
@@ -459,6 +579,32 @@
         <div class="modal-card">
             <section class="modal-card-body">
                 <b>Abstract:</b> Meaningful and simplified representations of neural activity can yield insights into how and what information is being processed within a neural circuit. However, without labels, finding representations that reveal the link between the brain and behavior can be challenging. Here, we introduce a novel unsupervised approach for learning disentangled representations of neural activity called SwapVAE. Our approach combines a generative modeling framework with an instance-specific alignment loss that tries to maximize the representational similarity between transformed views of the input (brain state). These transformed (or augmented) views are created by dropping out neurons and jittering samples in time, which intuitively should lead the network to a representation that maintains both temporal consistency and invariance to the specific neurons used to represent the neural state. Through evaluations on both synthetic data and neural recordings from hundreds of neurons in different primate brains, we show that it is possible to build representations that disentangle neural datasets along relevant latent dimensions linked to behavior.
+            </section>
+        </div>
+    </div>
+
+    <div id="swap-vae-cite" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Cite this paper</p>
+                <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                BibTex
+<pre><code>@inproceedings{NEURIPS2021_58182b82,
+ author = {Liu, Ran and Azabou, Mehdi and Dabagia, Max and Lin, Chi-Heng and Gheshlaghi Azar, Mohammad and Hengen, Keith and Valko, Michal and Dyer, Eva},
+ booktitle = {Advances in Neural Information Processing Systems},
+ editor = {M. Ranzato and A. Beygelzimer and Y. Dauphin and P.S. Liang and J. Wortman Vaughan},
+ pages = {10587--10599},
+ publisher = {Curran Associates, Inc.},
+ title = {Drop, Swap, and Generate: A Self-Supervised Approach for Generating Neural Activity},
+ url = {https://proceedings.neurips.cc/paper/2021/file/58182b82110146887c02dbd78719e3d5-Paper.pdf},
+ volume = {34},
+ year = {2021}
+}</code></pre>
+                APA
+<pre><code>Liu, R., Azabou, M., Dabagia, M., Lin, C. H., Gheshlaghi Azar, M., Hengen, K., Valko, M. & Dyer, E. (2021). Drop, swap, and generate: A self-supervised approach for generating neural activity. <i>Advances in Neural Information Processing Systems, 34</i>, 10587-10599.</code></pre>
             </section>
         </div>
     </div>
@@ -531,6 +677,8 @@
             <a href="https://sslneurips21.github.io/files/Poster/poster%2038.pdf" target="_blank" rel="noopener noreferrer"> <i class="fa-solid fa-person-chalkboard"></i> Poster </a>&nbsp;
             <a href="https://slideslive.com/38972685/mine-your-own-view-a-selfsupervised-approach-for-learning-representations-of-neural-activity?ref=recommended" target="_blank" rel="noopener noreferrer"> <i class="fa-solid fa-person-chalkboard"></i> Talk </a>&nbsp;
             <a href="https://arxiv.org/abs/2102.10106" target="_blank" rel="noopener noreferrer"> <i class="fa fa-desktop"></i> arXiv </a>
+            <button class="js-modal-trigger ghostbutton" style="font-size: 1rem;" data-target="myow-cite"> <a><i class="fa-solid fa-quote-right"></i> Cite</a></button>
+
 
         </div>
     </div>
@@ -540,6 +688,27 @@
         <div class="modal-card">
             <section class="modal-card-body">
                 <b>Abstract:</b> State-of-the-art methods for self-supervised learning (SSL) build representations by maximizing the similarity between different transformed "views" of a sample. Without sufficient diversity in the transformations used to create views, however, it can be difficult to overcome nuisance variables in the data and build rich representations. This motivates the use of the dataset itself to find similar, yet distinct, samples to serve as views for one another. In this paper, we introduce Mine Your Own vieW (MYOW), a new approach for self-supervised learning that looks within the dataset to define diverse targets for prediction. The idea behind our approach is to actively mine views, finding samples that are neighbors in the representation space of the network, and then predict, from one sample's latent representation, the representation of a nearby sample. After showing the promise of MYOW on benchmarks used in computer vision, we highlight the power of this idea in a novel application in neuroscience where SSL has yet to be applied. When tested on multi-unit neural recordings, we find that MYOW outperforms other self-supervised approaches in all examples (in some cases by more than 10%), and often surpasses the supervised baseline. With MYOW, we show that it is possible to harness the diversity of the data to build rich views and leverage self-supervision in new domains where augmentations are limited or unknown.
+            </section>
+        </div>
+    </div>
+
+    <div id="myow-cite" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Cite this paper</p>
+                <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                BibTex
+<pre><code>@article{azabou2021mine,
+  title={Mine your own view: Self-supervised learning through across-sample prediction},
+  author={Azabou, Mehdi and Azar, Mohammad Gheshlaghi and Liu, Ran and Lin, Chi-Heng and Johnson, Erik C and Bhaskaran-Nair, Kiran and Dabagia, Max and Avila-Pires, Bernardo and Kitchell, Lindsey and Hengen, Keith B and Gray-Roncal, William and Valko, Michal and Dyer, Eva L},
+  journal={arXiv preprint arXiv:2102.10106},
+  year={2021}
+  }</code></pre>
+                APA
+<pre><code>Azabou, M., Azar, M. G., Liu, R., Lin, C. H., Johnson, E. C., Bhaskaran-Nair, K., Dabagia, M., Avila-Pires, B., Kitchell, L., Hengen, K. B., Gray-Roncal, W., Valko, M. & Dyer, E. L. (2021). Mine your own view: Self-supervised learning through across-sample prediction. <i>arXiv preprint</i> arXiv:2102.10106.</code></pre>
             </section>
         </div>
     </div>
@@ -590,8 +759,10 @@
             <p><em><b>Mehdi Azabou</b><sup>+</sup>, Max Dabagia<sup>+</sup>, Ran Liu<sup>+</sup>, Chi-Heng Lin, Keith B. Hengen, Eva L. Dyer</em></p>
             <p><em><sup>+</sup>Contributed equally as co-first authors</em></p>
             <p class="conferencetitle">Neural Information Processing Systems (NeurIPS), Workshop on Self-supervised Learning: Theory and Practice, Feb 2021</p>
-            <a href="https://sslneurips21.github.io/files/CameraReady/neural_ssl_workshop.pdf" target="_blank" rel="noopener noreferrer"> <i class="fa fa-file-pdf"></i> Paper </a>
-            <a href="https://sslneurips21.github.io/files/Poster/poster%2036.pdf" target="_blank" rel="noopener noreferrer"> <i class="fa-solid fa-person-chalkboard"></i> Poster </a>&nbsp;
+            <a href="https://sslneurips21.github.io/files/CameraReady/neural_ssl_workshop.pdf" target="_blank" rel="noopener noreferrer"> <i class="fa fa-file-pdf"></i> Paper </a>&nbsp;
+            <a href="https://sslneurips21.github.io/files/Poster/poster%2036.pdf" target="_blank" rel="noopener noreferrer"> <i class="fa-solid fa-person-chalkboard"></i> Poster</a>
+            <button class="js-modal-trigger ghostbutton" style="font-size: 1rem;" data-target="neuro-ssl-cite"> <a><i class="fa-solid fa-quote-right"></i> Cite</a></button>
+
         </div>
     </div>
 
@@ -599,7 +770,26 @@
         <div class="modal-background"></div>
         <div class="modal-card">
             <section class="modal-card-body">
-                <b>Abstract:</b> Self-supervised learning (SSL) provides a powerful mechanism for building repre- sentations of complex data without the need for labels. In this perspective piece, we highlight recent progress in the application of self-supervised learning (SSL) to data analysis in neuroscience, discuss the implications of these results, and suggest ways in which SSL might be applied to reveal interesting properties of neural computation.
+                <b>Abstract:</b> Self-supervised learning (SSL) provides a powerful mechanism for building representations of complex data without the need for labels. In this perspective piece, we highlight recent progress in the application of self-supervised learning (SSL) to data analysis in neuroscience, discuss the implications of these results, and suggest ways in which SSL might be applied to reveal interesting properties of neural computation.
+            </section>
+        </div>
+    </div>
+
+    <div id="neuro-ssl-cite" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Cite this paper</p>
+                <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                BibTex
+                <pre><code>@article{azabouusing,
+  title={Using self-supervision and augmentations to build insights into neural coding},
+  author={Azabou, Mehdi and Dabagia, Max and Liu, Ran and Lin, Chi-Heng and Hengen, Keith B and Dyer, Eva L}
+}</code></pre>
+                APA
+                <pre><code>Azabou, M., Dabagia, M., Liu, R., Lin, C. H., Hengen, K. B. & Dyer, E. L. Using self-supervision and augmentations to build insights into neural coding.</code></pre>
             </section>
         </div>
     </div>
@@ -657,6 +847,8 @@
             <a href="https://cpn-us-w2.wpmucdn.com/sites.gatech.edu/dist/9/630/files/2021/07/icml_lot_final.pdf" target="_blank" rel="noopener noreferrer"> <i class="fa-solid fa-person-chalkboard"></i> Poster </a>&nbsp;
             <a href="http://proceedings.mlr.press/v139/lin21a.html" target="_blank" rel="noopener noreferrer"> <i class="fa fa-desktop"></i> ICML Proceedings </a>&nbsp;
             <a href="https://arxiv.org/abs/2102.10106" target="_blank" rel="noopener noreferrer"> <i class="fa fa-desktop"></i> arXiv </a>
+            <button class="js-modal-trigger ghostbutton" style="font-size: 1rem;" data-target="lot-cite"> <a><i class="fa-solid fa-quote-right"></i> Cite</a></button>
+
         </div>
     </div>
 
@@ -665,6 +857,34 @@
         <div class="modal-card">
             <section class="modal-card-body">
                 <b>Abstract:</b> Optimal transport (OT) is a widely used technique for distribution alignment, with applications throughout the machine learning, graphics, and vision communities. Without any additional structural assumptions on transport, however, OT can be fragile to outliers or noise, especially in high dimensions. Here, we introduce Latent OptimalTransport (LOT), a new approach for OT that simultaneously learns low-dimensional structure in data while leveraging this structure to solve the alignment task. The idea behind our approach is to learn two sets of “anchors” that constrain the flow of transport between a source and target distribution. In both theoretical and empirical studies, we show thatLOTregularizes the rank of transport and makes it more robust to outliers and the sampling density. We show that by allowing the source and target to have different anchors, and using LOT to align the latent spaces between anchors, the resulting transport plan has better structural interpretability and highlights connections between both the individual data points and the local geometry of the datasets.
+            </section>
+        </div>
+    </div>
+
+    <div id="lot-cite" class="modal">
+
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Cite this paper</p>
+                <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                BibTex
+<pre><code>@InProceedings{lin2021,
+  title = 	 {Making transport more robust and interpretable by moving data through a small number of anchor points},
+  author =       {Lin, Chi-Heng and Azabou, Mehdi and Dyer, Eva},
+  booktitle = 	 {Proceedings of the 38th International Conference on Machine Learning},
+  pages = 	 {6631--6641},
+  year = 	 {2021},
+  editor = 	 {Meila, Marina and Zhang, Tong},
+  volume = 	 {139},
+  series = 	 {Proceedings of Machine Learning Research},
+  month = 	 {18--24 Jul},
+  publisher =    {PMLR},
+}</code></pre>
+                APA
+<pre><code>Lin, C., Azabou, M. &amp; Dyer, E.. (2021). Making transport more robust and interpretable by moving data through a small number of anchor points. <i>Proceedings of the 38th International Conference on Machine Learning</i>, in <i>Proceedings of Machine Learning Research</i> 139:6631-6641 Available from https://proceedings.mlr.press/v139/lin21a.html.</code></pre>
             </section>
         </div>
     </div>
@@ -715,7 +935,8 @@
             <p class="conferencetitle">Conference on Cognitive Computational Neuroscience, 2022</p>
             <a href="https://2022.ccneuro.org/proceedings/0000046.pdf" target="_blank" rel="noopener noreferrer"> <i class="fa fa-file-pdf"></i> Paper </a>&nbsp;
             <a href="https://2022.ccneuro.org/view_paper.php?PaperNum=1261" target="_blank" rel="noopener noreferrer"> <i class="fa fa-desktop"></i> CCN Proceedings </a>&nbsp;
-            <a href="./assets/ccn_2022_poster.pdf" target="_blank" rel="noopener noreferrer"> <i class="fa-solid fa-person-chalkboard"></i> Poster </a>&nbsp;
+            <a href="./assets/ccn_2022_poster.pdf" target="_blank" rel="noopener noreferrer"> <i class="fa-solid fa-person-chalkboard"></i> Poster </a>
+            <button class="js-modal-trigger ghostbutton" style="font-size: 1rem;" data-target="urzay-22-cite"> <a><i class="fa-solid fa-quote-right"></i> Cite</a></button>
         </div>
     </div>
 
@@ -728,7 +949,29 @@
         </div>
     </div>
 
-
+    <div id="urzay-22-cite" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Cite this paper</p>
+                <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                BibTex
+<pre><code>@misc{Urzay_Ahad_Azabou_Schneider_Atmakuri_Hengen_Dyer_2022,
+  title={Detecting change points in neural population activity with contrastive metric learning},
+  url={http://dx.doi.org/10.32470/CCN.2022.1261-0},
+  DOI={10.32470/ccn.2022.1261-0},
+  journal={2022 Conference on Cognitive Computational Neuroscience},
+  publisher={Cognitive Computational Neuroscience},
+  author={Urzay, Carolina and Ahad, Nauman and Azabou, Mehdi and Schneider, Aidan and Atmakuri, Geethika and Hengen, Keith B. and Dyer, Eva L.},
+  year={2022}
+  }</code></pre>
+                APA
+<pre><code>Urzay, C., Ahad, N., Azabou, M., Schneider, A., Atmakuri, G., Hengen, K. B., & Dyer, E. L. (2022). Detecting change points in neural population activity with contrastive metric learning. In <i>2022 Conference on Cognitive Computational Neuroscience</i>. https://doi.org/10.32470/ccn.2022.1261-0</code></pre>
+            </section>
+        </div>
+    </div>
 </section>
 
 </body>
