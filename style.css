@@ -62,3 +62,8 @@
     margin-bottom: 3rem;
     text-align:left;
 }
+
+
+.nowrap {
+    white-space: nowrap;
+}
