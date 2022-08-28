@@ -39,6 +39,25 @@
 </div>
 
 <section class="section">
+    <div style="margin-bottom: 0.75rem;">
+    <div class="dropdown is-hoverable">
+            <div class="dropdown-trigger">
+                    <span class="ghostbutton">
+                        <span class="tag is-rounded is-light has-text-weight-bold">Tag</span>
+                    </span>
+            </div>
+            <div class="dropdown-menu" role="menu">
+                <div class="dropdown-content">
+                    <div class="dropdown-item">
+                        <p class="has-text-weight-normal is-size-7">TL;DR</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <span class="is-size-7"> <i class="fa-solid fa-angle-left"></i> hover to get TL;DR</span> &nbsp;&nbsp;
+    <a><i class="fa-solid fa-ellipsis"></i></a> <span class="is-size-7"> <i class="fa-solid fa-angle-left"></i> click to get abstract.</span>
+    </div>
+
     <h3 class="title">
         2022
     </h3>
@@ -55,13 +74,13 @@
             <div class="dropdown is-hoverable">
                 <div class="dropdown-trigger">
                     <span class="ghostbutton">
-                        <span class="tag is-success is-rounded is-light has-text-weight-bold">Neuro</span>
+                        <span class="tag is-success is-rounded is-light has-text-weight-bold">Neuroscience</span>
                     </span>
                 </div>
                 <div class="dropdown-menu" role="menu">
                     <div class="dropdown-content">
                         <div class="dropdown-item">
-                            <p class="has-text-weight-normal is-size-7">Neuroscience</p>
+                            <p class="has-text-weight-normal is-size-7">We reveal the existence of characteristic <b>computational fingerprints</b> of transcriptomic cell types, during neuronal activity across diverse contexts: drifting gratings, naturalistic movies.</p>
                         </div>
                     </div>
                 </div>
@@ -76,7 +95,7 @@
                 <div class="dropdown-menu" role="menu">
                     <div class="dropdown-content">
                         <div class="dropdown-item">
-                            <p class="has-text-weight-normal is-size-7">Attention</p>
+                            <p class="has-text-weight-normal is-size-7">LOLCAT uses soft-attention, which enables the model to <b>aggregate trial information</b> across different scales.</p>
                         </div>
                     </div>
                 </div>
@@ -162,13 +181,13 @@
             <div class="dropdown is-hoverable">
                 <div class="dropdown-trigger">
                     <span class="ghostbutton">
-                        <span class="tag is-success is-rounded is-light has-text-weight-bold">Neuro</span>
+                        <span class="tag is-success is-rounded is-light has-text-weight-bold">Neuroscience</span>
                     </span>
                 </div>
                 <div class="dropdown-menu" role="menu">
                     <div class="dropdown-content">
                         <div class="dropdown-item">
-                            <p class="has-text-weight-normal is-size-7">Neuroscience</p>
+                            <p class="has-text-weight-normal is-size-7">Our novel transformer model performs competitively on <b>behavior decoding</b> tasks for spiking data, and shows promising potential for <b>across-session</b> and <b>across-subject</b> generalization.</p>
                         </div>
                     </div>
                 </div>
@@ -183,7 +202,7 @@
                 <div class="dropdown-menu" role="menu">
                     <div class="dropdown-content">
                         <div class="dropdown-item">
-                            <p class="has-text-weight-normal is-size-7">Transformer</p>
+                            <p class="has-text-weight-normal is-size-7">We present a novel transformer architecture that first operates on individual time-series and then captures the interactions between them at a later stage; this induces a <b>permutation-invariance property</b> and can be used to transfer across systems of different size and order. </p>
                         </div>
                     </div>
                 </div>
@@ -262,20 +281,6 @@
                 <a class="js-modal-trigger" data-target="quesada-22-modal"><i class="fa-solid fa-ellipsis"></i></a></span>
             </p>
             <p class="tagp">
-            <div class="dropdown is-hoverable">
-                <div class="dropdown-trigger">
-                    <span class="ghostbutton">
-                        <span class="tag is-success is-rounded is-light has-text-weight-bold">Neuro</span>
-                    </span>
-                </div>
-                <div class="dropdown-menu" role="menu">
-                    <div class="dropdown-content">
-                        <div class="dropdown-item">
-                            <p class="has-text-weight-normal is-size-7">Neuroscience</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
             <div class="dropdown is-hoverable">
                 <div class="dropdown-trigger">
@@ -286,7 +291,7 @@
                 <div class="dropdown-menu" role="menu">
                     <div class="dropdown-content">
                         <div class="dropdown-item">
-                            <p class="has-text-weight-normal is-size-7">Neuroimaging</p>
+                            <p class="has-text-weight-normal is-size-7">We introduce a multi-task neuroimaging benchmark for micrometer-resolution <b>X-ray microtomography imaging</b> of a large thalamocortical section of mouse brain. </p>
                         </div>
                     </div>
                 </div>
@@ -320,7 +325,12 @@
                 <button class="delete" aria-label="close"></button>
             </header>
             <section class="modal-card-body">
-                <b>Abstract:</b> There are multiple scales of abstraction from which we can describe the same image, depending on whether we are focusing on fine-grained details or a more global attribute of the image. In brain mapping, learning to automatically parse  images to build representations of both small-scale features (e.g., the presence of cells or blood vessels) and global properties of an image (e.g., source brain region) is a crucial and open challenge. However, most existing datasets and benchmarks for neuroanatomy consider only a single downstream task at a time. We introduce a new dataset, annotations, and multiple downstream tasks that provide diverse ways to readout information about brain structure and architecture from the same image. Our multi-task neuroimaging benchmark (MTNeuro) is built on volumetric, micrometer-resolution X-ray microtomography imaging of a large thalamocortical section of mouse brain, encompassing multiple cortical and subcortical regions, that reveals dense reconstructions of the underlying microstructure (i.e., cell bodies, vasculature, and axons). We generated a number of different prediction challenges and evaluated several supervised and self-supervised models for brain-region prediction and pixel-level semantic segmentation of microstructures.  Our experiments not only highlight the rich heterogeneity of this dataset, but also provide insights into how self-supervised approaches can be used to learn representations that  capture multiple attributes of a single image and perform well on a variety of downstream tasks.  Datasets, code, and pre-trained baseline models are provided at: https://mtneuro.github.io/.
+                <div class="image padded_block">
+                    <img src="./assets/mtneuro.png" alt="">
+                </div>
+                <div>
+                    <b>Abstract:</b> There are multiple scales of abstraction from which we can describe the same image, depending on whether we are focusing on fine-grained details or a more global attribute of the image. In brain mapping, learning to automatically parse  images to build representations of both small-scale features (e.g., the presence of cells or blood vessels) and global properties of an image (e.g., source brain region) is a crucial and open challenge. However, most existing datasets and benchmarks for neuroanatomy consider only a single downstream task at a time. We introduce a new dataset, annotations, and multiple downstream tasks that provide diverse ways to readout information about brain structure and architecture from the same image. Our multi-task neuroimaging benchmark (MTNeuro) is built on volumetric, micrometer-resolution X-ray microtomography imaging of a large thalamocortical section of mouse brain, encompassing multiple cortical and subcortical regions, that reveals dense reconstructions of the underlying microstructure (i.e., cell bodies, vasculature, and axons). We generated a number of different prediction challenges and evaluated several supervised and self-supervised models for brain-region prediction and pixel-level semantic segmentation of microstructures.  Our experiments not only highlight the rich heterogeneity of this dataset, but also provide insights into how self-supervised approaches can be used to learn representations that  capture multiple attributes of a single image and perform well on a variety of downstream tasks.  Datasets, code, and pre-trained baseline models are provided at: https://mtneuro.github.io/.
+                </div>
             </section>
             <footer class="modal-card-foot"></footer>
         </div>
@@ -365,7 +375,7 @@
                 <div class="dropdown-menu" role="menu">
                     <div class="dropdown-content">
                         <div class="dropdown-item">
-                            <p class="has-text-weight-normal is-size-7">Animal Behavior</p>
+                            <p class="has-text-weight-normal is-size-7">Natural behavior consists of dynamics that are both unpredictable, can switch suddenly, and unfold over many different timescales. We introduce BAMS which can capture <b>multi-timescale</b> factors that help in <b>behavioral analysis</b>. We apply BAMS on <b>mouse</b> and <b>legged robots</b> dataset.</p>
                         </div>
                     </div>
                 </div>
@@ -381,6 +391,10 @@
                     <div class="dropdown-content">
                         <div class="dropdown-item">
                             <p class="has-text-weight-normal is-size-7">Self-Supervised Learning</p>
+                        </div>
+                        <hr class="dropdown-divider">
+                        <div class="dropdown-item">
+                            <p class="has-text-weight-normal is-size-7">We introduce a multi-scale representation learning model: we combine a pooling module that aggregates features extracted over encoders with <b>different temporal receptive fields</b>, and design a set of latent objectives to <b>bootstrap the representations in each respective space</b>.</p>
                         </div>
                     </div>
                 </div>
@@ -449,7 +463,7 @@
             <div class="dropdown is-hoverable">
                 <div class="dropdown-trigger">
                     <span class="ghostbutton">
-                        <span class="tag is-light is-rounded is-light has-text-weight-bold">Graphs</span>
+                        <span class="tag is-light is-rounded is-light has-text-weight-bold">Geometric Deep Learning</span>
                     </span>
                 </div>
                 <div class="dropdown-menu" role="menu">
@@ -550,7 +564,7 @@ url={https://openreview.net/forum?id=0UXT6PpRpW}
             <div class="dropdown is-hoverable">
                 <div class="dropdown-trigger">
                     <span class="ghostbutton">
-                        <span class="tag is-success is-rounded is-light has-text-weight-bold">Neuro</span>
+                        <span class="tag is-success is-rounded is-light has-text-weight-bold">Neuroscience</span>
                     </span>
                 </div>
                 <div class="dropdown-menu" role="menu">
@@ -579,7 +593,7 @@ url={https://openreview.net/forum?id=0UXT6PpRpW}
             <div class="dropdown is-hoverable">
                 <div class="dropdown-trigger">
                     <span class="ghostbutton">
-                        <span class="tag is-rounded is-light has-text-weight-bold">Generative</span>
+                        <span class="tag is-rounded is-light has-text-weight-bold">Generative Modeling</span>
                     </span>
                 </div>
                 <div class="dropdown-menu" role="menu">
@@ -666,7 +680,7 @@ url={https://openreview.net/forum?id=0UXT6PpRpW}
             <div class="dropdown is-hoverable">
                 <div class="dropdown-trigger">
                     <span class="ghostbutton">
-                        <span class="tag is-success is-rounded is-light has-text-weight-bold">Neuro</span>
+                        <span class="tag is-success is-rounded is-light has-text-weight-bold">Neuroscience</span>
                     </span>
                 </div>
                 <div class="dropdown-menu" role="menu">
@@ -779,7 +793,7 @@ url={https://openreview.net/forum?id=0UXT6PpRpW}
             <div class="dropdown is-hoverable">
                 <div class="dropdown-trigger">
                     <span class="ghostbutton">
-                        <span class="tag is-success is-rounded is-light has-text-weight-bold">Neuro</span>
+                        <span class="tag is-success is-rounded is-light has-text-weight-bold">Neuroscience</span>
                     </span>
                 </div>
                 <div class="dropdown-menu" role="menu">
@@ -977,7 +991,7 @@ url={https://openreview.net/forum?id=0UXT6PpRpW}
             <div class="dropdown is-hoverable">
                 <div class="dropdown-trigger">
                     <span class="ghostbutton">
-                        <span class="tag is-success is-rounded is-light has-text-weight-bold">Neuro</span>
+                        <span class="tag is-success is-rounded is-light has-text-weight-bold">Neuroscience</span>
                     </span>
                 </div>
                 <div class="dropdown-menu" role="menu">
