@@ -6,7 +6,7 @@
     <title>Mehdi Azabou</title>
     <meta name="keywords" content="Mehdi Azabou">
     <meta name="author" content="Mehdi Azabou">
-    <link rel="shortcut icon" href="assets/🧠.ico" />
+    <link rel="shortcut icon" href="assets/🧠.ico"/>
     <script src="https://kit.fontawesome.com/3875b07657.js" crossorigin="anonymous"></script>
     <script src="/node_modules/bulma-extensions/bulma-calendar/dist/bulma-calendar.min.js"></script>
     <script src="modal.js"></script>
@@ -19,7 +19,11 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SMP0QT1S6Z"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
         gtag('js', new Date());
 
         gtag('config', 'G-SMP0QT1S6Z');
@@ -33,9 +37,12 @@
             <li><a href="/">About</a></li>
             <li class="is-active"><a href="#" aria-current="page">Publications</a></li>
             <li><a href="resume">Resume</a></li>
-            <li><a href="https://scholar.google.com/citations?user=jXxyYCoAAAAJ&hl=en" target="_blank" rel="noopener noreferrer"> <i class="ai ai-google-scholar-square"></i></a></li>
-            <li><a href="https://github.com/mazabou" target="_blank" rel="noopener noreferrer"> <i class="fa fa-github"></i></a></li>
-            <li><a href="https://twitter.com/mehdiazabou" target="_blank" rel="noopener noreferrer"> <i class="fa-brands fa-twitter"></i></a></li>
+            <li><a href="https://scholar.google.com/citations?user=jXxyYCoAAAAJ&hl=en" target="_blank"
+                   rel="noopener noreferrer"> <i class="ai ai-google-scholar-square"></i></a></li>
+            <li><a href="https://github.com/mazabou" target="_blank" rel="noopener noreferrer"> <i
+                    class="fa fa-github"></i></a></li>
+            <li><a href="https://twitter.com/mehdiazabou" target="_blank" rel="noopener noreferrer"> <i
+                    class="fa-brands fa-twitter"></i></a></li>
         </ul>
     </nav>
 </div>
@@ -43,23 +50,23 @@
 <section class="section">
     <div style="margin-bottom: 0.75rem;">
         <div class="block container bd-post-content bottom_padding">
-    <div class="dropdown is-hoverable">
-            <div class="dropdown-trigger">
+            <div class="dropdown is-hoverable">
+                <div class="dropdown-trigger">
                     <span class="ghostbutton">
                         <span class="tag is-rounded is-light has-text-weight-bold">Tag</span>
                     </span>
-            </div>
-            <div class="dropdown-menu" role="menu">
-                <div class="dropdown-content">
-                    <div class="dropdown-item">
-                        <p class="has-text-weight-normal is-size-7">TL;DR</p>
+                </div>
+                <div class="dropdown-menu" role="menu">
+                    <div class="dropdown-content">
+                        <div class="dropdown-item">
+                            <p class="has-text-weight-normal is-size-7">TL;DR</p>
+                        </div>
                     </div>
                 </div>
             </div>
+            <span class="is-size-7"> <i class="fa-solid fa-angle-left"></i> hover to get TL;DR</span> &nbsp;&nbsp;
+            <a><i class="fa-solid fa-ellipsis"></i></a> <span class="is-size-7"> <i class="fa-solid fa-angle-left"></i> click to get abstract.</span>
         </div>
-    <span class="is-size-7"> <i class="fa-solid fa-angle-left"></i> hover to get TL;DR</span> &nbsp;&nbsp;
-    <a><i class="fa-solid fa-ellipsis"></i></a> <span class="is-size-7"> <i class="fa-solid fa-angle-left"></i> click to get abstract.</span>
-    </div>
     </div>
 
     <div class="block container bd-post-content">
@@ -70,167 +77,314 @@
         </h2>
     </div>
 
+
     <div class="block container bd-post-content">
-        <h1 class="title">
-            <p class="is-size-55">
-                <i class="fa-solid fa-arrows-split-up-and-left"></i>
-                Relax, it doesn't matter how you get there: A new self-supervised approach for multi-timescale behavior analysis
-                <!--<a class="js-modal-trigger" data-target="forest-trans-modal"><i class="fa-solid fa-ellipsis"></i></a></span>-->
+    <article class="media bottom_padding">
+        <figure class="media-left">
+            <p class="image is-128x128">
+                <img src="covers/DALL·E%202022-12-22%2023.29.54%20-%20a%20single%20branch%20that%20branches%20out%20to%20increasingly%20more%20branches,%20digital%20art,%20colorful.png">
             </p>
-            <p class="tagp">
-            <div class="dropdown is-hoverable">
-                <div class="dropdown-trigger">
+        </figure>
+        <div class="media-content">
+            <div>
+
+                <div class="block container bd-post-content">
+                    <h1 class="title">
+                        <p class="is-size-55">
+                            <i class="fa-solid fa-arrows-split-up-and-left"></i>
+                            Relax, it doesn't matter how you get there: A new self-supervised approach for
+                            multi-timescale behavior analysis
+                            <!--<a class="js-modal-trigger" data-target="forest-trans-modal"><i class="fa-solid fa-ellipsis"></i></a></span>-->
+                        </p>
+                        <p class="tagp">
+                        <div class="dropdown is-hoverable">
+                            <div class="dropdown-trigger">
                     <span class="ghostbutton">
                         <span class="tag is-danger is-rounded is-light has-text-weight-bold">Behavior</span>
                     </span>
-                </div>
-            </div>
-            </p>
-        </h1>
-        <div class="subtitle">
-            <p class="authors"><em><b>Mehdi Azabou</b>, Michael Mendelson, Nauman Ahad, Maks Sorokin, Shantanu Thakoorm Carolina Urzay, Eva L. Dyer</em></p>
-            <p class="conferencetitle">Preprint</p>
-            <!--
-            <span class="nowrap"><a href="https://nerdslab.github.io/EIT/" target="_blank" rel="noopener noreferrer"> <i class="fa fa-book"></i> Project page </a>&nbsp;</span>
-            <span class="nowrap"><a href="https://arxiv.org/pdf/2206.06131.pdf" target="_blank" rel="noopener noreferrer"> <i class="fa fa-file-pdf"></i> Paper </a>&nbsp;</span>
-            <span class="nowrap"><a href="https://github.com/nerdslab/EIT" target="_blank" rel="noopener noreferrer"> <i class="fa fa-github"></i> Code </a>&nbsp;</span>
-            <span class="nowrap"><a href="https://arxiv.org/abs/2206.06131" target="_blank" rel="noopener noreferrer"> <i class="fa fa-desktop"></i> arXiv </a>&nbsp;</span>
-            <span class="nowrap"><a class="js-modal-trigger" data-target="forest-trans-cite"> <i class="fa-solid fa-quote-right"></i> Cite</a></span>
-            -->
-        </div>
-    </div>
-
-
-    <div class="block container bd-post-content">
-        <h1 class="title">
-            <p class="is-size-55">
-                <i class="fa-solid fa-users"></i>
-                Learning signatures of decision making from many individuals playing the same game
-                <!--<a class="js-modal-trigger" data-target="forest-trans-modal"><i class="fa-solid fa-ellipsis"></i></a></span>-->
-            </p>
-            <p class="tagp">
-            <div class="dropdown is-hoverable">
-                <div class="dropdown-trigger">
-                    <span class="ghostbutton">
-                        <span class="tag is-danger is-rounded is-light has-text-weight-bold">Behavior</span>
-                    </span>
-                </div>
-            </div>
-            </p>
-        </h1>
-        <div class="subtitle">
-            <p class="authors"><em>Michael Mendelson, <b>Mehdi Azabou</b>, Suma Jacob, Nicola Grissom, David P. Barrow, Becket Ebitz, Alexander Herman, Eva L. Dyer</em></p>
-            <p class="conferencetitle">To appear at the 11th International IEEE EMBS Conference on Neural Engineering (NER'23), Baltimore, Maryland, April 2023</p>
-            <!--
-            <span class="nowrap"><a href="https://nerdslab.github.io/EIT/" target="_blank" rel="noopener noreferrer"> <i class="fa fa-book"></i> Project page </a>&nbsp;</span>
-            <span class="nowrap"><a href="https://arxiv.org/pdf/2206.06131.pdf" target="_blank" rel="noopener noreferrer"> <i class="fa fa-file-pdf"></i> Paper </a>&nbsp;</span>
-            <span class="nowrap"><a href="https://github.com/nerdslab/EIT" target="_blank" rel="noopener noreferrer"> <i class="fa fa-github"></i> Code </a>&nbsp;</span>
-            <span class="nowrap"><a href="https://arxiv.org/abs/2206.06131" target="_blank" rel="noopener noreferrer"> <i class="fa fa-desktop"></i> arXiv </a>&nbsp;</span>
-            <span class="nowrap"><a class="js-modal-trigger" data-target="forest-trans-cite"> <i class="fa-solid fa-quote-right"></i> Cite</a></span>
-            -->
-        </div>
-    </div>
-
-
-    <div class="block container bd-post-content">
-        <h1 class="title">
-            <p class="is-size-55">
-                <i class="fa-solid fa-road-spikes"></i>
-                Detecting change points in neural population activity with contrastive metric learning
-                <!--<a class="js-modal-trigger" data-target="forest-trans-modal"><i class="fa-solid fa-ellipsis"></i></a></span>-->
-            </p>
-            <p class="tagp">
-            <div class="dropdown is-hoverable">
-                <div class="dropdown-trigger">
-                    <span class="ghostbutton">
-                        <span class="tag is-success is-rounded is-light has-text-weight-bold">Neuroscience</span>
-                    </span>
-                </div>
-            </div>
-            <div class="dropdown is-hoverable">
-                <div class="dropdown-trigger">
-                    <span class="ghostbutton">
-                        <span class="tag is-rounded is-info is-light has-text-weight-bold">Preprint</span>
-                    </span>
-                </div>
-            </div>
-            </p>
-        </h1>
-        <div class="subtitle">
-            <p class="authors"><em>Carolina Urzay, Nauman Ahad, <b>Mehdi Azabou</b>, Aidan Schneider, Geethika Atamkuri, Keith B. Hengen, Eva L. Dyer</em></p>
-            <p class="conferencetitle">To appear at the 11th International IEEE EMBS Conference on Neural Engineering (NER'23), Baltimore, Maryland, April 2023</p>
-            <!--
-            <span class="nowrap"><a href="https://nerdslab.github.io/EIT/" target="_blank" rel="noopener noreferrer"> <i class="fa fa-book"></i> Project page </a>&nbsp;</span>
-            <span class="nowrap"><a href="https://arxiv.org/pdf/2206.06131.pdf" target="_blank" rel="noopener noreferrer"> <i class="fa fa-file-pdf"></i> Paper </a>&nbsp;</span>
-            <span class="nowrap"><a href="https://github.com/nerdslab/EIT" target="_blank" rel="noopener noreferrer"> <i class="fa fa-github"></i> Code </a>&nbsp;</span>
-            <span class="nowrap"><a href="https://arxiv.org/abs/2206.06131" target="_blank" rel="noopener noreferrer"> <i class="fa fa-desktop"></i> arXiv </a>&nbsp;</span>
-            <span class="nowrap"><a class="js-modal-trigger" data-target="forest-trans-cite"> <i class="fa-solid fa-quote-right"></i> Cite</a></span>
-            -->
-        </div>
-    </div>
-
-
-
-    <!-- > LOLCAT </!-->
-    <div class="block container bd-post-content">
-        <h1 class="title">
-            <p class="is-size-55">
-                <i class="fa-solid fa-barcode"></i>
-                Transcriptomic cell type structures in vivo neuronal activity across multiple time <span class="nowrap">scales
-                <a class="js-modal-trigger" data-target="lolcat-modal"><i class="fa-solid fa-ellipsis"></i></a></span>
-            </p>
-
-            <p class="tagp">
-            <div class="dropdown is-hoverable">
-                <div class="dropdown-trigger">
-                    <span class="ghostbutton">
-                        <span class="tag is-success is-rounded is-light has-text-weight-bold">Neuroscience</span>
-                    </span>
-                </div>
-                <div class="dropdown-menu" role="menu">
-                    <div class="dropdown-content">
-                        <div class="dropdown-item">
-                            <p class="has-text-weight-normal is-size-7">We reveal the existence of characteristic <b>computational fingerprints</b> of transcriptomic cell types, during neuronal activity across diverse contexts: drifting gratings, naturalistic movies.</p>
+                            </div>
                         </div>
+                        <div class="dropdown  is-hoverable">
+                            <div class="dropdown-trigger">
+                    <span class="ghostbutton">
+                        <span class="tag is-warning is-rounded is-light has-text-weight-bold">SSL</span>
+                    </span>
+                            </div>
+                            <div class="dropdown-menu" role="menu">
+                                <div class="dropdown-content">
+                                    <div class="dropdown-item">
+                                        <p class="has-text-weight-normal is-size-7">Self-Supervised Learning</p>
+                                    </div>
+                                    <!--
+                                    <hr class="dropdown-divider">
+                                    <div class="dropdown-item">
+                                        <p class="has-text-weight-normal is-size-7">We introduce a multi-scale representation
+                                            learning model: we combine a pooling module that aggregates features extracted over
+                                            encoders with <b>different temporal receptive fields</b>, and design a set of latent
+                                            objectives to <b>bootstrap the representations in each respective space</b>.</p>
+                                    </div>
+                                    -->
+                                </div>
+                            </div>
+                        </div>
+                        </p>
+                    </h1>
+                    <div class="subtitle">
+                        <p class="authors"><em><b>Mehdi Azabou</b>, Michael Mendelson, Nauman Ahad, Maks Sorokin,
+                            Shantanu Thakoor, Carolina Urzay, Eva L. Dyer</em></p>
+                        <p class="conferencetitle">In preparation</p>
+                        <!--
+                        <span class="nowrap"><a href="https://nerdslab.github.io/EIT/" target="_blank" rel="noopener noreferrer"> <i class="fa fa-book"></i> Project page </a>&nbsp;</span>
+                        <span class="nowrap"><a href="https://arxiv.org/pdf/2206.06131.pdf" target="_blank" rel="noopener noreferrer"> <i class="fa fa-file-pdf"></i> Paper </a>&nbsp;</span>
+                        <span class="nowrap"><a href="https://github.com/nerdslab/EIT" target="_blank" rel="noopener noreferrer"> <i class="fa fa-github"></i> Code </a>&nbsp;</span>
+                        <span class="nowrap"><a href="https://arxiv.org/abs/2206.06131" target="_blank" rel="noopener noreferrer"> <i class="fa fa-desktop"></i> arXiv </a>&nbsp;</span>
+                        <span class="nowrap"><a class="js-modal-trigger" data-target="forest-trans-cite"> <i class="fa-solid fa-quote-right"></i> Cite</a></span>
+                        -->
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="media-right">
 
-            <div class="dropdown  is-hoverable">
-                <div class="dropdown-trigger">
+        </div>
+    </article>
+    </div>
+
+    <div class="block container bd-post-content">
+    <article class="media bottom_padding">
+        <figure class="media-left">
+            <p class="image is-128x128">
+                <img src="covers/DALL·E%202022-12-22%2023.02.06%20-%20a%20lot%20of%20slot%20machines%20in%20the%20shape%20of%20robots%20stacked%20next%20to%20each%20other,%20high%20resolution,%20isometric%20view,%203d%20render.png">
+            </p>
+        </figure>
+        <div class="media-content">
+            <div class="block container bd-post-content">
+                <h1 class="title">
+                    <p class="is-size-55">
+                        <i class="fa-solid fa-users"></i>
+                        Learning signatures of decision making from many individuals playing the same game
+                        <!--<a class="js-modal-trigger" data-target="forest-trans-modal"><i class="fa-solid fa-ellipsis"></i></a></span>-->
+                    </p>
+                    <p class="tagp">
+                    <div class="dropdown is-hoverable">
+                        <div class="dropdown-trigger">
+                    <span class="ghostbutton">
+                        <span class="tag is-danger is-rounded is-light has-text-weight-bold">Behavior</span>
+                    </span>
+                        </div>
+                    </div>
+                    <div class="dropdown  is-hoverable">
+                        <div class="dropdown-trigger">
+                    <span class="ghostbutton">
+                        <span class="tag is-warning is-rounded is-light has-text-weight-bold">SSL</span>
+                    </span>
+                        </div>
+                        <div class="dropdown-menu" role="menu">
+                            <div class="dropdown-content">
+                                <div class="dropdown-item">
+                                    <p class="has-text-weight-normal is-size-7">Self-Supervised Learning</p>
+                                </div>
+                                <!--
+                                <hr class="dropdown-divider">
+                                <div class="dropdown-item">
+                                    <p class="has-text-weight-normal is-size-7">We introduce a multi-scale representation
+                                        learning model: we combine a pooling module that aggregates features extracted over
+                                        encoders with <b>different temporal receptive fields</b>, and design a set of latent
+                                        objectives to <b>bootstrap the representations in each respective space</b>.</p>
+                                </div>
+                                -->
+                            </div>
+                        </div>
+                    </div>
+                    </p>
+                </h1>
+                <div class="subtitle">
+                    <p class="authors"><em>Michael Mendelson, <b>Mehdi Azabou</b>, Suma Jacob, Nicola Grissom, David P. Barrow,
+                        Becket Ebitz, Alexander Herman, Eva L. Dyer</em></p>
+                    <p class="conferencetitle">To appear at the 11th International IEEE EMBS Conference on Neural Engineering
+                        (NER'23), Baltimore, Maryland, <span class="nowrap">April 2023</span></p>
+                    <!--
+                    <span class="nowrap"><a href="https://nerdslab.github.io/EIT/" target="_blank" rel="noopener noreferrer"> <i class="fa fa-book"></i> Project page </a>&nbsp;</span>
+                    <span class="nowrap"><a href="https://arxiv.org/pdf/2206.06131.pdf" target="_blank" rel="noopener noreferrer"> <i class="fa fa-file-pdf"></i> Paper </a>&nbsp;</span>
+                    <span class="nowrap"><a href="https://github.com/nerdslab/EIT" target="_blank" rel="noopener noreferrer"> <i class="fa fa-github"></i> Code </a>&nbsp;</span>
+                    <span class="nowrap"><a href="https://arxiv.org/abs/2206.06131" target="_blank" rel="noopener noreferrer"> <i class="fa fa-desktop"></i> arXiv </a>&nbsp;</span>
+                    <span class="nowrap"><a class="js-modal-trigger" data-target="forest-trans-cite"> <i class="fa-solid fa-quote-right"></i> Cite</a></span>
+                    -->
+                </div>
+            </div>
+        </div>
+        <div class="media-right">
+            <a class="js-modal-trigger" data-target="human-modal"><i class="fa-solid fa-ellipsis"></i></a>
+        </div>
+    </article>
+    </div>
+
+
+    <div id="human-modal" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title"></p>
+                <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+
+                <div>
+                    <b>Abstract:</b> Human behavior is incredibly complex and the factors that drive decision making—from
+                    instinct, to strategy, to biases between individuals—often vary over multiple timescales.
+                    In this paper, we design a predictive framework that learns representations to encode an individual's
+                    `behavioral style', i.e. long-term behavioral trends, while simultaneously predicting future actions
+                    and choices. The model  explicitly separates representations into three latent spaces: the recent
+                    past space, the short-term space, and the long-term space where we hope to capture individual
+                    differences. To simultaneously extract both global and local variables from complex human behavior,
+                    our method combines a multi-scale temporal convolutional network with latent prediction tasks,
+                    where we encourage embeddings across the entire sequence, as well as subsets of the sequence,
+                    to be mapped to similar points in the latent space.
+
+                    We develop and apply our method to a large-scale behavioral dataset from 1,000 humans playing a
+                    3-armed bandit task, and analyze what our model's resulting embeddings reveal about the human
+                    decision making process. In addition to predicting future choices, we show that our model can learn
+                    rich representations of human behavior over multiple timescales and provide signatures of
+                    differences in individuals.
+                </div>
+            </section>
+            <footer class="modal-card-foot"></footer>
+        </div>
+    </div>
+
+    <div class="block container bd-post-content">
+    <article class="media bottom_padding">
+        <figure class="media-left">
+            <p class="image is-128x128">
+                <img src="covers/DALL·E%202022-12-22%2022.20.39%20-%20population%20of%20neurons%20morphing%20from%20one%20color%20to%20the%20other%20from%20left%20to%20right%20with%20a%20clear%20boundary%20wall%20in%20the%20middle,%20digital%20art,%20high%20resolution.png">
+            </p>
+        </figure>
+        <div class="media-content">
+
+            <div class="block container bd-post-content">
+                <h1 class="title">
+                    <p class="is-size-55">
+                        <i class="fa-solid fa-road-spikes"></i>
+                        Detecting change points in neural population activity with contrastive metric learning
+                        <!--<a class="js-modal-trigger" data-target="forest-trans-modal"><i class="fa-solid fa-ellipsis"></i></a></span>-->
+                    </p>
+                    <p class="tagp">
+                    <div class="dropdown is-hoverable">
+                        <div class="dropdown-trigger">
+                    <span class="ghostbutton">
+                        <span class="tag is-success is-rounded is-light has-text-weight-bold">Neuroscience</span>
+                    </span>
+                        </div>
+                    </div>
+                    </p>
+                </h1>
+                <div class="subtitle">
+                    <p class="authors"><em>Carolina Urzay, Nauman Ahad, <b>Mehdi Azabou</b>, Aidan Schneider, Geethika Atamkuri,
+                        Keith B. Hengen, Eva L. Dyer</em></p>
+                    <p class="conferencetitle">To appear at the 11th International IEEE EMBS Conference on Neural Engineering
+                        (NER'23), Baltimore, Maryland, <span class="nowrap">April 2023</span></p>
+                    <!--
+                    <span class="nowrap"><a href="https://nerdslab.github.io/EIT/" target="_blank" rel="noopener noreferrer"> <i class="fa fa-book"></i> Project page </a>&nbsp;</span>
+                    <span class="nowrap"><a href="https://arxiv.org/pdf/2206.06131.pdf" target="_blank" rel="noopener noreferrer"> <i class="fa fa-file-pdf"></i> Paper </a>&nbsp;</span>
+                    <span class="nowrap"><a href="https://github.com/nerdslab/EIT" target="_blank" rel="noopener noreferrer"> <i class="fa fa-github"></i> Code </a>&nbsp;</span>
+                    <span class="nowrap"><a href="https://arxiv.org/abs/2206.06131" target="_blank" rel="noopener noreferrer"> <i class="fa fa-desktop"></i> arXiv </a>&nbsp;</span>
+                    <span class="nowrap"><a class="js-modal-trigger" data-target="forest-trans-cite"> <i class="fa-solid fa-quote-right"></i> Cite</a></span>
+                    -->
+                </div>
+            </div>
+        </div>
+        <div class="media-right">
+            <a class="js-modal-trigger" data-target="urzay-22-modal"><i class="fa-solid fa-ellipsis"></i></a>
+        </div>
+    </article>
+    </div>
+
+    <div class="block container bd-post-content">
+    <article class="media bottom_padding">
+        <figure class="media-left">
+            <p class="image is-128x128">
+                <img src="covers/45e4e74d-9cca-49b2-9cc4-21d2d1610ad7.webp">
+            </p>
+        </figure>
+        <div class="media-content">
+            <div class="block container bd-post-content">
+                <h1 class="title">
+                    <p class="is-size-55">
+                        <i class="fa-solid fa-barcode"></i>
+                        Transcriptomic cell type structures in vivo neuronal activity across multiple time <span
+                            class="nowrap">scales
+                </span>
+                    </p>
+
+                    <p class="tagp">
+                    <div class="dropdown is-hoverable">
+                        <div class="dropdown-trigger">
+                    <span class="ghostbutton">
+                        <span class="tag is-success is-rounded is-light has-text-weight-bold">Neuroscience</span>
+                    </span>
+                        </div>
+                        <div class="dropdown-menu" role="menu">
+                            <div class="dropdown-content">
+                                <div class="dropdown-item">
+                                    <p class="has-text-weight-normal is-size-7">We reveal the existence of
+                                        characteristic <b>computational fingerprints</b> of transcriptomic cell types,
+                                        during neuronal activity across diverse contexts: drifting gratings,
+                                        naturalistic movies.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dropdown  is-hoverable">
+                        <div class="dropdown-trigger">
                     <span class="ghostbutton">
                         <span class="tag is-rounded is-light has-text-weight-bold">Attention</span>
                     </span>
-                </div>
-                <div class="dropdown-menu" role="menu">
-                    <div class="dropdown-content">
-                        <div class="dropdown-item">
-                            <p class="has-text-weight-normal is-size-7">LOLCAT uses soft-attention, which enables the model to <b>aggregate trial information</b> across different scales.</p>
+                        </div>
+                        <div class="dropdown-menu" role="menu">
+                            <div class="dropdown-content">
+                                <div class="dropdown-item">
+                                    <p class="has-text-weight-normal is-size-7">LOLCAT uses soft-attention, which
+                                        enables the model to <b>aggregate trial information</b> across different scales.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="dropdown is-hoverable">
-                <div class="dropdown-trigger">
+                    <div class="dropdown is-hoverable">
+                        <div class="dropdown-trigger">
                     <span class="ghostbutton">
                         <span class="tag is-rounded is-info is-light has-text-weight-bold">Preprint</span>
                     </span>
+                        </div>
+                    </div>
+                    </p>
+
+                </h1>
+                <div class="subtitle">
+                    <p class="authors"><em>Aidan Schneider<sup>+</sup>, <b>Mehdi Azabou</b><sup>+</sup>, Louis
+                        McDougall-Vigier, David Parks, Sahara Ensley, Kiran Bhaskaran-Nair,
+                        Tom Nowakowski, Eva L. Dyer<sup>*</sup>, Keith B. Hengen<sup>*</sup></em></p>
+                    <p><em><sup>+</sup>Contributed equally as co-first authors</em></p>
+                    <p class="conferencetitle">bioRxiv, Jul 2022.</p>
+                    <span class="nowrap"><a href="https://www.biorxiv.org/content/10.1101/2022.07.10.499487v1.full.pdf"
+                                            target="_blank" rel="noopener noreferrer"> <i class="fa fa-file-pdf"></i> Paper </a> &nbsp;</span>
+                    <span class="nowrap"><a href="https://www.biorxiv.org/content/10.1101/2022.07.10.499487v1"
+                                            target="_blank" rel="noopener noreferrer"> <i class="fa fa-desktop"></i> bioRxiv </a>&nbsp;</span>
+                    <span class="nowrap"><a class="js-modal-trigger" data-target="lolcat-cite"> <i
+                            class="fa-solid fa-quote-right"></i> Cite</a></span>
                 </div>
             </div>
-            </p>
-
-        </h1>
-        <div class="subtitle">
-            <p class="authors"><em>Aidan Schneider<sup>+</sup>, <b>Mehdi Azabou</b><sup>+</sup>, Louis McDougall-Vigier, David Parks, Sahara Ensley, Kiran Bhaskaran-Nair,
-                Tom Nowakowski, Eva L. Dyer<sup>*</sup>, Keith B. Hengen<sup>*</sup></em></p>
-            <p><em><sup>+</sup>Contributed equally as co-first authors</em></p>
-            <p class="conferencetitle">bioRxiv, Jul 2022.</p>
-            <span class="nowrap"><a href="https://www.biorxiv.org/content/10.1101/2022.07.10.499487v1.full.pdf" target="_blank" rel="noopener noreferrer"> <i class="fa fa-file-pdf"></i> Paper </a> &nbsp;</span>
-            <span class="nowrap"><a href="https://www.biorxiv.org/content/10.1101/2022.07.10.499487v1" target="_blank" rel="noopener noreferrer"> <i class="fa fa-desktop"></i> bioRxiv </a>&nbsp;</span>
-            <span class="nowrap"><a class="js-modal-trigger" data-target="lolcat-cite"> <i class="fa-solid fa-quote-right"></i> Cite</a></span>
         </div>
+        <div class="media-right">
+            <a class="js-modal-trigger" data-target="lolcat-modal"><i class="fa-solid fa-ellipsis"></i></a>
+        </div>
+    </article>
     </div>
+
+    <!-- > LOLCAT </!-->
+
 
     <div id="lolcat-modal" class="modal">
         <div class="modal-background"></div>
@@ -245,7 +399,24 @@
                 </div>
 
                 <div>
-                    <b>Abstract:</b> Cell type is hypothesized to be a key determinant of the role of a neuron within a circuit. However, it is unknown whether a neuron’s transcriptomic type influences the timing of its activity in the intact brain. In other words, can transcriptomic cell type be extracted from the time series of a neuron’s activity? To address this question, we developed a new deep learning architecture that learns features of interevent intervals across multiple timescales (milliseconds to >30 min). We show that transcriptomic cell class information is robustly embedded in the timing of single neuron activity recorded in the intact brain of behaving animals (calcium imaging and extracellular electrophysiology), as well as in a bio-realistic model of visual cortex. In contrast, we were unable to reliably extract cell identity from summary measures of rate, variance, and interevent interval statistics. We applied our analyses to the question of whether transcriptomic subtypes of excitatory neurons represent functionally distinct classes. In the calcium imaging dataset, which contains a diverse set of excitatory Cre lines, we found that a subset of excitatory cell types are computationally distinguishable based upon their Cre lines, and that excitatory types can be classified with higher accuracy when considering their cortical layer and projection class. Here we address the fundamental question of whether a neuron, within a complex cortical network, embeds a fingerprint of its transcriptomic identity into its activity. Our results reveal robust computational fingerprints for transcriptomic types and classes across diverse contexts, defined over multiple timescales.
+                    <b>Abstract:</b> Cell type is hypothesized to be a key determinant of the role of a neuron within a
+                    circuit. However, it is unknown whether a neuron’s transcriptomic type influences the timing of its
+                    activity in the intact brain. In other words, can transcriptomic cell type be extracted from the
+                    time series of a neuron’s activity? To address this question, we developed a new deep learning
+                    architecture that learns features of interevent intervals across multiple timescales (milliseconds
+                    to >30 min). We show that transcriptomic cell class information is robustly embedded in the timing
+                    of single neuron activity recorded in the intact brain of behaving animals (calcium imaging and
+                    extracellular electrophysiology), as well as in a bio-realistic model of visual cortex. In contrast,
+                    we were unable to reliably extract cell identity from summary measures of rate, variance, and
+                    interevent interval statistics. We applied our analyses to the question of whether transcriptomic
+                    subtypes of excitatory neurons represent functionally distinct classes. In the calcium imaging
+                    dataset, which contains a diverse set of excitatory Cre lines, we found that a subset of excitatory
+                    cell types are computationally distinguishable based upon their Cre lines, and that excitatory types
+                    can be classified with higher accuracy when considering their cortical layer and projection class.
+                    Here we address the fundamental question of whether a neuron, within a complex cortical network,
+                    embeds a fingerprint of its transcriptomic identity into its activity. Our results reveal robust
+                    computational fingerprints for transcriptomic types and classes across diverse contexts, defined
+                    over multiple timescales.
                 </div>
             </section>
             <footer class="modal-card-foot"></footer>
@@ -281,55 +452,83 @@
 
     <!-- > Transformer </!-->
     <div class="block container bd-post-content">
-        <h1 class="title">
-            <p class="is-size-55">
-                <i class="fa-solid fa-tree"></i>
-                Seeing the forest and the tree: Building representations of both individual and collective dynamics with <span class="nowrap">transformers
-                <a class="js-modal-trigger" data-target="forest-trans-modal"><i class="fa-solid fa-ellipsis"></i></a></span>
+    <article class="media bottom_padding">
+        <figure class="media-left">
+            <p class="image is-128x128">
+                <img src="covers/DALL·E%202022-12-22%2022.54.36%20-%20a%20forest%20of%20neurons,%20all%20converging%20to%20a%20single%20point%20in%20the%20sky,%20digital%20art..png">
             </p>
-            <p class="tagp">
-            <div class="dropdown is-hoverable">
-                <div class="dropdown-trigger">
+        </figure>
+        <div class="media-content">
+
+            <div class="block container bd-post-content">
+                <h1 class="title">
+                    <p class="is-size-55">
+                        <i class="fa-solid fa-tree"></i>
+                        Seeing the forest and the tree: Building representations of both individual and collective dynamics with
+                        <span class="nowrap">transformers
+                </span>
+                    </p>
+                    <p class="tagp">
+                    <div class="dropdown is-hoverable">
+                        <div class="dropdown-trigger">
                     <span class="ghostbutton">
                         <span class="tag is-success is-rounded is-light has-text-weight-bold">Neuroscience</span>
                     </span>
-                </div>
-                <div class="dropdown-menu" role="menu">
-                    <div class="dropdown-content">
-                        <div class="dropdown-item">
-                            <p class="has-text-weight-normal is-size-7">Our novel transformer model performs competitively on <b>behavior decoding</b> tasks for spiking data, and shows promising potential for <b>across-session</b> and <b>across-subject</b> generalization.</p>
+                        </div>
+                        <div class="dropdown-menu" role="menu">
+                            <div class="dropdown-content">
+                                <div class="dropdown-item">
+                                    <p class="has-text-weight-normal is-size-7">Our novel transformer model performs
+                                        competitively on <b>behavior decoding</b> tasks for spiking data, and shows promising
+                                        potential for <b>across-session</b> and <b>across-subject</b> generalization.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="dropdown is-hoverable">
-                <div class="dropdown-trigger">
+                    <div class="dropdown is-hoverable">
+                        <div class="dropdown-trigger">
                     <span class="ghostbutton">
                         <span class="tag is-rounded is-light has-text-weight-bold">Transformer</span>
                     </span>
-                </div>
-                <div class="dropdown-menu" role="menu">
-                    <div class="dropdown-content">
-                        <div class="dropdown-item">
-                            <p class="has-text-weight-normal is-size-7">We present a novel transformer architecture that first operates on individual time-series and then captures the interactions between them at a later stage; this induces a <b>permutation-invariance property</b> and can be used to transfer across systems of different size and order. </p>
+                        </div>
+                        <div class="dropdown-menu" role="menu">
+                            <div class="dropdown-content">
+                                <div class="dropdown-item">
+                                    <p class="has-text-weight-normal is-size-7">We present a novel transformer architecture that
+                                        first operates on individual time-series and then captures the interactions between them
+                                        at a later stage; this induces a <b>permutation-invariance property</b> and can be used
+                                        to transfer across systems of different size and order. </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
+                    </p>
+                </h1>
+                <div class="subtitle">
+                    <p class="authors"><em>Ran Liu, <b>Mehdi Azabou</b>, Max Dabagia, Jingyun Xiao, Eva L. Dyer</em></p>
+                    <p class="conferencetitle">Neural Information Processing Systems (NeurIPS), 2022</p>
+                    <span class="nowrap"><a href="https://nerdslab.github.io/EIT/" target="_blank" rel="noopener noreferrer"> <i
+                            class="fa fa-book"></i> Project page </a>&nbsp;</span>
+                    <span class="nowrap"><a href="https://arxiv.org/pdf/2206.06131.pdf" target="_blank"
+                                            rel="noopener noreferrer"> <i class="fa fa-file-pdf"></i> Paper </a>&nbsp;</span>
+                    <span class="nowrap"><a href="https://github.com/nerdslab/EIT" target="_blank" rel="noopener noreferrer"> <i
+                            class="fa fa-github"></i> Code </a>&nbsp;</span>
+                    <span class="nowrap"><a href="https://arxiv.org/abs/2206.06131" target="_blank"
+                                            rel="noopener noreferrer"> <i class="fa fa-desktop"></i> arXiv </a>&nbsp;</span>
+                    <span class="nowrap"><a class="js-modal-trigger" data-target="forest-trans-cite"> <i
+                            class="fa-solid fa-quote-right"></i> Cite</a></span>
                 </div>
             </div>
-
-            </p>
-        </h1>
-        <div class="subtitle">
-            <p class="authors"><em>Ran Liu, <b>Mehdi Azabou</b>, Max Dabagia, Jingyun Xiao, Eva L. Dyer</em></p>
-            <p class="conferencetitle">Neural Information Processing Systems (NeurIPS), 2022</p>
-            <span class="nowrap"><a href="https://nerdslab.github.io/EIT/" target="_blank" rel="noopener noreferrer"> <i class="fa fa-book"></i> Project page </a>&nbsp;</span>
-            <span class="nowrap"><a href="https://arxiv.org/pdf/2206.06131.pdf" target="_blank" rel="noopener noreferrer"> <i class="fa fa-file-pdf"></i> Paper </a>&nbsp;</span>
-            <span class="nowrap"><a href="https://github.com/nerdslab/EIT" target="_blank" rel="noopener noreferrer"> <i class="fa fa-github"></i> Code </a>&nbsp;</span>
-            <span class="nowrap"><a href="https://arxiv.org/abs/2206.06131" target="_blank" rel="noopener noreferrer"> <i class="fa fa-desktop"></i> arXiv </a>&nbsp;</span>
-            <span class="nowrap"><a class="js-modal-trigger" data-target="forest-trans-cite"> <i class="fa-solid fa-quote-right"></i> Cite</a></span>
         </div>
+        <div class="media-right">
+            <a class="js-modal-trigger" data-target="forest-trans-modal"><i class="fa-solid fa-ellipsis"></i></a>
+        </div>
+    </article>
     </div>
+
+
 
     <div id="forest-trans-modal" class="modal">
         <div class="modal-background"></div>
@@ -343,7 +542,22 @@
                     <img src="./assets/trans-forest.jpg" alt="">
                 </div>
                 <div>
-                    <b>Abstract:</b> Complex time-varying systems are often studied by abstracting away from the dynamics of individual components to build a model of the population-level dynamics from the start. However, when building a population-level description, it can be easy to lose sight of each individual and how each contributes to the larger picture. In this paper, we present a novel transformer architecture for learning from time-varying data that builds descriptions of both the individual as well as the collective population dynamics. Rather than combining all of our data into our model at the onset, we develop a separable architecture that operates on individual time-series first before passing them forward; this induces a permutation-invariance property and can be used to transfer across systems of different size and order. After demonstrating that our model can be applied to successfully recover complex interactions and dynamics in many-body systems, we apply our approach to populations of neurons in the nervous system. On neural activity datasets, we show that our multi-scale transformer not only yields robust decoding performance, but also provides impressive performance in transfer. Our results show that it is possible to learn from neurons in one animal's brain and transfer the model on neurons in a different animal's brain, with interpretable neuron correspondence across sets and animals. This finding opens up a new path to decode from and represent large collections of neurons.
+                    <b>Abstract:</b> Complex time-varying systems are often studied by abstracting away from the
+                    dynamics of individual components to build a model of the population-level dynamics from the start.
+                    However, when building a population-level description, it can be easy to lose sight of each
+                    individual and how each contributes to the larger picture. In this paper, we present a novel
+                    transformer architecture for learning from time-varying data that builds descriptions of both the
+                    individual as well as the collective population dynamics. Rather than combining all of our data into
+                    our model at the onset, we develop a separable architecture that operates on individual time-series
+                    first before passing them forward; this induces a permutation-invariance property and can be used to
+                    transfer across systems of different size and order. After demonstrating that our model can be
+                    applied to successfully recover complex interactions and dynamics in many-body systems, we apply our
+                    approach to populations of neurons in the nervous system. On neural activity datasets, we show that
+                    our multi-scale transformer not only yields robust decoding performance, but also provides
+                    impressive performance in transfer. Our results show that it is possible to learn from neurons in
+                    one animal's brain and transfer the model on neurons in a different animal's brain, with
+                    interpretable neuron correspondence across sets and animals. This finding opens up a new path to
+                    decode from and represent large collections of neurons.
                 </div>
             </section>
             <footer class="modal-card-foot"></footer>
@@ -376,45 +590,71 @@
         </div>
     </div>
 
-
     <div class="block container bd-post-content">
-        <h1 class="title">
-            <p class="is-size-55">
-                <i class="fa-solid fa-microscope"></i>
-                MTNeuro: A Benchmark for Evaluating Representations of Brain Structure Across Multiple Levels of <span class="nowrap">Abstraction
-                <a class="js-modal-trigger" data-target="quesada-22-modal"><i class="fa-solid fa-ellipsis"></i></a></span>
+    <article class="media bottom_padding">
+        <figure class="media-left">
+            <p class="image is-128x128">
+                <img src="covers/DALL·E%202022-12-22%2023.05.03%20-%20brain%20under%20the%20microscope,%20a%20neuron%20is%20visible%20through%20the%20lens%20of%20the%20microscope,%20digital%20art.png">
             </p>
+        </figure>
+        <div class="media-content">
+            <div class="block container bd-post-content">
+                <h1 class="title">
+                    <p class="is-size-55">
+                        <i class="fa-solid fa-microscope"></i>
+                        MTNeuro: A Benchmark for Evaluating Representations of Brain Structure Across Multiple Levels of <span
+                            class="nowrap">Abstraction
+                </span>
+                    </p>
 
-            <p class="tagp">
+                    <p class="tagp">
 
-            <div class="dropdown is-hoverable">
-                <div class="dropdown-trigger">
+                    <div class="dropdown is-hoverable">
+                        <div class="dropdown-trigger">
                     <span class="ghostbutton">
                         <span class="tag is-rounded is-light has-text-weight-bold">Neuroimaging</span>
                     </span>
-                </div>
-                <div class="dropdown-menu" role="menu">
-                    <div class="dropdown-content">
-                        <div class="dropdown-item">
-                            <p class="has-text-weight-normal is-size-7">We introduce a multi-task neuroimaging benchmark for micrometer-resolution <b>X-ray microtomography imaging</b> of a large thalamocortical section of mouse brain. </p>
+                        </div>
+                        <div class="dropdown-menu" role="menu">
+                            <div class="dropdown-content">
+                                <div class="dropdown-item">
+                                    <p class="has-text-weight-normal is-size-7">We introduce a multi-task neuroimaging benchmark
+                                        for micrometer-resolution <b>X-ray microtomography imaging</b> of a large
+                                        thalamocortical section of mouse brain. </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
+
+                    </p>
+                </h1>
+                <div class="subtitle">
+                    <p class="authors"><em>Jorge Quesada, Lakshmi Sathidevi, Ran Liu, Nauman Ahad, Joy M Jackson, <b>Mehdi
+                        Azabou</b>, Jingyun Xiao, Chris Liding, Carolina Urzay, William Gray-Roncal, Erik Christopher Johnson,
+                        Eva L. Dyer</em></p>
+                    <p class="conferencetitle">Neural Information Processing Systems (NeurIPS) Datasets and Benchmarks Track,
+                        2022</p>
+                    <span class="nowrap"><a href="https://mtneuro.github.io" target="_blank" rel="noopener noreferrer"> <i
+                            class="fa-solid fa-globe"></i> Website  </a>&nbsp;</span>
+                    <span class="nowrap"><a href="https://openreview.net/pdf?id=5xuowSQ17vy" target="_blank"
+                                            rel="noopener noreferrer"> <i class="fa fa-file-pdf"></i> Paper </a>&nbsp;</span>
+                    <span class="nowrap"><a href="https://github.com/MTNeuro/MTNeuro" target="_blank" rel="noopener noreferrer"> <i
+                            class="fa fa-github"></i> Code </a>&nbsp;</span>
+                    <span class="nowrap"><a href="https://openreview.net/forum?id=5xuowSQ17vy" target="_blank"
+                                            rel="noopener noreferrer"> <i
+                            class="fa fa-desktop"></i> OpenReview </a>&nbsp;</span>
+                    <span class="nowrap"><a class="js-modal-trigger" data-target="quesada-22-cite"> <i
+                            class="fa-solid fa-quote-right"></i> Cite</a></span>
                 </div>
             </div>
-
-
-            </p>
-        </h1>
-        <div class="subtitle">
-            <p class="authors"><em>Jorge Quesada, Lakshmi Sathidevi, Ran Liu, Nauman Ahad, Joy M Jackson, <b>Mehdi Azabou</b>, Jingyun Xiao, Chris Liding, Carolina Urzay, William Gray-Roncal, Erik Christopher Johnson, Eva L. Dyer</em></p>
-            <p class="conferencetitle">Neural Information Processing Systems (NeurIPS) Datasets and Benchmarks Track, 2022</p>
-            <span class="nowrap"><a href="https://mtneuro.github.io" target="_blank" rel="noopener noreferrer"> <i class="fa-solid fa-globe"></i> Website  </a>&nbsp;</span>
-            <span class="nowrap"><a href="https://openreview.net/pdf?id=5xuowSQ17vy" target="_blank" rel="noopener noreferrer"> <i class="fa fa-file-pdf"></i> Paper </a>&nbsp;</span>
-            <span class="nowrap"><a href="https://github.com/MTNeuro/MTNeuro" target="_blank" rel="noopener noreferrer"> <i class="fa fa-github"></i> Code </a>&nbsp;</span>
-            <span class="nowrap"><a href="https://openreview.net/forum?id=5xuowSQ17vy" target="_blank" rel="noopener noreferrer"> <i class="fa fa-desktop"></i> OpenReview </a>&nbsp;</span>
-            <span class="nowrap"><a class="js-modal-trigger" data-target="quesada-22-cite"> <i class="fa-solid fa-quote-right"></i> Cite</a></span>
         </div>
+        <div class="media-right">
+            <a class="js-modal-trigger" data-target="quesada-22-modal"><i class="fa-solid fa-ellipsis"></i></a>
+        </div>
+    </article>
     </div>
+
 
     <div id="quesada-22-modal" class="modal">
         <div class="modal-background"></div>
@@ -428,7 +668,23 @@
                     <img src="./assets/mtneuro.png" alt="">
                 </div>
                 <div>
-                    <b>Abstract:</b> There are multiple scales of abstraction from which we can describe the same image, depending on whether we are focusing on fine-grained details or a more global attribute of the image. In brain mapping, learning to automatically parse  images to build representations of both small-scale features (e.g., the presence of cells or blood vessels) and global properties of an image (e.g., source brain region) is a crucial and open challenge. However, most existing datasets and benchmarks for neuroanatomy consider only a single downstream task at a time. We introduce a new dataset, annotations, and multiple downstream tasks that provide diverse ways to readout information about brain structure and architecture from the same image. Our multi-task neuroimaging benchmark (MTNeuro) is built on volumetric, micrometer-resolution X-ray microtomography imaging of a large thalamocortical section of mouse brain, encompassing multiple cortical and subcortical regions, that reveals dense reconstructions of the underlying microstructure (i.e., cell bodies, vasculature, and axons). We generated a number of different prediction challenges and evaluated several supervised and self-supervised models for brain-region prediction and pixel-level semantic segmentation of microstructures.  Our experiments not only highlight the rich heterogeneity of this dataset, but also provide insights into how self-supervised approaches can be used to learn representations that  capture multiple attributes of a single image and perform well on a variety of downstream tasks.  Datasets, code, and pre-trained baseline models are provided at: https://mtneuro.github.io/.
+                    <b>Abstract:</b> There are multiple scales of abstraction from which we can describe the same image,
+                    depending on whether we are focusing on fine-grained details or a more global attribute of the
+                    image. In brain mapping, learning to automatically parse images to build representations of both
+                    small-scale features (e.g., the presence of cells or blood vessels) and global properties of an
+                    image (e.g., source brain region) is a crucial and open challenge. However, most existing datasets
+                    and benchmarks for neuroanatomy consider only a single downstream task at a time. We introduce a new
+                    dataset, annotations, and multiple downstream tasks that provide diverse ways to readout information
+                    about brain structure and architecture from the same image. Our multi-task neuroimaging benchmark
+                    (MTNeuro) is built on volumetric, micrometer-resolution X-ray microtomography imaging of a large
+                    thalamocortical section of mouse brain, encompassing multiple cortical and subcortical regions, that
+                    reveals dense reconstructions of the underlying microstructure (i.e., cell bodies, vasculature, and
+                    axons). We generated a number of different prediction challenges and evaluated several supervised
+                    and self-supervised models for brain-region prediction and pixel-level semantic segmentation of
+                    microstructures. Our experiments not only highlight the rich heterogeneity of this dataset, but also
+                    provide insights into how self-supervised approaches can be used to learn representations that
+                    capture multiple attributes of a single image and perform well on a variety of downstream tasks.
+                    Datasets, code, and pre-trained baseline models are provided at: https://mtneuro.github.io/.
                 </div>
             </section>
             <footer class="modal-card-foot"></footer>
@@ -455,64 +711,91 @@
         </div>
     </div>
 
-
     <div class="block container bd-post-content">
-        <h1 class="title">
-            <p class="is-size-55">
-                <i class="fa-solid fa-stopwatch"></i>
-                Learning Behavior Representations Through Multi-Timescale <span class="nowrap">Bootstrapping
-                <a class="js-modal-trigger" data-target="bams-modal"><i class="fa-solid fa-ellipsis"></i></a></span>
+    <article class="media bottom_padding">
+        <figure class="media-left">
+            <p class="image is-128x128">
+                <img src="covers/DALL·E%202022-12-22%2023.17.40%20-%20three%20mice%20in%20an%20arena,%20key%20points%20are%20drawn%20to%20track%20the%20mice%20and%20their%20trajectory,%20isometric%20view,%20high%20resolution,%203d%20render.png">
             </p>
+        </figure>
+        <div class="media-content">
 
-            <p class="tagp">
-            <div class="dropdown is-hoverable">
-                <div class="dropdown-trigger">
+            <div class="block container bd-post-content">
+                <h1 class="title">
+                    <p class="is-size-55">
+                        <i class="fa-solid fa-stopwatch"></i>
+                        Learning Behavior Representations Through Multi-Timescale <span class="nowrap">Bootstrapping
+                </span>
+                    </p>
+
+                    <p class="tagp">
+                    <div class="dropdown is-hoverable">
+                        <div class="dropdown-trigger">
                     <span class="ghostbutton">
                         <span class="tag is-danger is-rounded is-light has-text-weight-bold">Behavior</span>
                     </span>
-                </div>
-                <div class="dropdown-menu" role="menu">
-                    <div class="dropdown-content">
-                        <div class="dropdown-item">
-                            <p class="has-text-weight-normal is-size-7">Natural behavior consists of dynamics that are both unpredictable, can switch suddenly, and unfold over many different timescales. We introduce BAMS which can capture <b>multi-timescale</b> factors that help in <b>behavioral analysis</b>. We apply BAMS on <b>mouse</b> and <b>legged robots</b> dataset.</p>
+                        </div>
+                        <div class="dropdown-menu" role="menu">
+                            <div class="dropdown-content">
+                                <div class="dropdown-item">
+                                    <p class="has-text-weight-normal is-size-7">Natural behavior consists of dynamics that are
+                                        both unpredictable, can switch suddenly, and unfold over many different timescales. We
+                                        introduce BAMS which can capture <b>multi-timescale</b> factors that help in <b>behavioral
+                                            analysis</b>. We apply BAMS on <b>mouse</b> and <b>legged robots</b> dataset.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="dropdown  is-hoverable">
-                <div class="dropdown-trigger">
+                    <div class="dropdown  is-hoverable">
+                        <div class="dropdown-trigger">
                     <span class="ghostbutton">
                         <span class="tag is-warning is-rounded is-light has-text-weight-bold">SSL</span>
                     </span>
-                </div>
-                <div class="dropdown-menu" role="menu">
-                    <div class="dropdown-content">
-                        <div class="dropdown-item">
-                            <p class="has-text-weight-normal is-size-7">Self-Supervised Learning</p>
                         </div>
-                        <hr class="dropdown-divider">
-                        <div class="dropdown-item">
-                            <p class="has-text-weight-normal is-size-7">We introduce a multi-scale representation learning model: we combine a pooling module that aggregates features extracted over encoders with <b>different temporal receptive fields</b>, and design a set of latent objectives to <b>bootstrap the representations in each respective space</b>.</p>
+                        <div class="dropdown-menu" role="menu">
+                            <div class="dropdown-content">
+                                <div class="dropdown-item">
+                                    <p class="has-text-weight-normal is-size-7">Self-Supervised Learning</p>
+                                </div>
+                                <hr class="dropdown-divider">
+                                <div class="dropdown-item">
+                                    <p class="has-text-weight-normal is-size-7">We introduce a multi-scale representation
+                                        learning model: we combine a pooling module that aggregates features extracted over
+                                        encoders with <b>different temporal receptive fields</b>, and design a set of latent
+                                        objectives to <b>bootstrap the representations in each respective space</b>.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    </p>
+
+                </h1>
+                <div class="subtitle">
+                    <p class="authors"><em><b>Mehdi Azabou</b>, Michael Mendelson, Maks Sorokin, Shantanu Thakoor, Nauman Ahad,
+                        Carolina Urzay, Eva L Dyer</em></p>
+                    <p class="conferencetitle">Conference on Vision and Pattern Recognition (CVPR), Workshop on Multi-Agent
+                        Behavior (Oral), 2022</p>
+                    <span class="nowrap"><a href="https://arxiv.org/pdf/2206.07041.pdf" target="_blank"
+                                            rel="noopener noreferrer"> <i class="fa fa-file-pdf"></i> Paper </a> &nbsp;</span>
+                    <span class="nowrap"><a href="./assets/bams_poster.pdf" target="_blank" rel="noopener noreferrer"> <i
+                            class="fa-solid fa-person-chalkboard"></i> Poster </a> &nbsp;</span>
+                    <span class="nowrap"><a href="./assets/bams_slides.pdf" target="_blank" rel="noopener noreferrer"> <i
+                            class="fa-solid fa-person-chalkboard"></i> Slides </a> &nbsp;</span>
+                    <span class="nowrap"><a href="https://arxiv.org/abs/2206.07041" target="_blank"
+                                            rel="noopener noreferrer"> <i class="fa fa-desktop"></i> arXiv </a>&nbsp;</span>
+                    <span class="nowrap"><a class="js-modal-trigger" data-target="bams-cite"> <i
+                            class="fa-solid fa-quote-right"></i> Cite</a></span>
+
                 </div>
             </div>
-            </p>
-
-        </h1>
-        <div class="subtitle">
-            <p class="authors"><em><b>Mehdi Azabou</b>, Michael Mendelson, Maks Sorokin, Shantanu Thakoor, Nauman Ahad,
-                Carolina Urzay, Eva L Dyer</em></p>
-            <p class="conferencetitle">Conference on Vision and Pattern Recognition (CVPR), Workshop on Multi-Agent Behavior (Oral), 2022</p>
-            <span class="nowrap"><a href="https://arxiv.org/pdf/2206.07041.pdf" target="_blank" rel="noopener noreferrer"> <i class="fa fa-file-pdf"></i> Paper </a> &nbsp;</span>
-            <span class="nowrap"><a href="./assets/bams_poster.pdf" target="_blank" rel="noopener noreferrer"> <i class="fa-solid fa-person-chalkboard"></i> Poster </a> &nbsp;</span>
-            <span class="nowrap"><a href="./assets/bams_slides.pdf" target="_blank" rel="noopener noreferrer"> <i class="fa-solid fa-person-chalkboard"></i> Slides </a> &nbsp;</span>
-            <span class="nowrap"><a href="https://arxiv.org/abs/2206.07041" target="_blank" rel="noopener noreferrer"> <i class="fa fa-desktop"></i> arXiv </a>&nbsp;</span>
-            <span class="nowrap"><a class="js-modal-trigger" data-target="bams-cite"> <i class="fa-solid fa-quote-right"></i> Cite</a></span>
-
         </div>
+        <div class="media-right">
+            <a class="js-modal-trigger" data-target="bams-modal"><i class="fa-solid fa-ellipsis"></i></a>
+        </div>
+    </article>
     </div>
+
 
     <div id="bams-modal" class="modal">
         <div class="modal-background"></div>
@@ -522,7 +805,18 @@
                 <button class="delete" aria-label="close"></button>
             </header>
             <section class="modal-card-body">
-                <b>Abstract:</b> Natural behavior consists of dynamics that are both unpredictable, can switch suddenly, and unfold over many different timescales. While some success has been found in building representations of behavior under constrained or simplified task-based conditions, many of these models cannot be applied to free and naturalistic settings due to the fact that they assume a single scale of temporal dynamics. In this work, we introduce Bootstrap Across Multiple Scales (BAMS), a multi-scale representation learning model for behavior: we combine a pooling module that aggregates features extracted over encoders with different temporal receptive fields, and design a set of latent objectives to bootstrap the representations in each respective space to encourage disentanglement across different timescales. We first apply our method on a dataset of quadrupeds navigating in different terrain types, and show that our model captures the temporal complexity of behavior. We then apply our method to the MABe 2022 Multi-agent behavior challenge, where our model ranks 3rd overall and 1st on two subtasks, and show the importance of incorporating multi-timescales when analyzing behavior.
+                <b>Abstract:</b> Natural behavior consists of dynamics that are both unpredictable, can switch suddenly,
+                and unfold over many different timescales. While some success has been found in building representations
+                of behavior under constrained or simplified task-based conditions, many of these models cannot be
+                applied to free and naturalistic settings due to the fact that they assume a single scale of temporal
+                dynamics. In this work, we introduce Bootstrap Across Multiple Scales (BAMS), a multi-scale
+                representation learning model for behavior: we combine a pooling module that aggregates features
+                extracted over encoders with different temporal receptive fields, and design a set of latent objectives
+                to bootstrap the representations in each respective space to encourage disentanglement across different
+                timescales. We first apply our method on a dataset of quadrupeds navigating in different terrain types,
+                and show that our model captures the temporal complexity of behavior. We then apply our method to the
+                MABe 2022 Multi-agent behavior challenge, where our model ranks 3rd overall and 1st on two subtasks, and
+                show the importance of incorporating multi-timescales when analyzing behavior.
             </section>
             <footer class="modal-card-foot"></footer>
         </div>
@@ -550,62 +844,89 @@
         </div>
     </div>
 
-
     <div class="block container bd-post-content">
-        <h1 class="title">
-            <p class="is-size-55">
-                <i class="fa-solid fa-circle-nodes"></i>
-                Large-scale representation learning on graphs via <span class="nowrap">bootstrapping
-                <a class="js-modal-trigger" data-target="bgrl-modal"><i class="fa-solid fa-ellipsis"></i></a></span>
+    <article class="media bottom_padding">
+        <figure class="media-left">
+            <p class="image is-128x128">
+                <img src="covers/DALL·E%202022-12-22%2023.10.10%20-%20bootstrapping%20networks,%203d%20render,%20digital%20art.png">
             </p>
-            <p class="tagp">
-            <div class="dropdown is-hoverable">
-                <div class="dropdown-trigger">
+        </figure>
+        <div class="media-content">
+
+            <div class="block container bd-post-content">
+                <h1 class="title">
+                    <p class="is-size-55">
+                        <i class="fa-solid fa-circle-nodes"></i>
+                        Large-scale representation learning on graphs via <span class="nowrap">bootstrapping
+                </span>
+                    </p>
+                    <p class="tagp">
+                    <div class="dropdown is-hoverable">
+                        <div class="dropdown-trigger">
                     <span class="ghostbutton">
                         <span class="tag is-light is-rounded is-light has-text-weight-bold">Geometric Deep Learning</span>
                     </span>
-                </div>
-                <div class="dropdown-menu" role="menu">
-                    <div class="dropdown-content">
-                        <div class="dropdown-item">
-                            <p class="has-text-weight-normal is-size-7"> We train BGRL on several established node-level classification benchmarks, and show competitive results compared to supervised and self-supervised methods, while achieving a 2-10x reduction in memory costs compared to GRACE.</p>
+                        </div>
+                        <div class="dropdown-menu" role="menu">
+                            <div class="dropdown-content">
+                                <div class="dropdown-item">
+                                    <p class="has-text-weight-normal is-size-7"> We train BGRL on several established node-level
+                                        classification benchmarks, and show competitive results compared to supervised and
+                                        self-supervised methods, while achieving a 2-10x reduction in memory costs compared to
+                                        GRACE.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="dropdown  is-hoverable">
-                <div class="dropdown-trigger">
+                    <div class="dropdown  is-hoverable">
+                        <div class="dropdown-trigger">
                     <span class="ghostbutton">
                         <span class="tag is-warning is-rounded is-light has-text-weight-bold">SSL</span>
                     </span>
-                </div>
-                <div class="dropdown-menu" role="menu">
-                    <div class="dropdown-content">
-                        <div class="dropdown-item">
-                            <p class="has-text-weight-normal is-size-7">Self-Supervised Learning</p>
                         </div>
-                        <hr class="dropdown-divider">
-                        <div class="dropdown-item">
-                            <p class="has-text-weight-normal is-size-7">When trained with supervised data alone, GNNs can easily overfit and may fail to generalize. Using DropEdge and DropFeat augmentations, BGRL learns unsupervised graph representations.</p>
+                        <div class="dropdown-menu" role="menu">
+                            <div class="dropdown-content">
+                                <div class="dropdown-item">
+                                    <p class="has-text-weight-normal is-size-7">Self-Supervised Learning</p>
+                                </div>
+                                <hr class="dropdown-divider">
+                                <div class="dropdown-item">
+                                    <p class="has-text-weight-normal is-size-7">When trained with supervised data alone, GNNs
+                                        can easily overfit and may fail to generalize. Using DropEdge and DropFeat
+                                        augmentations, BGRL learns unsupervised graph representations.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    </p>
+
+                </h1>
+                <div class="subtitle">
+                    <p class="authors"><em>Shantanu Thakoor, Corentin Tallec, Mohammad Gheshlaghi Azar, <b>Mehdi Azabou</b>,
+                        Eva L. Dyer, Remi Munos, Petar Veličković, Michal Valko</em></p>
+                    <p class="conferencetitle">International Conference on Learning Representations (ICLR), 2022.</p>
+                    <span class="nowrap"><a href="https://openreview.net/pdf?id=0UXT6PpRpW" target="_blank"
+                                            rel="noopener noreferrer"> <i class="fa fa-file-pdf"></i> Paper </a> &nbsp;</span>
+                    <span class="nowrap"><a href="https://github.com/nerdslab/bgrl" target="_blank"
+                                            rel="noopener noreferrer"> <i class="fa fa-github"></i> Code </a> &nbsp;</span>
+                    <span class="nowrap"><a href="https://iclr.cc/media/iclr-2022/Slides/6390.pdf" target="_blank"
+                                            rel="noopener noreferrer"> <i class="fa-solid fa-person-chalkboard"></i> Slides </a> &nbsp;</span>
+                    <span class="nowrap"><a href="https://openreview.net/forum?id=0UXT6PpRpW" target="_blank"
+                                            rel="noopener noreferrer"> <i
+                            class="fa fa-desktop"></i> OpenReview </a> &nbsp;</span>
+                    <span class="nowrap"><a href="https://arxiv.org/abs/2102.06514" target="_blank"
+                                            rel="noopener noreferrer"> <i class="fa fa-desktop"></i> arXiv</a>&nbsp;</span>
+                    <span class="nowrap"><a class="js-modal-trigger" data-target="bgrl-cite"> <i
+                            class="fa-solid fa-quote-right"></i> Cite</a></span>
                 </div>
             </div>
-            </p>
 
-        </h1>
-        <div class="subtitle">
-            <p class="authors"><em>Shantanu Thakoor, Corentin Tallec, Mohammad Gheshlaghi Azar, <b>Mehdi Azabou</b>,
-                Eva L. Dyer, Remi Munos, Petar Veličković, Michal Valko</em></p>
-            <p class="conferencetitle">International Conference on Learning Representations (ICLR), 2022.</p>
-            <span class="nowrap"><a href="https://openreview.net/pdf?id=0UXT6PpRpW" target="_blank" rel="noopener noreferrer"> <i class="fa fa-file-pdf"></i> Paper </a> &nbsp;</span>
-            <span class="nowrap"><a href="https://github.com/nerdslab/bgrl" target="_blank" rel="noopener noreferrer"> <i class="fa fa-github"></i> Code </a> &nbsp;</span>
-            <span class="nowrap"><a href="https://iclr.cc/media/iclr-2022/Slides/6390.pdf" target="_blank" rel="noopener noreferrer"> <i class="fa-solid fa-person-chalkboard"></i> Slides </a> &nbsp;</span>
-            <span class="nowrap"><a href="https://openreview.net/forum?id=0UXT6PpRpW" target="_blank" rel="noopener noreferrer"> <i class="fa fa-desktop"></i> OpenReview </a> &nbsp;</span>
-            <span class="nowrap"><a href="https://arxiv.org/abs/2102.06514" target="_blank" rel="noopener noreferrer"> <i class="fa fa-desktop"></i> arXiv</a>&nbsp;</span>
-            <span class="nowrap"><a class="js-modal-trigger" data-target="bgrl-cite"> <i class="fa-solid fa-quote-right"></i> Cite</a></span>
         </div>
+        <div class="media-right">
+            <a class="js-modal-trigger" data-target="bgrl-modal"><i class="fa-solid fa-ellipsis"></i></a>
+        </div>
+    </article>
     </div>
 
     <div id="bgrl-modal" class="modal">
@@ -620,7 +941,21 @@
                     <img src="./assets/bgrl_arch.png" alt="">
                 </div>
                 <div>
-                    <b>Abstract:</b> Self-supervised learning provides a promising path towards eliminating the need for costly label information in representation learning on graphs. However, to achieve state-of-the-art performance, methods often need large numbers of negative examples and rely on complex augmentations. This can be prohibitively expensive, especially for large graphs. To address these challenges, we introduce Bootstrapped Graph Latents (BGRL) - a graph representation learning method that learns by predicting alternative augmentations of the input. BGRL uses only simple augmentations and alleviates the need for contrasting with negative examples, and is thus scalable by design. BGRL outperforms or matches prior methods on several established benchmarks, while achieving a 2-10x reduction in memory costs. Furthermore, we show that BGRL can be scaled up to extremely large graphs with hundreds of millions of nodes in the semi-supervised regime - achieving state-of-the-art performance and improving over supervised baselines where representations are shaped only through label information. In particular, our solution centered on BGRL constituted one of the winning entries to the Open Graph Benchmark - Large Scale Challenge at KDD Cup 2021, on a graph orders of magnitudes larger than all previously available benchmarks, thus demonstrating the scalability and effectiveness of our approach.
+                    <b>Abstract:</b> Self-supervised learning provides a promising path towards eliminating the need for
+                    costly label information in representation learning on graphs. However, to achieve state-of-the-art
+                    performance, methods often need large numbers of negative examples and rely on complex
+                    augmentations. This can be prohibitively expensive, especially for large graphs. To address these
+                    challenges, we introduce Bootstrapped Graph Latents (BGRL) - a graph representation learning method
+                    that learns by predicting alternative augmentations of the input. BGRL uses only simple
+                    augmentations and alleviates the need for contrasting with negative examples, and is thus scalable
+                    by design. BGRL outperforms or matches prior methods on several established benchmarks, while
+                    achieving a 2-10x reduction in memory costs. Furthermore, we show that BGRL can be scaled up to
+                    extremely large graphs with hundreds of millions of nodes in the semi-supervised regime - achieving
+                    state-of-the-art performance and improving over supervised baselines where representations are
+                    shaped only through label information. In particular, our solution centered on BGRL constituted one
+                    of the winning entries to the Open Graph Benchmark - Large Scale Challenge at KDD Cup 2021, on a
+                    graph orders of magnitudes larger than all previously available benchmarks, thus demonstrating the
+                    scalability and effectiveness of our approach.
                 </div>
             </section>
             <footer class="modal-card-foot"></footer>
@@ -652,7 +987,6 @@ url={https://openreview.net/forum?id=0UXT6PpRpW}
     </div>
 
 
-
     <div class="block container bd-post-content">
         <h2 class="title">
             <p class="is-size-66">
@@ -662,73 +996,103 @@ url={https://openreview.net/forum?id=0UXT6PpRpW}
     </div>
 
     <div class="block container bd-post-content">
-        <h1 class="title">
-            <p class="is-size-55">
-                <i class="fa-solid fa-shuffle"></i>
-                Drop, Swap, and Generate: A Self-Supervised Approach for Generating Neural <span class="nowrap">Activity
-                <a class="js-modal-trigger" data-target="swap-vae-modal"><i class="fa-solid fa-ellipsis"></i></a></span>
+    <article class="media bottom_padding">
+        <figure class="media-left">
+            <p class="image is-128x128">
+                <img src="covers/DALL·E%202022-12-23%2000.11.48%20-%20shuffle%203d,%20style%20transfer,%20high%20resolution%20render,%20colorful.png">
             </p>
-            <p class="tagp">
-            <div class="dropdown is-hoverable">
-                <div class="dropdown-trigger">
+        </figure>
+        <div class="media-content">
+
+            <div class="block container bd-post-content">
+                <h1 class="title">
+                    <p class="is-size-55">
+                        <i class="fa-solid fa-shuffle"></i>
+                        Drop, Swap, and Generate: A Self-Supervised Approach for Generating Neural <span class="nowrap">Activity
+                </span>
+                    </p>
+                    <p class="tagp">
+                    <div class="dropdown is-hoverable">
+                        <div class="dropdown-trigger">
                     <span class="ghostbutton">
                         <span class="tag is-success is-rounded is-light has-text-weight-bold">Neuroscience</span>
                     </span>
-                </div>
-                <div class="dropdown-menu" role="menu">
-                    <div class="dropdown-content">
-                        <div class="dropdown-item">
-                            <p class="has-text-weight-normal is-size-7">Neuroscience</p>
+                        </div>
+                        <div class="dropdown-menu" role="menu">
+                            <div class="dropdown-content">
+                                <div class="dropdown-item">
+                                    <p class="has-text-weight-normal is-size-7">Neuroscience</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="dropdown  is-hoverable">
-                <div class="dropdown-trigger">
+                    <div class="dropdown  is-hoverable">
+                        <div class="dropdown-trigger">
                     <span class="ghostbutton">
                         <span class="tag is-warning is-rounded is-light has-text-weight-bold">SSL</span>
                     </span>
-                </div>
-                <div class="dropdown-menu" role="menu">
-                    <div class="dropdown-content">
-                        <div class="dropdown-item">
-                            <p class="has-text-weight-normal is-size-7">Self-Supervised Learning</p>
+                        </div>
+                        <div class="dropdown-menu" role="menu">
+                            <div class="dropdown-content">
+                                <div class="dropdown-item">
+                                    <p class="has-text-weight-normal is-size-7">Self-Supervised Learning</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="dropdown is-hoverable">
-                <div class="dropdown-trigger">
+                    <div class="dropdown is-hoverable">
+                        <div class="dropdown-trigger">
                     <span class="ghostbutton">
                         <span class="tag is-rounded is-light has-text-weight-bold">Generative Modeling</span>
                     </span>
-                </div>
-                <div class="dropdown-menu" role="menu">
-                    <div class="dropdown-content">
-                        <div class="dropdown-item">
-                            <p class="has-text-weight-normal is-size-7">Generative modeling</p>
+                        </div>
+                        <div class="dropdown-menu" role="menu">
+                            <div class="dropdown-content">
+                                <div class="dropdown-item">
+                                    <p class="has-text-weight-normal is-size-7">Generative modeling</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
+                    </p>
+                </h1>
+                <div class="subtitle">
+                    <p class="authors"><em>Ran Liu, <b>Mehdi Azabou</b>, Max Dabagia, Chi-Heng Lin, Mohammad Gheshlaghi Azar,
+                        Keith B. Hengen,
+                        Michal Valko, Eva L. Dyer</em></p>
+                    <p class="conferencetitle">Neural Information Processing Systems (NeurIPS), accepted for Oral (1%
+                        submissions), 2021</p>
+                    <span class="nowrap"><a href="https://nerdslab.github.io/SwapVAE/" target="_blank"
+                                            rel="noopener noreferrer"> <i class="fa fa-book"></i> Project page </a>&nbsp;</span>
+                    <span class="nowrap"><a
+                            href="https://papers.nips.cc/paper/2021/file/58182b82110146887c02dbd78719e3d5-Paper.pdf"
+                            target="_blank" rel="noopener noreferrer"> <i class="fa fa-file-pdf"></i> Paper </a>&nbsp;</span>
+                    <span class="nowrap"><a href="https://github.com/nerdslab/SwapVAE" target="_blank"
+                                            rel="noopener noreferrer"> <i class="fa fa-github"></i> Code </a>&nbsp;</span>
+                    <span class="nowrap"><a
+                            href="https://slideslive.com/38968190/drop-swap-and-generate-a-selfsupervised-approach-for-generating-neural-activity?ref=speaker-25659"
+                            target="_blank" rel="noopener noreferrer"> <i class="fa-solid fa-person-chalkboard"></i> Talk </a>&nbsp;</span>
+                    <span class="nowrap"><a
+                            href="https://papers.nips.cc/paper/2021/hash/58182b82110146887c02dbd78719e3d5-Abstract.html"
+                            target="_blank" rel="noopener noreferrer"> <i class="fa fa-desktop"></i> NeurIPS Proceedings </a>&nbsp;</span>
+                    <span class="nowrap"><a href="https://openreview.net/forum?id=ZRPRjfAF3yd" target="_blank"
+                                            rel="noopener noreferrer"> <i
+                            class="fa fa-desktop"></i> OpenReview </a>&nbsp;</span>
+                    <span class="nowrap"><a href="https://arxiv.org/abs/2111.02338" target="_blank"
+                                            rel="noopener noreferrer"> <i class="fa fa-desktop"></i> arXiv </a>&nbsp;</span>
+                    <span class="nowrap"><a class="js-modal-trigger" data-target="swap-vae-cite"> <i
+                            class="fa-solid fa-quote-right"></i> Cite</a></span>
                 </div>
             </div>
-
-            </p>
-        </h1>
-        <div class="subtitle">
-            <p class="authors"><em>Ran Liu, <b>Mehdi Azabou</b>, Max Dabagia, Chi-Heng Lin, Mohammad Gheshlaghi Azar, Keith B. Hengen,
-                Michal Valko, Eva L. Dyer</em></p>
-            <p class="conferencetitle">Neural Information Processing Systems (NeurIPS), accepted for Oral (1% submissions), 2021</p>
-            <span class="nowrap"><a href="https://nerdslab.github.io/SwapVAE/" target="_blank" rel="noopener noreferrer"> <i class="fa fa-book"></i> Project page </a>&nbsp;</span>
-            <span class="nowrap"><a href="https://papers.nips.cc/paper/2021/file/58182b82110146887c02dbd78719e3d5-Paper.pdf" target="_blank" rel="noopener noreferrer"> <i class="fa fa-file-pdf"></i> Paper </a>&nbsp;</span>
-            <span class="nowrap"><a href="https://github.com/nerdslab/SwapVAE" target="_blank" rel="noopener noreferrer"> <i class="fa fa-github"></i> Code </a>&nbsp;</span>
-            <span class="nowrap"><a href="https://slideslive.com/38968190/drop-swap-and-generate-a-selfsupervised-approach-for-generating-neural-activity?ref=speaker-25659" target="_blank" rel="noopener noreferrer"> <i class="fa-solid fa-person-chalkboard"></i> Talk </a>&nbsp;</span>
-            <span class="nowrap"><a href="https://papers.nips.cc/paper/2021/hash/58182b82110146887c02dbd78719e3d5-Abstract.html" target="_blank" rel="noopener noreferrer"> <i class="fa fa-desktop"></i> NeurIPS Proceedings </a>&nbsp;</span>
-            <span class="nowrap"><a href="https://openreview.net/forum?id=ZRPRjfAF3yd" target="_blank" rel="noopener noreferrer"> <i class="fa fa-desktop"></i> OpenReview </a>&nbsp;</span>
-            <span class="nowrap"><a href="https://arxiv.org/abs/2111.02338" target="_blank" rel="noopener noreferrer"> <i class="fa fa-desktop"></i> arXiv </a>&nbsp;</span>
-            <span class="nowrap"><a class="js-modal-trigger" data-target="swap-vae-cite"> <i class="fa-solid fa-quote-right"></i> Cite</a></span>
         </div>
+        <div class="media-right">
+            <a class="js-modal-trigger" data-target="swap-vae-modal"><i class="fa-solid fa-ellipsis"></i></a>
+        </div>
+    </article>
     </div>
+
 
     <div id="swap-vae-modal" class="modal">
         <div class="modal-background"></div>
@@ -742,7 +1106,19 @@ url={https://openreview.net/forum?id=0UXT6PpRpW}
                     <img src="./assets/overview_swapVAE.jpg" alt="">
                 </div>
                 <div>
-                    <b>Abstract:</b> Meaningful and simplified representations of neural activity can yield insights into how and what information is being processed within a neural circuit. However, without labels, finding representations that reveal the link between the brain and behavior can be challenging. Here, we introduce a novel unsupervised approach for learning disentangled representations of neural activity called SwapVAE. Our approach combines a generative modeling framework with an instance-specific alignment loss that tries to maximize the representational similarity between transformed views of the input (brain state). These transformed (or augmented) views are created by dropping out neurons and jittering samples in time, which intuitively should lead the network to a representation that maintains both temporal consistency and invariance to the specific neurons used to represent the neural state. Through evaluations on both synthetic data and neural recordings from hundreds of neurons in different primate brains, we show that it is possible to build representations that disentangle neural datasets along relevant latent dimensions linked to behavior.
+                    <b>Abstract:</b> Meaningful and simplified representations of neural activity can yield insights
+                    into how and what information is being processed within a neural circuit. However, without labels,
+                    finding representations that reveal the link between the brain and behavior can be challenging.
+                    Here, we introduce a novel unsupervised approach for learning disentangled representations of neural
+                    activity called SwapVAE. Our approach combines a generative modeling framework with an
+                    instance-specific alignment loss that tries to maximize the representational similarity between
+                    transformed views of the input (brain state). These transformed (or augmented) views are created by
+                    dropping out neurons and jittering samples in time, which intuitively should lead the network to a
+                    representation that maintains both temporal consistency and invariance to the specific neurons used
+                    to represent the neural state. Through evaluations on both synthetic data and neural recordings from
+                    hundreds of neurons in different primate brains, we show that it is possible to build
+                    representations that disentangle neural datasets along relevant latent dimensions linked to
+                    behavior.
                 </div>
             </section>
             <footer class="modal-card-foot"></footer>
@@ -776,74 +1152,100 @@ url={https://openreview.net/forum?id=0UXT6PpRpW}
         </div>
     </div>
 
-
     <div class="block container bd-post-content">
-        <h1 class="title">
-            <p class="is-size-55">
-                <i class="fa-solid fa-cat"></i>
-                Mine your own view: Self-supervised learning through across-sample <span class="nowrap">prediction
-                <a class="js-modal-trigger" data-target="myow-modal"><i class="fa-solid fa-ellipsis"></i></a></span>
+    <article class="media bottom_padding">
+        <figure class="media-left">
+            <p class="image is-128x128">
+                <img src="covers/DALL·E%202022-12-22%2021.59.42%20-%20humanoid%20robot%20holding%20a%20pickaxe,%20isometric%20view,%20studio%20photography,%20art.png">
+<!--
+                <img src="covers/DALL·E%202022-12-22%2021.38.50%20-%20humanoid%20robot%20that%20looks%20like%20a%20detective,%20inspecting%20a%20stack%20of%20images%20(of%20animals%20and%20cars),%20top%20down%20view,%20trending%20on%20artstation.png">
+            -->
             </p>
-            <p class="tagp">
-            <div class="dropdown is-hoverable">
-                <div class="dropdown-trigger">
+        </figure>
+        <div class="media-content">
+            <div class="block container bd-post-content">
+                <h1 class="title">
+                    <p class="is-size-55">
+                        <i class="fa-solid fa-cat"></i>
+                        Mine your own view: Self-supervised learning through across-sample <span class="nowrap">prediction
+                </span>
+                    </p>
+                    <p class="tagp">
+                    <div class="dropdown is-hoverable">
+                        <div class="dropdown-trigger">
                     <span class="ghostbutton">
                         <span class="tag is-success is-rounded is-light has-text-weight-bold">Neuroscience</span>
                     </span>
-                </div>
-                <div class="dropdown-menu" role="menu">
-                    <div class="dropdown-content">
-                        <div class="dropdown-item">
-                            <p class="has-text-weight-normal is-size-7">Neuroscience</p>
+                        </div>
+                        <div class="dropdown-menu" role="menu">
+                            <div class="dropdown-content">
+                                <div class="dropdown-item">
+                                    <p class="has-text-weight-normal is-size-7">Neuroscience</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="dropdown  is-hoverable">
-                <div class="dropdown-trigger">
+                    <div class="dropdown  is-hoverable">
+                        <div class="dropdown-trigger">
                     <span class="ghostbutton">
                         <span class="tag is-warning is-rounded is-light has-text-weight-bold">SSL</span>
                     </span>
-                </div>
-                <div class="dropdown-menu" role="menu">
-                    <div class="dropdown-content">
-                        <div class="dropdown-item">
-                            <p class="has-text-weight-normal is-size-7">Self-Supervised Learning</p>
+                        </div>
+                        <div class="dropdown-menu" role="menu">
+                            <div class="dropdown-content">
+                                <div class="dropdown-item">
+                                    <p class="has-text-weight-normal is-size-7">Self-Supervised Learning</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="dropdown is-hoverable">
-                <div class="dropdown-trigger">
+                    <div class="dropdown is-hoverable">
+                        <div class="dropdown-trigger">
                     <span class="ghostbutton">
                         <span class="tag is-rounded is-light has-text-weight-bold">Vision</span>
                     </span>
-                </div>
-                <div class="dropdown-menu" role="menu">
-                    <div class="dropdown-content">
-                        <div class="dropdown-item">
-                            <p class="has-text-weight-normal is-size-7">Computer Vision</p>
+                        </div>
+                        <div class="dropdown-menu" role="menu">
+                            <div class="dropdown-content">
+                                <div class="dropdown-item">
+                                    <p class="has-text-weight-normal is-size-7">Computer Vision</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
+                    </p>
+                </h1>
+                <div class="subtitle">
+                    <p class="authors"><em><b>Mehdi Azabou</b>, Mohammad Gheshlaghi Azar, Ran Liu, Chi-Heng Lin, Erik C.
+                        Johnson,
+                        Kiran Bhaskaran-Nair, Max Dabagia, Bernardo Avila-Pires, Lindsey Kitchell,
+                        Keith B. Hengen, William Gray-Roncal, Michal Valko, Eva L. Dyer</em></p>
+                    <p class="conferencetitle">Neural Information Processing Systems (NeurIPS), Workshop on Self-supervised
+                        Learning: Theory and Practice (Oral), Feb 2021</p>
+                    <span class="nowrap"><a href="https://nerdslab.github.io/myow/" target="_blank"
+                                            rel="noopener noreferrer"> <i class="fa fa-book"></i> Project page </a>&nbsp;</span>
+                    <span class="nowrap"><a href="https://arxiv.org/pdf/2102.10106.pdf" target="_blank"
+                                            rel="noopener noreferrer"> <i class="fa fa-file-pdf"></i> Paper </a>&nbsp;</span>
+                    <span class="nowrap"><a href="https://github.com/nerdslab/myow" target="_blank"
+                                            rel="noopener noreferrer"> <i class="fa fa-github"></i> Code </a>&nbsp;</span>
+                    <span class="nowrap"><a href="https://sslneurips21.github.io/files/Poster/poster%2038.pdf" target="_blank"
+                                            rel="noopener noreferrer"> <i class="fa-solid fa-person-chalkboard"></i> Poster </a>&nbsp;</span>
+                    <span class="nowrap"><a
+                            href="https://slideslive.com/38972685/mine-your-own-view-a-selfsupervised-approach-for-learning-representations-of-neural-activity?ref=recommended"
+                            target="_blank" rel="noopener noreferrer"> <i class="fa-solid fa-person-chalkboard"></i> Talk </a>&nbsp;</span>
+                    <span class="nowrap"><a href="https://arxiv.org/abs/2102.10106" target="_blank"
+                                            rel="noopener noreferrer"> <i class="fa fa-desktop"></i> arXiv </a>&nbsp;</span>
+                    <span class="nowrap"><a class="js-modal-trigger" data-target="myow-cite"> <i
+                            class="fa-solid fa-quote-right"></i> Cite</a></span>
                 </div>
             </div>
-
-            </p>
-        </h1>
-        <div class="subtitle">
-            <p class="authors"><em><b>Mehdi Azabou</b>, Mohammad Gheshlaghi Azar, Ran Liu, Chi-Heng Lin, Erik C. Johnson,
-                Kiran Bhaskaran-Nair, Max Dabagia, Bernardo Avila-Pires, Lindsey Kitchell,
-                Keith B. Hengen, William Gray-Roncal, Michal Valko, Eva L. Dyer</em></p>
-            <p class="conferencetitle">Neural Information Processing Systems (NeurIPS), Workshop on Self-supervised Learning: Theory and Practice (Oral), Feb 2021</p>
-            <span class="nowrap"><a href="https://nerdslab.github.io/myow/" target="_blank" rel="noopener noreferrer"> <i class="fa fa-book"></i> Project page </a>&nbsp;</span>
-            <span class="nowrap"><a href="https://arxiv.org/pdf/2102.10106.pdf" target="_blank" rel="noopener noreferrer"> <i class="fa fa-file-pdf"></i> Paper </a>&nbsp;</span>
-            <span class="nowrap"><a href="https://github.com/nerdslab/myow" target="_blank" rel="noopener noreferrer"> <i class="fa fa-github"></i> Code </a>&nbsp;</span>
-            <span class="nowrap"><a href="https://sslneurips21.github.io/files/Poster/poster%2038.pdf" target="_blank" rel="noopener noreferrer"> <i class="fa-solid fa-person-chalkboard"></i> Poster </a>&nbsp;</span>
-            <span class="nowrap"><a href="https://slideslive.com/38972685/mine-your-own-view-a-selfsupervised-approach-for-learning-representations-of-neural-activity?ref=recommended" target="_blank" rel="noopener noreferrer"> <i class="fa-solid fa-person-chalkboard"></i> Talk </a>&nbsp;</span>
-            <span class="nowrap"><a href="https://arxiv.org/abs/2102.10106" target="_blank" rel="noopener noreferrer"> <i class="fa fa-desktop"></i> arXiv </a>&nbsp;</span>
-            <span class="nowrap"><a class="js-modal-trigger" data-target="myow-cite"> <i class="fa-solid fa-quote-right"></i> Cite</a></span>
         </div>
+        <div class="media-right">
+            <a class="js-modal-trigger" data-target="myow-modal"><i class="fa-solid fa-ellipsis"></i></a>
+        </div>
+    </article>
     </div>
 
     <div id="myow-modal" class="modal">
@@ -858,7 +1260,21 @@ url={https://openreview.net/forum?id=0UXT6PpRpW}
                     <img src="./assets/myow_mined.gif" alt="">
                 </div>
                 <div>
-                <b>Abstract:</b> State-of-the-art methods for self-supervised learning (SSL) build representations by maximizing the similarity between different transformed "views" of a sample. Without sufficient diversity in the transformations used to create views, however, it can be difficult to overcome nuisance variables in the data and build rich representations. This motivates the use of the dataset itself to find similar, yet distinct, samples to serve as views for one another. In this paper, we introduce Mine Your Own vieW (MYOW), a new approach for self-supervised learning that looks within the dataset to define diverse targets for prediction. The idea behind our approach is to actively mine views, finding samples that are neighbors in the representation space of the network, and then predict, from one sample's latent representation, the representation of a nearby sample. After showing the promise of MYOW on benchmarks used in computer vision, we highlight the power of this idea in a novel application in neuroscience where SSL has yet to be applied. When tested on multi-unit neural recordings, we find that MYOW outperforms other self-supervised approaches in all examples (in some cases by more than 10%), and often surpasses the supervised baseline. With MYOW, we show that it is possible to harness the diversity of the data to build rich views and leverage self-supervision in new domains where augmentations are limited or unknown.
+                    <b>Abstract:</b> State-of-the-art methods for self-supervised learning (SSL) build representations
+                    by maximizing the similarity between different transformed "views" of a sample. Without sufficient
+                    diversity in the transformations used to create views, however, it can be difficult to overcome
+                    nuisance variables in the data and build rich representations. This motivates the use of the dataset
+                    itself to find similar, yet distinct, samples to serve as views for one another. In this paper, we
+                    introduce Mine Your Own vieW (MYOW), a new approach for self-supervised learning that looks within
+                    the dataset to define diverse targets for prediction. The idea behind our approach is to actively
+                    mine views, finding samples that are neighbors in the representation space of the network, and then
+                    predict, from one sample's latent representation, the representation of a nearby sample. After
+                    showing the promise of MYOW on benchmarks used in computer vision, we highlight the power of this
+                    idea in a novel application in neuroscience where SSL has yet to be applied. When tested on
+                    multi-unit neural recordings, we find that MYOW outperforms other self-supervised approaches in all
+                    examples (in some cases by more than 10%), and often surpasses the supervised baseline. With MYOW,
+                    we show that it is possible to harness the diversity of the data to build rich views and leverage
+                    self-supervision in new domains where augmentations are limited or unknown.
                 </div>
             </section>
             <footer class="modal-card-foot"></footer>
@@ -887,58 +1303,78 @@ url={https://openreview.net/forum?id=0UXT6PpRpW}
         </div>
     </div>
 
-
     <div class="block container bd-post-content">
-        <h1 class="title">
-            <p class="is-size-55">
-                <i class="fa-solid fa-brain"></i>
-                Using self-supervision and augmentations to build insights into neural <span class="nowrap">coding
-                <a class="js-modal-trigger" data-target="neuro-ssl-modal">
-                    <i class="fa-solid fa-ellipsis"></i>
-                </a></span>
+    <article class="media bottom_padding">
+        <figure class="media-left">
+            <p class="image is-128x128">
+                <img src="covers/DALL·E%202022-12-22%2021.53.33%20-%20shadow%20art%20hyperrealistic%20colorful%20brain,%20studio%20photography,%20isometric%20view.png">
             </p>
-            <p class="tagp">
-            <div class="dropdown is-hoverable">
-                <div class="dropdown-trigger">
+        </figure>
+        <div class="media-content">
+            <div class="block container bd-post-content">
+                <h1 class="title">
+                    <p class="is-size-55">
+                        <i class="fa-solid fa-brain"></i>
+                        Using self-supervision and augmentations to build insights into neural <span class="nowrap">coding
+                </span>
+                    </p>
+                    <p class="tagp">
+                    <div class="dropdown is-hoverable">
+                        <div class="dropdown-trigger">
                     <span class="ghostbutton">
                         <span class="tag is-success is-rounded is-light has-text-weight-bold">Neuroscience</span>
                     </span>
-                </div>
-                <div class="dropdown-menu" role="menu">
-                    <div class="dropdown-content">
-                        <div class="dropdown-item">
-                            <p class="has-text-weight-normal is-size-7">Neuroscience</p>
+                        </div>
+                        <div class="dropdown-menu" role="menu">
+                            <div class="dropdown-content">
+                                <div class="dropdown-item">
+                                    <p class="has-text-weight-normal is-size-7">Neuroscience</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="dropdown  is-hoverable">
-                <div class="dropdown-trigger">
+                    <div class="dropdown  is-hoverable">
+                        <div class="dropdown-trigger">
                     <span class="ghostbutton">
                         <span class="tag is-warning is-rounded is-light has-text-weight-bold">SSL</span>
                     </span>
-                </div>
-                <div class="dropdown-menu" role="menu">
-                    <div class="dropdown-content">
-                        <div class="dropdown-item">
-                            <p class="has-text-weight-normal is-size-7">Self-Supervised Learning</p>
+                        </div>
+                        <div class="dropdown-menu" role="menu">
+                            <div class="dropdown-content">
+                                <div class="dropdown-item">
+                                    <p class="has-text-weight-normal is-size-7">Self-Supervised Learning</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    </p>
+                </h1>
+                <div class="subtitle">
+                    <p class="authors"><em><b>Mehdi Azabou</b><sup>+</sup>, Max Dabagia<sup>+</sup>, Ran Liu<sup>+</sup>,
+                        Chi-Heng Lin, Keith B. Hengen, Eva L. Dyer</em></p>
+                    <p><em><sup>+</sup>Contributed equally as co-first authors</em></p>
+                    <p class="conferencetitle">Neural Information Processing Systems (NeurIPS), Workshop on Self-supervised
+                        Learning: Theory and Practice, Feb 2021</p>
+                    <span class="nowrap"><a href="https://sslneurips21.github.io/files/CameraReady/neural_ssl_workshop.pdf"
+                                            target="_blank" rel="noopener noreferrer"> <i class="fa fa-file-pdf"></i> Paper </a>&nbsp;</span>
+                    <span class="nowrap"><a href="https://sslneurips21.github.io/files/Poster/poster%2036.pdf" target="_blank"
+                                            rel="noopener noreferrer"> <i class="fa-solid fa-person-chalkboard"></i> Poster</a>&nbsp;</span>
+                    <span class="nowrap"><a class="js-modal-trigger" data-target="neuro-ssl-cite"> <i
+                            class="fa-solid fa-quote-right"></i> Cite</a></span>
+
                 </div>
             </div>
-            </p>
-        </h1>
-        <div class="subtitle">
-            <p class="authors"><em><b>Mehdi Azabou</b><sup>+</sup>, Max Dabagia<sup>+</sup>, Ran Liu<sup>+</sup>, Chi-Heng Lin, Keith B. Hengen, Eva L. Dyer</em></p>
-            <p><em><sup>+</sup>Contributed equally as co-first authors</em></p>
-            <p class="conferencetitle">Neural Information Processing Systems (NeurIPS), Workshop on Self-supervised Learning: Theory and Practice, Feb 2021</p>
-            <span class="nowrap"><a href="https://sslneurips21.github.io/files/CameraReady/neural_ssl_workshop.pdf" target="_blank" rel="noopener noreferrer"> <i class="fa fa-file-pdf"></i> Paper </a>&nbsp;</span>
-            <span class="nowrap"><a href="https://sslneurips21.github.io/files/Poster/poster%2036.pdf" target="_blank" rel="noopener noreferrer"> <i class="fa-solid fa-person-chalkboard"></i> Poster</a>&nbsp;</span>
-            <span class="nowrap"><a class="js-modal-trigger" data-target="neuro-ssl-cite"> <i class="fa-solid fa-quote-right"></i> Cite</a></span>
-
         </div>
+        <div class="media-right">
+            <a class="js-modal-trigger" data-target="neuro-ssl-modal">
+                <i class="fa-solid fa-ellipsis"></i>
+            </a>
+        </div>
+    </article>
     </div>
+
+
 
     <div id="neuro-ssl-modal" class="modal">
         <div class="modal-background"></div>
@@ -948,7 +1384,11 @@ url={https://openreview.net/forum?id=0UXT6PpRpW}
                 <button class="delete" aria-label="close"></button>
             </header>
             <section class="modal-card-body">
-                <b>Abstract:</b> Self-supervised learning (SSL) provides a powerful mechanism for building representations of complex data without the need for labels. In this perspective piece, we highlight recent progress in the application of self-supervised learning (SSL) to data analysis in neuroscience, discuss the implications of these results, and suggest ways in which SSL might be applied to reveal interesting properties of neural computation.
+                <b>Abstract:</b> Self-supervised learning (SSL) provides a powerful mechanism for building
+                representations of complex data without the need for labels. In this perspective piece, we highlight
+                recent progress in the application of self-supervised learning (SSL) to data analysis in neuroscience,
+                discuss the implications of these results, and suggest ways in which SSL might be applied to reveal
+                interesting properties of neural computation.
             </section>
             <footer class="modal-card-foot"></footer>
         </div>
@@ -974,63 +1414,86 @@ url={https://openreview.net/forum?id=0UXT6PpRpW}
         </div>
     </div>
 
-
+    <!-- LOT -->
     <div class="block container bd-post-content">
-        <h1 class="title">
-            <p class="is-size-55">
-                <i class="fa-solid fa-anchor"></i>
-                Making transport more robust and interpretable by moving data through a small number of anchor <span class="nowrap">points
-                <a class="js-modal-trigger" data-target="lin-20-modal">
-                    <i class="fa-solid fa-ellipsis"></i>
-                </a></span>
+    <article class="media bottom_padding">
+        <figure class="media-left">
+            <p class="image is-128x128">
+                <img src="covers/DALL·E%202022-12-22%2023.21.25%20-%20a%20complex%20network%20of%20highways%20made%20with%20octopi,%20digital%20art,%20high%20resolution.png">
             </p>
+        </figure>
+        <div class="media-content">
+            <div class="block container bd-post-content">
+                <h1 class="title">
+                    <p class="is-size-55">
+                        <i class="fa-solid fa-anchor"></i>
+                        Making transport more robust and interpretable by moving data through a small number of anchor <span
+                            class="nowrap">points</span>
+                    </p>
 
-            <p class="tagp">
+                    <p class="tagp">
 
-            <div class="dropdown is-hoverable">
-                <div class="dropdown-trigger">
+                    <div class="dropdown is-hoverable">
+                        <div class="dropdown-trigger">
                     <span class="ghostbutton">
                         <span class="tag is-rounded is-light has-text-weight-bold">Optimal Transport</span>
                     </span>
-                </div>
-                <div class="dropdown-menu" role="menu">
-                    <div class="dropdown-content">
-                        <div class="dropdown-item">
-                            <p class="has-text-weight-normal is-size-7">Optimal Transport</p>
+                        </div>
+                        <div class="dropdown-menu" role="menu">
+                            <div class="dropdown-content">
+                                <div class="dropdown-item">
+                                    <p class="has-text-weight-normal is-size-7">Optimal Transport</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="dropdown is-hoverable">
-                <div class="dropdown-trigger">
+                    <div class="dropdown is-hoverable">
+                        <div class="dropdown-trigger">
                     <span class="ghostbutton">
                         <span class="tag is-rounded is-light has-text-weight-bold">Domain Adaptation</span>
                     </span>
-                </div>
-                <div class="dropdown-menu" role="menu">
-                    <div class="dropdown-content">
-                        <div class="dropdown-item">
-                            <p class="has-text-weight-normal is-size-7">Domain Adaptation</p>
+                        </div>
+                        <div class="dropdown-menu" role="menu">
+                            <div class="dropdown-content">
+                                <div class="dropdown-item">
+                                    <p class="has-text-weight-normal is-size-7">Domain Adaptation</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
+                    </p>
+                </h1>
+                <div class="subtitle">
+                    <p class="authors"><em>Chi-Heng Lin, <b>Mehdi Azabou</b>, Eva L. Dyer</em></p>
+                    <p class="conferencetitle">International Conference on Machine Learning (ICML), 2021</p>
+                    <span class="nowrap"><a href="https://nerdslab.github.io/latentOT/" target="_blank"
+                                            rel="noopener noreferrer"> <i class="fa fa-book"></i> Project page </a>&nbsp;</span>
+                    <span class="nowrap"><a href="http://proceedings.mlr.press/v139/lin21a/lin21a.pdf" target="_blank"
+                                            rel="noopener noreferrer"> <i class="fa fa-file-pdf"></i> Paper </a>&nbsp;</span>
+                    <span class="nowrap"><a href="https://github.com/nerdslab/latentOT" target="_blank"
+                                            rel="noopener noreferrer"> <i class="fa fa-github"></i> Code </a>&nbsp;</span>
+                    <span class="nowrap"><a
+                            href="https://cpn-us-w2.wpmucdn.com/sites.gatech.edu/dist/9/630/files/2021/07/icml_lot_final.pdf"
+                            target="_blank" rel="noopener noreferrer"> <i class="fa-solid fa-person-chalkboard"></i> Poster </a>&nbsp;</span>
+                    <span class="nowrap"><a href="http://proceedings.mlr.press/v139/lin21a.html" target="_blank"
+                                            rel="noopener noreferrer"> <i class="fa fa-desktop"></i> ICML Proceedings </a>&nbsp;</span>
+                    <span class="nowrap"><a href="https://arxiv.org/abs/2102.10106" target="_blank"
+                                            rel="noopener noreferrer"> <i class="fa fa-desktop"></i> arXiv </a>&nbsp;</span>
+                    <span class="nowrap"><a class="js-modal-trigger" data-target="lot-cite"> <i
+                            class="fa-solid fa-quote-right"></i> Cite</a></span>
+
                 </div>
             </div>
-
-            </p>
-        </h1>
-        <div class="subtitle">
-            <p class="authors"><em>Chi-Heng Lin, <b>Mehdi Azabou</b>, Eva L. Dyer</em></p>
-            <p class="conferencetitle">International Conference on Machine Learning (ICML), 2021</p>
-            <span class="nowrap"><a href="https://nerdslab.github.io/latentOT/" target="_blank" rel="noopener noreferrer"> <i class="fa fa-book"></i> Project page </a>&nbsp;</span>
-            <span class="nowrap"><a href="http://proceedings.mlr.press/v139/lin21a/lin21a.pdf" target="_blank" rel="noopener noreferrer"> <i class="fa fa-file-pdf"></i> Paper </a>&nbsp;</span>
-            <span class="nowrap"><a href="https://github.com/nerdslab/latentOT" target="_blank" rel="noopener noreferrer"> <i class="fa fa-github"></i> Code </a>&nbsp;</span>
-            <span class="nowrap"><a href="https://cpn-us-w2.wpmucdn.com/sites.gatech.edu/dist/9/630/files/2021/07/icml_lot_final.pdf" target="_blank" rel="noopener noreferrer"> <i class="fa-solid fa-person-chalkboard"></i> Poster </a>&nbsp;</span>
-            <span class="nowrap"><a href="http://proceedings.mlr.press/v139/lin21a.html" target="_blank" rel="noopener noreferrer"> <i class="fa fa-desktop"></i> ICML Proceedings </a>&nbsp;</span>
-            <span class="nowrap"><a href="https://arxiv.org/abs/2102.10106" target="_blank" rel="noopener noreferrer"> <i class="fa fa-desktop"></i> arXiv </a>&nbsp;</span>
-            <span class="nowrap"><a class="js-modal-trigger" data-target="lot-cite"> <i class="fa-solid fa-quote-right"></i> Cite</a></span>
-
         </div>
+        <div class="media-right">
+            <a class="js-modal-trigger" data-target="lin-20-modal">
+                <i class="fa-solid fa-ellipsis"></i>
+            </a>
+        </div>
+    </article>
     </div>
+
 
     <div id="lin-20-modal" class="modal">
         <div class="modal-background"></div>
@@ -1044,7 +1507,18 @@ url={https://openreview.net/forum?id=0UXT6PpRpW}
                     <img src="./assets/lot.png" alt="">
                 </div>
                 <div>
-                    <b>Abstract:</b> Optimal transport (OT) is a widely used technique for distribution alignment, with applications throughout the machine learning, graphics, and vision communities. Without any additional structural assumptions on transport, however, OT can be fragile to outliers or noise, especially in high dimensions. Here, we introduce Latent OptimalTransport (LOT), a new approach for OT that simultaneously learns low-dimensional structure in data while leveraging this structure to solve the alignment task. The idea behind our approach is to learn two sets of “anchors” that constrain the flow of transport between a source and target distribution. In both theoretical and empirical studies, we show thatLOTregularizes the rank of transport and makes it more robust to outliers and the sampling density. We show that by allowing the source and target to have different anchors, and using LOT to align the latent spaces between anchors, the resulting transport plan has better structural interpretability and highlights connections between both the individual data points and the local geometry of the datasets.
+                    <b>Abstract:</b> Optimal transport (OT) is a widely used technique for distribution alignment, with
+                    applications throughout the machine learning, graphics, and vision communities. Without any
+                    additional structural assumptions on transport, however, OT can be fragile to outliers or noise,
+                    especially in high dimensions. Here, we introduce Latent OptimalTransport (LOT), a new approach for
+                    OT that simultaneously learns low-dimensional structure in data while leveraging this structure to
+                    solve the alignment task. The idea behind our approach is to learn two sets of “anchors” that
+                    constrain the flow of transport between a source and target distribution. In both theoretical and
+                    empirical studies, we show thatLOTregularizes the rank of transport and makes it more robust to
+                    outliers and the sampling density. We show that by allowing the source and target to have different
+                    anchors, and using LOT to align the latent spaces between anchors, the resulting transport plan has
+                    better structural interpretability and highlights connections between both the individual data
+                    points and the local geometry of the datasets.
                 </div>
             </section>
             <footer class="modal-card-foot"></footer>
@@ -1090,50 +1564,69 @@ url={https://openreview.net/forum?id=0UXT6PpRpW}
     </div>
 
     <div class="block container bd-post-content">
-        <h1 class="title">
-            <p class="is-size-55">
-                <i class="fa-solid fa-road-spikes"></i>
-                Detecting change points in neural population activity with contrastive metric <span class="nowrap">learning
-                <a class="js-modal-trigger" data-target="urzay-22-modal">
-                    <i class="fa-solid fa-ellipsis"></i>
-                </a></span>
+    <article class="media">
+        <figure class="media-left">
+            <p class="image is-128x128">
+                <img src="covers/DALL·E%202022-12-22%2022.20.39%20-%20population%20of%20neurons%20morphing%20from%20one%20color%20to%20the%20other%20from%20left%20to%20right%20with%20a%20clear%20boundary%20wall%20in%20the%20middle,%20digital%20art,%20high%20resolution.png">
             </p>
+        </figure>
+        <div class="media-content">
+            <div class="block container bd-post-content">
+                <h1 class="title">
+                    <p class="is-size-55">
+                        <i class="fa-solid fa-road-spikes"></i>
+                        Detecting change points in neural population activity with contrastive metric <span class="nowrap">learning
+                </span>
+                    </p>
 
-            <p class="tagp">
+                    <p class="tagp">
 
-            <div class="dropdown is-hoverable">
-                <div class="dropdown-trigger">
+                    <div class="dropdown is-hoverable">
+                        <div class="dropdown-trigger">
                     <span class="ghostbutton">
                         <span class="tag is-success is-rounded is-light has-text-weight-bold">Neuroscience</span>
                     </span>
-                </div>
-                <div class="dropdown-menu" role="menu">
-                    <div class="dropdown-content">
-                        <div class="dropdown-item">
-                            <p class="has-text-weight-normal is-size-7">Neuroscience</p>
+                        </div>
+                        <div class="dropdown-menu" role="menu">
+                            <div class="dropdown-content">
+                                <div class="dropdown-item">
+                                    <p class="has-text-weight-normal is-size-7">Neuroscience</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="dropdown is-hoverable">
-                <div class="dropdown-trigger">
+                    <div class="dropdown is-hoverable">
+                        <div class="dropdown-trigger">
                     <span class="ghostbutton">
                         <span class="tag is-rounded is-info is-light has-text-weight-bold">Abstract</span>
                     </span>
+                        </div>
+                    </div>
+
+
+                    </p>
+                </h1>
+                <div class="subtitle">
+                    <p class="authors"><em>Carolina Urzay, Nauman Ahad, <b>Mehdi Azabou</b>, Aidan Schneider, Geethika Atmakuri,
+                        Keith B. Hengen, Eva L. Dyer</em></p>
+                    <p class="conferencetitle">Conference on Cognitive Computational Neuroscience (CCN), 2022</p>
+                    <span class="nowrap"><a href="https://2022.ccneuro.org/proceedings/0000046.pdf" target="_blank"
+                                            rel="noopener noreferrer"> <i class="fa fa-file-pdf"></i> Paper </a>&nbsp;</span>
+                    <span class="nowrap"><a href="https://2022.ccneuro.org/view_paper.php?PaperNum=1261" target="_blank"
+                                            rel="noopener noreferrer"> <i class="fa fa-desktop"></i> CCN Proceedings </a>&nbsp;</span>
+                    <span class="nowrap"><a href="./assets/ccn_2022_poster.pdf" target="_blank" rel="noopener noreferrer"> <i
+                            class="fa-solid fa-person-chalkboard"></i> Poster </a>&nbsp;</span>
+                    <span class="nowrap"><a class="js-modal-trigger" data-target="urzay-22-cite"> <i
+                            class="fa-solid fa-quote-right"></i> Cite</a></span>
                 </div>
             </div>
-
-
-            </p>
-        </h1>
-        <div class="subtitle">
-            <p class="authors"><em>Carolina Urzay, Nauman Ahad, <b>Mehdi Azabou</b>, Aidan Schneider, Geethika Atmakuri, Keith B. Hengen, Eva L. Dyer</em></p>
-            <p class="conferencetitle">Conference on Cognitive Computational Neuroscience (CCN), 2022</p>
-            <span class="nowrap"><a href="https://2022.ccneuro.org/proceedings/0000046.pdf" target="_blank" rel="noopener noreferrer"> <i class="fa fa-file-pdf"></i> Paper </a>&nbsp;</span>
-            <span class="nowrap"><a href="https://2022.ccneuro.org/view_paper.php?PaperNum=1261" target="_blank" rel="noopener noreferrer"> <i class="fa fa-desktop"></i> CCN Proceedings </a>&nbsp;</span>
-            <span class="nowrap"><a href="./assets/ccn_2022_poster.pdf" target="_blank" rel="noopener noreferrer"> <i class="fa-solid fa-person-chalkboard"></i> Poster </a>&nbsp;</span>
-            <span class="nowrap"><a class="js-modal-trigger" data-target="urzay-22-cite"> <i class="fa-solid fa-quote-right"></i> Cite</a></span>
         </div>
+        <div class="media-right">
+            <a class="js-modal-trigger" data-target="urzay-22-modal">
+                <i class="fa-solid fa-ellipsis"></i>
+            </a>
+        </div>
+    </article>
     </div>
 
     <div id="urzay-22-modal" class="modal">
@@ -1144,7 +1637,18 @@ url={https://openreview.net/forum?id=0UXT6PpRpW}
                 <button class="delete" aria-label="close"></button>
             </header>
             <section class="modal-card-body">
-                <b>Abstract:</b> Finding points in time where the distribution of neural responses changes (change points) is an important step in many neural data analysis pipelines. However, in complex and free behaviors, where we see different types of shifts occurring at different rates, it can be difficult to use existing methods for change point (CP) detection because they can't necessarily handle different types of changes that may occur in the underlying neural distribution. In this work, we introduce a new approach for finding changes in neural population states across diverse activities and arousal states occurring in free behavior. Our model follows a contrastive learning approach: we learn a metric for CP detection based on maximizing the Sinkhorn divergences of neuron firing rates across two sides of a labeled CP. We apply this method to a 12-hour neural recording of a freely behaving mouse to detect changes in sleep stages and behavior. We show that when we learn a metric, we can better detect change points and also yield insights into which neurons and sub-groups are important for detecting certain types of switches that occur in the brain.
+                <b>Abstract:</b> Finding points in time where the distribution of neural responses changes (change
+                points) is an important step in many neural data analysis pipelines. However, in complex and free
+                behaviors, where we see different types of shifts occurring at different rates, it can be difficult to
+                use existing methods for change point (CP) detection because they can't necessarily handle different
+                types of changes that may occur in the underlying neural distribution. In this work, we introduce a new
+                approach for finding changes in neural population states across diverse activities and arousal states
+                occurring in free behavior. Our model follows a contrastive learning approach: we learn a metric for CP
+                detection based on maximizing the Sinkhorn divergences of neuron firing rates across two sides of a
+                labeled CP. We apply this method to a 12-hour neural recording of a freely behaving mouse to detect
+                changes in sleep stages and behavior. We show that when we learn a metric, we can better detect change
+                points and also yield insights into which neurons and sub-groups are important for detecting certain
+                types of switches that occur in the brain.
             </section>
             <footer class="modal-card-foot"></footer>
         </div>
