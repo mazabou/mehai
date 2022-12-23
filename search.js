@@ -8,8 +8,8 @@ function handleTagButtonClick(event) {
     const clickedTag = clickedButton.dataset.tag;
 
     document.body.style.backgroundColor = clickedButton.dataset.color;
-    // tagButtons.forEach(button => button.classList.add('is-light'));
-    // clickedButton.classList.remove('is-light');
+    tagButtons.forEach(button => button.classList.remove('ghostbutton'));
+    clickedButton.classList.add('ghostbutton');
 
     entries.forEach(entry => {
         if (entry.dataset.tags.includes(clickedTag)) {
@@ -28,6 +28,7 @@ function handleButtonClick() {
 
     document.body.style.backgroundColor = 'white';
     entries.forEach(entry => entry.style.display = 'block');
+    tagButtons.forEach(button => button.classList.remove('ghostbutton'))
     button.style.display = 'none'
 
 }
