@@ -10,6 +10,7 @@ body {
 .section{
     max-width:70em;
     margin: auto;
+    padding-top: 2rem
 }
 
 .navbar{
@@ -77,7 +78,7 @@ body {
 }
 
 .padded_block {
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
     margin-left: 0.75rem;
     margin-right: 0.75rem;
 }
@@ -85,6 +86,11 @@ body {
 .bottom_padding {
     margin-bottom: 1.5rem;
 }
+
+.bottom_padding_2 {
+    margin-bottom: 2rem;
+}
+
 
 .resume_block {
     margin-bottom: 3rem;
@@ -108,6 +114,12 @@ body {
 
 .top_padding {
     margin-top: 0.5rem;
+}
+
+.resume_header {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    cursor: inherit;
 }
 
 
