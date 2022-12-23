@@ -6,6 +6,7 @@
 
 .navbar{
     padding-bottom: 1rem;
+    background-color: inherit;
 }
 
 .title {
@@ -79,4 +80,18 @@
 
 .nowrap {
     white-space: nowrap;
+}
+
+.button_container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#reset {
+    display: none;
+}
+
+.top_padding {
+    margin-top: 0.5rem;
 }

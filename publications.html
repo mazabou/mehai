@@ -49,6 +49,7 @@
 
 <section class="section">
     <div style="margin-bottom: 0.75rem;">
+        <!--
         <div class="block container bd-post-content bottom_padding">
             <div class="dropdown is-hoverable">
                 <div class="dropdown-trigger">
@@ -67,9 +68,19 @@
             <span class="is-size-7"> <i class="fa-solid fa-angle-left"></i> hover to get TL;DR</span> &nbsp;&nbsp;
             <a><i class="fa-solid fa-ellipsis"></i></a> <span class="is-size-7"> <i class="fa-solid fa-angle-left"></i> click to get abstract.</span>
         </div>
+        -->
+        <div class="button_container bottom_padding">
+            <span class="has-text-weight-bold top_padding">Tags: &nbsp;</span>
+            <button class="ghostbutton tag-button tag is-info is-rounded is-light has-text-weight-bold is-medium top_padding" data-tag="ssl" data-color="hsl(206, 70%, 96%)"> Self-Supervised Learning </button>&nbsp;
+            <button class="tag-button ghostbutton tag is-success is-rounded is-light has-text-weight-bold is-medium top_padding" data-tag="neuro" data-color="hsl(142, 52%, 96%)"> Neuroscience </button>&nbsp;
+            <button class="tag-button ghostbutton tag is-danger is-rounded is-light has-text-weight-bold is-medium top_padding" data-tag="behavior" data-color="hsl(347, 90%, 96%)">Behavior</button>&nbsp;
+            <button class="tag-button ghostbutton tag is-warning is-rounded is-light has-text-weight-bold is-medium top_padding" data-tag="graphs" data-color="hsl(48, 100%, 96%)">Graphs</button>&nbsp;
+            <button class="tag-button ghostbutton tag is-rounded is-light has-text-weight-bold is-medium top_padding" data-tag="ot" data-color="hsl(0, 0%, 96%)">Optimal Transport</button>&nbsp; &nbsp;
+            <button class="delete top_padding" id="reset"></button>
+        </div>
     </div>
 
-    <div class="block container bd-post-content">
+    <div class="block container bd-post-content entry" data-tags="header">
         <h2 class="title">
             <p class="is-size-66">
                 2022
@@ -78,7 +89,7 @@
     </div>
 
 
-    <div class="block container bd-post-content">
+    <div class="entry block container bd-post-content" data-tags="behavior,ssl">
     <article class="media bottom_padding">
         <figure class="is-hidden-mobile media-left">
             <p class="image is-128x128 ">
@@ -87,7 +98,6 @@
         </figure>
         <div class="media-content">
             <div>
-
                 <div class="block container bd-post-content">
                     <h1 class="title">
                         <p class="is-size-55">
@@ -107,7 +117,7 @@
                         <div class="dropdown  is-hoverable">
                             <div class="dropdown-trigger">
                     <span class="ghostbutton">
-                        <span class="tag is-warning is-rounded is-light has-text-weight-bold">SSL</span>
+                        <span class="tag is-info is-rounded is-light has-text-weight-bold">SSL</span>
                     </span>
                             </div>
                             <div class="dropdown-menu" role="menu">
@@ -150,7 +160,7 @@
     </article>
     </div>
 
-    <div class="block container bd-post-content">
+    <div class="block container bd-post-content entry" data-tags="behavior,ssl">
     <article class="media bottom_padding">
         <figure class="is-hidden-mobile media-left">
             <p class="image is-128x128">
@@ -173,10 +183,10 @@
                     </span>
                         </div>
                     </div>
-                    <div class="dropdown  is-hoverable">
+                    <div class="dropdown is-hoverable">
                         <div class="dropdown-trigger">
                     <span class="ghostbutton">
-                        <span class="tag is-warning is-rounded is-light has-text-weight-bold">SSL</span>
+                        <span class="tag is-info is-rounded is-light has-text-weight-bold">SSL</span>
                     </span>
                         </div>
                         <div class="dropdown-menu" role="menu">
@@ -252,7 +262,7 @@
         </div>
     </div>
 
-    <div class="block container bd-post-content">
+    <div class="block container bd-post-content entry" data-tags="neuro">
     <article class="media bottom_padding">
         <figure class="media-left is-hidden-mobile">
             <p class="image is-128x128">
@@ -299,7 +309,7 @@
     </article>
     </div>
 
-    <div class="block container bd-post-content">
+    <div class="block container bd-post-content entry" data-tags="neuro">
     <article class="media bottom_padding">
         <figure class="media-left is-hidden-mobile">
             <p class="image is-128x128">
@@ -451,7 +461,7 @@
     </div>
 
     <!-- > Transformer </!-->
-    <div class="block container bd-post-content">
+    <div class="block container bd-post-content entry" data-tags="neuro,transformer">
     <article class="media bottom_padding">
         <figure class="media-left is-hidden-mobile">
             <p class="image is-128x128">
@@ -590,7 +600,9 @@
         </div>
     </div>
 
-    <div class="block container bd-post-content">
+
+
+    <div class="block container bd-post-content entry" data-tags="neuro, neuroimaging">
     <article class="media bottom_padding">
         <figure class="media-left is-hidden-mobile">
             <p class="image is-128x128">
@@ -711,7 +723,9 @@
         </div>
     </div>
 
-    <div class="block container bd-post-content">
+
+
+    <div class="block container bd-post-content entry" data-tags="behavior,ssl">
     <article class="media bottom_padding">
         <figure class="media-left is-hidden-mobile">
             <p class="image is-128x128">
@@ -750,7 +764,7 @@
                     <div class="dropdown  is-hoverable">
                         <div class="dropdown-trigger">
                     <span class="ghostbutton">
-                        <span class="tag is-warning is-rounded is-light has-text-weight-bold">SSL</span>
+                        <span class="tag is-info is-rounded is-light has-text-weight-bold">SSL</span>
                     </span>
                         </div>
                         <div class="dropdown-menu" role="menu">
@@ -844,7 +858,10 @@
         </div>
     </div>
 
-    <div class="block container bd-post-content">
+
+
+
+    <div class="block container bd-post-content entry" data-tags="graphs,ssl">
     <article class="media bottom_padding">
         <figure class="media-left is-hidden-mobile">
             <p class="image is-128x128">
@@ -864,7 +881,7 @@
                     <div class="dropdown is-hoverable">
                         <div class="dropdown-trigger">
                     <span class="ghostbutton">
-                        <span class="tag is-light is-rounded is-light has-text-weight-bold">Geometric Deep Learning</span>
+                        <span class="tag is-light is-rounded is-warning is-light has-text-weight-bold">Geometric Deep Learning</span>
                     </span>
                         </div>
                         <div class="dropdown-menu" role="menu">
@@ -882,7 +899,7 @@
                     <div class="dropdown  is-hoverable">
                         <div class="dropdown-trigger">
                     <span class="ghostbutton">
-                        <span class="tag is-warning is-rounded is-light has-text-weight-bold">SSL</span>
+                        <span class="tag is-info is-rounded is-light has-text-weight-bold">SSL</span>
                     </span>
                         </div>
                         <div class="dropdown-menu" role="menu">
@@ -987,7 +1004,7 @@ url={https://openreview.net/forum?id=0UXT6PpRpW}
     </div>
 
 
-    <div class="block container bd-post-content">
+    <div class="block container bd-post-content entry" data-tags="header">
         <h2 class="title">
             <p class="is-size-66">
                 2021
@@ -995,7 +1012,7 @@ url={https://openreview.net/forum?id=0UXT6PpRpW}
         </h2>
     </div>
 
-    <div class="block container bd-post-content">
+    <div class="block container bd-post-content entry" data-tags="neuro,ssl">
     <article class="media bottom_padding">
         <figure class="media-left is-hidden-mobile">
             <p class="image is-128x128">
@@ -1030,7 +1047,7 @@ url={https://openreview.net/forum?id=0UXT6PpRpW}
                     <div class="dropdown  is-hoverable">
                         <div class="dropdown-trigger">
                     <span class="ghostbutton">
-                        <span class="tag is-warning is-rounded is-light has-text-weight-bold">SSL</span>
+                        <span class="tag is-info is-rounded is-light has-text-weight-bold">SSL</span>
                     </span>
                         </div>
                         <div class="dropdown-menu" role="menu">
@@ -1152,7 +1169,7 @@ url={https://openreview.net/forum?id=0UXT6PpRpW}
         </div>
     </div>
 
-    <div class="block container bd-post-content">
+    <div class="block container bd-post-content entry" data-tags="neuro,ssl">
     <article class="media bottom_padding">
         <figure class="media-left is-hidden-mobile">
             <p class="image is-128x128">
@@ -1187,7 +1204,7 @@ url={https://openreview.net/forum?id=0UXT6PpRpW}
                     <div class="dropdown  is-hoverable">
                         <div class="dropdown-trigger">
                     <span class="ghostbutton">
-                        <span class="tag is-warning is-rounded is-light has-text-weight-bold">SSL</span>
+                        <span class="tag is-info is-rounded is-light has-text-weight-bold">SSL</span>
                     </span>
                         </div>
                         <div class="dropdown-menu" role="menu">
@@ -1301,7 +1318,10 @@ url={https://openreview.net/forum?id=0UXT6PpRpW}
         </div>
     </div>
 
-    <div class="block container bd-post-content">
+
+
+
+    <div class="block container bd-post-content entry" data-tags="neuro,ssl">
     <article class="media bottom_padding">
         <figure class="media-left is-hidden-mobile">
             <p class="image is-128x128">
@@ -1335,7 +1355,7 @@ url={https://openreview.net/forum?id=0UXT6PpRpW}
                     <div class="dropdown  is-hoverable">
                         <div class="dropdown-trigger">
                     <span class="ghostbutton">
-                        <span class="tag is-warning is-rounded is-light has-text-weight-bold">SSL</span>
+                        <span class="tag is-info is-rounded is-light has-text-weight-bold">SSL</span>
                     </span>
                         </div>
                         <div class="dropdown-menu" role="menu">
@@ -1413,7 +1433,7 @@ url={https://openreview.net/forum?id=0UXT6PpRpW}
     </div>
 
     <!-- LOT -->
-    <div class="block container bd-post-content">
+    <div class="block container bd-post-content entry" data-tags="ot,da">
     <article class="media bottom_padding">
         <figure class="media-left is-hidden-mobile">
             <p class="image is-128x128">
@@ -1553,7 +1573,7 @@ url={https://openreview.net/forum?id=0UXT6PpRpW}
     </div>
 
 
-    <div class="block container bd-post-content">
+    <div class="block container bd-post-content entry" data-tags="header">
         <h2 class="title">
             <p class="is-size-66">
                 Abstracts
@@ -1561,7 +1581,7 @@ url={https://openreview.net/forum?id=0UXT6PpRpW}
         </h2>
     </div>
 
-    <div class="block container bd-post-content">
+    <div class="block container bd-post-content entry" data-tags="neuro">
     <article class="media">
         <figure class="media-left is-hidden-mobile">
             <p class="image is-128x128">
@@ -1678,5 +1698,6 @@ url={https://openreview.net/forum?id=0UXT6PpRpW}
     </div>
 </section>
 
+<script src="search.js"></script>
 </body>
 </html>
