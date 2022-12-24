@@ -93,7 +93,7 @@
     <article class="media bottom_padding">
         <figure class="is-hidden-mobile media-left">
             <p class="image is-128x128 ">
-                <img src="covers/bams-hoa.png" data-prompt="a single branch that branches out to increasingly more branches, digital art, colorful">
+                <img src="covers/bams-hoa.png" data-prompt="multiverse, a single branch that branches out to increasingly more branches, digital art, colorful">
             </p>
         </figure>
         <div class="media-content">
@@ -107,34 +107,31 @@
                             <!--<a class="js-modal-trigger" data-target="forest-trans-modal"><i class="fa-solid fa-ellipsis"></i></a></span>-->
                         </p>
                         <p class="tagp">
+
                         <div class="dropdown is-hoverable">
                             <div class="dropdown-trigger">
                     <span class="ghostbutton">
                         <span class="tag is-danger is-rounded is-light has-text-weight-bold">Behavior</span>
                     </span>
                             </div>
+
                         </div>
-                        <div class="dropdown  is-hoverable">
+
+
+                        <div class="dropdown is-hoverable">
                             <div class="dropdown-trigger">
                     <span class="ghostbutton">
                         <span class="tag is-info is-rounded is-light has-text-weight-bold">SSL</span>
                     </span>
                             </div>
-                            <div class="dropdown-menu" role="menu">
-                                <div class="dropdown-content">
-                                    <div class="dropdown-item">
-                                        <p class="has-text-weight-normal is-size-7">Self-Supervised Learning</p>
-                                    </div>
-                                    <!--
-                                    <hr class="dropdown-divider">
-                                    <div class="dropdown-item">
-                                        <p class="has-text-weight-normal is-size-7">We introduce a multi-scale representation
-                                            learning model: we combine a pooling module that aggregates features extracted over
-                                            encoders with <b>different temporal receptive fields</b>, and design a set of latent
-                                            objectives to <b>bootstrap the representations in each respective space</b>.</p>
-                                    </div>
-                                    -->
-                                </div>
+
+                        </div>
+
+                        <div class="dropdown is-hoverable">
+                            <div class="dropdown-trigger">
+                    <span class="ghostbutton">
+                        <span class="tag is-rounded is-light has-text-weight-bold">Optimal Transport</span>
+                    </span>
                             </div>
                         </div>
                         </p>
@@ -155,10 +152,47 @@
             </div>
         </div>
         <div class="media-right">
-
+            <a class="js-modal-trigger" data-target="bams-hoa-modal"><i class="fa-regular fa-square-plus fa-lg"></i></a>
         </div>
     </article>
     </div>
+
+
+    <div id="bams-hoa-modal" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title"></p>
+                <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+
+                <div>
+                    <b>Abstract:</b> Natural behavior consists of dynamics that are complex
+                    and unpredictable, especially when trying to predict many
+                    steps into the future. While some success has been found
+                    in building representations of behavior under constrained
+                    or simplified task-based conditions, many of these models
+                    cannot be applied to free and naturalistic settings where
+                    behavior becomes increasingly hard to model. In this work,
+                    we develop a multi-task representation learning model for
+                    behavior that combines two novel components: (i) An action
+                    prediction objective that aims to predict the distribution of
+                    actions over future timesteps, and (ii) A multi-scale architecture that builds separate latent spaces to accommodate
+                    short- and long-term dynamics. After demonstrating the ability of the method to build representations of both local and
+                    global dynamics in realistic robots in varying environments
+                    and terrains, we apply our method to the MABe 2022 Multi-agent behavior challenge, where our model ranks 1st overall
+                    and on all global tasks, and 1st on 4 out of 9 frame-level
+                    subtasks. In all of these cases, we show that our model can
+                    build representations that capture the many different factors
+                    that drive behavior and solve a wide range of downstream
+                    tasks.
+                </div>
+            </section>
+            <footer class="modal-card-foot"></footer>
+        </div>
+    </div>
+
 
     <div class="block container bd-post-content entry" data-tags="behavior,ssl">
     <article class="media bottom_padding">
@@ -176,13 +210,29 @@
                         <!--<a class="js-modal-trigger" data-target="forest-trans-modal"><i class="fa-solid fa-ellipsis"></i></a></span>-->
                     </p>
                     <p class="tagp">
+
                     <div class="dropdown is-hoverable">
                         <div class="dropdown-trigger">
                     <span class="ghostbutton">
                         <span class="tag is-danger is-rounded is-light has-text-weight-bold">Behavior</span>
                     </span>
                         </div>
+                        <div class="dropdown-menu" role="menu">
+                            <div class="dropdown-content">
+                                <div class="dropdown-item">
+                                    <p class="has-text-weight-normal is-size-7">We study a large-scale behavioral dataset
+                                        from <b>1,000 humans</b> playing a <b>3-armed bandit task</b>. By learning to predict future choices,
+                                        we identify characteristic playing <b>strategies</b> and signatures of differences across individuals.</p>
+                                </div>
+                                <!--
+                                <hr class="dropdown-divider">
+
+                                -->
+                            </div>
+                        </div>
                     </div>
+
+
                     <div class="dropdown is-hoverable">
                         <div class="dropdown-trigger">
                     <span class="ghostbutton">
@@ -194,14 +244,17 @@
                                 <div class="dropdown-item">
                                     <p class="has-text-weight-normal is-size-7">Self-Supervised Learning</p>
                                 </div>
-                                <!--
                                 <hr class="dropdown-divider">
                                 <div class="dropdown-item">
-                                    <p class="has-text-weight-normal is-size-7">We introduce a multi-scale representation
-                                        learning model: we combine a pooling module that aggregates features extracted over
-                                        encoders with <b>different temporal receptive fields</b>, and design a set of latent
-                                        objectives to <b>bootstrap the representations in each respective space</b>.</p>
+                                    <p class="has-text-weight-normal is-size-7">To simultaneously extract both <b>global</b>
+                                        and <b>local</b> variables from complex human behavior, our method combines a
+                                        multi-scale temporal convolutional network with latent prediction tasks,
+                                        where we encourage embeddings across the entire sequence, as well as subsets
+                                        of the sequence, to be mapped to similar points in the latent space.</p>
                                 </div>
+                                <!--
+                                <hr class="dropdown-divider">
+
                                 -->
                             </div>
                         </div>
@@ -224,7 +277,7 @@
             </div>
         </div>
         <div class="media-right">
-            <a class="js-modal-trigger" data-target="human-modal"><i class="fa-solid fa-ellipsis"></i></a>
+            <a class="js-modal-trigger" data-target="human-modal"><i class="fa-regular fa-square-plus fa-lg"></i></a>
         </div>
     </article>
     </div>
@@ -285,6 +338,15 @@
                         <span class="tag is-success is-rounded is-light has-text-weight-bold">Neuroscience</span>
                     </span>
                         </div>
+                        <div class="dropdown-menu" role="menu">
+                            <div class="dropdown-content">
+                                <div class="dropdown-item">
+                                    <p class="has-text-weight-normal is-size-7">
+                                        We introduce an approach for identifying <b>switches</b> in neural population during
+                                        <b>free behavior</b>, and find that different groups of neurons are useful for different contexts. </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     </p>
                 </h1>
@@ -304,7 +366,7 @@
             </div>
         </div>
         <div class="media-right">
-            <a class="js-modal-trigger" data-target="urzay-22-modal"><i class="fa-solid fa-ellipsis"></i></a>
+            <a class="js-modal-trigger" data-target="urzay-22-modal"><i class="fa-regular fa-square-plus fa-lg"></i></a>
         </div>
     </article>
     </div>
@@ -313,7 +375,7 @@
     <article class="media bottom_padding">
         <figure class="media-left is-hidden-mobile">
             <p class="image is-128x128">
-                <img src="covers/45e4e74d-9cca-49b2-9cc4-21d2d1610ad7.webp">
+                <img src="covers/lolcat.png" data-prompt="neuron transcriptomic, firing, digital art, high resolution, orange, blue">
             </p>
         </figure>
         <div class="media-content">
@@ -388,7 +450,7 @@
             </div>
         </div>
         <div class="media-right">
-            <a class="js-modal-trigger" data-target="lolcat-modal"><i class="fa-solid fa-ellipsis"></i></a>
+            <a class="js-modal-trigger" data-target="lolcat-modal"><i class="fa-regular fa-square-plus fa-lg"></i></a>
         </div>
     </article>
     </div>
@@ -533,7 +595,7 @@
             </div>
         </div>
         <div class="media-right">
-            <a class="js-modal-trigger" data-target="forest-trans-modal"><i class="fa-solid fa-ellipsis"></i></a>
+            <a class="js-modal-trigger" data-target="forest-trans-modal"><i class="fa-regular fa-square-plus fa-lg"></i></a>
         </div>
     </article>
     </div>
@@ -638,6 +700,21 @@
                         </div>
                     </div>
 
+                    <div class="dropdown is-hoverable">
+                        <div class="dropdown-trigger">
+                    <span class="ghostbutton">
+                        <span class="tag is-rounded is-light has-text-weight-bold">Vision</span>
+                    </span>
+                        </div>
+                        <div class="dropdown-menu" role="menu">
+                            <div class="dropdown-content">
+                                <div class="dropdown-item">
+                                    <p class="has-text-weight-normal is-size-7">We benchmark a series of 2D and 3D image <b>classfication</b> and <b>segmentation</b> methods.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
 
                     </p>
                 </h1>
@@ -662,7 +739,7 @@
             </div>
         </div>
         <div class="media-right">
-            <a class="js-modal-trigger" data-target="quesada-22-modal"><i class="fa-solid fa-ellipsis"></i></a>
+            <a class="js-modal-trigger" data-target="quesada-22-modal"><i class="fa-regular fa-square-plus fa-lg"></i></a>
         </div>
     </article>
     </div>
@@ -805,7 +882,7 @@
             </div>
         </div>
         <div class="media-right">
-            <a class="js-modal-trigger" data-target="bams-modal"><i class="fa-solid fa-ellipsis"></i></a>
+            <a class="js-modal-trigger" data-target="bams-modal"><i class="fa-regular fa-square-plus fa-lg"></i></a>
         </div>
     </article>
     </div>
@@ -889,8 +966,8 @@
                                 <div class="dropdown-item">
                                     <p class="has-text-weight-normal is-size-7"> We train BGRL on several established node-level
                                         classification benchmarks, and show competitive results compared to supervised and
-                                        self-supervised methods, while achieving a 2-10x reduction in memory costs compared to
-                                        GRACE.</p>
+                                        self-supervised methods, while achieving a <b>2-10x reduction in memory costs</b> compared to
+                                        GRACE, which enable us to <b>scale to large graphs</b>.</p>
                                 </div>
                             </div>
                         </div>
@@ -910,7 +987,7 @@
                                 <hr class="dropdown-divider">
                                 <div class="dropdown-item">
                                     <p class="has-text-weight-normal is-size-7">When trained with supervised data alone, GNNs
-                                        can easily overfit and may fail to generalize. Using DropEdge and DropFeat
+                                        can easily overfit and may fail to generalize. Using <b>DropEdge</b> and <b>DropFeat</b>
                                         augmentations, BGRL learns unsupervised graph representations.</p>
                                 </div>
                             </div>
@@ -941,7 +1018,7 @@
 
         </div>
         <div class="media-right">
-            <a class="js-modal-trigger" data-target="bgrl-modal"><i class="fa-solid fa-ellipsis"></i></a>
+            <a class="js-modal-trigger" data-target="bgrl-modal"><i class="fa-regular fa-square-plus fa-lg"></i></a>
         </div>
     </article>
     </div>
@@ -1038,7 +1115,10 @@ url={https://openreview.net/forum?id=0UXT6PpRpW}
                         <div class="dropdown-menu" role="menu">
                             <div class="dropdown-content">
                                 <div class="dropdown-item">
-                                    <p class="has-text-weight-normal is-size-7">Neuroscience</p>
+                                    <p class="has-text-weight-normal is-size-7">Through evaluations on both synthetic data
+                                        and neural recordings from hundreds of neurons in different primate brains,
+                                        we show that it is possible to build representations that <b>disentangle</b> neural
+                                        datasets along <b>relevant latent dimensions linked to behavior</b>.</p>
                                 </div>
                             </div>
                         </div>
@@ -1055,6 +1135,13 @@ url={https://openreview.net/forum?id=0UXT6PpRpW}
                                 <div class="dropdown-item">
                                     <p class="has-text-weight-normal is-size-7">Self-Supervised Learning</p>
                                 </div>
+                                <hr class="dropdown-divider">
+                                <div class="dropdown-item">
+                                    <p class="has-text-weight-normal is-size-7"> Views are created by <b>dropping out neurons</b>
+                                        and <b>jittering samples in time</b>, which intuitively should lead the network to a
+                                        representation that maintains both temporal consistency and invariance
+                                        to the specific neurons used to represent the neural state.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1067,7 +1154,7 @@ url={https://openreview.net/forum?id=0UXT6PpRpW}
                         <div class="dropdown-menu" role="menu">
                             <div class="dropdown-content">
                                 <div class="dropdown-item">
-                                    <p class="has-text-weight-normal is-size-7">Generative modeling</p>
+                                    <p class="has-text-weight-normal is-size-7">Our approach combines a generative modeling framework with an instance-specific alignment loss that tries to maximize the representational similarity between transformed views of the input.</p>
                                 </div>
                             </div>
                         </div>
@@ -1105,7 +1192,7 @@ url={https://openreview.net/forum?id=0UXT6PpRpW}
             </div>
         </div>
         <div class="media-right">
-            <a class="js-modal-trigger" data-target="swap-vae-modal"><i class="fa-solid fa-ellipsis"></i></a>
+            <a class="js-modal-trigger" data-target="swap-vae-modal"><i class="fa-regular fa-square-plus fa-lg"></i></a>
         </div>
     </article>
     </div>
@@ -1186,20 +1273,6 @@ url={https://openreview.net/forum?id=0UXT6PpRpW}
                 </span>
                     </p>
                     <p class="tagp">
-                    <div class="dropdown is-hoverable">
-                        <div class="dropdown-trigger">
-                    <span class="ghostbutton">
-                        <span class="tag is-success is-rounded is-light has-text-weight-bold">Neuroscience</span>
-                    </span>
-                        </div>
-                        <div class="dropdown-menu" role="menu">
-                            <div class="dropdown-content">
-                                <div class="dropdown-item">
-                                    <p class="has-text-weight-normal is-size-7">Neuroscience</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
                     <div class="dropdown  is-hoverable">
                         <div class="dropdown-trigger">
@@ -1211,6 +1284,12 @@ url={https://openreview.net/forum?id=0UXT6PpRpW}
                             <div class="dropdown-content">
                                 <div class="dropdown-item">
                                     <p class="has-text-weight-normal is-size-7">Self-Supervised Learning</p>
+                                </div>
+                                <hr class="dropdown-divider">
+                                <div class="dropdown-item">
+                                    <p class="has-text-weight-normal is-size-7">How can we introduce diverse views for learning?
+                                        We propose the use of <b>the dataset itself</b> to find <b>similar, yet distinct, samples</b> to serve as views for one another.
+                                        </p>
                                 </div>
                             </div>
                         </div>
@@ -1224,7 +1303,25 @@ url={https://openreview.net/forum?id=0UXT6PpRpW}
                         <div class="dropdown-menu" role="menu">
                             <div class="dropdown-content">
                                 <div class="dropdown-item">
-                                    <p class="has-text-weight-normal is-size-7">Computer Vision</p>
+                                    <p class="has-text-weight-normal is-size-7">We benchmark MYOW against other SOTA SSL methods on CIFAR-10(0) and Tiny Imagenet.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dropdown is-hoverable">
+                        <div class="dropdown-trigger">
+                    <span class="ghostbutton">
+                        <span class="tag is-success is-rounded is-light has-text-weight-bold">Neuroscience</span>
+                    </span>
+                        </div>
+                        <div class="dropdown-menu" role="menu">
+                            <div class="dropdown-content">
+                                <div class="dropdown-item">
+                                    <p class="has-text-weight-normal is-size-7">When tested on <b>multi-unit neural
+                                        recordings</b> in rodents (V1, CA1) and primates (MC), we find that MYOW
+                                        outperforms other self-supervised approaches in all examples (in some cases by more than 10%),
+                                        and often <b>surpasses the supervised baseline</b>. </p>
                                 </div>
                             </div>
                         </div>
@@ -1258,7 +1355,7 @@ url={https://openreview.net/forum?id=0UXT6PpRpW}
             </div>
         </div>
         <div class="media-right">
-            <a class="js-modal-trigger" data-target="myow-modal"><i class="fa-solid fa-ellipsis"></i></a>
+            <a class="js-modal-trigger" data-target="myow-modal"><i class="fa-regular fa-square-plus fa-lg"></i></a>
         </div>
     </article>
     </div>
@@ -1333,7 +1430,7 @@ url={https://openreview.net/forum?id=0UXT6PpRpW}
                 <h1 class="title">
                     <p class="is-size-55">
                         <i class="fa-solid fa-brain"></i>
-                        Using self-supervision and augmentations to build insights into neural <span class="nowrap">coding
+                        Using self-supervision and augmentations to build insights into <span class="nowrap"> neural coding
                 </span>
                     </p>
                     <p class="tagp">
@@ -1346,7 +1443,9 @@ url={https://openreview.net/forum?id=0UXT6PpRpW}
                         <div class="dropdown-menu" role="menu">
                             <div class="dropdown-content">
                                 <div class="dropdown-item">
-                                    <p class="has-text-weight-normal is-size-7">Neuroscience</p>
+                                    <p class="has-text-weight-normal is-size-7">We investigate recent work in the
+                                        application of self-supervised learning (SSL) for neuroscience, and discuss
+                                    the types of data augmentations needed to develop the next <b>brain-machine interfaces</b>.</p>
                                 </div>
                             </div>
                         </div>
@@ -1363,6 +1462,13 @@ url={https://openreview.net/forum?id=0UXT6PpRpW}
                                 <div class="dropdown-item">
                                     <p class="has-text-weight-normal is-size-7">Self-Supervised Learning</p>
                                 </div>
+                                <hr class="dropdown-divider">
+                                <div class="dropdown-item">
+                                    <p class="has-text-weight-normal is-size-7">Many self-supervised methods are based on
+                                        learning <b>invariances</b> across different views of the data. The <b>augmentations</b> that are used
+                                        help define what these invariances are. We ask what is required to apply SSL in the
+                                    neuroscience domain. </p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1373,7 +1479,7 @@ url={https://openreview.net/forum?id=0UXT6PpRpW}
                         Chi-Heng Lin, Keith B. Hengen, Eva L. Dyer</em></p>
                     <p><em><sup>+</sup>Contributed equally as co-first authors</em></p>
                     <p class="conferencetitle">Neural Information Processing Systems (NeurIPS), Workshop on Self-supervised
-                        Learning: Theory and Practice, Feb 2021</p>
+                        Learning: Theory and Practice, <span class="nowrap">Feb 2021</span></p>
                     <span class="nowrap"><a href="https://sslneurips21.github.io/files/CameraReady/neural_ssl_workshop.pdf"
                                             target="_blank" rel="noopener noreferrer"> <i class="fa fa-file-pdf"></i> Paper </a>&nbsp;</span>
                     <span class="nowrap"><a href="https://sslneurips21.github.io/files/Poster/poster%2036.pdf" target="_blank"
@@ -1386,7 +1492,7 @@ url={https://openreview.net/forum?id=0UXT6PpRpW}
         </div>
         <div class="media-right">
             <a class="js-modal-trigger" data-target="neuro-ssl-modal">
-                <i class="fa-solid fa-ellipsis"></i>
+                <i class="fa-regular fa-square-plus fa-lg"></i>
             </a>
         </div>
     </article>
@@ -1460,7 +1566,9 @@ url={https://openreview.net/forum?id=0UXT6PpRpW}
                         <div class="dropdown-menu" role="menu">
                             <div class="dropdown-content">
                                 <div class="dropdown-item">
-                                    <p class="has-text-weight-normal is-size-7">Optimal Transport</p>
+                                    <p class="has-text-weight-normal is-size-7">By imposing a <b>low rank</b> structure to the
+                                        transport plan, we show that our approach is more <b>robust</b> to outliers and
+                                        in high-dimensional spaces compared to vanilla OT and other approaches.</p>
                                 </div>
                             </div>
                         </div>
@@ -1474,7 +1582,9 @@ url={https://openreview.net/forum?id=0UXT6PpRpW}
                         <div class="dropdown-menu" role="menu">
                             <div class="dropdown-content">
                                 <div class="dropdown-item">
-                                    <p class="has-text-weight-normal is-size-7">Domain Adaptation</p>
+                                    <p class="has-text-weight-normal is-size-7">We apply LOT to different domain
+                                        adaptation problems, and show how our approach is both effective and
+                                        <b>interpretable</b>.</p>
                                 </div>
                             </div>
                         </div>
@@ -1506,7 +1616,7 @@ url={https://openreview.net/forum?id=0UXT6PpRpW}
         </div>
         <div class="media-right">
             <a class="js-modal-trigger" data-target="lin-20-modal">
-                <i class="fa-solid fa-ellipsis"></i>
+                <i class="fa-regular fa-square-plus fa-lg"></i>
             </a>
         </div>
     </article>
@@ -1608,7 +1718,9 @@ url={https://openreview.net/forum?id=0UXT6PpRpW}
                         <div class="dropdown-menu" role="menu">
                             <div class="dropdown-content">
                                 <div class="dropdown-item">
-                                    <p class="has-text-weight-normal is-size-7">Neuroscience</p>
+                                    <p class="has-text-weight-normal is-size-7">
+                                        We introduce an approach for identifying <b>switches</b> in neural population during
+                                        <b>free behavior</b>, and find that different groups of neurons are useful for different contexts. </p>
                                 </div>
                             </div>
                         </div>
@@ -1641,7 +1753,7 @@ url={https://openreview.net/forum?id=0UXT6PpRpW}
         </div>
         <div class="media-right">
             <a class="js-modal-trigger" data-target="urzay-22-modal">
-                <i class="fa-solid fa-ellipsis"></i>
+                <i class="fa-regular fa-square-plus fa-lg"></i>
             </a>
         </div>
     </article>
