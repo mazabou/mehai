@@ -1,5 +1,8 @@
 const entries = document.querySelectorAll('.entry');
 const tagButtons = document.querySelectorAll('.tag-button');
+
+const footer = document.querySelector('.footer')
+
 console.log(`Buttons registered: ${tagButtons}`);
 function handleTagButtonClick(event) {
     console.log(`Tag button clicked: ${event.target.dataset.tag}`);
@@ -18,6 +21,9 @@ function handleTagButtonClick(event) {
             entry.style.display = 'none';
         }
     });
+
+    footer.style.display = 'none';
+
 }
 tagButtons.forEach(button => button.addEventListener('click', handleTagButtonClick));
 
@@ -30,6 +36,7 @@ function handleButtonClick() {
     entries.forEach(entry => entry.style.display = 'block');
     tagButtons.forEach(button => button.classList.remove('ghostbutton'))
     button.style.display = 'none'
+    footer.style.display = 'block';
 
 }
 
