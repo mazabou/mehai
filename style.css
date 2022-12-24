@@ -8,6 +8,10 @@ body {
     transition: background-color 1s;
 }
 
+.colorme {
+    transition: color 1s;
+}
+
 .section{
     max-width:70em;
     margin: auto;
