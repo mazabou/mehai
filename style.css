@@ -13,6 +13,23 @@ body {
     padding-top: 2rem
 }
 
+.black-box {
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    padding: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    max-width: 500px;
+    max-height: 80px;
+    word-wrap: break-word;
+    display: inline-block;
+}
+
+.bf {
+    font-weight: bold;
+}
+
 .navbar{
     padding-bottom: 1rem;
     background-color: inherit;

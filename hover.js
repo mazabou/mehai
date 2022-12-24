@@ -2,8 +2,12 @@ const thumbnails = document.querySelectorAll('.image');
 
 // Create a new element to hold the larger image
 const largeImageContainer = document.createElement('div');
+const largeImageHeader = document.createElement('div');
 largeImageContainer.style.position = 'absolute';
 largeImageContainer.style.zIndex = '1';
+
+largeImageHeader.style.position = 'absolute';
+largeImageHeader.style.zIndex = '1';
 
 // Get the body element
 const body = document.body;
@@ -31,9 +35,13 @@ function handleThumbnailHover(event) {
 
     // Set the innerHTML of the large image container to the Image object
     largeImageContainer.innerHTML = highResImage.outerHTML;
+    console.log(highResImage.outerHTML);
+    largeImageHeader.innerHTML = `<div style="padding-bottom: 4px;"><p class="black-box">Generated using DALL·E 2</p></div><div style="padding-bottom: 4px;"><p class="black-box"><span class="bf">Prompt</span>: ${thumbnail.dataset.prompt}</p></div>`;
+    console.log(largeImageHeader.innerHTML);
 
     // Position the large image container next to the cursor
     largeImageContainer.style.left = (imageLeft + 140) + 'px';
+    largeImageHeader.style.left = (imageLeft + 140) + 'px';
 
     console.log(body.offsetHeight)
     console.log(document.documentElement.clientWidth)
@@ -49,12 +57,13 @@ function handleThumbnailHover(event) {
     }
 
     largeImageContainer.style.top = imagePos + 'px';
+    largeImageHeader.style.top = imagePos - 102 + 'px';
 
     // Add the large image container to the document
     document.body.appendChild(largeImageContainer);
+    document.body.appendChild(largeImageHeader);
 }
 
 
-
 thumbnails.forEach(thumbnail => thumbnail.addEventListener('mouseover', handleThumbnailHover))
-thumbnails.forEach(thumbnail => thumbnail.addEventListener('mouseout', () => {document.body.removeChild(largeImageContainer);}))
+thumbnails.forEach(thumbnail => thumbnail.addEventListener('mouseout', () => {document.body.removeChild(largeImageContainer); document.body.removeChild(largeImageHeader);}))
