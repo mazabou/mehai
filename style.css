@@ -20,13 +20,10 @@ body {
 
 .footer {
     background-color: white;
-    padding: 3rem;
+    padding: 0rem;
     alignment: left;
 }
 
-.credits {
-
-}
 
 .black-box {
     background-color: black;
@@ -168,4 +165,14 @@ body {
 
 .modal-card-title {
     font-size: 1rem;
+}
+
+.teach-section {
+    display: flex;
+    flex-direction: row;
+}
+
+.teach-description {
+    padding-right: .8em;
+    flex: 80%;
 }
