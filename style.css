@@ -18,6 +18,16 @@ body {
     padding-top: 2rem
 }
 
+.footer {
+    background-color: white;
+    padding: 1.5rem;
+    alignment: left;
+}
+
+.credits {
+
+}
+
 .black-box {
     background-color: black;
     color: white;
