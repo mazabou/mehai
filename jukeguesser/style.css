@@ -24,14 +24,14 @@ button.selected {
 }
 
 /* Mobile styles */
-@media (max-width: 800px) {
+@media (max-width: 1023px) {
     .container {
         width: 90%;
     }
 }
 
 /* Desktop styles */
-@media (min-width: 801px) {
+@media (min-width: 1024px) {
     .container {
         width: 50%;
     }
