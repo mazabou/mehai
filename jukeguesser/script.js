@@ -16,14 +16,12 @@ async function main() {
 
     const urlParams = new URLSearchParams(window.location.search);
     const id = urlParams.get('id') || 'default';
-    console.log(id)
 
 
     ////////////////////////////////////////
     // Hide Answer
 
     var iframe = document.getElementById("soundcloud");
-    console.log(iframe);
 
     // Create the black box element
     var blackBox = document.createElement("button");
@@ -36,7 +34,6 @@ async function main() {
 
     const imageRect = iframe.getBoundingClientRect();
     console.log(`The image is positioned at (${imageRect.left}, ${imageRect.top}).`);
-    console.log(imageRect);
 
     blackBox.style.left = imageRect.left + 222  + 'px';
     blackBox.style.top = imageRect.top + 34 + 'px';
@@ -48,7 +45,6 @@ async function main() {
         const imageRect = iframe.getBoundingClientRect();
         blackBox.style.left = imageRect.left + 222  + 'px';
         blackBox.style.top = imageRect.top + 34 + 'px';
-        console.log(imageRect.width);
         blackBox.style.width = Math.min(400, imageRect.width - 300) + 'px';
     });
 
@@ -125,14 +121,10 @@ async function main() {
     let index = 0;
 
     if (id !== 'default') {
-        console.log(id)
-        console.log(songs[id])
         filteredSongs[0] = {'song': songs[id].soundcloud_uri, 'artist': songs[id].artist}
     }
 
-    console.log(filteredSongs);
     iframe.src = "https://w.soundcloud.com/player/?url=" + filteredSongs[index].song;
-    console.log(iframe.src)
 
     function nextSong() {
         console.log('Next song triggered');
@@ -143,6 +135,8 @@ async function main() {
         // + "&amp;amp;auto_play=true&amp;amp;show_comments=false&amp;amp;show_artwork=false&amp;amp;color=06459d";
         input.disabled = false;
         if (!guessed) {
+            console.log('total set to 0')
+            total = 0;
             falseAlert();
         }
         guessed = false;
@@ -186,15 +180,12 @@ async function main() {
         input.value = '';
         total = total + 1;
         UpdateScore();
+        blackBox.style.display = 'none';
         input.disabled = true;
     }
 
     let falseTrigger = false;
     function falseAlert () {
-        if (!guessed) {
-            console.log('total set to 0')
-            total = 0;
-        }
         if (!falseTrigger) {
             document.body.style.backgroundColor = '#f06565';
             setTimeout(() => {
@@ -257,6 +248,19 @@ async function main() {
 
     document.getElementById('share').addEventListener('click', share);
 
+
+    /////
+    const button = document.querySelector('#info');
+    const panel = document.querySelector('#howtoplay');
+    const closeButton = document.querySelector('#closeButton');
+
+    button.addEventListener('click', function() {
+        panel.style.display = 'block';
+    });
+
+    closeButton.addEventListener('click', function() {
+        panel.style.display = 'none';
+    });
 
 }
 

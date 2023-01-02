@@ -117,3 +117,20 @@ button.selected {
     border-radius: 0.5em;
     opacity: 0;
 }
+
+#howtoplay {
+    z-index: 1;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    width: 30rem;
+    height: 30rem;
+    transform: translate(-50%, 0%);
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.panel-container {
+    align-items: center;
+    padding: 1em;
+}
