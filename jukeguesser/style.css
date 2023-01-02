@@ -1,0 +1,119 @@
+
+body {
+    transition: background-color 1s;
+    font-family: Arial, sans-serif;
+}
+
+.flex {
+    display: flex;
+}
+
+
+button.selected {
+    background-color: black;
+    color: white;
+    border-style: none;
+    border-radius: 0.5em;
+}
+
+.container {
+    margin: auto;
+    display: block;
+    align-items: center;
+    padding-bottom: 1em;
+}
+
+/* Mobile styles */
+@media (max-width: 800px) {
+    .container {
+        width: 90%;
+    }
+}
+
+/* Desktop styles */
+@media (min-width: 801px) {
+    .container {
+        width: 50%;
+    }
+}
+
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.skipbutton {
+    height: 2.5em;
+    border-radius: 0.5em;
+    font-size: 0.8em;
+    color: black;
+    border-style: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.soundcloudwrapper {
+    padding-top: 1em ;
+    padding-bottom: 1em;
+}
+
+.guessbox {
+    height: 2em;
+    font-size: 0.9em;
+    width: 20em;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.guessbox:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.bigbutton {
+    height: 2em;
+    font-size: 1em;
+    border-radius: 0.5em;
+    color: black;
+    border-style: none;
+    /*border-color: black;*/
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.streak {
+    font-size: 0.8em;
+    /*font-size: 1em;*/
+    /*color: #bd1919;*/
+}
+
+.hideblock {
+    background-color: black;
+    border: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 400px;
+    height: 20px;
+    color: white;
+    text-align: right;
+}
+
+#notification {
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: lightgrey;
+    font-weight: 5;
+    padding: 0.8em;
+    padding-bottom: 0.6em;
+    padding-top: 0.6em;
+    border-radius: 0.5em;
+    opacity: 0;
+}
