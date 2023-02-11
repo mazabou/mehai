@@ -86,11 +86,88 @@
     <div class="block container bd-post-content entry" data-tags="header">
         <h2 class="title">
             <p class="is-size-66">
-                2022
+                2023
             </p>
         </h2>
     </div>
 
+
+    <div class="entry block container bd-post-content" data-tags="graphs">
+        <article class="media bottom_padding">
+            <figure class="is-hidden-mobile media-left">
+                <p class="image is-128x128 ">
+                    <img src="covers/halfhop.png" data-prompt="zooming into a graph/network with a magnifying glass. black background. high quality">
+                </p>
+            </figure>
+            <div class="media-content">
+                <div>
+                    <div class="block container bd-post-content">
+                        <h1 class="title">
+                            <p class="is-size-55">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                Half-Hop: A graph upsampling approach for slowing down message passing
+                                <!--<a class="js-modal-trigger" data-target="forest-trans-modal"><i class="fa-solid fa-ellipsis"></i></a></span>-->
+                            </p>
+                            <p class="tagp">
+
+                            <div class="dropdown is-hoverable">
+                                <div class="dropdown-trigger">
+                    <span class="ghostbutton">
+                        <span class="tag is-warning is-rounded is-light has-text-weight-bold">Geometric Deep Learning</span>
+                    </span>
+                                </div>
+
+                            </div>
+
+                            </p>
+                        </h1>
+                        <div class="subtitle">
+                            <p class="authors"><em><b>Mehdi Azabou</b>, Venkataramana Ganesh, Shantanu Thakoor, Chi-Heng Lin,
+                                Lakshmi Sathidevi, Ran Liu, Michal Valko, Petar Veličković, Eva L. Dyer</em></p>
+                            <p class="conferencetitle">In preparation</p>
+                            <!--
+                            <span class="nowrap"><a href="https://nerdslab.github.io/EIT/" target="_blank" rel="noopener noreferrer"> <i class="fa fa-book"></i> Project page </a>&nbsp;</span>
+                            <span class="nowrap"><a href="https://arxiv.org/pdf/2206.06131.pdf" target="_blank" rel="noopener noreferrer"> <i class="fa fa-file-pdf"></i> Paper </a>&nbsp;</span>
+                            <span class="nowrap"><a href="https://github.com/nerdslab/EIT" target="_blank" rel="noopener noreferrer"> <i class="fa fa-github"></i> Code </a>&nbsp;</span>
+                            <span class="nowrap"><a href="https://arxiv.org/abs/2206.06131" target="_blank" rel="noopener noreferrer"> <i class="fa fa-desktop"></i> arXiv </a>&nbsp;</span>
+                            <span class="nowrap"><a class="js-modal-trigger" data-target="forest-trans-cite"> <i class="fa-solid fa-quote-right"></i> Cite</a></span>
+                            -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="media-right">
+                <a class="js-modal-trigger" data-target="halfhop-modal"><i class="fa-regular fa-square-plus fa-lg"></i></a>
+            </div>
+        </article>
+    </div>
+
+
+
+    <div id="halfhop-modal" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title"></p>
+                <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+
+                <div>
+                    <b>Abstract:</b> Message passing neural networks have shown a lot of success on graph-structured data.
+                    However, there are many instances where message passing can lead to over-smoothing or fail when neighboring nodes belong to different classes.
+                    In this work, we introduce a simple yet general framework for improving learning in message passing neural networks.
+                    Our approach essentially upsamples edges in the original graph by adding ``slow nodes'' at each
+                    edge that can mediate communication between a source and a target node. Our method only modifies the input graph,
+                    making it plug-and-play and easy to use with existing models. To understand the benefits of slowing down message passing,
+                    we provide theoretical and empirical analyses. We report results on several supervised and self-supervised benchmarks,
+                    and show improvements across the board, notably in heterophilic conditions where adjacent nodes may have different
+                    labels. We also show how our method can be used to generate multi-scale views for graph self-supervised learning.
+                </div>
+            </section>
+            <footer class="modal-card-foot"></footer>
+        </div>
+    </div>
 
     <div class="entry block container bd-post-content" data-tags="behavior,ssl,ot">
     <article class="media bottom_padding">
@@ -372,6 +449,14 @@
             <a class="js-modal-trigger" data-target="urzay-22-modal"><i class="fa-regular fa-square-plus fa-lg"></i></a>
         </div>
     </article>
+    </div>
+
+    <div class="block container bd-post-content entry" data-tags="header">
+        <h2 class="title">
+            <p class="is-size-66">
+                2022
+            </p>
+        </h2>
     </div>
 
     <div class="block container bd-post-content entry" data-tags="neuro">
