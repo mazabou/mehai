@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://bulma.io/css/bulma-docs.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons/css/academicons.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-confetti@2.9.3/tsparticles.confetti.bundle.min.js"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SMP0QT1S6Z"></script>
@@ -91,8 +92,8 @@
         </h2>
     </div>
 
-
-    <div class="entry block container bd-post-content" data-tags="graphs">
+    <div class="wrapper">
+    <div class="entry block container bd-post-content target-div" data-tags="graphs ssl">
         <article class="media bottom_padding">
             <figure class="is-hidden-mobile media-left">
                 <p class="image is-128x128 ">
@@ -115,16 +116,37 @@
                     <span class="ghostbutton">
                         <span class="tag is-warning is-rounded is-light has-text-weight-bold">Geometric Deep Learning</span>
                     </span>
-                                </div>
-
+                </div>
+                <div class="dropdown is-hoverable">
+                    <div class="dropdown-trigger">
+                <span class="ghostbutton">
+                    <span class="tag is-info is-rounded is-light has-text-weight-bold">SSL</span>
+                </span>
+                    </div>
+                    <div class="dropdown-menu" role="menu">
+                        <div class="dropdown-content">
+                            <div class="dropdown-item">
+                                <p class="has-text-weight-normal is-size-7">Self-Supervised Learning</p>
                             </div>
+                            <hr class="dropdown-divider">
+                            <div class="dropdown-item">
+                                <p class="has-text-weight-normal is-size-7">Half-Hop is used to generate more dirverse views for methods like BGRL and GRACE.</p>
+                            </div>
+                            <!--
+                            <hr class="dropdown-divider">
+
+                            -->
+                        </div>
+                    </div>
+                </div>
+                </div>
 
                             </p>
                         </h1>
                         <div class="subtitle">
                             <p class="authors"><em><b>Mehdi Azabou</b>, Venkataramana Ganesh, Shantanu Thakoor, Chi-Heng Lin,
                                 Lakshmi Sathidevi, Ran Liu, Michal Valko, Petar Veličković, Eva L. Dyer</em></p>
-                            <p class="conferencetitle">To appear at ICML 2023</p>
+                            <p class="conferencetitle">Accepted at ICML 2023</p>
                             <!--
                             <span class="nowrap"><a href="https://nerdslab.github.io/EIT/" target="_blank" rel="noopener noreferrer"> <i class="fa fa-book"></i> Project page </a>&nbsp;</span>
                             <span class="nowrap"><a href="https://arxiv.org/pdf/2206.06131.pdf" target="_blank" rel="noopener noreferrer"> <i class="fa fa-file-pdf"></i> Paper </a>&nbsp;</span>
@@ -140,6 +162,8 @@
                 <a class="js-modal-trigger" data-target="halfhop-modal"><i class="fa-regular fa-square-plus fa-lg"></i></a>
             </div>
         </article>
+    </div>
+    <canvas id="my-canvas"></canvas>
     </div>
 
 
@@ -222,14 +246,14 @@
                             </div>
                         </div>
     
-                        <div class="dropdown is-hoverable">
+                        <!-- <div class="dropdown is-hoverable">
                             <div class="dropdown-trigger">
                         <span class="ghostbutton">
                             <span class="tag is-rounded is-info is-light has-text-weight-bold">Preprint</span>
                         </span>
                             </div>
                         </div>
-                        </p>
+                        </p> -->
     
                     </h1>
                     <div class="subtitle">
@@ -807,6 +831,148 @@ year = {2023}
     </div>
 
 
+    <div class="block container bd-post-content entry" data-tags="graphs,ssl">
+        <article class="media bottom_padding">
+            <figure class="media-left is-hidden-mobile">
+                <p class="image is-128x128">
+                    <img src="covers/bgrl.png" data-prompt="two graphs colliding, 3d render, network, high resolution, black background, colorful, explosion">
+                </p>
+            </figure>
+            <div class="media-content">
+    
+                <div class="block container bd-post-content">
+                    <h1 class="title">
+                        <p class="is-size-55">
+                            <i class="fa-solid fa-circle-nodes"></i>
+                            Large-scale representation learning on graphs via <span class="nowrap">bootstrapping
+                    </span>
+                        </p>
+                        <p class="tagp">
+                        <div class="dropdown is-hoverable">
+                            <div class="dropdown-trigger">
+                        <span class="ghostbutton">
+                            <span class="tag is-light is-rounded is-warning is-light has-text-weight-bold">Geometric Deep Learning</span>
+                        </span>
+                            </div>
+                            <div class="dropdown-menu" role="menu">
+                                <div class="dropdown-content">
+                                    <div class="dropdown-item">
+                                        <p class="has-text-weight-normal is-size-7"> We train BGRL on several established node-level
+                                            classification benchmarks, and show competitive results compared to supervised and
+                                            self-supervised methods, while achieving a <b>2-10x reduction in memory costs</b> compared to
+                                            GRACE, which enable us to <b>scale to large graphs</b>.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="dropdown  is-hoverable">
+                            <div class="dropdown-trigger">
+                        <span class="ghostbutton">
+                            <span class="tag is-info is-rounded is-light has-text-weight-bold">SSL</span>
+                        </span>
+                            </div>
+                            <div class="dropdown-menu" role="menu">
+                                <div class="dropdown-content">
+                                    <div class="dropdown-item">
+                                        <p class="has-text-weight-normal is-size-7">Self-Supervised Learning</p>
+                                    </div>
+                                    <hr class="dropdown-divider">
+                                    <div class="dropdown-item">
+                                        <p class="has-text-weight-normal is-size-7">When trained with supervised data alone, GNNs
+                                            can easily overfit and may fail to generalize. Using <b>DropEdge</b> and <b>DropFeat</b>
+                                            augmentations, BGRL learns unsupervised graph representations.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </p>
+    
+                    </h1>
+                    <div class="subtitle">
+                        <p class="authors"><em>Shantanu Thakoor, Corentin Tallec, Mohammad Gheshlaghi Azar, <b>Mehdi Azabou</b>,
+                            Eva L. Dyer, Remi Munos, Petar Veličković, Michal Valko</em></p>
+                        <p class="conferencetitle">International Conference on Learning Representations (ICLR), 2022.</p>
+                        <span class="nowrap"><a href="https://openreview.net/pdf?id=0UXT6PpRpW" target="_blank"
+                                                rel="noopener noreferrer"> <i class="fa fa-file-pdf"></i> Paper </a> &nbsp;</span>
+                        <span class="nowrap"><a href="https://github.com/nerdslab/bgrl" target="_blank"
+                                                rel="noopener noreferrer"> <i class="fa fa-github"></i> Code </a> &nbsp;</span>
+                        <span class="nowrap"><a href="https://iclr.cc/media/iclr-2022/Slides/6390.pdf" target="_blank"
+                                                rel="noopener noreferrer"> <i class="fa-solid fa-person-chalkboard"></i> Slides </a> &nbsp;</span>
+                        <span class="nowrap"><a href="https://openreview.net/forum?id=0UXT6PpRpW" target="_blank"
+                                                rel="noopener noreferrer"> <i
+                                class="fa fa-desktop"></i> OpenReview </a> &nbsp;</span>
+                        <span class="nowrap"><a href="https://arxiv.org/abs/2102.06514" target="_blank"
+                                                rel="noopener noreferrer"> <i class="fa fa-desktop"></i> arXiv</a>&nbsp;</span>
+                        <span class="nowrap"><a class="js-modal-trigger" data-target="bgrl-cite"> <i
+                                class="fa-solid fa-quote-right"></i> Cite</a></span>
+                    </div>
+                </div>
+    
+            </div>
+            <div class="media-right">
+                <a class="js-modal-trigger" data-target="bgrl-modal"><i class="fa-regular fa-square-plus fa-lg"></i></a>
+            </div>
+        </article>
+        </div>
+    
+        <div id="bgrl-modal" class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+                <header class="modal-card-head">
+                    <p class="modal-card-title"></p>
+                    <button class="delete" aria-label="close"></button>
+                </header>
+                <section class="modal-card-body">
+                    <div class="image padded_block">
+                        <img src="./assets/bgrl_arch.png" alt="">
+                    </div>
+                    <div>
+                        <b>Abstract:</b> Self-supervised learning provides a promising path towards eliminating the need for
+                        costly label information in representation learning on graphs. However, to achieve state-of-the-art
+                        performance, methods often need large numbers of negative examples and rely on complex
+                        augmentations. This can be prohibitively expensive, especially for large graphs. To address these
+                        challenges, we introduce Bootstrapped Graph Latents (BGRL) - a graph representation learning method
+                        that learns by predicting alternative augmentations of the input. BGRL uses only simple
+                        augmentations and alleviates the need for contrasting with negative examples, and is thus scalable
+                        by design. BGRL outperforms or matches prior methods on several established benchmarks, while
+                        achieving a 2-10x reduction in memory costs. Furthermore, we show that BGRL can be scaled up to
+                        extremely large graphs with hundreds of millions of nodes in the semi-supervised regime - achieving
+                        state-of-the-art performance and improving over supervised baselines where representations are
+                        shaped only through label information. In particular, our solution centered on BGRL constituted one
+                        of the winning entries to the Open Graph Benchmark - Large Scale Challenge at KDD Cup 2021, on a
+                        graph orders of magnitudes larger than all previously available benchmarks, thus demonstrating the
+                        scalability and effectiveness of our approach.
+                    </div>
+                </section>
+                <footer class="modal-card-foot"></footer>
+            </div>
+        </div>
+    
+        <div id="bgrl-cite" class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+                <header class="modal-card-head">
+                    <p class="modal-card-title">Cite this paper</p>
+                    <button class="delete" aria-label="close"></button>
+                </header>
+                <section class="modal-card-body">
+                    BibTex
+                    <pre><code>@inproceedings{
+    thakoor2022largescale,
+    title={Large-Scale Representation Learning on Graphs via Bootstrapping},
+    author={Shantanu Thakoor and Corentin Tallec and Mohammad Gheshlaghi Azar and Mehdi Azabou and Eva L Dyer and Remi Munos and Petar Veli{\v{c}}kovi{\'c} and Michal Valko},
+    booktitle={International Conference on Learning Representations},
+    year={2022},
+    url={https://openreview.net/forum?id=0UXT6PpRpW}
+    }</code></pre>
+                    APA
+                    <pre><code>Thakoor, S., Tallec, C., Azar, M. G., Azabou, M., Dyer, E. L., Munos, R., Veli{\v{c}}kovi{\'c}, P., & Valko, M. (2021). Large-scale representation learning on graphs via bootstrapping. <i>International Conference on Learning Representations</i>.</code></pre>
+                </section>
+                <footer class="modal-card-foot"></footer>
+            </div>
+        </div>
+    
 
     <div class="block container bd-post-content entry" data-tags="neuro, neuroimaging">
     <article class="media bottom_padding">
@@ -1074,151 +1240,6 @@ year = {2023}
 }</code></pre>
                 APA
                 <pre><code>Azabou, M., Mendelson, M., Sorokin, M., Thakoor, S., Ahad, N., Urzay, C., & Dyer, E. L. (2022). Learning Behavior Representations Through Multi-Timescale Bootstrapping. <i>arXiv preprint</i> arXiv:2206.07041.</code></pre>
-            </section>
-            <footer class="modal-card-foot"></footer>
-        </div>
-    </div>
-
-
-
-
-    <div class="block container bd-post-content entry" data-tags="graphs,ssl">
-    <article class="media bottom_padding">
-        <figure class="media-left is-hidden-mobile">
-            <p class="image is-128x128">
-                <img src="covers/bgrl.png" data-prompt="two graphs colliding, 3d render, network, high resolution, black background, colorful, explosion">
-            </p>
-        </figure>
-        <div class="media-content">
-
-            <div class="block container bd-post-content">
-                <h1 class="title">
-                    <p class="is-size-55">
-                        <i class="fa-solid fa-circle-nodes"></i>
-                        Large-scale representation learning on graphs via <span class="nowrap">bootstrapping
-                </span>
-                    </p>
-                    <p class="tagp">
-                    <div class="dropdown is-hoverable">
-                        <div class="dropdown-trigger">
-                    <span class="ghostbutton">
-                        <span class="tag is-light is-rounded is-warning is-light has-text-weight-bold">Geometric Deep Learning</span>
-                    </span>
-                        </div>
-                        <div class="dropdown-menu" role="menu">
-                            <div class="dropdown-content">
-                                <div class="dropdown-item">
-                                    <p class="has-text-weight-normal is-size-7"> We train BGRL on several established node-level
-                                        classification benchmarks, and show competitive results compared to supervised and
-                                        self-supervised methods, while achieving a <b>2-10x reduction in memory costs</b> compared to
-                                        GRACE, which enable us to <b>scale to large graphs</b>.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="dropdown  is-hoverable">
-                        <div class="dropdown-trigger">
-                    <span class="ghostbutton">
-                        <span class="tag is-info is-rounded is-light has-text-weight-bold">SSL</span>
-                    </span>
-                        </div>
-                        <div class="dropdown-menu" role="menu">
-                            <div class="dropdown-content">
-                                <div class="dropdown-item">
-                                    <p class="has-text-weight-normal is-size-7">Self-Supervised Learning</p>
-                                </div>
-                                <hr class="dropdown-divider">
-                                <div class="dropdown-item">
-                                    <p class="has-text-weight-normal is-size-7">When trained with supervised data alone, GNNs
-                                        can easily overfit and may fail to generalize. Using <b>DropEdge</b> and <b>DropFeat</b>
-                                        augmentations, BGRL learns unsupervised graph representations.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    </p>
-
-                </h1>
-                <div class="subtitle">
-                    <p class="authors"><em>Shantanu Thakoor, Corentin Tallec, Mohammad Gheshlaghi Azar, <b>Mehdi Azabou</b>,
-                        Eva L. Dyer, Remi Munos, Petar Veličković, Michal Valko</em></p>
-                    <p class="conferencetitle">International Conference on Learning Representations (ICLR), 2022.</p>
-                    <span class="nowrap"><a href="https://openreview.net/pdf?id=0UXT6PpRpW" target="_blank"
-                                            rel="noopener noreferrer"> <i class="fa fa-file-pdf"></i> Paper </a> &nbsp;</span>
-                    <span class="nowrap"><a href="https://github.com/nerdslab/bgrl" target="_blank"
-                                            rel="noopener noreferrer"> <i class="fa fa-github"></i> Code </a> &nbsp;</span>
-                    <span class="nowrap"><a href="https://iclr.cc/media/iclr-2022/Slides/6390.pdf" target="_blank"
-                                            rel="noopener noreferrer"> <i class="fa-solid fa-person-chalkboard"></i> Slides </a> &nbsp;</span>
-                    <span class="nowrap"><a href="https://openreview.net/forum?id=0UXT6PpRpW" target="_blank"
-                                            rel="noopener noreferrer"> <i
-                            class="fa fa-desktop"></i> OpenReview </a> &nbsp;</span>
-                    <span class="nowrap"><a href="https://arxiv.org/abs/2102.06514" target="_blank"
-                                            rel="noopener noreferrer"> <i class="fa fa-desktop"></i> arXiv</a>&nbsp;</span>
-                    <span class="nowrap"><a class="js-modal-trigger" data-target="bgrl-cite"> <i
-                            class="fa-solid fa-quote-right"></i> Cite</a></span>
-                </div>
-            </div>
-
-        </div>
-        <div class="media-right">
-            <a class="js-modal-trigger" data-target="bgrl-modal"><i class="fa-regular fa-square-plus fa-lg"></i></a>
-        </div>
-    </article>
-    </div>
-
-    <div id="bgrl-modal" class="modal">
-        <div class="modal-background"></div>
-        <div class="modal-card">
-            <header class="modal-card-head">
-                <p class="modal-card-title"></p>
-                <button class="delete" aria-label="close"></button>
-            </header>
-            <section class="modal-card-body">
-                <div class="image padded_block">
-                    <img src="./assets/bgrl_arch.png" alt="">
-                </div>
-                <div>
-                    <b>Abstract:</b> Self-supervised learning provides a promising path towards eliminating the need for
-                    costly label information in representation learning on graphs. However, to achieve state-of-the-art
-                    performance, methods often need large numbers of negative examples and rely on complex
-                    augmentations. This can be prohibitively expensive, especially for large graphs. To address these
-                    challenges, we introduce Bootstrapped Graph Latents (BGRL) - a graph representation learning method
-                    that learns by predicting alternative augmentations of the input. BGRL uses only simple
-                    augmentations and alleviates the need for contrasting with negative examples, and is thus scalable
-                    by design. BGRL outperforms or matches prior methods on several established benchmarks, while
-                    achieving a 2-10x reduction in memory costs. Furthermore, we show that BGRL can be scaled up to
-                    extremely large graphs with hundreds of millions of nodes in the semi-supervised regime - achieving
-                    state-of-the-art performance and improving over supervised baselines where representations are
-                    shaped only through label information. In particular, our solution centered on BGRL constituted one
-                    of the winning entries to the Open Graph Benchmark - Large Scale Challenge at KDD Cup 2021, on a
-                    graph orders of magnitudes larger than all previously available benchmarks, thus demonstrating the
-                    scalability and effectiveness of our approach.
-                </div>
-            </section>
-            <footer class="modal-card-foot"></footer>
-        </div>
-    </div>
-
-    <div id="bgrl-cite" class="modal">
-        <div class="modal-background"></div>
-        <div class="modal-card">
-            <header class="modal-card-head">
-                <p class="modal-card-title">Cite this paper</p>
-                <button class="delete" aria-label="close"></button>
-            </header>
-            <section class="modal-card-body">
-                BibTex
-                <pre><code>@inproceedings{
-thakoor2022largescale,
-title={Large-Scale Representation Learning on Graphs via Bootstrapping},
-author={Shantanu Thakoor and Corentin Tallec and Mohammad Gheshlaghi Azar and Mehdi Azabou and Eva L Dyer and Remi Munos and Petar Veli{\v{c}}kovi{\'c} and Michal Valko},
-booktitle={International Conference on Learning Representations},
-year={2022},
-url={https://openreview.net/forum?id=0UXT6PpRpW}
-}</code></pre>
-                APA
-                <pre><code>Thakoor, S., Tallec, C., Azar, M. G., Azabou, M., Dyer, E. L., Munos, R., Veli{\v{c}}kovi{\'c}, P., & Valko, M. (2021). Large-scale representation learning on graphs via bootstrapping. <i>International Conference on Learning Representations</i>.</code></pre>
             </section>
             <footer class="modal-card-foot"></footer>
         </div>
@@ -1961,7 +1982,7 @@ url={https://openreview.net/forum?id=0UXT6PpRpW}
 <footer class="footer">
     <div class="section content">
         <div style="font-weight: 400; font-size: .6em;">VERSION</div>
-        <div style="font-size: 1em;">2023 © Edition 1.1</div>
+        <div style="font-size: 1em;">2023 © Edition 1.2</div>
 <!--        <div style="max-width: 550px; margin: auto;">Feel free to copy <a href="https://github.com/mazabou/mehai">this website</a>. Some of the images have been generated using DALL·E, an artificial intelligence tool developed by OpenAI.</div>-->
 
     </div>
@@ -1970,5 +1991,98 @@ url={https://openreview.net/forum?id=0UXT6PpRpW}
 
 <script src="search.js"></script>
 <script src="hover.js"></script>
+
+<script>
+    (async () => {
+    const canvas = document.getElementById("my-canvas");
+
+    canvas.confetti =
+        canvas.confetti || (await confetti.create(canvas, { resize: false }));
+
+  const duration = 3 * 1000,
+  animationEnd = Date.now() + duration,
+  defaults = { startVelocity: 10, spread: 360, ticks: 60, zIndex: 0, decay: 0.94, scalar:1.3, };
+
+function randomInRange(min, max) {
+  return Math.random() * (max - min) + min;
+}
+
+const interval = setInterval(function() {
+  const timeLeft = animationEnd - Date.now();
+
+  if (timeLeft <= 0) {
+    return clearInterval(interval);
+  }
+
+  const particleCount = 20 * (timeLeft / duration);
+  const particleCount2 = 10; 
+
+  // since particles fall down, start a bit higher than random
+  canvas.confetti(
+    Object.assign({}, defaults, {
+      particleCount,
+      origin: { x: randomInRange(0.2, 0.6), y: Math.random() - 0.2 },
+    })
+  );
+  canvas.confetti(
+    Object.assign({}, 
+        {   ...defaults, 
+        particleCount: 3,
+        scalar: 2.5,
+        shapes: ["text"],
+        shapeOptions: {
+        text: {
+            value: ["🐰", "🏝️"],
+        }, }, },
+    {
+        particleCount2,
+      origin: { x: randomInRange(0.2, 0.6), y: Math.random() - 0.2 },
+    })
+  );
+  canvas.confetti(
+    Object.assign({}, 
+        {   ...defaults, 
+        particleCount: 3,
+        scalar: 1,
+        shapes: ["text"],
+        shapeOptions: {
+        text: {
+            value: ["🐰", "🏝️"],
+        }, }, },
+    {
+        particleCount2,
+      origin: { x: randomInRange(0.2, 0.6), y: Math.random() - 0.2 },
+    })
+  );
+
+  canvas.confetti(
+    Object.assign({}, defaults, {
+      particleCount,
+      origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
+    })
+  );
+  canvas.confetti(
+    Object.assign({}, 
+        {   ...defaults, 
+        particleCount: 3,
+        scalar: 2.5,
+        shapes: ["text"],
+        shapeOptions: {
+        text: {
+            value: ["🏝️"],
+        }, }, },
+        {
+        particleCount2,
+      origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
+    })
+  );
+}, 250);
+
+    // canvas.confetti({
+    //     spread: 10,
+    //     origin: { y: 1.2 },
+    // });
+    })();
+</script>
 </body>
 </html>

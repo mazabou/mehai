@@ -176,3 +176,21 @@ body {
     padding-right: .8em;
     flex: 80%;
 }
+
+
+.wrapper {
+    position: relative;
+  }
+
+.target-div {
+position: relative;
+z-index: 1;
+}
+
+#my-canvas {
+position: absolute;
+top: 0;
+left: 0;
+z-index: 2;
+pointer-events: none; /* To allow interaction with the content beneath the canvas */
+}
