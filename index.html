@@ -15,6 +15,9 @@
     <link rel="stylesheet" href="https://bulma.io/css/bulma-docs.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons/css/academicons.min.css">
     <link rel="stylesheet" href="style.css">
+
+
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SMP0QT1S6Z"></script>
     <script>
@@ -45,12 +48,14 @@
 </div>
 
 <section class="section" style="padding-bottom: 0px;">
+    <div class="tsparticles-container">
+    <div id="tsparticles"></div>
     <article class="media">
         <figure class="media-left image is-128x128">
             <img id="me" style="border-radius: 20px; border: 8px solid hsl(347, 90%, 90%);" alt="Mehdi Azabou" src="assets/me.png">
         </figure>
-        <div class="media-content">
-            <div>
+        <div class="media-content tsparticles-content" style="background-color: transparent;">
+            <div class="tsparticles-content">
                 <p class=" is-size-4">
                     Mehdi Azabou
                 </p>
@@ -66,19 +71,34 @@
             </div>
         </div>
     </article>
-
-    <!--
-    <div class="bio  is-size-55">
-        <h2 class="title"> News </h2>
-            <ul>
-                <li><i class="fa-solid fa-chevron-right fa-2xs"></i>&nbsp; Presented  </li>
-
-            </ul>
     </div>
--->
+    
+    <div class="bio is-size-55" style="margin-bottom:0em">
+        <h2 class="title2"> News </h2>
+        <table>
+            <tr>
+              <td class="no-wrap"><span style="font-weight: 300;"> Apr 2023 </span></td>
+              <td class="no-wrap">&nbsp;<i class="fa-solid fa-chevron-right fa-2xs"></i>&nbsp;</td>
+              <td>Half-Hop is accepted at ICML 2023 🎉. More details coming soon.</td>
+            </tr>
+            <tr>
+              <td class="no-wrap"><span style="font-weight: 300;"> Apr 2023 </span></td>
+              <td class="no-wrap">&nbsp;<i class="fa-solid fa-chevron-right fa-2xs"></i>&nbsp;</td>
+              <td>Our paper on identifying cell type from in vivo neuronal activity was published in Cell Reports [<a href="https://www.cell.com/cell-reports/fulltext/S2211-1247(23)00329-7">Link</a>].</td>
+            </tr>
+            <tr>
+                <td class="no-wrap"><span style="font-weight: 300;"> Mar 2023 </span></td>
+                <td class="no-wrap">&nbsp;<i class="fa-solid fa-chevron-right fa-2xs"></i>&nbsp;</td>
+                <td>Check out our latest behavior representation learning model BAMS which ranks first 🥇 on the MABe 2022 benchmark [<a href="https://multiscale-behavior.github.io/">Project page</a>].</td>
+            </tr>
+          </table>
+          <hr>
+    </div>
 
-    <div class="bio is-size-55">
-        <h2 class="title"> Bio </h2>
+
+
+    <div class="bio is-size-55" style="margin-top:0em">
+        <h2 class="title2"> Bio </h2>
         <p>
             Hi! I am Mehdi. I am a third-year Machine Learning Ph.D. student advised
             by <a href="https://dyerlab.gatech.edu/" target="_blank" rel="noopener noreferrer"> Dr. Eva L. Dyer</a>.
@@ -91,7 +111,7 @@
             Through the development of new approaches for analyzing and interpreting complex modalities,
             I aim to make an impact in our understanding of the brain, and biological intelligence,
             and to contribute new tools that facilitate new scientific discoveries.
-            I am currently working on developing methods for learning representations of neural activity and behavior,
+            I am currently working on developing methods for learning representations of neural activity, behavior, and graphs,
             with the goal of improving our understanding of the brain.
         </p>
         <br>
@@ -107,12 +127,14 @@
 
 
 
-<!--<div class="section" style="padding-top: 10px;">-->
-<!--    <h2 class="title"> What I am listening to </h2>-->
-<!--    <div class="content">-->
-<!--        <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/playlist/current-favorites/pl.u-8aAVZ6VivgyDMAE"></iframe>-->
-<!--    </div>-->
-<!--</div>-->
+<!-- <div class="section" style="padding-top: 10px;">
+   <h2 class="title"> What I am listening to </h2>
+   
+   <div class="content">
+       <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="450" style="width:100%;max-width:1200px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/playlist/current-favorites/pl.u-8aAVZ6VivgyDMAE"></iframe>
+   </div>
+</div> -->
+
 
 
 <footer class="footer">
@@ -122,7 +144,18 @@
     </div>
 </footer>
 
+
 </body>
 
 <script src="dynamic-background.js"></script>
+
+
+<!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/tsparticles/1.18.11/tsparticles.min.js'></script> -->
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/2.9.3/tsparticles.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/2.9.3/tsparticles.bundle.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/2.9.3/tsparticles.js"></script>
+<script  src="./tsparticles.js"></script>
+
+
 </html>

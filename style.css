@@ -51,6 +51,12 @@ body {
     font-size:1.5rem;
 }
 
+.title2 {
+    font-weight: 600;
+    font-size:1.5rem;
+    margin-bottom: .3em;
+}
+
 
 .bd-post-content {
     max-width: 70em;
@@ -187,10 +193,46 @@ position: relative;
 z-index: 1;
 }
 
+
 #my-canvas {
 position: absolute;
 top: 0;
 left: 0;
 z-index: 2;
 pointer-events: none; /* To allow interaction with the content beneath the canvas */
+}
+
+.no-wrap {
+    white-space: nowrap;
+  }
+
+
+.tsparticles-container {
+position: relative;
+}
+
+#tsparticles {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: 0;
+background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+#tsparticles::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 25%, rgba(255, 255, 255, 0));
+    z-index: 0;
+    pointer-events: none;
+  }
+
+.tsparticles-content {
+    z-index: 1;
 }
