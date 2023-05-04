@@ -42,3 +42,33 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Add a click event on buttons to open a specific modal
+    (document.querySelectorAll('.js-expand-trigger') || []).forEach(($trigger) => {
+        const modal = $trigger.dataset.target;
+        const $target = document.getElementById(modal);
+        let isExpanded = false;
+
+        $trigger.addEventListener('click', () => {
+            if ($target.style.display === 'block') {
+                $target.style.display = 'none';
+                $trigger.classList.remove("rotate");
+                // $trigger.classList.add("fa-chevron-down");
+                // contentDiv.style.maxHeight = '500px';
+                // expandButton.textContent = 'Expand';
+            } else {
+                $target.style.display = 'block';
+                // $trigger.classList.remove("fa-chevron-down");
+                $trigger.classList.add("rotate");
+                // contentDiv.style.maxHeight = '1000px'; // Set the max-height to accommodate the expanded content
+                // expandButton.textContent = 'Collapse';
+            }
+            isExpanded = !isExpanded;
+        })
+        });
+    });
+
+
+

@@ -12,7 +12,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="https://bulma.io/css/bulma-docs.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons/css/academicons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
     <script src="https://cdn.jsdelivr.net/npm/tsparticles-confetti@2.9.3/tsparticles.confetti.bundle.min.js"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -84,7 +88,7 @@
         </div>
     </div>
 
-    <div class="block container bd-post-content entry" data-tags="header">
+    <div class="block container bd-post-content entry year" data-tags="header">
         <h2 class="title">
             <p class="is-size-66">
                 2023
@@ -93,7 +97,7 @@
     </div>
 
     <div class="wrapper">
-    <div class="entry block container bd-post-content target-div" data-tags="graphs ssl">
+    <div class="entry block container bd-post-content target-div highlighter" data-tags="graphs ssl">
         <article class="media bottom_padding">
             <figure class="is-hidden-mobile media-left">
                 <p class="image is-128x128 ">
@@ -155,11 +159,22 @@
                             <span class="nowrap"><a class="js-modal-trigger" data-target="forest-trans-cite"> <i class="fa-solid fa-quote-right"></i> Cite</a></span>
                             -->
                         </div>
+                        <div id="halfhop-abstract" style="display:none;">
+                            <b>Abstract:</b> Message passing neural networks have shown a lot of success on graph-structured data.
+                            However, there are many instances where message passing can lead to over-smoothing or fail when neighboring nodes belong to different classes.
+                            In this work, we introduce a simple yet general framework for improving learning in message passing neural networks.
+                            Our approach essentially upsamples edges in the original graph by adding ``slow nodes'' at each
+                            edge that can mediate communication between a source and a target node. Our method only modifies the input graph,
+                            making it plug-and-play and easy to use with existing models. To understand the benefits of slowing down message passing,
+                            we provide theoretical and empirical analyses. We report results on several supervised and self-supervised benchmarks,
+                            and show improvements across the board, notably in heterophilic conditions where adjacent nodes may have different
+                            labels. We also show how our method can be used to generate multi-scale views for graph self-supervised learning.
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="media-right">
-                <a class="js-modal-trigger" data-target="halfhop-modal"><i class="fa-regular fa-square-plus fa-lg"></i></a>
+                <a class="js-expand-trigger fa-solid fa-chevron-down" data-target="halfhop-abstract"></a>
             </div>
         </article>
     </div>
@@ -262,6 +277,31 @@
                             Tom Nowakowski, Eva L. Dyer<sup>*</sup>, Keith B. Hengen<sup>*</sup></em></p>
                         <p><em><sup>+</sup>Contributed equally as co-first authors</em></p>
                         <p class="conferencetitle">Cell Reports, Volume 42, Issue 4, April 2023.</p>
+                    </div>
+                        <div id="lolcat-abstract" style="display:none;">
+                            <!-- <img src="./assets/lolcat.jpg" alt=""> -->
+                            <b>Abstract:</b> Cell type is hypothesized to be a key determinant of the role of a neuron within a
+                            circuit. However, it is unknown whether a neuron’s transcriptomic type influences the timing of its
+                            activity in the intact brain. In other words, can transcriptomic cell type be extracted from the
+                            time series of a neuron’s activity? To address this question, we developed a new deep learning
+                            architecture that learns features of interevent intervals across multiple timescales (milliseconds
+                            to >30 min). We show that transcriptomic cell class information is robustly embedded in the timing
+                            of single neuron activity recorded in the intact brain of behaving animals (calcium imaging and
+                            extracellular electrophysiology), as well as in a bio-realistic model of visual cortex. In contrast,
+                            we were unable to reliably extract cell identity from summary measures of rate, variance, and
+                            interevent interval statistics. We applied our analyses to the question of whether transcriptomic
+                            subtypes of excitatory neurons represent functionally distinct classes. In the calcium imaging
+                            dataset, which contains a diverse set of excitatory Cre lines, we found that a subset of excitatory
+                            cell types are computationally distinguishable based upon their Cre lines, and that excitatory types
+                            can be classified with higher accuracy when considering their cortical layer and projection class.
+                            Here we address the fundamental question of whether a neuron, within a complex cortical network,
+                            embeds a fingerprint of its transcriptomic identity into its activity. Our results reveal robust
+                            computational fingerprints for transcriptomic types and classes across diverse contexts, defined
+                            over multiple timescales.
+
+                    </div>
+                    <div class="subtitle">
+                        <hr>
                         <span class="nowrap"><a href="https://reader.elsevier.com/reader/sd/pii/S2211124723003297?token=C10DAF41EC33244826A08D09CE24930253CD6423459C834B965CD6BAE3253EBF6845ED9C2ADC6CE3EA68114690C2560E&originRegion=us-east-1&originCreation=20230330205233"
                                                 target="_blank" rel="noopener noreferrer"> <i class="fa fa-file-pdf"></i> Paper </a> &nbsp;</span>
                         <!-- <span class="nowrap"><a href="https://www.biorxiv.org/content/10.1101/2022.07.10.499487v1"
@@ -275,7 +315,7 @@
                 </div>
             </div>
             <div class="media-right">
-                <a class="js-modal-trigger" data-target="lolcat-modal"><i class="fa-regular fa-square-plus fa-lg"></i></a>
+                <a class="js-expand-trigger fa-solid fa-chevron-down" data-target="lolcat-abstract"></a>
             </div>
         </article>
         </div>
@@ -401,6 +441,30 @@ author = {Aidan Schneider and Mehdi Azabou and Louis McDougall-Vigier and David 
                         <p class="authors"><em><b>Mehdi Azabou</b>, Michael Mendelson, Nauman Ahad, Maks Sorokin,
                             Shantanu Thakoor, Carolina Urzay, Eva L. Dyer</em></p>
                         <p class="conferencetitle">Preprint, Mar 2023</p>
+                    </div>
+                    <div id="bams-hoa-abstract" style="display:none;">
+                        <b>Abstract:</b> Natural behavior consists of dynamics that are complex
+                        and unpredictable, especially when trying to predict many
+                        steps into the future. While some success has been found
+                        in building representations of behavior under constrained
+                        or simplified task-based conditions, many of these models
+                        cannot be applied to free and naturalistic settings where
+                        behavior becomes increasingly hard to model. In this work,
+                        we develop a multi-task representation learning model for
+                        behavior that combines two novel components: (i) An action
+                        prediction objectiåve that aims to predict the distribution of
+                        actions over future timesteps, and (ii) A multi-scale architecture that builds separate latent spaces to accommodate
+                        short- and long-term dynamics. After demonstrating the ability of the method to build representations of both local and
+                        global dynamics in realistic robots in varying environments
+                        and terrains, we apply our method to the MABe 2022 Multi-agent behavior challenge, where our model ranks 1st overall
+                        and on all global tasks, and 1st on 4 out of 9 frame-level
+                        subtasks. In all of these cases, we show that our model can
+                        build representations that capture the many different factors
+                        that drive behavior and solve a wide range of downstream
+                        tasks.
+                    </div>
+                    <div class="subtitle">
+                        <hr>
                         <span class="nowrap"><a href="https://multiscale-behavior.github.io/" target="_blank" rel="noopener noreferrer"> <i class="fa fa-book"></i> Project page </a>&nbsp;</span>
                         <span class="nowrap"><a href="https://arxiv.org/pdf/2303.08811.pdf" target="_blank" rel="noopener noreferrer"> <i class="fa fa-file-pdf"></i> Paper </a>&nbsp;</span>
                         <span class="nowrap"><a href="https://arxiv.org/pdf/2303.08811" target="_blank" rel="noopener noreferrer"> <i class="fa fa-desktop"></i> arXiv </a>&nbsp;</span>
@@ -413,7 +477,7 @@ author = {Aidan Schneider and Mehdi Azabou and Louis McDougall-Vigier and David 
             </div>
         </div>
         <div class="media-right">
-            <a class="js-modal-trigger" data-target="bams-hoa-modal"><i class="fa-regular fa-square-plus fa-lg"></i></a>
+            <a class="js-expand-trigger fa-solid fa-chevron-down" data-target="bams-hoa-abstract"></a>
         </div>
     </article>
     </div>
@@ -552,6 +616,28 @@ year = {2023}
                     <p><em><sup>+</sup>Contributed equally as co-first authors</em></p>
                     <p class="conferencetitle">To appear at the 11th International IEEE EMBS Conference on Neural Engineering
                         (NER'23), Baltimore, Maryland, <span class="nowrap">April 2023</span></p>
+                </div>
+
+                <div id="human-abstract" style="display: none;">
+                    <b>Abstract:</b> Human behavior is incredibly complex and the factors that drive decision making—from
+                    instinct, to strategy, to biases between individuals—often vary over multiple timescales.
+                    In this paper, we design a predictive framework that learns representations to encode an individual's
+                    `behavioral style', i.e. long-term behavioral trends, while simultaneously predicting future actions
+                    and choices. The model  explicitly separates representations into three latent spaces: the recent
+                    past space, the short-term space, and the long-term space where we hope to capture individual
+                    differences. To simultaneously extract both global and local variables from complex human behavior,
+                    our method combines a multi-scale temporal convolutional network with latent prediction tasks,
+                    where we encourage embeddings across the entire sequence, as well as subsets of the sequence,
+                    to be mapped to similar points in the latent space.
+
+                    We develop and apply our method to a large-scale behavioral dataset from 1,000 humans playing a
+                    3-armed bandit task, and analyze what our model's resulting embeddings reveal about the human
+                    decision making process. In addition to predicting future choices, we show that our model can learn
+                    rich representations of human behavior over multiple timescales and provide signatures of
+                    differences in individuals.
+                </div>
+                <div class="subtitle">
+                    <hr>
                     <span class="nowrap"><a href="https://arxiv.org/pdf/2302.11023.pdf" target="_blank" rel="noopener noreferrer"> <i class="fa fa-file-pdf"></i> Paper </a>&nbsp;</span>
                     <span class="nowrap"><a href="https://arxiv.org/abs/2302.11023" target="_blank" rel="noopener noreferrer"> <i class="fa fa-desktop"></i> arXiv </a>&nbsp;</span>
                     <span class="nowrap"><a class="js-modal-trigger" data-target="human-bandit-cite"> <i class="fa-solid fa-quote-right"></i> Cite</a></span>
@@ -559,7 +645,7 @@ year = {2023}
             </div>
         </div>
         <div class="media-right">
-            <a class="js-modal-trigger" data-target="human-modal"><i class="fa-regular fa-square-plus fa-lg"></i></a>
+            <a class="js-expand-trigger fa-solid fa-chevron-down" data-target="human-abstract"></a>
         </div>
     </article>
     </div>
@@ -670,15 +756,29 @@ year = {2023}
                     <span class="nowrap"><a class="js-modal-trigger" data-target="forest-trans-cite"> <i class="fa-solid fa-quote-right"></i> Cite</a></span>
                     -->
                 </div>
+                <div id="urzay-22-abstract" style="display:none;">
+                    <b>Abstract:</b> Finding points in time where the distribution of neural responses changes (change
+                    points) is an important step in many neural data analysis pipelines. However, in complex and free
+                    behaviors, where we see different types of shifts occurring at different rates, it can be difficult to
+                    use existing methods for change point (CP) detection because they can't necessarily handle different
+                    types of changes that may occur in the underlying neural distribution. In this work, we introduce a new
+                    approach for finding changes in neural population states across diverse activities and arousal states
+                    occurring in free behavior. Our model follows a contrastive learning approach: we learn a metric for CP
+                    detection based on maximizing the Sinkhorn divergences of neuron firing rates across two sides of a
+                    labeled CP. We apply this method to a 12-hour neural recording of a freely behaving mouse to detect
+                    changes in sleep stages and behavior. We show that when we learn a metric, we can better detect change
+                    points and also yield insights into which neurons and sub-groups are important for detecting certain
+                    types of switches that occur in the brain.
+                </div>
             </div>
         </div>
         <div class="media-right">
-            <a class="js-modal-trigger" data-target="urzay-22-modal"><i class="fa-regular fa-square-plus fa-lg"></i></a>
+            <a class="js-expand-trigger fa-solid fa-chevron-down" data-target="urzay-22-abstract"></a>
         </div>
     </article>
     </div>
 
-    <div class="block container bd-post-content entry" data-tags="header">
+    <div class="block container bd-post-content entry year" data-tags="header">
         <h2 class="title">
             <p class="is-size-66">
                 2022
@@ -746,6 +846,28 @@ year = {2023}
                 <div class="subtitle">
                     <p class="authors"><em>Ran Liu, <b>Mehdi Azabou</b>, Max Dabagia, Jingyun Xiao, Eva L. Dyer</em></p>
                     <p class="conferencetitle">Neural Information Processing Systems (NeurIPS), 2022</p>
+                    </div>
+                    <div id="forest-trans-abstract" style="display: none;">
+                        <!-- <img src="./assets/trans-forest.jpg" alt=""> -->
+                        <b>Abstract:</b> Complex time-varying systems are often studied by abstracting away from the
+                        dynamics of individual components to build a model of the population-level dynamics from the start.
+                        However, when building a population-level description, it can be easy to lose sight of each
+                        individual and how each contributes to the larger picture. In this paper, we present a novel
+                        transformer architecture for learning from time-varying data that builds descriptions of both the
+                        individual as well as the collective population dynamics. Rather than combining all of our data into
+                        our model at the onset, we develop a separable architecture that operates on individual time-series
+                        first before passing them forward; this induces a permutation-invariance property and can be used to
+                        transfer across systems of different size and order. After demonstrating that our model can be
+                        applied to successfully recover complex interactions and dynamics in many-body systems, we apply our
+                        approach to populations of neurons in the nervous system. On neural activity datasets, we show that
+                        our multi-scale transformer not only yields robust decoding performance, but also provides
+                        impressive performance in transfer. Our results show that it is possible to learn from neurons in
+                        one animal's brain and transfer the model on neurons in a different animal's brain, with
+                        interpretable neuron correspondence across sets and animals. This finding opens up a new path to
+                        decode from and represent large collections of neurons.
+                    </div>
+                <div class="subtitle">
+                    <hr>
                     <span class="nowrap"><a href="https://nerdslab.github.io/EIT/" target="_blank" rel="noopener noreferrer"> <i
                             class="fa fa-book"></i> Project page </a>&nbsp;</span>
                     <span class="nowrap"><a href="https://arxiv.org/pdf/2206.06131.pdf" target="_blank"
@@ -763,7 +885,7 @@ year = {2023}
             </div>
         </div>
         <div class="media-right">
-            <a class="js-modal-trigger" data-target="forest-trans-modal"><i class="fa-regular fa-square-plus fa-lg"></i></a>
+            <a class="js-expand-trigger fa-solid fa-chevron-down" data-target="forest-trans-abstract"></a>
         </div>
     </article>
     </div>
@@ -893,6 +1015,26 @@ year = {2023}
                         <p class="authors"><em>Shantanu Thakoor, Corentin Tallec, Mohammad Gheshlaghi Azar, <b>Mehdi Azabou</b>,
                             Eva L. Dyer, Remi Munos, Petar Veličković, Michal Valko</em></p>
                         <p class="conferencetitle">International Conference on Learning Representations (ICLR), 2022.</p>
+                        </div>
+                        <div id="bgrl-abstract" style="display: none;">
+                            <b>Abstract:</b> Self-supervised learning provides a promising path towards eliminating the need for
+                            costly label information in representation learning on graphs. However, to achieve state-of-the-art
+                            performance, methods often need large numbers of negative examples and rely on complex
+                            augmentations. This can be prohibitively expensive, especially for large graphs. To address these
+                            challenges, we introduce Bootstrapped Graph Latents (BGRL) - a graph representation learning method
+                            that learns by predicting alternative augmentations of the input. BGRL uses only simple
+                            augmentations and alleviates the need for contrasting with negative examples, and is thus scalable
+                            by design. BGRL outperforms or matches prior methods on several established benchmarks, while
+                            achieving a 2-10x reduction in memory costs. Furthermore, we show that BGRL can be scaled up to
+                            extremely large graphs with hundreds of millions of nodes in the semi-supervised regime - achieving
+                            state-of-the-art performance and improving over supervised baselines where representations are
+                            shaped only through label information. In particular, our solution centered on BGRL constituted one
+                            of the winning entries to the Open Graph Benchmark - Large Scale Challenge at KDD Cup 2021, on a
+                            graph orders of magnitudes larger than all previously available benchmarks, thus demonstrating the
+                            scalability and effectiveness of our approach.
+                        </div>
+                        <div class="subtitle">
+                        <hr>
                         <span class="nowrap"><a href="https://openreview.net/pdf?id=0UXT6PpRpW" target="_blank"
                                                 rel="noopener noreferrer"> <i class="fa fa-file-pdf"></i> Paper </a> &nbsp;</span>
                         <span class="nowrap"><a href="https://github.com/nerdslab/bgrl" target="_blank"
@@ -911,7 +1053,7 @@ year = {2023}
     
             </div>
             <div class="media-right">
-                <a class="js-modal-trigger" data-target="bgrl-modal"><i class="fa-regular fa-square-plus fa-lg"></i></a>
+                <a class="js-expand-trigger fa-solid fa-chevron-down" data-target="bgrl-abstract"></a>
             </div>
         </article>
         </div>
@@ -1034,6 +1176,28 @@ year = {2023}
                         Eva L. Dyer</em></p>
                     <p class="conferencetitle">Neural Information Processing Systems (NeurIPS) Datasets and Benchmarks Track,
                         2022</p>
+                    </div>
+                    <div id="quesada-22-abstract" style="display: none;">
+                        <b>Abstract:</b> There are multiple scales of abstraction from which we can describe the same image,
+                        depending on whether we are focusing on fine-grained details or a more global attribute of the
+                        image. In brain mapping, learning to automatically parse images to build representations of both
+                        small-scale features (e.g., the presence of cells or blood vessels) and global properties of an
+                        image (e.g., source brain region) is a crucial and open challenge. However, most existing datasets
+                        and benchmarks for neuroanatomy consider only a single downstream task at a time. We introduce a new
+                        dataset, annotations, and multiple downstream tasks that provide diverse ways to readout information
+                        about brain structure and architecture from the same image. Our multi-task neuroimaging benchmark
+                        (MTNeuro) is built on volumetric, micrometer-resolution X-ray microtomography imaging of a large
+                        thalamocortical section of mouse brain, encompassing multiple cortical and subcortical regions, that
+                        reveals dense reconstructions of the underlying microstructure (i.e., cell bodies, vasculature, and
+                        axons). We generated a number of different prediction challenges and evaluated several supervised
+                        and self-supervised models for brain-region prediction and pixel-level semantic segmentation of
+                        microstructures. Our experiments not only highlight the rich heterogeneity of this dataset, but also
+                        provide insights into how self-supervised approaches can be used to learn representations that
+                        capture multiple attributes of a single image and perform well on a variety of downstream tasks.
+                        Datasets, code, and pre-trained baseline models are provided at: https://mtneuro.github.io/.
+                    </div>
+                    <div class="subtitle">
+                        <hr>
                     <span class="nowrap"><a href="https://mtneuro.github.io" target="_blank" rel="noopener noreferrer"> <i
                             class="fa-solid fa-globe"></i> Website  </a>&nbsp;</span>
                     <span class="nowrap"><a href="https://openreview.net/pdf?id=5xuowSQ17vy" target="_blank"
@@ -1049,7 +1213,7 @@ year = {2023}
             </div>
         </div>
         <div class="media-right">
-            <a class="js-modal-trigger" data-target="quesada-22-modal"><i class="fa-regular fa-square-plus fa-lg"></i></a>
+            <a class="js-expand-trigger fa-solid fa-chevron-down" data-target="quesada-22-abstract"></a>
         </div>
     </article>
     </div>
@@ -1177,6 +1341,23 @@ year = {2023}
                         Carolina Urzay, Eva L Dyer</em></p>
                     <p class="conferencetitle">Conference on Vision and Pattern Recognition (CVPR), Workshop on Multi-Agent
                         Behavior (Oral), 2022</p>
+                        </div>
+                    <div id="bams-abstract" style="display: none;">
+                        <b>Abstract:</b> Natural behavior consists of dynamics that are both unpredictable, can switch suddenly,
+                        and unfold over many different timescales. While some success has been found in building representations
+                        of behavior under constrained or simplified task-based conditions, many of these models cannot be
+                        applied to free and naturalistic settings due to the fact that they assume a single scale of temporal
+                        dynamics. In this work, we introduce Bootstrap Across Multiple Scales (BAMS), a multi-scale
+                        representation learning model for behavior: we combine a pooling module that aggregates features
+                        extracted over encoders with different temporal receptive fields, and design a set of latent objectives
+                        to bootstrap the representations in each respective space to encourage disentanglement across different
+                        timescales. We first apply our method on a dataset of quadrupeds navigating in different terrain types,
+                        and show that our model captures the temporal complexity of behavior. We then apply our method to the
+                        MABe 2022 Multi-agent behavior challenge, where our model ranks 3rd overall and 1st on two subtasks, and
+                        show the importance of incorporating multi-timescales when analyzing behavior.
+                    </div>
+                    <div class="subtitle">
+                    <hr>
                     <span class="nowrap"><a href="https://arxiv.org/pdf/2206.07041.pdf" target="_blank"
                                             rel="noopener noreferrer"> <i class="fa fa-file-pdf"></i> Paper </a> &nbsp;</span>
                     <span class="nowrap"><a href="./assets/bams_poster.pdf" target="_blank" rel="noopener noreferrer"> <i
@@ -1192,7 +1373,7 @@ year = {2023}
             </div>
         </div>
         <div class="media-right">
-            <a class="js-modal-trigger" data-target="bams-modal"><i class="fa-regular fa-square-plus fa-lg"></i></a>
+            <a class="js-expand-trigger fa-solid fa-chevron-down" data-target="bams-abstract"></a>
         </div>
     </article>
     </div>
@@ -1246,7 +1427,7 @@ year = {2023}
     </div>
 
 
-    <div class="block container bd-post-content entry" data-tags="header">
+    <div class="block container bd-post-content entry year" data-tags="header">
         <h2 class="title">
             <p class="is-size-66">
                 2021
@@ -1333,6 +1514,24 @@ year = {2023}
                         Michal Valko, Eva L. Dyer</em></p>
                     <p class="conferencetitle">Neural Information Processing Systems (NeurIPS), accepted for Oral (1%
                         submissions), 2021</p>
+                        </div>
+                        <div id="swap-vae-abstract" style="display: none;">
+                            <b>Abstract:</b> Meaningful and simplified representations of neural activity can yield insights
+                            into how and what information is being processed within a neural circuit. However, without labels,
+                            finding representations that reveal the link between the brain and behavior can be challenging.
+                            Here, we introduce a novel unsupervised approach for learning disentangled representations of neural
+                            activity called SwapVAE. Our approach combines a generative modeling framework with an
+                            instance-specific alignment loss that tries to maximize the representational similarity between
+                            transformed views of the input (brain state). These transformed (or augmented) views are created by
+                            dropping out neurons and jittering samples in time, which intuitively should lead the network to a
+                            representation that maintains both temporal consistency and invariance to the specific neurons used
+                            to represent the neural state. Through evaluations on both synthetic data and neural recordings from
+                            hundreds of neurons in different primate brains, we show that it is possible to build
+                            representations that disentangle neural datasets along relevant latent dimensions linked to
+                            behavior.
+                        </div>
+                    <div class="subtitle">    
+                    <hr>
                     <span class="nowrap"><a href="https://nerdslab.github.io/SwapVAE/" target="_blank"
                                             rel="noopener noreferrer"> <i class="fa fa-book"></i> Project page </a>&nbsp;</span>
                     <span class="nowrap"><a
@@ -1357,7 +1556,7 @@ year = {2023}
             </div>
         </div>
         <div class="media-right">
-            <a class="js-modal-trigger" data-target="swap-vae-modal"><i class="fa-regular fa-square-plus fa-lg"></i></a>
+            <a class="js-expand-trigger fa-solid fa-chevron-down" data-target="swap-vae-abstract"></a>
         </div>
     </article>
     </div>
@@ -1501,6 +1700,26 @@ year = {2023}
                         Keith B. Hengen, William Gray-Roncal, Michal Valko, Eva L. Dyer</em></p>
                     <p class="conferencetitle">Neural Information Processing Systems (NeurIPS), Workshop on Self-supervised
                         Learning: Theory and Practice (Oral), Feb 2021</p>
+                    </div>
+                    <div id="myow-abstract" style="display: none;">
+                        <b>Abstract:</b> State-of-the-art methods for self-supervised learning (SSL) build representations
+                        by maximizing the similarity between different transformed "views" of a sample. Without sufficient
+                        diversity in the transformations used to create views, however, it can be difficult to overcome
+                        nuisance variables in the data and build rich representations. This motivates the use of the dataset
+                        itself to find similar, yet distinct, samples to serve as views for one another. In this paper, we
+                        introduce Mine Your Own vieW (MYOW), a new approach for self-supervised learning that looks within
+                        the dataset to define diverse targets for prediction. The idea behind our approach is to actively
+                        mine views, finding samples that are neighbors in the representation space of the network, and then
+                        predict, from one sample's latent representation, the representation of a nearby sample. After
+                        showing the promise of MYOW on benchmarks used in computer vision, we highlight the power of this
+                        idea in a novel application in neuroscience where SSL has yet to be applied. When tested on
+                        multi-unit neural recordings, we find that MYOW outperforms other self-supervised approaches in all
+                        examples (in some cases by more than 10%), and often surpasses the supervised baseline. With MYOW,
+                        we show that it is possible to harness the diversity of the data to build rich views and leverage
+                        self-supervision in new domains where augmentations are limited or unknown.
+                    </div>
+                    <div class="subtitle">
+                        <hr>
                     <span class="nowrap"><a href="https://nerdslab.github.io/myow/" target="_blank"
                                             rel="noopener noreferrer"> <i class="fa fa-book"></i> Project page </a>&nbsp;</span>
                     <span class="nowrap"><a href="https://arxiv.org/pdf/2102.10106.pdf" target="_blank"
@@ -1520,7 +1739,7 @@ year = {2023}
             </div>
         </div>
         <div class="media-right">
-            <a class="js-modal-trigger" data-target="myow-modal"><i class="fa-regular fa-square-plus fa-lg"></i></a>
+            <a class="js-expand-trigger fa-solid fa-chevron-down" data-target="myow-abstract"></a>
         </div>
     </article>
     </div>
@@ -1645,6 +1864,16 @@ year = {2023}
                     <p><em><sup>+</sup>Contributed equally as co-first authors</em></p>
                     <p class="conferencetitle">Neural Information Processing Systems (NeurIPS), Workshop on Self-supervised
                         Learning: Theory and Practice, <span class="nowrap">Feb 2021</span></p>
+                        </div>
+                    <div id="neuro-ssl-abstract" style="display: none;">                
+                        <b>Abstract:</b> Self-supervised learning (SSL) provides a powerful mechanism for building
+                        representations of complex data without the need for labels. In this perspective piece, we highlight
+                        recent progress in the application of self-supervised learning (SSL) to data analysis in neuroscience,
+                        discuss the implications of these results, and suggest ways in which SSL might be applied to reveal
+                        interesting properties of neural computation.
+                    </div>
+                    <div class="subtitle">
+                        <hr>
                     <span class="nowrap"><a href="https://sslneurips21.github.io/files/CameraReady/neural_ssl_workshop.pdf"
                                             target="_blank" rel="noopener noreferrer"> <i class="fa fa-file-pdf"></i> Paper </a>&nbsp;</span>
                     <span class="nowrap"><a href="https://sslneurips21.github.io/files/Poster/poster%2036.pdf" target="_blank"
@@ -1656,9 +1885,7 @@ year = {2023}
             </div>
         </div>
         <div class="media-right">
-            <a class="js-modal-trigger" data-target="neuro-ssl-modal">
-                <i class="fa-regular fa-square-plus fa-lg"></i>
-            </a>
+            <a class="js-expand-trigger fa-solid fa-chevron-down" data-target="neuro-ssl-abstract"></a>
         </div>
     </article>
     </div>
@@ -1762,6 +1989,23 @@ year = {2023}
                 <div class="subtitle">
                     <p class="authors"><em>Chi-Heng Lin, <b>Mehdi Azabou</b>, Eva L. Dyer</em></p>
                     <p class="conferencetitle">International Conference on Machine Learning (ICML), 2021</p>
+                    </div>
+                    <div id="lin-20-abstract" style="display: none;">
+                        <b>Abstract:</b> Optimal transport (OT) is a widely used technique for distribution alignment, with
+                        applications throughout the machine learning, graphics, and vision communities. Without any
+                        additional structural assumptions on transport, however, OT can be fragile to outliers or noise,
+                        especially in high dimensions. Here, we introduce Latent OptimalTransport (LOT), a new approach for
+                        OT that simultaneously learns low-dimensional structure in data while leveraging this structure to
+                        solve the alignment task. The idea behind our approach is to learn two sets of “anchors” that
+                        constrain the flow of transport between a source and target distribution. In both theoretical and
+                        empirical studies, we show thatLOTregularizes the rank of transport and makes it more robust to
+                        outliers and the sampling density. We show that by allowing the source and target to have different
+                        anchors, and using LOT to align the latent spaces between anchors, the resulting transport plan has
+                        better structural interpretability and highlights connections between both the individual data
+                        points and the local geometry of the datasets.
+                    </div>
+                    <div class="subtitle">
+                    <hr>
                     <span class="nowrap"><a href="https://nerdslab.github.io/latentOT/" target="_blank"
                                             rel="noopener noreferrer"> <i class="fa fa-book"></i> Project page </a>&nbsp;</span>
                     <span class="nowrap"><a href="http://proceedings.mlr.press/v139/lin21a/lin21a.pdf" target="_blank"
@@ -1782,9 +2026,7 @@ year = {2023}
             </div>
         </div>
         <div class="media-right">
-            <a class="js-modal-trigger" data-target="lin-20-modal">
-                <i class="fa-regular fa-square-plus fa-lg"></i>
-            </a>
+            <a class="js-expand-trigger fa-solid fa-chevron-down" data-target="lin-20-abstract"></a>
         </div>
     </article>
     </div>
@@ -1850,7 +2092,7 @@ year = {2023}
     </div>
 
 
-    <div class="block container bd-post-content entry" data-tags="header">
+    <div class="block container bd-post-content entry year" data-tags="header">
         <h2 class="title">
             <p class="is-size-66">
                 Abstracts
@@ -1907,6 +2149,23 @@ year = {2023}
                     <p class="authors"><em>Carolina Urzay, Nauman Ahad, <b>Mehdi Azabou</b>, Aidan Schneider, Geethika Atmakuri,
                         Keith B. Hengen, Eva L. Dyer</em></p>
                     <p class="conferencetitle">Conference on Cognitive Computational Neuroscience (CCN), 2022</p>
+                    </div>
+                    <div id="urzay-221-abstract" style="display: none;">                
+                        <b>Abstract:</b> Finding points in time where the distribution of neural responses changes (change
+                        points) is an important step in many neural data analysis pipelines. However, in complex and free
+                        behaviors, where we see different types of shifts occurring at different rates, it can be difficult to
+                        use existing methods for change point (CP) detection because they can't necessarily handle different
+                        types of changes that may occur in the underlying neural distribution. In this work, we introduce a new
+                        approach for finding changes in neural population states across diverse activities and arousal states
+                        occurring in free behavior. Our model follows a contrastive learning approach: we learn a metric for CP
+                        detection based on maximizing the Sinkhorn divergences of neuron firing rates across two sides of a
+                        labeled CP. We apply this method to a 12-hour neural recording of a freely behaving mouse to detect
+                        changes in sleep stages and behavior. We show that when we learn a metric, we can better detect change
+                        points and also yield insights into which neurons and sub-groups are important for detecting certain
+                        types of switches that occur in the brain.
+                    </div>
+                    <div class="subtitle">
+                    <hr>
                     <span class="nowrap"><a href="https://2022.ccneuro.org/proceedings/0000046.pdf" target="_blank"
                                             rel="noopener noreferrer"> <i class="fa fa-file-pdf"></i> Paper </a>&nbsp;</span>
                     <span class="nowrap"><a href="https://2022.ccneuro.org/view_paper.php?PaperNum=1261" target="_blank"
@@ -1919,9 +2178,7 @@ year = {2023}
             </div>
         </div>
         <div class="media-right">
-            <a class="js-modal-trigger" data-target="urzay-22-modal">
-                <i class="fa-regular fa-square-plus fa-lg"></i>
-            </a>
+            <a class="js-expand-trigger fa-solid fa-chevron-down" data-target="urzay-221-abstract"></a>
         </div>
     </article>
     </div>
