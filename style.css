@@ -96,7 +96,7 @@ body {
 
 .tag-button {
     border-width: 0em;
-    border-color: white;
+    border-color: rgba(170, 170, 170, 0.525);
     border-style: solid;
 }
 
@@ -331,7 +331,7 @@ transform: rotate(180deg);
     padding: 1em;
     border-radius: 0.5em;
     background-color: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 2px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     margin-top: 0.6em !important;
@@ -347,10 +347,64 @@ transform: rotate(180deg);
     padding-left: 1.5em;
     border-radius: 0.5em;
     background-color: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 2px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     margin-left: 0.3em !important;
     margin-right: 0.3em !important;
     z-index: 110;
+}
+
+
+#mii {
+    position: relative; /* To position the pseudo-element correctly */
+    display: inline-block; /* To fit the div size to the image */
+    border-radius: 100px;
+    overflow: hidden; /* To clip the pseudo-element to the border radius */
+}
+
+#mii::before {
+    content: ""; /* Required for pseudo-elements */
+    position: absolute; /* To cover the entire parent element */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 100px;
+    box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+.image {
+    position: relative; /* To position the pseudo-element correctly */
+    display: inline-block; /* To fit the div size to the image */
+    overflow: hidden; /* To clip the pseudo-element to the border radius */
+    border-radius: 4px;
+}
+
+.image::before {
+    content: ""; /* Required for pseudo-elements */
+    position: absolute; /* To cover the entire parent element */
+    border-radius: 4px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.custom-marker {
+    background-image: url('./assets/mii.png');
+    background-size: cover;
+    border-radius: 100px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.navbar {
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 4px 6px -6px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 }

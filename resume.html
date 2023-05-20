@@ -12,6 +12,9 @@
   <link rel="stylesheet" href="https://bulma.io/css/bulma-docs.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons/css/academicons.min.css">
   <link rel="stylesheet" href="style.css">
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
+
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-SMP0QT1S6Z"></script>
@@ -42,14 +45,49 @@
 </div>
 
 <section class="section">
-  <div class="tile is-only-child bottom_padding_2">
-    <div class="tile button_container" style="padding-bottom: 0em;">
-      <div style="padding-right: 1em; padding-left:0.2em;">
-      <button class="ghostbutton tag is-warning is-light has-text-weight-bold is-medium resume_header is-large"> Resume </button></div>
-      <p class="is-size-55"> <a href="./assets/resume_mehdi_azabou.pdf"> <i class="fa-solid fa-download"></i> Download </a> (Last updated: 12/09/2022)</p>
+  <div class="tile is-ancestor">
+    <div class="tile is-child is-8">
+      <div class="media padded_block" style="margin-top:0.5rem;">
+        <figure id="mii" class="media-left image is-128x128" style="margin-right:1.5rem;">
+          <img style="border-radius: 100px;" alt="Mehdi Azabou" src="assets/mii.png">
+        </figure>
+      <div class="media-content">
+      <!-- <h1 class="title is-4"> Mehdi Azabou </h1> -->
+      <ul>
+        <p>
+          <span class="is-size-4">Mehdi Azabou</span> - ML PhD Student @ Georgia Tech
+      </p>
+      <hr style="margin-top: 2px; margin-bottom:10px;">
+      <p>
+        I am actively working on developing methods for self-supervised
+representation learning for different modalities, and researching new models to learn from neural activity and behavior.
+      </p>
+      </ul>
+    </div>
+      </div>
+    </div>
+    <div class="tile is-child">
+      <div id='map' style='width: 100%; height: 100%; max-height:400px; min-height: 100px;'></div>
     </div>
   </div>
 
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoibWVoZGlhIiwiYSI6ImNsaHdqNGltbDBoM3cza3Fmd3pkaG05ejMifQ.N5TBe_Sg3jBrPyAU7uLv3A';
+    var map = new mapboxgl.Map({
+        container: 'map', // container id
+        style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+        center: [-84.3880, 33.7490], // starting position [lng, lat] for Atlanta
+        zoom: 1 // starting zoom
+    });
+
+    var el = document.createElement('div');
+    el.className = 'custom-marker';
+
+    var marker = new mapboxgl.Marker(el)
+    .setLngLat([-84.3880, 33.7490]) // Marker position [lng, lat] for Atlanta
+    .addTo(map);
+
+    </script>
 
 
   <div class="tile is-ancestor">
@@ -156,8 +194,8 @@
       <ul>
         <li><span class="title"><button class="ghostbutton tag is-light has-text-weight-bold is-medium resume_header is-large"> Coding </button></span></li>
         <li><i class="fa-solid fa-code fa-2xs"></i> Main Programming Language: <i class="fa-brands fa-python"></i> Python. </li>
-        <li><i class="fa-solid fa-code fa-2xs"></i> ML frameworks: <span class="nowrap"><i class="fa-solid fa-fire-flame-curved"></i> PyTorch</span>, <span class="nowrap"><i class="fa-solid fa-circle-nodes"></i> PyG (PyTorch Geometric)</span>, <span class="nowrap"><i class="fa-solid fa-cubes"></i> jax.</span> </li>
-        <li><i class="fa-solid fa-code fa-2xs"></i> Favorite tools: <span class="nowrap"><i class="fa-solid fa-chart-area"></i> Bokeh</span>, <span class="nowrap"><i class="fa-solid fa-pepper-hot"></i> Flask</span>, <span class="nowrap"><i class="fa-brands fa-docker"></i> Docker</span>, <span class="nowrap"><i class="fa-solid fa-chart-line"></i>TensorBoard.</span> </li>
+        <li><i class="fa-solid fa-code fa-2xs"></i> ML frameworks: <span class="nowrap"><i class="fa-solid fa-fire-flame-curved"></i> PyTorch</span>, <span class="nowrap"><i class="fa-solid fa-circle-nodes"></i> PyG</span>, <span class="nowrap"><i class="fa-solid fa-cubes"></i> jax.</span> </li>
+        <li><i class="fa-solid fa-code fa-2xs"></i> Favorite tools: <span class="nowrap"><i class="fa-solid fa-chart-area"></i> Bokeh</span>, <span class="nowrap"><i class="fa-solid fa-pepper-hot"></i> Flask</span>, <span class="nowrap"><i class="fa-brands fa-docker"></i> Docker</span>, <span class="nowrap"><i class="fa-solid fa-chart-line"></i>TensorBoard,</span> <span class="nowrap"><i class="fa-solid fa-share-nodes"></i> raytune.</span></li>
       </ul>
 
       <div style="padding-top: 1rem;">
@@ -218,7 +256,15 @@
       </li>
     </ul>
   </div>
+  </div>  
   </div>
+
+  <div class="tile is-only-child bottom_padding_2">
+    <div class="tile button_container" style="padding-bottom: 0em;">
+      <div style="padding-right: 1em; padding-left:0.2em;">
+      <button class="ghostbutton tag is-warning is-light has-text-weight-bold is-medium resume_header is-large"> Resume </button></div>
+      <p class="is-size-55"> <a href="./assets/resume_mehdi_azabou.pdf"> <i class="fa-solid fa-download"></i> Download </a> (Last updated: 12/09/2022)</p>
+    </div>
   </div>
 
 </section>
