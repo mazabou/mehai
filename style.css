@@ -479,3 +479,32 @@ a.nav:hover {
 .navbar-item {
     transition: left 1s ease-out;
 }
+
+
+.tile.is-child.centered-icon {
+    background-color: rgba(79, 166, 237, 0.4); /* or any specific pastel blue you prefer */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tile.is-child.centered-icon-jukeguesser {
+    background-color: rgba(78, 205, 148, 0.4); /* or any specific pastel blue you prefer */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    font-size: 4em; /* Adjust based on your preference */
+    color: rgb(255, 255, 255);
+}

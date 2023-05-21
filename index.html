@@ -15,7 +15,9 @@
     <link rel="stylesheet" href="https://bulma.io/css/bulma-docs.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons/css/academicons.min.css">
     <link rel="stylesheet" href="style.css">
-
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
+  
 
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -52,133 +54,381 @@
 <div class="navbar-container">
     <div class="navbar-item navbar-highlight"><a class="nav" href="#" aria-current="page">About</a></div>
     <div class="navbar-item"><a class="nav" href="publications">Publications</a></div>
-    <div class="navbar-item"><a class="nav" href="resume">Resume</a></div>
     <div class="navbar-item"><a class="nav" href="https://scholar.google.com/citations?user=jXxyYCoAAAAJ&hl=en" target="_blank" rel="noopener noreferrer"> <i class="ai ai-google-scholar-square"></i></a></div>
     <div class="navbar-item"><a class="nav" href="https://github.com/mazabou" target="_blank" rel="noopener noreferrer"> <i class="fa fa-github"></i></a></div>
     <div class="navbar-item"><a class="nav" href="https://twitter.com/mehdiazabou" target="_blank" rel="noopener noreferrer"> <i class="fa-brands fa-twitter"></i></a></div>
 </div>
 </div> 
 
-<section class="section" style="padding-bottom: 0px; padding-top: 5px;">
-    <div class="tile is-child" style="padding:1.5em;">
-        <div class="tsparticles-container">
-        <div id="tsparticles"></div>
-        <article class="media me-header is-flex-mobile">
-            <figure class="media-left image is-128x128">
-                <img id="me" style="border-radius: 5px;" alt="Mehdi Azabou" src="assets/me.jpg">
-            </figure>
-            <div class="media-content tsparticles-content" style="background-color: transparent;">
-                <div class="tsparticles-content">
-                    <p class=" is-size-4">
-                        Mehdi Azabou
-                    </p>
-                    <p class=" is-size-5">
-                        ML PhD Student @ Georgia Tech
-                    </p>
-                    <p class=" is-size-6">
-                        email: mazabou [at] gatech [dot] edu
-                    </p>
-                    <p class="has-text-weight-light is-size-4">
-                        🧠🤖
-                    </p>
-                </div>
+<section class="section" style="padding-top:0em; padding-bottom: 0em;">
+    <div class="tile">
+      <div class="tile is-child is-8">
+        <div class="media padded_block is-flex-mobile">
+          <figure id="mii" class="media-left image is-128x128" style="margin-right:1.5rem;">
+            <img style="border-radius: 100px;" alt="Mehdi Azabou" src="assets/mii.png">
+          </figure>
+          <div class="media-content">
+              <ul>
+                  <p>
+                      <span class="is-size-4">Mehdi Azabou</span> - ML PhD Student @ Georgia Tech
+                  </p>
+                  <hr style="margin-top: 2px; margin-bottom:10px;">
+                  <p>
+                      I am actively working on developing methods for self-supervised
+                      representation learning for different modalities, and researching new models to learn from neural activity and behavior.
+                  </p>
+              </ul>
+          </div>
+      </div>
+      </div>
+      <div class="tile is-child">
+        <div id='map' style='width: 100%; height: 100%; max-height:400px; min-height: 100px; border-radius: 0.5em;'></div>
+      </div>
+    </div>
+  
+    <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoibWVoZGlhIiwiYSI6ImNsaHdqNGltbDBoM3cza3Fmd3pkaG05ejMifQ.N5TBe_Sg3jBrPyAU7uLv3A';
+      var map = new mapboxgl.Map({
+          container: 'map', // container id
+          style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+          center: [-84.3880, 33.7490], // starting position [lng, lat] for Atlanta
+          zoom: 1 // starting zoom
+      });
+  
+      var el = document.createElement('div');
+      el.className = 'custom-marker';
+  
+      var marker = new mapboxgl.Marker(el)
+      .setLngLat([-84.3880, 33.7490]) // Marker position [lng, lat] for Atlanta
+      .addTo(map);
+  
+      </script>
+  
+  
+    <div class="tile">
+      <div class="tile is-child is-5">
+        <a href="https://www.cell.com/cell-reports/fulltext/S2211-1247(23)00329-7" target="_blank">
+        <div class="padded_block">
+          <span class="title"><button class="ghostbutton tag is-danger is-light has-text-weight-bold is-medium resume_header is-large"><i class="fa-regular fa-hand-point-right"></i> &nbsp; Latest Publication </button></span>
+          <article class="media" style="padding-top: 0.7em;">
+          <figure class="media-left is-hidden-mobile">
+            <p class="image is-128x128">
+                <img src="covers/lolcat.png" data-ai="DALL·E 2" data-prompt="neuron transcriptomic, firing, digital art, high resolution, orange, blue">
+            </p>
+          </figure>
+          <div class="media-content">
+            <h1>
+              <p style="font-weight: 600;">
+              Transcriptomic cell type structures in vivo neuronal activity across multiple <span
+              class="nowrap"> time scales.
+              </span></p></h1>
+              <p class="conferencetitle">Cell Reports, April 2023.</p>
             </div>
-        </article>
+            </article>
         </div>
-    
-    <div class="bio is-size-55" >
-        <h2 class="title2"> News </h2>
-        <table>
-            <tr>
-              <td class="no-wrap"><span> Apr 2023 </span></td>
-              <td class="no-wrap">&nbsp;<i class="fa-solid fa-chevron-right fa-2xs"></i>&nbsp;</td>
-              <td>Half-Hop is accepted at ICML 2023 🎉. More details coming soon.</td>
-            </tr>
-            <tr>
-              <td class="no-wrap"><span> Apr 2023 </span></td>
-              <td class="no-wrap">&nbsp;<i class="fa-solid fa-chevron-right fa-2xs"></i>&nbsp;</td>
-              <td>Our paper on identifying cell type from in vivo neuronal activity was published in Cell Reports [<a href="https://www.cell.com/cell-reports/fulltext/S2211-1247(23)00329-7">Link</a>].</td>
-            </tr>
-            <tr>
-                <td class="no-wrap"><span> Mar 2023 </span></td>
+        </a>
+      </div>
+      <div class="tile is-2 is-vertical is-hidden-mobile">
+        <!-- <div class="padded_block">
+          <span class="title"><button class="ghostbutton tag is-info is-light has-text-weight-bold is-medium resume_header is-large"><i class="fa-regular fa-hand-point-right"></i> &nbsp; Email </button></span>
+          <ul>mazabou [at] gatech [dot] edu</ul>
+        </div> -->
+        <div class="tile is-child centered-icon" style="margin-bottom: 10px !important;"> 
+          <a href="mailto:mazabou@gatech.edu">
+          <button class="icon-button">
+              <i class="fa-solid fa-envelope icon"></i>
+          </button>
+        </a>
+      </div>
+      
+      <div class="tile is-child centered-icon-jukeguesser" style="margin-bottom: 10px !important;"> 
+        <a href="jukeguesser">
+        <button class="icon-button">
+            <i class="fa-solid fa-icons icon"></i>
+        </button>
+      </a>
+    </div>
+  
+      </div>
+      <div class="tile is-child is-hidden-mobile" style="padding: 0em; overflow: hidden;position: relative; ">        
+          <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="100%" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/g-l-o-cc-ep/1682840470"></iframe>      </div>
+      </div>
+  
+    </div>
+  
+  
+    <div class="tile">
+      <div class="tile is-child is-4">
+        <div class="padded_block">
+        <span class="title"><button class="ghostbutton tag is-warning is-light has-text-weight-bold is-medium resume_header is-large"><i class="fa-regular fa-user"></i> &nbsp; Bio </button></span> </li>
+        <div style="max-height: 200px; overflow-y: auto;">
+        <p>
+          I am a third-year Machine Learning Ph.D. student advised
+          by <a href="https://dyerlab.gatech.edu/" target="_blank" rel="noopener noreferrer"> Dr. Eva L. Dyer</a>.
+          My main areas of interest are <span class="nowrap">🤖 <b>Deep Learning</b></span> and <span class="nowrap"> 🧠 <b>Computational Neuroscience</b></span>.
+      </p>
+      <br>
+      <p>
+          My research focuses on the development of new methods for representation learning.
+          </p>
+          <br>
+          <p>
+          I am particularly interested in expanding the use of these tools to novel domains where the structure of the data can be complex and obscured.
+          Through the development of new approaches for analyzing and interpreting complex modalities,
+          I aim to make an impact in our understanding of the brain, and biological intelligence,
+          and to contribute new tools that facilitate new scientific discoveries.
+          </p>
+            <br>
+            <p>
+          I am currently working on developing methods for learning representations of neural activity, behavior, and graphs,
+          with the goal of improving our understanding of the brain.
+      </p>
+      <!-- <br> -->
+      <!-- <p>
+          I love coding and learning new things. I am an enthusiast for dynamic and interactive visualizations
+          that can provide insights into complex data and enable new ways of thinking.
+          I received a MS in Engineering from CentraleSupélec, France in 2019 and a MS in Computer Science from
+          Georgia Tech in 2020.
+      </p> -->
+    </div>
+      </div>
+      </div>
+      <div class="tile is-child">
+        <div class="padded_block">
+        <ul>
+          <li> <span class="title"><button class="ghostbutton tag is-error is-light has-text-weight-bold is-medium resume_header is-large"><i class="fa-solid fa-newspaper"></i> &nbsp; News </button></span> </li>
+          <div style="max-height: 200px; overflow-y: auto;">
+            <table>
+              <tr>
+                <td class="no-wrap"><span> May 2023 </span></td>
                 <td class="no-wrap">&nbsp;<i class="fa-solid fa-chevron-right fa-2xs"></i>&nbsp;</td>
-                <td>Check out our latest behavior representation learning model BAMS which ranks first 🥇 on the MABe 2022 benchmark [<a href="https://multiscale-behavior.github.io/">Project page</a>].</td>
-            </tr>
-          </table>
+                <td>I am interning at IBM Research this summer. I will at the IBM Thomas J. Watson Research Center in New York.</td>
+              </tr>
+                <tr>
+                  <td class="no-wrap"><span> Apr 2023 </span></td>
+                  <td class="no-wrap">&nbsp;<i class="fa-solid fa-chevron-right fa-2xs"></i>&nbsp;</td>
+                  <td>Half-Hop is accepted at ICML 2023 🎉. More details coming soon.</td>
+                </tr>
+                <tr>
+                  <td class="no-wrap"><span> Apr 2023 </span></td>
+                  <td class="no-wrap">&nbsp;<i class="fa-solid fa-chevron-right fa-2xs"></i>&nbsp;</td>
+                  <td>Our paper on identifying cell type from in vivo neuronal activity was published in Cell Reports [<a href="https://www.cell.com/cell-reports/fulltext/S2211-1247(23)00329-7">Link</a>].</td>
+                </tr>
+                <tr>
+                    <td class="no-wrap"><span> Mar 2023 </span></td>
+                    <td class="no-wrap">&nbsp;<i class="fa-solid fa-chevron-right fa-2xs"></i>&nbsp;</td>
+                    <td>Check out our latest behavior representation learning model BAMS which ranks first 🥇 on the MABe 2022 benchmark [<a href="https://multiscale-behavior.github.io/">Project page</a>].</td>
+                </tr>
+              </table>
+            </div>
+        </div>
+        </ul>
+        </div>
+      </div>
+  </div>
+  
+  
+  <div class="tile">
+    <div class="tile is-child">
+      <div class="padded_block">
+      <ul>
+        <li> <span class="title"><button class="ghostbutton tag is-info is-light has-text-weight-bold is-medium resume_header is-large"> <i class="fa-solid fa-building-columns"></i> &nbsp; Education </button></span> </li>
+        <li><i class="fa-solid fa-spinner"></i>&nbsp;&nbsp; Ph.D. in Machine Learning, Georgia Tech 🇺🇸, Current </li>
+        <li><i class="fa-solid fa-graduation-cap"></i>&nbsp; M.S. in Computer Science, Georgia Tech 🇺🇸, 2020 </li>
+        <li><i class="fa-solid fa-graduation-cap"></i>&nbsp; M.S. in Engineering, CentraleSupélec 🇫🇷, 2019 </li>
+      </ul>
+      </div>
     </div>
-    <hr>
-
-
-
-    <div class="bio is-size-55">
-        <h2 class="title2"> Bio </h2>
-        <p>
-            Hi! I am Mehdi. I am a third-year Machine Learning Ph.D. student advised
-            by <a href="https://dyerlab.gatech.edu/" target="_blank" rel="noopener noreferrer"> Dr. Eva L. Dyer</a>.
-            My main areas of interest are <span class="nowrap">🤖 <b>Deep Learning</b></span> and <span class="nowrap"> 🧠 <b>Computational Neuroscience</b></span>.
-        </p>
-        <br>
-        <p>
-            My research focuses on the development of new methods for representation learning.
-            I am particularly interested in expanding the use of these tools to novel domains where the structure of the data can be complex and obscured.
-            Through the development of new approaches for analyzing and interpreting complex modalities,
-            I aim to make an impact in our understanding of the brain, and biological intelligence,
-            and to contribute new tools that facilitate new scientific discoveries.
-            I am currently working on developing methods for learning representations of neural activity, behavior, and graphs,
-            with the goal of improving our understanding of the brain.
-        </p>
-        <br>
-        <p>
-            I love coding and learning new things. I am an enthusiast for dynamic and interactive visualizations
-            that can provide insights into complex data and enable new ways of thinking.
-            I received a MS in Engineering from CentraleSupélec, France in 2019 and a MS in Computer Science from
-            Georgia Tech in 2020.
-        </p>
+    <div class="tile is-child is-6">
+      <div class="padded_block">
+      <ul>
+        <li> <span class="title"><button class="ghostbutton tag is-success is-light has-text-weight-bold is-medium resume_header is-large"><i class="fa-solid fa-briefcase"></i> &nbsp; Work Experience </button></span> </li>
+        <li><i class="fa-solid fa-chevron-right fa-2xs"></i>&nbsp; AI Research Scientist Intern @ <a href="https://research.ibm.com/">IBM Research</a>, 2023  </li>
+        <li><i class="fa-solid fa-chevron-right fa-2xs"></i>&nbsp; Deep Learning Intern @ <a href="https://www.parrot.com/us">Parrot Drones</a>, 2019  </li>
+        <li><i class="fa-solid fa-chevron-right fa-2xs"></i>&nbsp; Machine Learning & Computer Vision Intern @ <a href="https://www.cleed.com">Cleed</a>, 2018</li>
+      </ul>
+      </div>
     </div>
-    <hr>
-
-
-    <div class="bio is-size-55">
-
-        Check out &nbsp;<a href="jukeguesser"><i class="fa-solid fa-icons"></i> JukeGuesser</a>, a game where you guess the artist that the AI is trying to emulate.
-    
+  </div>
+  
+  
+    <div class="tile is-child">
+      <div class="padded_block">
+      <ul>
+        <li> <span class="title"><button class="ghostbutton tag is-danger is-light has-text-weight-bold is-medium resume_header is-large"><i class="fa-solid fa-chalkboard"></i> &nbsp; Teaching </button></span> </li>
+        <li> <div class="teach-section">
+          <div class="teach-description">
+          <i class="fa-solid fa-chevron-right fa-2xs"></i>
+          Co-Instructor for the <u>representation learning hands-on session</u> during the Caltech/Chen Institute’s
+          <a href="https://neuroscience.caltech.edu/about/research-centers/chen-center-for-datasai/data-science-and-ai-for-neuroscience-summer-school">Data Science and AI for Neuroscience Summer School</a>, Pasadena, California, 2022.
+          </div>
+          <div>
+            <span class="nowrap"><a href="https://github.com/SaberaTalukder/Chen_Institute_DataSAI_for_Neuroscience/tree/main/07_14_22_day8_generative_modeling_and_MYOW"><i class="fa-solid fa-box-archive"></i> Materials</a></span>
+          </div>
+          </div>
+        </li>
+        <li>
+          <div class="teach-section">
+            <div class="teach-description">
+          <i class="fa-solid fa-chevron-right fa-2xs"></i>
+          Content Developer for the <u>Python bootcamp session</u> for the
+          <a href="https://www.mbl.edu/education/advanced-research-training-courses/course-offerings/dlmbl-deep-learning-microscopy-image-analysis">DL@MBL: Deep Learning for Microscopy Image Analysis</a>
+              course at Marine Biological Laboratory, Woods Hole, Massachusetts, 2021. </div>
+            <span class="nowrap"><a href="https://github.com/dlmbl/boot/tree/0b8525daa4738b711ba272c4b7032265199f380f"><i class="fa-solid fa-box-archive"></i> Materials</a></span> </div>
+        </li>
+        <li>
+          <div class="teach-section">
+            <div class="teach-description">
+              <i class="fa-solid fa-chevron-right fa-2xs"></i>
+              Content Developer for BMED 6517 <u>Machine Learning in Biosciences</u> at Georgia Tech, 2021.
+            </div> <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></div>
+        </li>
+        <li>
+          <div class="teach-section">
+            <div class="teach-description">
+          <i class="fa-solid fa-chevron-right fa-2xs"></i>
+          Teaching Assistant for CS 4261 <u>Mobile applications and Services</u> at Georgia Tech, Spring 2019.</div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+            </div>
+        </li>
+      </ul>
+      </div>
+    </div>
+  
+    <div class="tile">
+  
+    <div class="tile is-child">
+      <div class="padded_block">
+      <ul>
+        <li> <span class="title"><button class="ghostbutton tag is-success is-light has-text-weight-bold is-medium resume_header is-large"> <i class="fa-solid fa-glasses"></i> &nbsp; Reviewing </button></span> </li>
+        <i><em>I have served as a reviewer for notable conferences and journals:</em></i>
+        <li><i class="fa-solid fa-glasses fa-2xs"></i> International Conference on Machine Learning, <span class="nowrap"><u>ICML</u> '23 </span> </li>
+        <li><i class="fa-solid fa-glasses fa-2xs"></i> Computer Vision and Pattern Recognition, <span class="nowrap"><u>CVPR</u> '23 </span> </li>
+        <li><i class="fa-solid fa-glasses fa-2xs"></i> Neural Information Processing Systems, <span class="nowrap"><u>NeurIPS</u> '21/22 </span></li>
+        <li><i class="fa-solid fa-glasses fa-2xs"></i> Learning on Graphs Conference, <u>LOG</u> '22 </li>
+        <li><i class="fa-solid fa-glasses fa-2xs"></i> Artificial Intelligence and Statistics, <u>AISTATS</u> '21 </li>
+        <li><i class="fa-solid fa-glasses fa-2xs"></i> <u>IEEE</u> Transactions on Knowledge and Data Engineering</li>
+        <li><i class="fa-solid fa-glasses fa-2xs"></i> <u>Cell Patterns</u>, 2022</li>
+        <li><i class="fa-solid fa-glasses fa-2xs"></i> Sub-reviewer for <u>Neuron</u>, 2021 </li>
+      </ul>
+        </div>
+    </div>
+      <div class="tile is-child">
+        <div class="padded_block">
+          <ul>
+            <li> <span class="title"><button class="ghostbutton tag is-warning is-light has-text-weight-bold is-medium resume_header is-large"> <i class="fa-solid fa-user-group"></i> &nbsp; Mentorship </button></span> </li>
+            <li><em>I was privileged to work with and mentor a group of outstanding students at Georgia Tech:</em></li>
+            <li><i class="fa-solid fa-user-graduate fa-2xs"></i> Vinam Arora, Master's in ECE, 2023</li>
+            <li><i class="fa-solid fa-user-graduate fa-2xs"></i> <a href="https://venkys.website">Venkataramana Ganesh</a>, Master's in CS, 2022-2023</li>
+            <li><i class="fa-solid fa-user-graduate fa-2xs"></i> Michael Mendelson, Undergrad in BME, 2021-2023</li>
+            <li><i class="fa-solid fa-user-graduate fa-2xs"></i> Santosh Nachimuthu, Undergrad in BME, 2023</li>
+            <li><i class="fa-solid fa-user-graduate fa-2xs"></i> Carolina Urzay, Undergrad in BME, 2021-2022</li>
+            <li><i class="fa-solid fa-user-graduate fa-2xs"></i> Zijing Wu, Undergrad in CS / Math, 2020-2021</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  
+    <div class="tile">
+    <div class="tile is-child">
+      <div class="padded_block">
+        <ul>
+          <li><span class="title"><button class="ghostbutton tag is-light has-text-weight-bold is-medium resume_header is-large"><i class="fa-solid fa-laptop"></i> &nbsp; Coding </button></span></li>
+          <li><i class="fa-solid fa-code fa-2xs"></i> Main Programming Language: <i class="fa-brands fa-python"></i> Python. </li>
+          <li><i class="fa-solid fa-code fa-2xs"></i> ML frameworks: <span class="nowrap"><i class="fa-solid fa-fire-flame-curved"></i> PyTorch</span>, <span class="nowrap"><i class="fa-solid fa-circle-nodes"></i> PyG</span>, <span class="nowrap"><i class="fa-solid fa-cubes"></i> jax.</span> </li>
+          <li><i class="fa-solid fa-code fa-2xs"></i> Favorite tools: <span class="nowrap"><i class="fa-solid fa-chart-area"></i> Bokeh</span>, <span class="nowrap"><i class="fa-solid fa-pepper-hot"></i> Flask</span>, <span class="nowrap"><i class="fa-brands fa-docker"></i> Docker</span>, <span class="nowrap"><i class="fa-solid fa-chart-line"></i>TensorBoard,</span> <span class="nowrap"><i class="fa-solid fa-share-nodes"></i> raytune.</span></li>
+        </ul>
+  
+        <div style="padding-top: 1rem;">
+          <nav class="panel">
+            <p class="panel-heading" style="font-size:1em; background-color: #f5f5f5;">
+              Repositories
+            </p>
+            <a class="panel-block" href="https://github.com/nerdslab/bgrl" target="_blank" rel="noopener noreferrer">
+                <span class="panel-icon">
+                  <i class="fa fa-github" aria-hidden="true"></i>
+                </span>
+              bgrl &nbsp; &nbsp; <iframe src="https://ghbtns.com/github-btn.html?user=nerdslab&repo=bgrl&type=star&count=true" frameborder="0" scrolling="0" width="150" height="20" title="GitHub"></iframe></a>
+            </a>
+            <a class="panel-block" href="https://github.com/nerdslab/myow" target="_blank" rel="noopener noreferrer">
+      <span class="panel-icon">
+        <i class="fa fa-github" aria-hidden="true"></i>
+      </span>
+              myow &nbsp;&nbsp; <iframe src="https://ghbtns.com/github-btn.html?user=nerdslab&repo=myow&type=star&count=true" frameborder="0" scrolling="0" width="150" height="20" title="GitHub"></iframe>
+            </a>
+            <a class="panel-block" href="https://github.com/nerdslab/myow-neuro" target="_blank" rel="noopener noreferrer">
+      <span class="panel-icon">
+        <i class="fa fa-github" aria-hidden="true"></i>
+      </span>
+              myow-neuro &nbsp;&nbsp; <iframe src="https://ghbtns.com/github-btn.html?user=nerdslab&repo=myow-neuro&type=star&count=true" frameborder="0" scrolling="0" width="150" height="20" title="GitHub"></iframe>
+            </a>
+            <a class="panel-block" href="https://github.com/mazabou/interpretable-gcn-covid-19" target="_blank" rel="noopener noreferrer">
+      <span class="panel-icon">
+        <i class="fa fa-github" aria-hidden="true"></i>
+      </span>
+              interpretable-gcn-covid-19
+            </a>
+            <a class="panel-block" href="https://github.com/mazabou/JupyterSIFT" target="_blank" rel="noopener noreferrer">
+      <span class="panel-icon">
+        <i class="fa fa-github" aria-hidden="true"></i>
+      </span>
+              JupyterSIFT
+            </a>
+          </nav>
+        </div>
+      </div>
+  
+    </div>
+  
+    <div class="tile is-child bottom_padding">
+      <div class="padded_block">
+      <ul>
+        <li> <span class="title"><button class="ghostbutton tag is-info is-light has-text-weight-bold is-medium resume_header is-large"><i class="fa-solid fa-paintbrush"></i> &nbsp; Design </button></span> </li>
+        <li><i class="fa-solid fa-palette fa-xs"></i> Favorite tools: <i class="fa-solid fa-bezier-curve"></i> Illustrator, <i class="fa-solid fa-bars-staggered"></i> After Effects </li>
+        <li><i class="fa-solid fa-palette fa-xs"></i> Designed a logo (with colorful variants) for the Neural Data Science (NeRDS) Lab at Georgia Tech. </li>
+        <img width="128" src="./assets/nerds_lab_logo.png">
+        <img width="128" src="./assets/nerds_lab_logo_v2.png">
+        <img width="128" src="./assets/nerds_lab_logo_v3.png">
+        <li>
+          <i class="fa-solid fa-laptop-code fa-xs"></i>
+          Designed this website using <a href="https://bulma.io">Bulma</a> elements, icons from <a href="https://fontawesome.com">Font Awesome</a>,
+          and <a href="https://www.netlify.com">netlify</a> for hosting. Javascript written with the help of
+          <a href="https://chat.openai.com/chat">ChatGPT</a> and art generated using <a href="https://labs.openai.com/history">DALL·E 2</a>. Code can be found <a href="https://github.com/mazabou/mehai">here</a>.
+        </li>
+      </ul>
     </div>
     </div>  
-</section>
-
-
-
-<!-- <div class="section" style="padding-top: 10px;">
-   <h2 class="title"> What I am listening to </h2>
-   
-   <div class="content">
-       <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="450" style="width:100%;max-width:1200px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/playlist/current-favorites/pl.u-8aAVZ6VivgyDMAE"></iframe>
-   </div>
-</div> -->
-
-
-
-<footer class="footer">
+    </div>
+  
+    <div class="tile is-child bottom_padding_2">
+      <div class="tile button_container" style="padding-bottom: 0em;">
+        <div style="padding-right: 1em; padding-left:0.2em;">
+        <button class="ghostbutton tag is-warning is-light has-text-weight-bold is-medium resume_header is-large"> <i class="fa-solid fa-file-lines"></i> &nbsp; Resume </button></div>
+        <p class="is-size-55"> <a href="./assets/resume_mehdi_azabou.pdf"> <i class="fa-solid fa-download"></i> Download </a> (Last updated: 12/09/2022)</p>
+      </div>
+    </div>
+  
+  </section>
+  
+  </body>
+  
+  <footer class="footer">
     <div class="section content">
-        <div style="margin-left: 1em;">
-        <div style="font-weight: 400; font-size: .6em;">VERSION</div>
-        <div style="font-size: 1em;">2023 © Edition 1.3</div>
+      <div style="margin-left: 1em;">
+  
+      <div style="font-weight: 400; font-size: .6em;">VERSION</div>
+      <div style="font-size: 1em;">2023 © Edition 1.3</div>
+      <!--        <div style="max-width: 550px; margin: auto;">Feel free to copy <a href="https://github.com/mazabou/mehai">this website</a>. Some of the images have been generated using DALL·E, an artificial intelligence tool developed by OpenAI.</div>-->
+        </div>
     </div>
-    </div>
-</footer>
-
-
-</body>
-
-<script src="dynamic-background.js"></script>
-
-
-<!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/tsparticles/1.18.11/tsparticles.min.js'></script> -->
-
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/2.9.3/tsparticles.min.js"></script> -->
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/2.9.3/tsparticles.bundle.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/2.9.3/tsparticles.js"></script>
-<script  src="./tsparticles.js"></script> -->
-
-
-</html>
+  </footer>
+  
+  <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/tsparticles/1.18.11/tsparticles.min.js'></script> -->
+  
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/2.9.3/tsparticles.min.js"></script> -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/2.9.3/tsparticles.bundle.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/2.9.3/tsparticles.js"></script>
+  <script  src="./tsparticles.js"></script> -->
+  
+  
+  </html>
