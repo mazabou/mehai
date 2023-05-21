@@ -36,7 +36,7 @@ function handleThumbnailHover(event) {
     // Set the innerHTML of the large image container to the Image object
     largeImageContainer.innerHTML = highResImage.outerHTML;
     console.log(highResImage.outerHTML);
-    largeImageHeader.innerHTML = `<div style="padding-bottom: 4px;"><p class="black-box">Generated using DALL·E 2</p></div><div style="padding-bottom: 4px;"><p class="black-box"><span class="bf">Prompt</span>: ${thumbnail.dataset.prompt}</p></div>`;
+    largeImageHeader.innerHTML = `<div style="padding-bottom: 4px;"><p class="black-box">Generated using ${thumbnail.dataset.ai}</p></div><div style="padding-bottom: 4px;"><p class="black-box"><span class="bf">Prompt</span>: ${thumbnail.dataset.prompt}</p></div>`;
     console.log(largeImageHeader.innerHTML);
 
     // Position the large image container next to the cursor

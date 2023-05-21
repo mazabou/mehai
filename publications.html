@@ -37,7 +37,7 @@
 </head>
 <body>
 
-<div class="section is-max-desktop navbar" style="z-index: 0;">
+<!-- <div class="section is-max-desktop navbar" style="z-index: 0;">
     <nav class="breadcrumb is-large" aria-label="breadcrumbs">
         <ul>
             <li><a class="colorme" href="/">About</a></li>
@@ -45,18 +45,31 @@
             <li><a class="colorme" href="resume">Resume</a></li>
             <li><a class="colorme" href="https://scholar.google.com/citations?user=jXxyYCoAAAAJ&hl=en" target="_blank"
                    rel="noopener noreferrer"> <i class="ai ai-google-scholar-square"></i></a></li>
-            <!-- <li><a class="colorme" href="https://www.semanticscholar.org/author/Mehdi-Azabou/2039962468" target="_blank"
-                   rel="noopener noreferrer"> <i class="ai ai-semantic-scholar"></i></a></li> -->
             <li><a class="colorme" href="https://github.com/mazabou" target="_blank" rel="noopener noreferrer"> <i
                     class="fa fa-github"></i></a></li>
             <li><a class="colorme" href="https://twitter.com/mehdiazabou" target="_blank" rel="noopener noreferrer"> <i
                     class="fa-brands fa-twitter"></i></a></li>
         </ul>
     </nav>
-</div>
+</div> -->
 
-<section class="section" style="z-index: 2;">
-    <div style="margin-bottom: 0.75rem;">
+
+<div class="section is-max-desktop" style="padding-bottom: 0em; z-index: 0;">
+    <div class="navbar-container">
+        <div class="navbar-item colorme"><a class="nav colorme" href="/" aria-current="page">About</a></div>
+        <div class="navbar-item colorme navbar-highlight"><a class="nav colorme" href="#">Publications</a></div>
+        <div class="navbar-item colorme"><a class="nav colorme" href="resume">Resume</a></div>
+        <div class="navbar-item colorme">
+            <a class="nav colorme" href="https://scholar.google.com/citations?user=jXxyYCoAAAAJ&hl=en" target="_blank" rel="noopener noreferrer"> <i class="ai ai-google-scholar-square"></i></a>
+        </div>
+        <div class="navbar-item colorme"><a class="nav colorme" href="https://github.com/mazabou" target="_blank" rel="noopener noreferrer"> <i class="fa fa-github"></i></a></div>
+        <div class="navbar-item colorme"><a class="nav colorme" href="https://twitter.com/mehdiazabou" target="_blank" rel="noopener noreferrer"> <i class="fa-brands fa-twitter"></i></a></div>
+    </div>
+    </div> 
+
+
+<section class="section" style="z-index: 2; padding-top: 1em;">
+    <div style="margin-bottom: 0.; padding-left: 1em; padding-bottom: 0em;">
         <!--
         <div class="block container bd-post-content bottom_padding">
             <div class="dropdown is-hoverable">
@@ -88,20 +101,87 @@
         </div>
     </div>
 
-    <div class="block container bd-post-content entry year" data-tags="header" style="padding-top: 0px;">
+    <!-- <div class="block container bd-post-content entry year" data-tags="header" style="padding-top: 0px;">
         <h2 class="title">
             <p class="is-size-66">
                 2023
             </p>
         </h2>
-    </div>
+    </div> -->
 
     <div class="wrapper">
-    <div class="entry block container bd-post-content target-div highlighter" data-tags="graphs ssl">
+        <div class="entry block container bd-post-content target-div highlighter" data-tags="neuro">
+            <article class="media bottom_padding">
+                <figure class="is-hidden-mobile media-left">
+                    <p class="image is-128x128">
+                        <img src="covers/poyo.jpg" data-ai="Adobe Firefly" data-prompt="multiple monkeys brain connected together to a central computer">
+                    </p>
+                </figure>
+                <div class="media-content">
+                    <div>
+                        <div class="block container bd-post-content">
+                            <h1 class="title">
+                                <p class="is-size-55">
+                                    <i class="fa-solid fa-brain"></i>
+                                    A Unified, Scalable Framework for Neural Population Decoding
+                                    <!--<a class="js-modal-trigger" data-target="forest-trans-modal"><i class="fa-solid fa-ellipsis"></i></a></span>-->
+                                </p>
+                                <p class="tagp">
+    
+                                <div class="dropdown is-hoverable">
+                                    <div class="dropdown-trigger">
+                        <span class="ghostbutton">
+                            <span class="tag is-success is-rounded is-light has-text-weight-bold">Neuroscience</span>
+                        </span>
+                    </div>
+                    </div>
+    
+                                </p>
+                            </h1>
+                            <div class="subtitle subtitle-no-margin">
+                                <p class="authors"><em><b>Mehdi Azabou</b>, Vinam Arora, Venkataramana Ganesh, Ximeng Mao, Santosh Nachimuthu, Michael Mendelson, 
+                                    Blake Richards, Matthew Perich, Guillaume Lajoie, <span class=nowrap>Eva L Dyer</span></em></p>
+                                <p class="conferencetitle">In preparation</p>
+                                <!--
+                                <span class="nowrap"><a href="https://nerdslab.github.io/EIT/" target="_blank" rel="noopener noreferrer"> <i class="fa fa-book"></i> Project page </a>&nbsp;</span>
+                                <span class="nowrap"><a href="https://arxiv.org/pdf/2206.06131.pdf" target="_blank" rel="noopener noreferrer"> <i class="fa fa-file-pdf"></i> Paper </a>&nbsp;</span>
+                                <span class="nowrap"><a href="https://github.com/nerdslab/EIT" target="_blank" rel="noopener noreferrer"> <i class="fa fa-github"></i> Code </a>&nbsp;</span>
+                                <span class="nowrap"><a href="https://arxiv.org/abs/2206.06131" target="_blank" rel="noopener noreferrer"> <i class="fa fa-desktop"></i> arXiv </a>&nbsp;</span>
+                                <span class="nowrap"><a class="js-modal-trigger" data-target="forest-trans-cite"> <i class="fa-solid fa-quote-right"></i> Cite</a></span>
+                                -->
+                            </div>
+                            <div id="poyo-abstract" style="display:none;">
+                                <b>Abstract:</b> Our ability to use deep learning approaches to decipher neural activity would likely benefit from greater scale, 
+                                in terms of both the model size and the datasets. However, the integration of many neural recordings into one unified model 
+                                is challenging, as each recording contains the activity of different neurons from different individual animals. 
+                                In this paper, we introduce a training framework and architecture designed to model the population dynamics of neural 
+                                activity across diverse, large-scale neural recordings. Our method first tokenizes individual spikes within the dataset 
+                                to build an efficient representation of neural events that captures the fine temporal structure of neural activity. 
+                                We then employ cross-attention and a PerceiverIO backbone to further construct a latent tokenization of neural population activities. 
+                                Utilizing this architecture and training framework, we construct a large- scale multi-session model trained on large datasets 
+                                from seven nonhuman primates, spanning over 158 different sessions of recording from over 27,373 neural units and over 100 hours of recordings. 
+                                In a number of different tasks, we demonstrate that our pretrained model can be rapidly adapted to new, unseen sessions with unspecified 
+                                neuron correspondence, enabling few-shot performance with minimal labels. This work presents a powerful new approach for building deep 
+                                learning tools to analyze neural data and stakes out a clear path to training at scale for neural decoding models.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="media-right">
+                    <a class="js-expand-trigger fa-solid fa-chevron-down" data-target="poyo-abstract"></a>
+                </div>
+            </article>
+        </div>
+        </div>
+    
+
+        
+<div class="wrapper">
+     <div class="entry block container bd-post-content target-div highlighter" data-tags="graphs ssl">
         <article class="media bottom_padding">
             <figure class="is-hidden-mobile media-left">
                 <p class="image is-128x128">
-                    <img src="covers/halfhop.png" data-prompt="zooming into a graph/network with a magnifying glass. black background. high quality">
+                    <img src="covers/halfhop.png" data-ai="DALL·E 2" data-prompt="zooming into a graph/network with a magnifying glass. black background. high quality">
                 </p>
             </figure>
             <div class="media-content">
@@ -212,7 +292,7 @@
         <article class="media bottom_padding">
             <figure class="media-left is-hidden-mobile">
                 <p class="image is-128x128">
-                    <img src="covers/lolcat.png" data-prompt="neuron transcriptomic, firing, digital art, high resolution, orange, blue">
+                    <img src="covers/lolcat.png" data-ai="DALL·E 2" data-prompt="neuron transcriptomic, firing, digital art, high resolution, orange, blue">
                 </p>
             </figure>
             <div class="media-content">
@@ -394,7 +474,7 @@ author = {Aidan Schneider and Mehdi Azabou and Louis McDougall-Vigier and David 
     <article class="media bottom_padding">
         <figure class="is-hidden-mobile media-left">
             <p class="image is-128x128 ">
-                <img src="covers/bams-hoa.png" data-prompt="multiverse, a single branch that branches out to increasingly more branches, digital art, colorful">
+                <img src="covers/bams-hoa.png" data-ai="DALL·E 2" data-prompt="multiverse, a single branch that branches out to increasingly more branches, digital art, colorful">
             </p>
         </figure>
         <div class="media-content">
@@ -547,7 +627,7 @@ year = {2023}
     <article class="media bottom_padding">
         <figure class="is-hidden-mobile media-left">
             <p class="image is-128x128">
-                <img src="covers/bams-human.png" data-prompt="a lot of slot machines in the shape of robots stacked next to each other, high resolution, isometric view, 3d render">
+                <img src="covers/bams-human.png" data-ai="DALL·E 2" data-prompt="a lot of slot machines in the shape of robots stacked next to each other, high resolution, isometric view, 3d render">
             </p>
         </figure>
         <div class="media-content">
@@ -712,7 +792,7 @@ year = {2023}
     <article class="media bottom_padding">
         <figure class="media-left is-hidden-mobile">
             <p class="image is-128x128">
-                <img src="covers/changepoint.png" data-prompt="population of neurons morphing from one color to the other from left to right with a clear boundary, digital art">
+                <img src="covers/changepoint.png" data-ai="DALL·E 2" data-prompt="population of neurons morphing from one color to the other from left to right with a clear boundary, digital art">
             </p>
         </figure>
         <div class="media-content">
@@ -792,7 +872,7 @@ year = {2023}
     <article class="media bottom_padding">
         <figure class="media-left is-hidden-mobile">
             <p class="image is-128x128">
-                <img src="covers/eit.png" data-prompt="a forest of neurons, all converging to a single point in the sky, digital art">
+                <img src="covers/eit.png" data-ai="DALL·E 2" data-prompt="a forest of neurons, all converging to a single point in the sky, digital art">
             </p>
         </figure>
         <div class="media-content">
@@ -957,7 +1037,7 @@ year = {2023}
         <article class="media bottom_padding">
             <figure class="media-left is-hidden-mobile">
                 <p class="image is-128x128">
-                    <img src="covers/bgrl.png" data-prompt="two graphs colliding, 3d render, network, high resolution, black background, colorful, explosion">
+                    <img src="covers/bgrl.png" data-ai="DALL·E 2" data-prompt="two graphs colliding, 3d render, network, high resolution, black background, colorful, explosion">
                 </p>
             </figure>
             <div class="media-content">
@@ -1120,7 +1200,7 @@ year = {2023}
     <article class="media bottom_padding">
         <figure class="media-left is-hidden-mobile">
             <p class="image is-128x128">
-                <img src="covers/mtneuro.png" data-prompt="brain under the microscope, a neuron is visible through the lens of the microscope, digital art">
+                <img src="covers/mtneuro.png" data-ai="DALL·E 2" data-prompt="brain under the microscope, a neuron is visible through the lens of the microscope, digital art">
             </p>
         </figure>
         <div class="media-content">
@@ -1280,7 +1360,7 @@ year = {2023}
     <article class="media bottom_padding">
         <figure class="media-left is-hidden-mobile">
             <p class="image is-128x128">
-                <img src="covers/bams.png" data-prompt="three mice in an arena, key points are drawn to track the mice and their trajectory, isometric view, 3d render">
+                <img src="covers/bams.png" data-ai="DALL·E 2" data-prompt="three mice in an arena, key points are drawn to track the mice and their trajectory, isometric view, 3d render">
             </p>
         </figure>
         <div class="media-content">
@@ -1439,7 +1519,7 @@ year = {2023}
     <article class="media bottom_padding">
         <figure class="media-left is-hidden-mobile">
             <p class="image is-128x128">
-                <img src="covers/swapvae.png" data-prompt="3d arrows interlacing in the center, with pointy arrows, render, colorful, space background">
+                <img src="covers/swapvae.png" data-ai="DALL·E 2" data-prompt="3d arrows interlacing in the center, with pointy arrows, render, colorful, space background">
             </p>
         </figure>
         <div class="media-content">
@@ -1624,7 +1704,7 @@ year = {2023}
     <article class="media bottom_padding">
         <figure class="media-left is-hidden-mobile">
             <p class="image is-128x128">
-                <img src="covers/myow.png" data-prompt="robot cat, Sherlock holmes style, inspecting a stack of scattered images on a table, trending on artstation">
+                <img src="covers/myow.png" data-ai="DALL·E 2" data-prompt="robot cat, Sherlock holmes style, inspecting a stack of scattered images on a table, trending on artstation">
 
             </p>
         </figure>
@@ -1806,7 +1886,7 @@ year = {2023}
     <article class="media bottom_padding">
         <figure class="media-left is-hidden-mobile">
             <p class="image is-128x128">
-                <img src="covers/neurossl.png" data-prompt="shadow art hyperrealistic colorful brain, studio photography, isometric view">
+                <img src="covers/neurossl.png" data-ai="DALL·E 2" data-prompt="shadow art hyperrealistic colorful brain, studio photography, isometric view">
             </p>
         </figure>
         <div class="media-content">
@@ -1937,7 +2017,7 @@ year = {2023}
     <article class="media bottom_padding">
         <figure class="media-left is-hidden-mobile">
             <p class="image is-128x128">
-                <img src="covers/lot.png" data-prompt="a complex network of highways made with octopi, digital art, high resolution">
+                <img src="covers/lot.png"  data-ai="DALL·E 2" data-prompt="a complex network of highways made with octopi, digital art, high resolution">
             </p>
         </figure>
         <div class="media-content">
@@ -2104,7 +2184,7 @@ year = {2023}
     <article class="media">
         <figure class="media-left is-hidden-mobile">
             <p class="image is-128x128">
-                <img src="covers/changepoint.png" data-prompt="population of neurons morphing from one color to the other from left to right with a clear boundary, digital art">
+                <img src="covers/changepoint.png" data-ai="DALL·E 2" data-prompt="population of neurons morphing from one color to the other from left to right with a clear boundary, digital art">
             </p>
         </figure>
         <div class="media-content">
@@ -2238,8 +2318,10 @@ year = {2023}
 
 <footer class="footer">
     <div class="section content">
+        <div style="padding-left: 1em;">
         <div style="font-weight: 400; font-size: .6em;">VERSION</div>
         <div style="font-size: 1em;">2023 © Edition 1.3</div>
+    </div>
 <!--        <div style="max-width: 550px; margin: auto;">Feel free to copy <a href="https://github.com/mazabou/mehai">this website</a>. Some of the images have been generated using DALL·E, an artificial intelligence tool developed by OpenAI.</div>-->
 
     </div>

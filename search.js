@@ -40,7 +40,7 @@ function handleButtonClick() {
     tagButtons.forEach(button => button.classList.remove('ghostbutton'))
     button.style.display = 'none';
     footer.style.display = 'block';
-    breadcrumbs.forEach(breadcrumb => breadcrumb.style.color = "#485fc7");
+    breadcrumbs.forEach(breadcrumb => breadcrumb.style.color = "rgb(74, 74, 74)");
 }
 
 button.addEventListener('click', handleButtonClick);
