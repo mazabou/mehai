@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="style.css">
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
+    <script src="slider.js"></script>
   
 
 
@@ -64,7 +65,7 @@
     <div class="tile">
       <div class="tile is-child is-8">
         <div class="media padded_block is-flex-mobile">
-          <figure id="mii" class="media-left image is-128x128" style="margin-right:1.5rem;">
+          <figure id="mii" class="media-left image is-128x128" style="margin-right:1.5rem; background-color:aliceblue ;">
             <img style="border-radius: 100px;" alt="Mehdi Azabou" src="assets/me_mlgt.png">
           </figure>
           <div class="media-content">
@@ -107,7 +108,7 @@
   
     <div class="tile">
         <div class="tile is-vertical is-5">
-            <div class="tile is-child" style="margin-bottom: 0.6em !important;">
+            <div class="tile is-child" style="margin-bottom: 0.9em !important;">
                 <a href="https://icml.cc/virtual/2023/poster/23873" target="_blank">
                 <div class="padded_block">
                   <span class="title"><button class="ghostbutton tag is-danger is-light has-text-weight-bold is-medium resume_header is-large"><i class="fa-regular fa-hand-point-right"></i> &nbsp; Latest Publication </button></span>
@@ -167,10 +168,12 @@
       <!-- </div> -->
 
       <div class="tile is-child">
-        <div class="padded_block">
+        <div class="padded_block" style="margin-right: 0 !important;">       
         <ul>
           <li> <span class="title"><button class="ghostbutton tag is-info is-light has-text-weight-bold is-medium resume_header is-large"><i class="fa-solid fa-newspaper"></i> &nbsp; News </button></span> </li>
-          <div style="max-height: 240px; overflow-y: auto;">
+          <!-- <div style="max-height: 240px; overflow-y: auto;"> -->
+            <div class="scrollable-container">
+              <div class="scrollable-content" style="height:240px;">   
             <table>
               <tr>
                 <td class="no-wrap"><span> Jul 2023 </span></td>
@@ -201,6 +204,11 @@
             </div>
         </div>
         </ul>
+      <!-- </div> -->
+        </div>
+      </div>
+      
+    </div>
         </div>
 
 
@@ -213,9 +221,11 @@
   
     <div class="tile">
       <div class="tile is-child is-8">
-        <div class="padded_block">
+        <div class="padded_block" style="margin-right: 0 !important;">
         <span class="title"><button class="ghostbutton tag is-success is-light has-text-weight-bold is-medium resume_header is-large"><i class="fa-regular fa-user"></i> &nbsp; Bio </button></span> </li>
         <div style="max-height: 308px; overflow-y: auto;">
+          <div class="scrollable-container">
+            <div class="scrollable-content" style="height:320px;">   
         <p>
           I am a third-year Machine Learning Ph.D. student advised
           by <a href="https://dyerlab.gatech.edu/" target="_blank" rel="noopener noreferrer"> Dr. Eva L. Dyer</a>.
@@ -232,7 +242,7 @@
         <br> 
          <p> 
           I am currently working on developing methods for learning representations of neural activity, behavior, and graphs,
-          with the goal of improving our understanding of the brain. If you are interested in collaborating, feel free to reach out!
+          with the goal of improving our understanding of the brain. <u>If you are interested in collaborating, feel free to reach out!</u>
       </p>
       <br> 
        <p> 
@@ -241,6 +251,7 @@
           I received a MS in Engineering from CentraleSupélec, France in 2019 and a MS in Computer Science from
           Georgia Tech in 2020.
       </p>
+    </div></div>
     </div>
       </div>
       </div>
