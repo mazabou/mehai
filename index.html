@@ -52,6 +52,78 @@
 </div>
 </div> -->
 
+<div class="sticker-container">
+  <!-- Stickers will be added dynamically here -->
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const container = document.querySelector(".sticker-container");
+  const stickerImages = ["stickers/poyo_peeling_sticker.png", "stickers/nerds_lab_sticker.png", "stickers/gt_sticker.png"];
+
+  const numStickers = 40;
+  const stickers = [];
+
+  const section = document.querySelector(".section");
+
+  const sectionWidth = section.offsetWidth; 
+  const viewportWidth = window.innerWidth; 
+  const sectionWidthPercentage = (sectionWidth / viewportWidth) * 100;
+
+
+  for (let i = 0; i < numStickers; i++) {
+    const sticker = document.createElement("img");
+
+    const viewportHeight = window.innerHeight; 
+    const documentHeight = document.body.scrollHeight - 400;
+
+    const randomImage = stickerImages[Math.floor(Math.random() * stickerImages.length)];
+    sticker.src = randomImage;
+    sticker.classList.add("sticker");
+    let side;
+    let deltaFromSection;
+    if (Math.random() > 0.5) {
+      side = "left";
+      sticker.style.left = `${(100 - sectionWidthPercentage) / 2 - 30 * 100 / viewportHeight - (Math.random() * 360 / viewportHeight * 100)}%`; // Random horizontal position within the remaining space
+      deltaFromSection = (viewportWidth - sectionWidth) / 2 - parseFloat(sticker.style.left) * viewportWidth / 100;
+    } else {
+      side = "right";
+      sticker.style.right = `${(100 - sectionWidthPercentage) / 2 - 30 * 100 / viewportHeight - (Math.random() * 360 / viewportHeight * 100)}%`; // Random horizontal position within the remaining space
+      deltaFromSection = (viewportWidth - sectionWidth) / 2 - parseFloat(sticker.style.right) * viewportWidth / 100;
+    }
+    sticker.style.top = `${Math.random() * (documentHeight / viewportHeight) * 100 - 5}%`; // Random vertical position
+    const rotation = Math.random() * 60 - 30; // Random rotation between -90 and 90 degrees
+    sticker.style.transform = `rotate(${rotation}deg)`; 
+    // Adjust shadow position based on rotation
+    const shadowOffsetX = Math.sin(rotation * (Math.PI / 180)) * 5; // Shadow X offset
+    const shadowOffsetY = Math.cos(rotation * (Math.PI / 180)) * 5; // Shadow Y offset
+    sticker.style.filter = `drop-shadow(${shadowOffsetX}px ${shadowOffsetY}px 5px rgba(0, 0, 0, 0.5))`; 
+    document.body.appendChild(sticker); 
+    stickers.push({ element: sticker, side: side, deltaFromSection: deltaFromSection});
+  }
+  function updateStickerPositions() {
+    const viewportWidth = window.innerWidth;
+    const sectionWidth = section.offsetWidth; 
+
+    stickers.forEach(stickerData => {
+      const sticker = stickerData.element;
+      const deltaFromSection = stickerData.deltaFromSection;
+      const sectionLeft = (viewportWidth - sectionWidth) / 2;
+      if (stickerData.side === "left") {
+        const newLeft = sectionLeft - deltaFromSection;
+        sticker.style.left = `${newLeft}px`;
+      } else {
+        const newRight = sectionLeft - deltaFromSection;
+        sticker.style.right = `${newRight}px`;
+      }
+    });
+  }
+
+  // window.addEventListener("scroll", updateStickerPositions);
+  window.addEventListener("resize", updateStickerPositions);
+});
+</script>
+
 
   <div class="section is-max-desktop" style="padding-bottom: 0em;">
     <div class="navbar-container">
@@ -77,7 +149,7 @@
           <div class="media-content">
             <ul>
               <p>
-                <span class="is-size-4">Mehdi Azabou</span> - ML PhD Student @ Georgia Tech
+                <span class="is-size-4">Mehdi Azabou</span> - ML PhD Candidate @ Georgia Tech
               </p>
               <hr style="margin-top: 2px; margin-bottom:10px;">
               <p>
@@ -190,6 +262,13 @@
               <div class="scrollable-content" style="height:240px;">
                 <table>
                   <tr>
+                    <td class="no-wrap"><span> Feb 2024 </span></td>
+                    <td class="no-wrap">&nbsp;<i class="fa-solid fa-chevron-right fa-2xs"></i>&nbsp;</td>
+                    <td> I will at COSYNE 2024 in Lisbon, Portugal to present our latest poster titled <em>"Large-scale pretraining on neural data allows for
+                      transfer across subjects, tasks and species".</em></td>
+                    </td>
+                  </tr>
+                  <tr>
                     <td class="no-wrap"><span> Oct 2023 </span></td>
                     <td class="no-wrap">&nbsp;<i class="fa-solid fa-chevron-right fa-2xs"></i>&nbsp;</td>
                     <td> Our work on large-scale brain decoders is out 🧠🕹️🐒 [<a
@@ -261,7 +340,7 @@
             <div class="scrollable-container">
               <div class="scrollable-content" style="height:320px;">
                 <p>
-                  I am a fourth-year Machine Learning Ph.D. student advised
+                  I am a fourth-year Machine Learning Ph.D. candidate advised
                   by <a href="https://dyerlab.gatech.edu/" target="_blank" rel="noopener noreferrer"> Dr. Eva L.
                     Dyer</a>.
                   My main areas of interest are Representation Learning, Generative AI, Data-Centric AI, and
@@ -341,7 +420,7 @@
     </div>
 
 
-    <div class="tile is-child">
+    <div class="tile is-only-child">
       <div class="padded_block">
         <ul>
           <li> <span class="title"><button
@@ -413,19 +492,19 @@
                     class="fa-solid fa-glasses"></i> &nbsp; Reviewing </button></span> </li>
             <i><em>I have served as a reviewer for notable conferences and journals:</em></i>
             <li><i class="fa-solid fa-glasses fa-2xs"></i> Neural Information Processing Systems, <span
-                class="nowrap"><u>NeurIPS</u> '21,</span> '22 and '23
-            </li>
-            <li><i class="fa-solid fa-glasses fa-2xs"></i> Neural Information Processing Systems Datasets and Benchmarks
-              track, <span class="nowrap"><u>NeurIPS</u> '22,</span> and '23.
+                class="nowrap"><u>NeurIPS</u> 2021,</span> 2022 and 2023
             </li>
             <li><i class="fa-solid fa-glasses fa-2xs"></i> International Conference on Learning Representations, <span
-                class="nowrap"><u>ICLR</u> '23 </span> </li>
+                class="nowrap"><u>ICLR</u> 2023 </span> </li>
             <li><i class="fa-solid fa-glasses fa-2xs"></i> International Conference on Machine Learning, <span
-                class="nowrap"><u>ICML</u> '23 </span> </li>
+                class="nowrap"><u>ICML</u> 2023 and 2024 </span> </li>
             <li><i class="fa-solid fa-glasses fa-2xs"></i> Computer Vision and Pattern Recognition, <span
-                class="nowrap"><u>CVPR</u> '23 </span> </li>
-            <li><i class="fa-solid fa-glasses fa-2xs"></i> Learning on Graphs Conference, <u>LOG</u> '22, '23 </li>
-            <li><i class="fa-solid fa-glasses fa-2xs"></i> Artificial Intelligence and Statistics, <u>AISTATS</u> '21
+                class="nowrap"><u>CVPR</u> 2023 and 2024 </span> </li>
+            <li><i class="fa-solid fa-glasses fa-2xs"></i> Neural Information Processing Systems Datasets and Benchmarks
+              track, <span class="nowrap"><u>NeurIPS</u> 2022,</span> and 2023.
+            </li>
+            <li><i class="fa-solid fa-glasses fa-2xs"></i> Learning on Graphs Conference, <u>LOG</u> 2022, 2023 </li>
+            <li><i class="fa-solid fa-glasses fa-2xs"></i> Artificial Intelligence and Statistics, <u>AISTATS</u> 2021
             </li>
             <li><i class="fa-solid fa-glasses fa-2xs"></i> <u>IEEE</u> Transactions on Knowledge and Data Engineering
             </li>
@@ -444,10 +523,10 @@
             <li><i class="fa-solid fa-user-graduate fa-2xs"></i> Vinam Arora, Master's in ECE, 2023</li>
             <li><i class="fa-solid fa-user-graduate fa-2xs"></i> Puru Malhotra, Master's in CS, 2023</li>
             <li><i class="fa-solid fa-user-graduate fa-2xs"></i> <a href="https://venkys.website">Venkataramana
-                Ganesh</a>, Master's in CS, 2022-2023</li>
+                Ganesh</a>, Master's in CS, 2022-2024</li>
             <li><i class="fa-solid fa-user-graduate fa-2xs"></i> Michael Mendelson, Undergrad in BME, 2021-2023</li>
-            <li><i class="fa-solid fa-user-graduate fa-2xs"></i> Santosh Nachimuthu, Undergrad in BME, 2023</li>
-            <li><i class="fa-solid fa-user-graduate fa-2xs"></i> Daniel Leite, Undergrad in CS / Math, 2023</li>
+            <li><i class="fa-solid fa-user-graduate fa-2xs"></i> Santosh Nachimuthu, Undergrad in BME, 2023-2024</li>
+            <li><i class="fa-solid fa-user-graduate fa-2xs"></i> Daniel Leite, Undergrad in CS / Math, 2023-2024</li>
             <li><i class="fa-solid fa-user-graduate fa-2xs"></i> Carolina Urzay, Undergrad in BME, 2021-2022</li>
             <li><i class="fa-solid fa-user-graduate fa-2xs"></i> Zijing Wu, Undergrad in CS / Math, 2020-2021</li>
           </ul>
