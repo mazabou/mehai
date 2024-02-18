@@ -522,7 +522,7 @@ a.nav:hover {
 
 
 .tile.is-child.centered-icon {
-    background-color: white;
+    /* background-color: white; */
     /* or any specific pastel blue you prefer */
     display: flex;
     align-items: center;

@@ -74,6 +74,22 @@ document.addEventListener("DOMContentLoaded", function() {
   for (let i = 0; i < numStickers; i++) {
     const sticker = document.createElement("img");
 
+    sticker.addEventListener("click", function(event) {
+      const stickerRect = sticker.getBoundingClientRect();
+      const offsetX = 2 * (event.clientX - stickerRect.left - stickerRect.width / 2); // Calculate offset from sticker center
+      const offsetY = 2 * (event.clientY - stickerRect.top - stickerRect.height / 2); // Calculate offset from sticker center
+      const flickRotation = Math.random() * 60 - 30; // Random rotation between -30 and 30 degrees
+      sticker.style.transition = "transform 0.5s ease"; // Set transition for smooth animation
+      sticker.style.transform = `translate(${-offsetX}px, ${-offsetY}px) rotate(${flickRotation}deg)`; // Apply movement based on click position and flick rotation
+
+      // Update sticker's position in the stickers array
+      const index = stickers.findIndex(item => item.element === sticker);
+      if (index !== -1) {
+        stickers[index].deltaFromSection = stickers[index].deltaFromSection - offsetX / viewportWidth; // Update deltaFromSection based on new position
+        stickers[index].rotation = flickRotation; // Update rotation
+      }
+    });
+
     const viewportHeight = window.innerHeight; 
     const documentHeight = document.body.scrollHeight - 400;
 
@@ -99,7 +115,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const shadowOffsetY = Math.cos(rotation * (Math.PI / 180)) * 5; // Shadow Y offset
     sticker.style.filter = `drop-shadow(${shadowOffsetX}px ${shadowOffsetY}px 5px rgba(0, 0, 0, 0.5))`; 
     document.body.appendChild(sticker); 
-    stickers.push({ element: sticker, side: side, deltaFromSection: deltaFromSection});
+    stickers.push({ element: sticker, side: side, deltaFromSection: deltaFromSection, rotation: rotation });
   }
   function updateStickerPositions() {
     const viewportWidth = window.innerWidth;
@@ -216,14 +232,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
         <div class="tile is-hidden-mobile" style="min-height:90px;">
-          <div class="tile is-child centered-icon" style="margin-bottom: 10px !important;">
+          <div class="tile is-child centered-icon is-only-child" style="margin-bottom: 10px !important;">
             <a href="mailto:mazabou@gatech.edu">
               <button class="icon-button">
                 <i class="fa-solid fa-envelope icon"></i> <span class="icon-text">&nbsp;&nbsp; Contact</span>
               </button>
             </a>
           </div>
-          <div class="tile is-child centered-icon" style="margin-bottom: 10px !important;">
+          <div class="tile is-child centered-icon is-only-child" style="margin-bottom: 10px !important;">
             <a href="publications">
               <button class="icon-button">
                 <i class="fa-solid fa-book icon"></i> <span class="icon-text">&nbsp;&nbsp; Publications</span>
