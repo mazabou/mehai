@@ -153,6 +153,10 @@ body {
     margin-bottom: 12px !important;
 }
 
+.subtitle {
+    font-size: 1rem;
+}
+
 .dropdown-menu {
     z-index: 1000;
 }
