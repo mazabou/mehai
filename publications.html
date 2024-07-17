@@ -207,7 +207,7 @@
                                     <p class="authors"><em>Divyansha Lachi, <b>Mehdi Azabou</b>, Vinam Arora, Eva L.
                                             Dyer</em>
                                     </p>
-                                    <p class="conferencetitle">arXiv Preprint, 2024
+                                    <p class="conferencetitle">Preprint, 2024
                                     </p>
                                 </div>
                                 <div id="graphfm-abstract" style="display:none;">
@@ -377,32 +377,27 @@ Url={Https://Arxiv.Org/Abs/2407.11907},
                                         <p class="conferencetitle">Computational and Systems Neuroscience (COSYNE), 2024
                                         </p>
                                     </div>
-                                    <!-- <div id="poyo-cosyne-abstract" style="display:none;">
-                                <b>Abstract:</b> Our ability to use deep learning approaches to decipher neural
-                                activity would likely benefit from greater scale,
-                                in terms of both the model size and the datasets. However, the integration of many
-                                neural recordings into one unified model
-                                is challenging, as each recording contains the activity of different neurons from
-                                different individual animals.
-                                In this paper, we introduce a training framework and architecture designed to model
-                                the population dynamics of neural
-                                activity across diverse, large-scale neural recordings. Our method first tokenizes
-                                individual spikes within the dataset
-                                to build an efficient representation of neural events that captures the fine
-                                temporal structure of neural activity.
-                                We then employ cross-attention and a PerceiverIO backbone to further construct a
-                                latent tokenization of neural population activities.
-                                Utilizing this architecture and training framework, we construct a large- scale
-                                multi-session model trained on large datasets
-                                from seven nonhuman primates, spanning over 158 different sessions of recording from
-                                over 27,373 neural units and over 100 hours of recordings.
-                                In a number of different tasks, we demonstrate that our pretrained model can be
-                                rapidly adapted to new, unseen sessions with unspecified
-                                neuron correspondence, enabling few-shot performance with minimal labels. This work
-                                presents a powerful new approach for building deep
-                                learning tools to analyze neural data and stakes out a clear path to training at
-                                scale for neural decoding models.
-                            </div> -->
+                                    <div id="poyo-cosyne-abstract" style="display:none;">
+                                <b>Abstract:</b> Current population-level models of neural data are built to operate on a single dataset, condition, or
+task at a time. This both limits the amount of training data we can build models on, and also makes it difficult to
+build unified models where it may be possible to compare across individuals and over distinct tasks. To address
+this gap, we introduce a novel approach for large-scale training over many diverse datasets spanning many sessions
+and tasks. Much like words or groups of letters are passed into transformers in natural language processing, our
+approach centers around a novel way to breakdown neural population activity into parts or “tokens” that can be
+processed by a large transformer model. Rather than binning data, we represent each individual spike as a token and
+associate these spike events with a learned unit-level embedding which can capture information about the identity
+of a neural unit or channel (in the case of multiunits). We combine this input tokenization method with an encoder-
+decoder architecture that compresses the input spikes into a latent space and learns interactions across spikes in
+time and across neurons. To demonstrate the flexibility and scalability of our multi-session training framework,
+we apply it to a wide range of motor, visual, and decision making tasks from electrophysiology datasets collected
+in monkeys, humans, and mice. In particular, we train three large models, the first being from 7 nonhuman
+primates (27,373 units) engaging in four different motor tasks across three laboratories, the second combining
+human and monkey motor cortical datasets (9,789 monkey units + 1,920 human units) in diverse tasks, and the
+third from 58 mice (99,180 units) engaged in visual tasks during recordings to multiple regions in the cortex, deep,
+and midbrain structures. In these cases, we demonstrate that our pretrained models can be rapidly adapted to
+new, unseen sessions, enabling few-shot performance across animals and species with minimal labels. Our results
+highlight the power of scale and demonstrate how pretraining on large datasets can benefit neural data analysis.
+                            </div>
                                     <div class="subtitle">
                                         <hr>
                                         <span class="nowrap"><a href="https://poyo-brain.github.io/" target="_blank"
@@ -428,9 +423,9 @@ Url={Https://Arxiv.Org/Abs/2407.11907},
                                 </div>
                             </div>
                         </div>
-                        <!-- <div class="media-right">
-                    <a class="js-expand-trigger fa-solid fa-chevron-down" data-target="poyo-abstract"></a>
-                </div> -->
+                        <div class="media-right">
+                    <a class="js-expand-trigger fa-solid fa-chevron-down" data-target="poyo-cosyne-abstract"></a>
+                </div>
                     </article>
                 </div>
                 <!-- <canvas id="my-canvas"></canvas> -->
