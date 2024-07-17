@@ -126,64 +126,258 @@
         </h2>
     </div> -->
 
-    
-    <div class="wrapper">
-        <div class="entry block container bd-post-content target-div" data-tags="neuro,ts">
-            <article class="media bottom_padding">
-                <figure class="is-hidden-mobile media-left">
-                    <p class="image is-128x128">
-                        <img src="covers/poyo_cosyne.png" data-ai="DALL·E"
-                            data-prompt="a brain at the center of the image, kaleidoscope effect, 4k, art">
-                    </p>
-                </figure>
-                <div class="media-content">
-                    <div>
-                        <div class="block container bd-post-content">
-                            <h1 class="title">
-                                <p class="is-size-55">
-                                    <i class="fas fa-exchange-alt"></i>
-                                    Large-scale pretraining on neural data allows for transfer across subjects, tasks <span class=nowrap>and species</span>
-                                    <!--<a class="js-modal-trigger" data-target="forest-trans-modal"><i class="fa-solid fa-ellipsis"></i></a></span>-->
-                                </p>
-                                <p class="tagp">
 
-                                <div class="dropdown is-hoverable">
+
+        <div class="wrapper">
+            <div class="entry block container bd-post-content target-div highlighter" data-tags="graphs">
+                <article class="media bottom_padding">
+                    <figure class="is-hidden-mobile media-left">
+                        <p class="image is-128x128">
+                            <img src="covers/graphfm.png" data-ai="DALL·E 3"
+                                data-prompt="graph foundation model, colorful central glowing node and web of interconnected colorful nodes and edges.">
+                        </p>
+                    </figure>
+                    <div class="media-content">
+                        <div>
+                            <div class="block container bd-post-content">
+                                <h1 class="title">
+                                    <p class="is-size-55">
+                                        <i class="fa-solid fa-globe"></i>
+                                        GraphFM: A Scalable Framework For Multi-Graph Pretraining
+                                    </p>
+                                    <p class="tagp">
+
+                                    <div class="dropdown is-hoverable">
+                                        <div class="dropdown-trigger">
+                                            <span class="ghostbutton">
+                                                <span
+                                                    class="tag is-warning is-rounded is-light has-text-weight-bold">Geometric
+                                                    Deep Learning</span>
+                                            </span>
+                                        </div>
+                                        <!-- <div class="dropdown-menu" role="menu">
+                                        <div class="dropdown-content">
+                                            <div class="dropdown-item">
+                                                <p class="has-text-weight-normal is-size-7">Half-Hop is a
+                                                    plug-and-play <b>augmentation</b>
+                                                    that works with any message passing neural network. We show that
+                                                    it leads to
+                                                    improved performance on various supervised and self-supervised
+                                                    benchmarks.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                    </div>
+                                    <div class="dropdown is-hoverable">
+                                        <div class="dropdown-trigger">
+                                            <span class="ghostbutton">
+                                                <span
+                                                    class="tag is-rounded is-light has-text-weight-bold">Transformers</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="dropdown is-hoverable">
                                     <div class="dropdown-trigger">
                                         <span class="ghostbutton">
                                             <span
-                                                class="tag is-rounded is-light has-text-weight-bold">Abstract</span>
+                                                class="tag is-info is-rounded is-light has-text-weight-bold">SSL</span>
                                         </span>
                                     </div>
-                                </div>
-
-                                <div class="dropdown is-hoverable">
-                                    <div class="dropdown-trigger">
-                                        <span class="ghostbutton">
-                                            <span
-                                                class="tag is-success is-rounded is-light has-text-weight-bold">Neuroscience</span>
-                                        </span>
+                                    <div class="dropdown-menu" role="menu">
+                                        <div class="dropdown-content">
+                                            <div class="dropdown-item">
+                                                <p class="has-text-weight-normal is-size-7">Self-Supervised
+                                                    Learning</p>
+                                            </div>
+                                            <hr class="dropdown-divider">
+                                            <div class="dropdown-item">
+                                                <p class="has-text-weight-normal is-size-7">Half-Hop is used as an
+                                                    augmentation to generate <b>more diverse views</b> for methods
+                                                    like BGRL and
+                                                    GRACE.</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
+                                </div> -->
 
-                                <div class="dropdown is-hoverable">
-                                    <div class="dropdown-trigger">
-                                        <span class="ghostbutton">
-                                            <span
-                                                class="tag is-rounded is-light has-text-weight-bold">Transformers</span>
-                                        </span>
-                                    </div>
+                                    </p>
+                                </h1>
+                                <div class="subtitle subtitle-no-margin">
+                                    <p class="authors"><em>Divyansha Lachi, <b>Mehdi Azabou</b>, Vinam Arora, Eva L.
+                                            Dyer</em>
+                                    </p>
+                                    <p class="conferencetitle">arXiv Preprint, 2024
+                                    </p>
                                 </div>
-
-                                </p>
-                            </h1>
-                            <div class="subtitle subtitle-no-margin">
-                                <p class="authors"><em><b>Mehdi Azabou</b>, Vinam Arora, Patrick Mineault, Venkataramana Ganesh,
-                                        Ximeng Mao, Santosh Nachimuthu, Michael Mendelson,
-                                        Blake Richards, Matthew Perich, Guillaume Lajoie, <span class=nowrap>Eva L.
-                                            Dyer</span></em></p>
-                                <p class="conferencetitle">Computational and Systems Neuroscience (COSYNE), 2024</p>
+                                <div id="graphfm-abstract" style="display:none;">
+                                    <b>Abstract:</b> Graph neural networks are typically trained on individual datasets, often requiring
+                                    highly specialized models and extensive hyperparameter tuning. This datasetspecific approach arises because each graph dataset often has unique node features
+                                    and diverse connectivity structures, making it difficult to build a generalist model.
+                                    To address these challenges, we introduce a scalable multi-graph multi-task pretraining approach specifically tailored for node classification tasks across diverse
+                                    graph datasets from different domains. Our method, Graph Foundation Model
+                                    (GraphFM), leverages a Perceiver-based encoder that employs learned latent tokens
+                                    to compress domain-specific features into a common latent space. This approach
+                                    enhances the model's ability to generalize across different graphs and allows for
+                                    scaling across diverse data. We demonstrate the efficacy of our approach by training
+                                    a model on 152 different graph datasets comprising over 7.4 million nodes and 189
+                                    million edges, establishing the first set of scaling laws for multi-graph pretraining
+                                    on datasets spanning many domains (e.g., molecules, citation and product graphs).
+                                    Our results show that pretraining on a diverse array of real and synthetic graphs
+                                    improves the model's adaptability and stability, while performing competitively
+                                    with state-of-the-art specialist models. This work illustrates that multi-graph pretraining can significantly reduce the burden imposed by the current graph training
+                                    paradigm, unlocking new capabilities for the field of graph neural networks by
+                                    creating a single generalist model that performs competitively across a wide range
+                                    of datasets and tasks.
+                                </div>
+                                <div class="subtitle">
+                                    <hr>
+                                    <span class="nowrap"><a href="https://arxiv.org/pdf/2407.11907" target="_blank"
+                                            rel="noopener noreferrer"> <i class="fa fa-file-pdf"></i>
+                                            Paper </a>&nbsp;</span>
+                                    <span class="nowrap"><a href="https://arxiv.org/abs/2407.11907" target="_blank"
+                                            rel="noopener noreferrer"> <i class="fa fa-desktop"></i>
+                                            arXiv </a>&nbsp;</span>
+                                    <span class="nowrap"><a class="js-modal-trigger" data-target="graphfm-cite"> <i
+                                                class="fa-solid fa-quote-right"></i> Cite</a></span>
+                                </div>
                             </div>
-                            <!-- <div id="poyo-cosyne-abstract" style="display:none;">
+                        </div>
+                    </div>
+                    <div class="media-right">
+                        <a class="js-expand-trigger fa-solid fa-chevron-down" data-target="graphfm-abstract"></a>
+                    </div>
+                </article>
+            </div>
+            <!-- <canvas id="my-canvas"></canvas>
+</div> -->
+
+
+            <div id="graphfm-cite" class="modal">
+                <div class="modal-background"></div>
+                <div class="modal-card">
+                    <header class="modal-card-head">
+                        <p class="modal-card-title">Cite this paper</p>
+                        <button class="delete" aria-label="close"></button>
+                    </header>
+                    <section class="modal-card-body">
+                        BibTex
+                        <pre><code>@Misc{lachi2024graphfm,
+Title={GraphFM: A Scalable Framework For Multi-Graph Pretraining}, 
+Author={Divyansha Lachi And Mehdi Azabou And Vinam Arora And Eva Dyer},
+Year={2024},
+Eprint={2407.11907},
+ArchivePrefix={ArXiv},
+PrimaryClass={Cs.LG},
+Url={Https://Arxiv.Org/Abs/2407.11907}, 
+}
+</code></pre>
+                        APA
+                        <pre><code>Lachi, D., Azabou, M., Arora, V. & Dyer, E. L. (2024). GraphFM: A Scalable Framework For Multi-Graph Pretraining.  <i>ArXiv 2407.11907</i>         </code></pre>
+                    </section>
+                    <footer class="modal-card-foot"></footer>
+                </div>
+            </div>
+
+
+
+            <div id="graphfm-modal" class="modal">
+                <div class="modal-background"></div>
+                <div class="modal-card">
+                    <header class="modal-card-head">
+                        <p class="modal-card-title"></p>
+                        <button class="delete" aria-label="close"></button>
+                    </header>
+                    <section class="modal-card-body">
+
+                        <div>
+                            <b>Abstract:</b> Graph neural networks are typically trained on individual datasets, often requiring
+                            highly specialized models and extensive hyperparameter tuning. This datasetspecific approach arises because each graph dataset often has unique node features
+                            and diverse connectivity structures, making it difficult to build a generalist model.
+                            To address these challenges, we introduce a scalable multi-graph multi-task pretraining approach specifically tailored for node classification tasks across diverse
+                            graph datasets from different domains. Our method, Graph Foundation Model
+                            (GraphFM), leverages a Perceiver-based encoder that employs learned latent tokens
+                            to compress domain-specific features into a common latent space. This approach
+                            enhances the model's ability to generalize across different graphs and allows for
+                            scaling across diverse data. We demonstrate the efficacy of our approach by training
+                            a model on 152 different graph datasets comprising over 7.4 million nodes and 189
+                            million edges, establishing the first set of scaling laws for multi-graph pretraining
+                            on datasets spanning many domains (e.g., molecules, citation and product graphs).
+                            Our results show that pretraining on a diverse array of real and synthetic graphs
+                            improves the model's adaptability and stability, while performing competitively
+                            with state-of-the-art specialist models. This work illustrates that multi-graph pretraining can significantly reduce the burden imposed by the current graph training
+                            paradigm, unlocking new capabilities for the field of graph neural networks by
+                            creating a single generalist model that performs competitively across a wide range
+                            of datasets and tasks.
+                        </div>
+                    </section>
+                    <footer class="modal-card-foot"></footer>
+                </div>
+            </div>
+
+
+
+            <div class="wrapper">
+                <div class="entry block container bd-post-content target-div" data-tags="neuro,ts">
+                    <article class="media bottom_padding">
+                        <figure class="is-hidden-mobile media-left">
+                            <p class="image is-128x128">
+                                <img src="covers/poyo_cosyne.png" data-ai="DALL·E"
+                                    data-prompt="a brain at the center of the image, kaleidoscope effect, 4k, art">
+                            </p>
+                        </figure>
+                        <div class="media-content">
+                            <div>
+                                <div class="block container bd-post-content">
+                                    <h1 class="title">
+                                        <p class="is-size-55">
+                                            <i class="fas fa-exchange-alt"></i>
+                                            Large-scale pretraining on neural data allows for transfer across subjects,
+                                            tasks <span class=nowrap>and species</span>
+                                            <!--<a class="js-modal-trigger" data-target="forest-trans-modal"><i class="fa-solid fa-ellipsis"></i></a></span>-->
+                                        </p>
+                                        <p class="tagp">
+
+                                        <div class="dropdown is-hoverable">
+                                            <div class="dropdown-trigger">
+                                                <span class="ghostbutton">
+                                                    <span
+                                                        class="tag is-rounded is-light has-text-weight-bold">Abstract</span>
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="dropdown is-hoverable">
+                                            <div class="dropdown-trigger">
+                                                <span class="ghostbutton">
+                                                    <span
+                                                        class="tag is-success is-rounded is-light has-text-weight-bold">Neuroscience</span>
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="dropdown is-hoverable">
+                                            <div class="dropdown-trigger">
+                                                <span class="ghostbutton">
+                                                    <span
+                                                        class="tag is-rounded is-light has-text-weight-bold">Transformers</span>
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        </p>
+                                    </h1>
+                                    <div class="subtitle subtitle-no-margin">
+                                        <p class="authors"><em><b>Mehdi Azabou</b>, Vinam Arora, Patrick Mineault,
+                                                Venkataramana Ganesh,
+                                                Ximeng Mao, Santosh Nachimuthu, Michael Mendelson,
+                                                Blake Richards, Matthew Perich, Guillaume Lajoie, <span class=nowrap>Eva
+                                                    L.
+                                                    Dyer</span></em></p>
+                                        <p class="conferencetitle">Computational and Systems Neuroscience (COSYNE), 2024
+                                        </p>
+                                    </div>
+                                    <!-- <div id="poyo-cosyne-abstract" style="display:none;">
                                 <b>Abstract:</b> Our ability to use deep learning approaches to decipher neural
                                 activity would likely benefit from greater scale,
                                 in terms of both the model size and the datasets. However, the integration of many
@@ -209,12 +403,12 @@
                                 learning tools to analyze neural data and stakes out a clear path to training at
                                 scale for neural decoding models.
                             </div> -->
-                            <div class="subtitle">
-                                <hr>
-                                <span class="nowrap"><a href="https://poyo-brain.github.io/" target="_blank"
-                                        rel="noopener noreferrer"> <i class="fa fa-book"></i> Project page
-                                    </a>&nbsp;</span>
-                                <!-- <span class="nowrap"><a href="https://arxiv.org/pdf/2310.16046.pdf" target="_blank"
+                                    <div class="subtitle">
+                                        <hr>
+                                        <span class="nowrap"><a href="https://poyo-brain.github.io/" target="_blank"
+                                                rel="noopener noreferrer"> <i class="fa fa-book"></i> Project page
+                                            </a>&nbsp;</span>
+                                        <!-- <span class="nowrap"><a href="https://arxiv.org/pdf/2310.16046.pdf" target="_blank"
                                         rel="noopener noreferrer"> <i class="fa fa-file-pdf"></i> Paper
                                     </a>&nbsp;</span>
                                 <span class="nowrap"><a
@@ -227,31 +421,31 @@
                                 <span class="nowrap"><a href="https://openreview.net/forum?id=sw2Y0sirtM"
                                         target="_blank" rel="noopener noreferrer"> <i class="fa fa-desktop"></i>
                                         OpenReview </a>&nbsp;</span> -->
-<!-- 
+                                        <!-- 
                                 <span class="nowrap"><a class="js-modal-trigger" data-target="poyo-cite"> <i
                                             class="fa-solid fa-quote-right"></i> Cite</a></span> -->
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <!-- <div class="media-right">
+                        <!-- <div class="media-right">
                     <a class="js-expand-trigger fa-solid fa-chevron-down" data-target="poyo-abstract"></a>
                 </div> -->
-            </article>
+                    </article>
+                </div>
+                <!-- <canvas id="my-canvas"></canvas> -->
+            </div>
         </div>
-        <!-- <canvas id="my-canvas"></canvas> -->
-    </div>
-    </div>
 
 
 
-    <div class="block container bd-post-content entry year" data-tags="header">
-        <h2 class="title">
-            <p class="is-size-66">
-                2023
-            </p>
-        </h2>
-    </div>
+        <div class="block container bd-post-content entry year" data-tags="header">
+            <h2 class="title">
+                <p class="is-size-66">
+                    2023
+                </p>
+            </h2>
+        </div>
 
         <div class="wrapper">
             <div class="entry block container bd-post-content target-div highlighter" data-tags="neuro,ts">
@@ -2179,8 +2373,7 @@ author = {Aidan Schneider and Mehdi Azabou and Louis McDougall-Vigier and David 
                                 <div class="dropdown is-hoverable">
                                     <div class="dropdown-trigger">
                                         <span class="ghostbutton">
-                                            <span
-                                                class="tag is-rounded is-light has-text-weight-bold">Abstract</span>
+                                            <span class="tag is-rounded is-light has-text-weight-bold">Abstract</span>
                                         </span>
                                     </div>
                                 </div>
