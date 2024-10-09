@@ -59,7 +59,7 @@
 <script>
 document.addEventListener("DOMContentLoaded", function() {
   const container = document.querySelector(".sticker-container");
-  const stickerImages = ["stickers/poyo_peeling_sticker.png", "stickers/nerds_lab_sticker.png", "stickers/gt_sticker.png"];
+  const stickerImages = ["stickers/poyo_peeling_sticker.png", "stickers/nerds_lab_sticker.png", "stickers/gt_sticker.png", "stickers/arni.png"];
 
   const numStickers = 20;
   const stickers = [];
@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     const viewportHeight = window.innerHeight; 
-    const documentHeight = document.body.scrollHeight - 400;
+    const documentHeight = document.body.scrollHeight - 800;
 
     const randomImage = stickerImages[Math.floor(Math.random() * stickerImages.length)];
     sticker.src = randomImage;
@@ -100,11 +100,11 @@ document.addEventListener("DOMContentLoaded", function() {
     let deltaFromSection;
     if (Math.random() > 0.5) {
       side = "left";
-      sticker.style.left = `${(100 - sectionWidthPercentage) / 2 - 30 * 100 / viewportHeight - (Math.random() * 360 / viewportHeight * 100)}%`; // Random horizontal position within the remaining space
+      sticker.style.left = `${(100 - sectionWidthPercentage) / 2 - 100 * 100 / viewportHeight - (Math.random() * 360 / viewportHeight * 100)}%`; // Random horizontal position within the remaining space
       deltaFromSection = (viewportWidth - sectionWidth) / 2 - parseFloat(sticker.style.left) * viewportWidth / 100;
     } else {
       side = "right";
-      sticker.style.right = `${(100 - sectionWidthPercentage) / 2 - 30 * 100 / viewportHeight - (Math.random() * 360 / viewportHeight * 100)}%`; // Random horizontal position within the remaining space
+      sticker.style.right = `${(100 - sectionWidthPercentage) / 2 - 100 * 100 / viewportHeight - (Math.random() * 360 / viewportHeight * 100)}%`; // Random horizontal position within the remaining space
       deltaFromSection = (viewportWidth - sectionWidth) / 2 - parseFloat(sticker.style.right) * viewportWidth / 100;
     }
     sticker.style.top = `${Math.random() * (documentHeight / viewportHeight) * 100 - 5}%`; // Random vertical position
@@ -165,14 +165,12 @@ document.addEventListener("DOMContentLoaded", function() {
           <div class="media-content">
             <ul>
               <p>
-                <span class="is-size-4">Mehdi Azabou</span> - ML PhD Candidate @ Georgia Tech
+                <span class="is-size-4">Mehdi Azabou</span> - Postdoc @ Columbia University
               </p>
               <hr style="margin-top: 2px; margin-bottom:10px;">
               <p>
                 My areas of interest are Representation Learning, Data-Centric AI, and Computational
-                Neuroscience. I am
-                actively working on developing methods for self-supervised representation learning for time-series and
-                graphs.
+                Neuroscience. I am actively working on developing methods for self-supervised representation learning for time-series and graphs.
               </p>
             </ul>
           </div>
@@ -189,7 +187,7 @@ document.addEventListener("DOMContentLoaded", function() {
       var map = new mapboxgl.Map({
         container: 'map', // container id
         style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
-        center: [-98.5, 39.8], // starting position [lng, lat] for Atlanta
+        center: [-74.0060, 40.7128], // starting position [lng, lat] for New York City
         zoom: 1 // starting zoom
       });
 
@@ -197,7 +195,7 @@ document.addEventListener("DOMContentLoaded", function() {
       el.className = 'custom-marker';
 
       var marker = new mapboxgl.Marker(el)
-        .setLngLat([-84.3880, 33.7490]) // Marker position [lng, lat] for Atlanta
+        .setLngLat([-74.0060, 40.7128]) // Marker position [lng, lat] for New York City
         .addTo(map);
 
     </script>
@@ -278,6 +276,19 @@ document.addEventListener("DOMContentLoaded", function() {
               <div class="scrollable-content" style="height:240px;">
                 <table>
                   <tr>
+                    <td class="no-wrap"><span> Oct 2024 </span></td>
+                    <td class="no-wrap">&nbsp;<i class="fa-solid fa-chevron-right fa-2xs"></i>&nbsp;</td>
+                    <td> I have started as an NSF AI Institute for
+                      Artificial and Natural Intelligence (<a href=https://arni-institute.org/>ARNI</a>) Postdoc at Columbia University in 🍎 New York City.</em></td>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="no-wrap"><span> Aug 2024 </span></td>
+                    <td class="no-wrap">&nbsp;<i class="fa-solid fa-chevron-right fa-2xs"></i>&nbsp;</td>
+                    <td> I have successfully defended my 🎓 PhD thesis titled "Building a foundation model for neuroscience".</em></td>
+                    </td>
+                  </tr>
+                  <tr>
                     <td class="no-wrap"><span> Feb 2024 </span></td>
                     <td class="no-wrap">&nbsp;<i class="fa-solid fa-chevron-right fa-2xs"></i>&nbsp;</td>
                     <td> I will at COSYNE 2024 in Lisbon, Portugal to present our latest poster titled <em>"Large-scale pretraining on neural data allows for
@@ -347,16 +358,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     <div class="tile">
-      <div class="tile is-child is-8">
+      <div class="tile is-child">
         <div class="padded_block" style="margin-right: 0 !important;">
           <span class="title"><button
               class="ghostbutton tag is-success is-light has-text-weight-bold is-medium resume_header is-large"><i
                 class="fa-regular fa-user"></i> &nbsp; Bio </button></span> </li>
           <div style="max-height: 308px; overflow-y: auto;">
             <div class="scrollable-container">
-              <div class="scrollable-content" style="height:320px;">
+              <!-- </div> class="scrollable-content" style="height:320px;"> -->
+              <div> 
                 <p>
-                  I am a fourth-year Machine Learning Ph.D. candidate advised
+                  I am an <a href=https://arni-institute.org/>ARNI</a> Postdoc at Columbia University working with <a href="http://www.stat.columbia.edu/~liam/" target="_blank" rel="noopener noreferrer"> Dr. Liam Paninski</a>
+                  and <a href="https://www.mcgill.ca/neuro/blake-richards-phd" target="_blank" rel="noopener noreferrer"> Dr. Blake Richards</a>. I did my Ph.D. at Georgia Tech and was advised
                   by <a href="https://dyerlab.gatech.edu/" target="_blank" rel="noopener noreferrer"> Dr. Eva L.
                     Dyer</a>.
                   My main areas of interest are Representation Learning, Generative AI, Data-Centric AI, and
@@ -376,30 +389,27 @@ document.addEventListener("DOMContentLoaded", function() {
                   Through the development of new approaches for analyzing and interpreting complex modalities,
                   I aim to make an impact in our understanding of the brain, and biological intelligence,
                   and to contribute new tools that facilitate new scientific discoveries.
-                </p>
-                <br>
-                <p>
                   I am currently working on developing a large-scale multimodal foundation models for neuroscience
                   with the goal of improving brain-computer interfaces, along with our understanding of the brain. <u>If
                     you are interested in collaborating,
                     feel free to reach out!</u>
                 </p>
-                <br>
+                <!-- <br>
                 <p>
                   I love coding and learning new things. I am an enthusiast for dynamic and interactive visualizations
                   that can provide insights into complex data and enable new ways of thinking.
-                </p>
+                </p> -->
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="tile is-child is-hidden-mobile" style="padding: 0em; overflow: hidden;position: relative; ">
+      <!-- <div class="tile is-child is-hidden-mobile" style="padding: 0em; overflow: hidden;position: relative; ">
         <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="100%"
           style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;"
           sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
           src="https://embed.music.apple.com/us/playlist/current-favorites/pl.u-8aAVZ6VivgyDMAE"></iframe>
-      </div>
+      </div> -->
     </div>
     </div>
 
@@ -411,7 +421,7 @@ document.addEventListener("DOMContentLoaded", function() {
             <li> <span class="title"><button
                   class="ghostbutton tag is-warning is-light has-text-weight-bold is-medium resume_header is-large"> <i
                     class="fa-solid fa-building-columns"></i> &nbsp; Education </button></span> </li>
-            <li><i class="fa-solid fa-spinner"></i>&nbsp;&nbsp; Ph.D. in Machine Learning, Georgia Tech 🇺🇸, Current
+            <li><i class="fa-solid  fa-graduation-cap"></i>&nbsp; Ph.D. in Machine Learning, Georgia Tech 🇺🇸, 2024
             </li>
             <li><i class="fa-solid fa-graduation-cap"></i>&nbsp; M.S. in Computer Science, Georgia Tech 🇺🇸, 2020 </li>
             <li><i class="fa-solid fa-graduation-cap"></i>&nbsp; M.S. in Engineering, CentraleSupélec 🇫🇷, 2019 </li>
@@ -508,7 +518,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     class="fa-solid fa-glasses"></i> &nbsp; Reviewing </button></span> </li>
             <i><em>I have served as a reviewer for notable conferences and journals:</em></i>
             <li><i class="fa-solid fa-glasses fa-2xs"></i> Neural Information Processing Systems, <span
-                class="nowrap"><u>NeurIPS</u> 2021,</span> 2022 and 2023
+                class="nowrap"><u>NeurIPS</u> 2021,</span> 2022, 2023 and 2024
             </li>
             <li><i class="fa-solid fa-glasses fa-2xs"></i> International Conference on Learning Representations, <span
                 class="nowrap"><u>ICLR</u> 2023 </span> </li>
@@ -517,10 +527,12 @@ document.addEventListener("DOMContentLoaded", function() {
             <li><i class="fa-solid fa-glasses fa-2xs"></i> Computer Vision and Pattern Recognition, <span
                 class="nowrap"><u>CVPR</u> 2023 and 2024 </span> </li>
             <li><i class="fa-solid fa-glasses fa-2xs"></i> Neural Information Processing Systems Datasets and Benchmarks
-              track, <span class="nowrap"><u>NeurIPS</u> 2022,</span> and 2023.
+              track, <span class="nowrap"><u>NeurIPS</u> 2022,</span> 2023 and 2024.
             </li>
             <li><i class="fa-solid fa-glasses fa-2xs"></i> Learning on Graphs Conference, <u>LOG</u> 2022, 2023 </li>
             <li><i class="fa-solid fa-glasses fa-2xs"></i> Artificial Intelligence and Statistics, <u>AISTATS</u> 2021
+            </li>
+            <li><i class="fa-solid fa-glasses fa-2xs"></i> NeurIPS 2024 NeuroAI Workshop
             </li>
             <li><i class="fa-solid fa-glasses fa-2xs"></i> <u>IEEE</u> Transactions on Knowledge and Data Engineering
             </li>
