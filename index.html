@@ -60,8 +60,44 @@
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const container = document.querySelector(".sticker-container");
-      const stickerImages = ["stickers/poyo_peeling_sticker.png", "stickers/nerds_lab_sticker.png", "stickers/gt_sticker.png", "stickers/arni.png", "stickers/columbia.png", "stickers/torch_brain_sticker.png", "stickers/temporaldata_sticker.png", "stickers/brainsets_sticker.png"];
 
+      // Added mapping of stickers to their descriptions and URLs
+      const stickerInfo = {
+        "stickers/poyo_peeling_sticker.png": {
+          description: "POYO",
+          url: "https://poyo-brain.github.io/"
+        },
+        "stickers/nerds_lab_sticker.png": {
+          description: "Neural Data Science Lab at Georgia Tech",
+          url: "https://dyerlab.gatech.edu/"
+        },
+        "stickers/gt_sticker.png": {
+          description: "Georgia Tech",
+          url: "https://www.gatech.edu/"
+        },
+        "stickers/arni.png": {
+          description: "NSF ARNI",
+          url: "https://arni-institute.org/"
+        },
+        "stickers/columbia.png": {
+          description: "Columbia University",
+          url: "https://www.columbia.edu/"
+        },
+        "stickers/torch_brain_sticker.png": {
+          description: "torch_brain",
+          url: "https://github.com/neuro-galaxy/torch_brain"
+        },
+        "stickers/temporaldata_sticker.png": {
+          description: "temporaldata",
+          url: "https://github.com/neuro-galaxy/temporaldata"
+        },
+        "stickers/brainsets_sticker.png": {
+          description: "brainsets",
+          url: "https://github.com/neuro-galaxy/brainsets"
+        }
+      };
+
+      const stickerImages = Object.keys(stickerInfo);
       const numStickers = 20;
       const stickers = [];
 
@@ -74,20 +110,58 @@
 
       for (let i = 0; i < numStickers; i++) {
         const sticker = document.createElement("img");
+        const tooltip = document.createElement("div");
 
-        sticker.addEventListener("click", function (event) {
-          const stickerRect = sticker.getBoundingClientRect();
-          const offsetX = 2 * (event.clientX - stickerRect.left - stickerRect.width / 2); // Calculate offset from sticker center
-          const offsetY = 2 * (event.clientY - stickerRect.top - stickerRect.height / 2); // Calculate offset from sticker center
-          const flickRotation = Math.random() * 60 - 30; // Random rotation between -30 and 30 degrees
-          sticker.style.transition = "transform 0.5s ease"; // Set transition for smooth animation
-          sticker.style.transform = `translate(${-offsetX}px, ${-offsetY}px) rotate(${flickRotation}deg)`; // Apply movement based on click position and flick rotation
+        // Create tooltip for description on hover
+        tooltip.classList.add("sticker-tooltip");
+        tooltip.style.display = "none";
 
-          // Update sticker's position in the stickers array
-          const index = stickers.findIndex(item => item.element === sticker);
-          if (index !== -1) {
-            stickers[index].deltaFromSection = stickers[index].deltaFromSection - offsetX / viewportWidth; // Update deltaFromSection based on new position
-            stickers[index].rotation = flickRotation; // Update rotation
+        // Add hover event listeners for tooltip
+        sticker.addEventListener("mouseenter", function (e) {
+          const stickerInfo = getStickerInfo(sticker.src);
+          if (stickerInfo) {
+            tooltip.textContent = stickerInfo.description;
+            tooltip.style.display = "block";
+
+            // Position the tooltip to the right of the cursor
+            updateTooltipPosition(e, tooltip);
+          }
+        });
+
+        sticker.addEventListener("mousemove", function (e) {
+          if (tooltip.style.display !== "none") {
+            updateTooltipPosition(e, tooltip);
+          }
+        });
+
+        sticker.addEventListener("mouseleave", function () {
+          tooltip.style.display = "none";
+        });
+
+        // Function to update tooltip position next to cursor
+        function updateTooltipPosition(e, tooltip) {
+          const cursorOffset = 15; // Distance from cursor
+          tooltip.style.left = (e.clientX + cursorOffset) + "px";
+          tooltip.style.top = (e.clientY - (tooltip.offsetHeight / 2)) + "px";
+
+          // Keep tooltip in viewport
+          const viewportWidth = window.innerWidth;
+          const tooltipRect = tooltip.getBoundingClientRect();
+
+          if (tooltipRect.right > viewportWidth) {
+            tooltip.style.left = (e.clientX - tooltipRect.width - cursorOffset) + "px";
+            // Change the arrow to point from right side
+            tooltip.style.setProperty('--arrow-position', 'right');
+          } else {
+            tooltip.style.setProperty('--arrow-position', 'left');
+          }
+        }
+
+        // Change click behavior to navigate to URL instead of flicking
+        sticker.addEventListener("click", function () {
+          const stickerInfo = getStickerInfo(sticker.src);
+          if (stickerInfo && stickerInfo.url) {
+            window.open(stickerInfo.url, "_blank");
           }
         });
 
@@ -97,6 +171,8 @@
         const randomImage = stickerImages[Math.floor(Math.random() * stickerImages.length)];
         sticker.src = randomImage;
         sticker.classList.add("sticker");
+        sticker.style.cursor = "pointer"; // Add pointer cursor to indicate clickability
+
         let side;
         let deltaFromSection;
         if (Math.random() > 0.5) {
@@ -116,8 +192,17 @@
         const shadowOffsetY = Math.cos(rotation * (Math.PI / 180)) * 5; // Shadow Y offset
         sticker.style.filter = `drop-shadow(${shadowOffsetX}px ${shadowOffsetY}px 5px rgba(0, 0, 0, 0.5))`;
         document.body.appendChild(sticker);
-        stickers.push({ element: sticker, side: side, deltaFromSection: deltaFromSection, rotation: rotation });
+        document.body.appendChild(tooltip);
+        stickers.push({ element: sticker, tooltip: tooltip, side: side, deltaFromSection: deltaFromSection, rotation: rotation });
       }
+
+      // Helper function to extract sticker info from the src URL
+      function getStickerInfo(src) {
+        // Extract the filename from the full URL
+        const filename = src.split('/').slice(-2).join('/');
+        return stickerInfo[filename];
+      }
+
       function updateStickerPositions() {
         const viewportWidth = window.innerWidth;
         const sectionWidth = section.offsetWidth;
@@ -132,6 +217,14 @@
           } else {
             const newRight = sectionLeft - deltaFromSection;
             sticker.style.right = `${newRight}px`;
+          }
+
+          // Update tooltip position if visible
+          const tooltip = stickerData.tooltip;
+          if (tooltip.style.display !== "none") {
+            const stickerRect = sticker.getBoundingClientRect();
+            tooltip.style.left = stickerRect.left + (stickerRect.width / 2) - (tooltip.offsetWidth / 2) + "px";
+            tooltip.style.top = stickerRect.top - tooltip.offsetHeight - 10 + "px";
           }
         });
       }
