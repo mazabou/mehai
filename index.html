@@ -5,7 +5,8 @@
   <meta charset="utf-8">
   <meta name="keywords" content="Mehdi Azabou">
   <meta name="author" content="Mehdi Azabou">
-  <meta name="description" content="Mehdi Azabou is a Postdoc at Columbia University with the NSF AI Institute for
+  <meta name="description"
+    content="Mehdi Azabou is a Postdoc at Columbia University with the NSF AI Institute for
   Artificial and Natural Intelligence. He graduated from Georgia Tech with a PhD in Machine Learning and a Master's in Computer Science. 
   His work includes POYO, a large-scale framework for training a unified neural decoder on multiple subjects, tasks and species.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -52,93 +53,93 @@
 </div>
 </div> -->
 
-<div class="sticker-container">
-  <!-- Stickers will be added dynamically here -->
-</div>
+  <div class="sticker-container">
+    <!-- Stickers will be added dynamically here -->
+  </div>
 
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  const container = document.querySelector(".sticker-container");
-  const stickerImages = ["stickers/poyo_peeling_sticker.png", "stickers/nerds_lab_sticker.png", "stickers/gt_sticker.png", "stickers/arni.png", "stickers/columbia.png"];
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const container = document.querySelector(".sticker-container");
+      const stickerImages = ["stickers/poyo_peeling_sticker.png", "stickers/nerds_lab_sticker.png", "stickers/gt_sticker.png", "stickers/arni.png", "stickers/columbia.png", "stickers/torch_brain_sticker.png", "stickers/temporaldata_sticker.png", "stickers/brainsets_sticker.png"];
 
-  const numStickers = 20;
-  const stickers = [];
+      const numStickers = 20;
+      const stickers = [];
 
-  const section = document.querySelector(".section");
+      const section = document.querySelector(".section");
 
-  const sectionWidth = section.offsetWidth; 
-  const viewportWidth = window.innerWidth; 
-  const sectionWidthPercentage = (sectionWidth / viewportWidth) * 100;
+      const sectionWidth = section.offsetWidth;
+      const viewportWidth = window.innerWidth;
+      const sectionWidthPercentage = (sectionWidth / viewportWidth) * 100;
 
 
-  for (let i = 0; i < numStickers; i++) {
-    const sticker = document.createElement("img");
+      for (let i = 0; i < numStickers; i++) {
+        const sticker = document.createElement("img");
 
-    sticker.addEventListener("click", function(event) {
-      const stickerRect = sticker.getBoundingClientRect();
-      const offsetX = 2 * (event.clientX - stickerRect.left - stickerRect.width / 2); // Calculate offset from sticker center
-      const offsetY = 2 * (event.clientY - stickerRect.top - stickerRect.height / 2); // Calculate offset from sticker center
-      const flickRotation = Math.random() * 60 - 30; // Random rotation between -30 and 30 degrees
-      sticker.style.transition = "transform 0.5s ease"; // Set transition for smooth animation
-      sticker.style.transform = `translate(${-offsetX}px, ${-offsetY}px) rotate(${flickRotation}deg)`; // Apply movement based on click position and flick rotation
+        sticker.addEventListener("click", function (event) {
+          const stickerRect = sticker.getBoundingClientRect();
+          const offsetX = 2 * (event.clientX - stickerRect.left - stickerRect.width / 2); // Calculate offset from sticker center
+          const offsetY = 2 * (event.clientY - stickerRect.top - stickerRect.height / 2); // Calculate offset from sticker center
+          const flickRotation = Math.random() * 60 - 30; // Random rotation between -30 and 30 degrees
+          sticker.style.transition = "transform 0.5s ease"; // Set transition for smooth animation
+          sticker.style.transform = `translate(${-offsetX}px, ${-offsetY}px) rotate(${flickRotation}deg)`; // Apply movement based on click position and flick rotation
 
-      // Update sticker's position in the stickers array
-      const index = stickers.findIndex(item => item.element === sticker);
-      if (index !== -1) {
-        stickers[index].deltaFromSection = stickers[index].deltaFromSection - offsetX / viewportWidth; // Update deltaFromSection based on new position
-        stickers[index].rotation = flickRotation; // Update rotation
+          // Update sticker's position in the stickers array
+          const index = stickers.findIndex(item => item.element === sticker);
+          if (index !== -1) {
+            stickers[index].deltaFromSection = stickers[index].deltaFromSection - offsetX / viewportWidth; // Update deltaFromSection based on new position
+            stickers[index].rotation = flickRotation; // Update rotation
+          }
+        });
+
+        const viewportHeight = window.innerHeight;
+        const documentHeight = document.body.scrollHeight - 800;
+
+        const randomImage = stickerImages[Math.floor(Math.random() * stickerImages.length)];
+        sticker.src = randomImage;
+        sticker.classList.add("sticker");
+        let side;
+        let deltaFromSection;
+        if (Math.random() > 0.5) {
+          side = "left";
+          sticker.style.left = `${(100 - sectionWidthPercentage) / 2 - 100 * 100 / viewportHeight - (Math.random() * 360 / viewportHeight * 100)}%`; // Random horizontal position within the remaining space
+          deltaFromSection = (viewportWidth - sectionWidth) / 2 - parseFloat(sticker.style.left) * viewportWidth / 100;
+        } else {
+          side = "right";
+          sticker.style.right = `${(100 - sectionWidthPercentage) / 2 - 100 * 100 / viewportHeight - (Math.random() * 360 / viewportHeight * 100)}%`; // Random horizontal position within the remaining space
+          deltaFromSection = (viewportWidth - sectionWidth) / 2 - parseFloat(sticker.style.right) * viewportWidth / 100;
+        }
+        sticker.style.top = `${Math.random() * (documentHeight / viewportHeight) * 100 - 5}%`; // Random vertical position
+        const rotation = Math.random() * 60 - 30; // Random rotation between -90 and 90 degrees
+        sticker.style.transform = `rotate(${rotation}deg)`;
+        // Adjust shadow position based on rotation
+        const shadowOffsetX = Math.sin(rotation * (Math.PI / 180)) * 5; // Shadow X offset
+        const shadowOffsetY = Math.cos(rotation * (Math.PI / 180)) * 5; // Shadow Y offset
+        sticker.style.filter = `drop-shadow(${shadowOffsetX}px ${shadowOffsetY}px 5px rgba(0, 0, 0, 0.5))`;
+        document.body.appendChild(sticker);
+        stickers.push({ element: sticker, side: side, deltaFromSection: deltaFromSection, rotation: rotation });
       }
-    });
+      function updateStickerPositions() {
+        const viewportWidth = window.innerWidth;
+        const sectionWidth = section.offsetWidth;
 
-    const viewportHeight = window.innerHeight; 
-    const documentHeight = document.body.scrollHeight - 800;
-
-    const randomImage = stickerImages[Math.floor(Math.random() * stickerImages.length)];
-    sticker.src = randomImage;
-    sticker.classList.add("sticker");
-    let side;
-    let deltaFromSection;
-    if (Math.random() > 0.5) {
-      side = "left";
-      sticker.style.left = `${(100 - sectionWidthPercentage) / 2 - 100 * 100 / viewportHeight - (Math.random() * 360 / viewportHeight * 100)}%`; // Random horizontal position within the remaining space
-      deltaFromSection = (viewportWidth - sectionWidth) / 2 - parseFloat(sticker.style.left) * viewportWidth / 100;
-    } else {
-      side = "right";
-      sticker.style.right = `${(100 - sectionWidthPercentage) / 2 - 100 * 100 / viewportHeight - (Math.random() * 360 / viewportHeight * 100)}%`; // Random horizontal position within the remaining space
-      deltaFromSection = (viewportWidth - sectionWidth) / 2 - parseFloat(sticker.style.right) * viewportWidth / 100;
-    }
-    sticker.style.top = `${Math.random() * (documentHeight / viewportHeight) * 100 - 5}%`; // Random vertical position
-    const rotation = Math.random() * 60 - 30; // Random rotation between -90 and 90 degrees
-    sticker.style.transform = `rotate(${rotation}deg)`; 
-    // Adjust shadow position based on rotation
-    const shadowOffsetX = Math.sin(rotation * (Math.PI / 180)) * 5; // Shadow X offset
-    const shadowOffsetY = Math.cos(rotation * (Math.PI / 180)) * 5; // Shadow Y offset
-    sticker.style.filter = `drop-shadow(${shadowOffsetX}px ${shadowOffsetY}px 5px rgba(0, 0, 0, 0.5))`; 
-    document.body.appendChild(sticker); 
-    stickers.push({ element: sticker, side: side, deltaFromSection: deltaFromSection, rotation: rotation });
-  }
-  function updateStickerPositions() {
-    const viewportWidth = window.innerWidth;
-    const sectionWidth = section.offsetWidth; 
-
-    stickers.forEach(stickerData => {
-      const sticker = stickerData.element;
-      const deltaFromSection = stickerData.deltaFromSection;
-      const sectionLeft = (viewportWidth - sectionWidth) / 2;
-      if (stickerData.side === "left") {
-        const newLeft = sectionLeft - deltaFromSection;
-        sticker.style.left = `${newLeft}px`;
-      } else {
-        const newRight = sectionLeft - deltaFromSection;
-        sticker.style.right = `${newRight}px`;
+        stickers.forEach(stickerData => {
+          const sticker = stickerData.element;
+          const deltaFromSection = stickerData.deltaFromSection;
+          const sectionLeft = (viewportWidth - sectionWidth) / 2;
+          if (stickerData.side === "left") {
+            const newLeft = sectionLeft - deltaFromSection;
+            sticker.style.left = `${newLeft}px`;
+          } else {
+            const newRight = sectionLeft - deltaFromSection;
+            sticker.style.right = `${newRight}px`;
+          }
+        });
       }
-    });
-  }
 
-  // window.addEventListener("scroll", updateStickerPositions);
-  window.addEventListener("resize", updateStickerPositions);
-});
-</script>
+      // window.addEventListener("scroll", updateStickerPositions);
+      window.addEventListener("resize", updateStickerPositions);
+    });
+  </script>
 
 
   <div class="section is-max-desktop" style="padding-bottom: 0em;">
@@ -170,7 +171,8 @@ document.addEventListener("DOMContentLoaded", function() {
               <hr style="margin-top: 2px; margin-bottom:10px;">
               <p>
                 My areas of interest are Representation Learning, Data-Centric AI, and Computational
-                Neuroscience. I am actively working on developing methods for self-supervised representation learning for time-series and graphs.
+                Neuroscience. I am actively working on developing methods for self-supervised representation learning
+                for time-series and graphs.
               </p>
             </ul>
           </div>
@@ -271,28 +273,49 @@ document.addEventListener("DOMContentLoaded", function() {
             <li> <span class="title"><button
                   class="ghostbutton tag is-info is-light has-text-weight-bold is-medium resume_header is-large"><i
                     class="fa-solid fa-newspaper"></i> &nbsp; News </button></span> </li>
-            <!-- <div style="max-height: 240px; overflow-y: auto;"> -->
             <div class="scrollable-container">
               <div class="scrollable-content" style="height:240px;">
                 <table>
                   <tr>
+                    <td class="no-wrap"><span> Mar 2025 </span></td>
+                    <td class="no-wrap">&nbsp;<i class="fa-solid fa-chevron-right fa-2xs"></i>&nbsp;</td>
+                    <td> I co-organized the 🧠 <a href=https://neurofm-workshop.github.io />Building a foundation model
+                      for
+                      the brain Workshop</a> at COSYNE 2025 in Mont Tremblant, Canada.</em></td>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="no-wrap"><span> Mar 2025 </span></td>
+                    <td class="no-wrap">&nbsp;<i class="fa-solid fa-chevron-right fa-2xs"></i>&nbsp;</td>
+                    <td> I co-developped the content for the 🧑‍💻 <a href=https://cosyne-tutorial-2025.github.io />
+                      COSYNE
+                      2025 main tutorial</a>. We covered the fundamentals of
+                      transformers and their applications in neuroscience, and showcased our new packages: ⏱️ <a
+                        href=https://github.com/neuro-galaxy/temporaldata>temporaldata</a> and 🔥 <a
+                        href=https://github.com/neuro-galaxy/torch_brain>torch_brain</a>.</em></td>
+                    </td>
+                  </tr>
+                  <tr>
                     <td class="no-wrap"><span> Oct 2024 </span></td>
                     <td class="no-wrap">&nbsp;<i class="fa-solid fa-chevron-right fa-2xs"></i>&nbsp;</td>
                     <td> I have started as an NSF AI Institute for
-                      Artificial and Natural Intelligence (<a href=https://arni-institute.org/>ARNI</a>) Postdoc at Columbia University in 🍎 New York City.</em></td>
+                      Artificial and Natural Intelligence (<a href=https://arni-institute.org />ARNI</a>) Postdoc at
+                      Columbia University in 🍎 New York City.</em></td>
                     </td>
                   </tr>
                   <tr>
                     <td class="no-wrap"><span> Aug 2024 </span></td>
                     <td class="no-wrap">&nbsp;<i class="fa-solid fa-chevron-right fa-2xs"></i>&nbsp;</td>
-                    <td> I have successfully defended my 🎓 PhD thesis titled "Building a foundation model for neuroscience".</em></td>
+                    <td> I have successfully defended my 🎓 PhD thesis titled "Building a foundation model for
+                      neuroscience".</em></td>
                     </td>
                   </tr>
                   <tr>
                     <td class="no-wrap"><span> Feb 2024 </span></td>
                     <td class="no-wrap">&nbsp;<i class="fa-solid fa-chevron-right fa-2xs"></i>&nbsp;</td>
-                    <td> I will at COSYNE 2024 in Lisbon, Portugal to present our latest poster titled <em>"Large-scale pretraining on neural data allows for
-                      transfer across subjects, tasks and species".</em></td>
+                    <td> I will at COSYNE 2024 in Lisbon, Portugal to present our latest poster titled <em>"Large-scale
+                        pretraining on neural data allows for
+                        transfer across subjects, tasks and species".</em></td>
                     </td>
                   </tr>
                   <tr>
@@ -364,12 +387,15 @@ document.addEventListener("DOMContentLoaded", function() {
               class="ghostbutton tag is-success is-light has-text-weight-bold is-medium resume_header is-large"><i
                 class="fa-regular fa-user"></i> &nbsp; Bio </button></span> </li>
           <div style="max-height: 308px; overflow-y: auto;">
-            <div class="scrollable-container">
+            <div class="scrollable-container no-gradient">
               <!-- </div> class="scrollable-content" style="height:320px;"> -->
-              <div> 
+              <div>
                 <p>
-                  I am an <a href=https://arni-institute.org/>ARNI</a> Postdoc at Columbia University working with <a href="http://www.stat.columbia.edu/~liam/" target="_blank" rel="noopener noreferrer"> Dr. Liam Paninski</a>
-                  and <a href="https://www.mcgill.ca/neuro/blake-richards-phd" target="_blank" rel="noopener noreferrer"> Dr. Blake Richards</a>. I did my Ph.D. at Georgia Tech and was advised
+                  I am an <a href=https://arni-institute.org />ARNI</a> Postdoc at Columbia University working with <a
+                    href="http://www.stat.columbia.edu/~liam/" target="_blank" rel="noopener noreferrer"> Dr. Liam
+                    Paninski</a>
+                  and <a href="https://www.mcgill.ca/neuro/blake-richards-phd" target="_blank"
+                    rel="noopener noreferrer"> Dr. Blake Richards</a>. I did my Ph.D. at Georgia Tech and was advised
                   by <a href="https://dyerlab.gatech.edu/" target="_blank" rel="noopener noreferrer"> Dr. Eva L.
                     Dyer</a>.
                   My main areas of interest are Representation Learning, Generative AI, Data-Centric AI, and
@@ -377,7 +403,7 @@ document.addEventListener("DOMContentLoaded", function() {
                   Neuroscience.
                   I am actively working on developing methods for self-supervised representation learning for
                   time-series and
-                  graphs, and developing new frameworks to build large-scale multimodal foundation models to advance
+                  graphs, and developing frameworks to build large-scale multimodal foundation models to advance
                   scientific
                   discovery.
                 </p>
@@ -456,8 +482,22 @@ document.addEventListener("DOMContentLoaded", function() {
             <div class="teach-section">
               <div class="teach-description">
                 <i class="fa-solid fa-chevron-right fa-2xs"></i>
+                Content Developer for the <u>COSYNE 2025 main tutorial</u>, "<a
+                  href="https://cosyne-tutorial-2025.github.io/">Transformers in Neuroscience</a>".
+                Montreal, Canada 2025.
+              </div>
+              <div>
+                <span class="nowrap is-hidden-mobile"><a href="https://cosyne-tutorial-2025.github.io/"><i
+                      class="fa-solid fa-box-archive"></i> Materials</a></span>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="teach-section">
+              <div class="teach-description">
+                <i class="fa-solid fa-chevron-right fa-2xs"></i>
                 Co-Instructor for the <u>representation learning hands-on session</u> during the Caltech/Chen
-                Institute’s
+                Institute's
                 <a
                   href="https://neuroscience.caltech.edu/about/research-centers/chen-center-for-datasai/data-science-and-ai-for-neuroscience-summer-school">Data
                   Science and AI for Neuroscience Summer School</a>, Pasadena, California, 2022.
@@ -520,10 +560,10 @@ document.addEventListener("DOMContentLoaded", function() {
             <li><i class="fa-solid fa-glasses fa-2xs"></i> Neural Information Processing Systems, <span
                 class="nowrap"><u>NeurIPS</u> 2021,</span> 2022, 2023 and 2024
             </li>
+            <li><i class="fa-solid fa-glasses fa-2xs"></i> International Conference on Machine Learning, <span
+                class="nowrap"><u>ICML</u> 2023, 2024 and 2025 </span> </li>
             <li><i class="fa-solid fa-glasses fa-2xs"></i> International Conference on Learning Representations, <span
                 class="nowrap"><u>ICLR</u> 2023 </span> </li>
-            <li><i class="fa-solid fa-glasses fa-2xs"></i> International Conference on Machine Learning, <span
-                class="nowrap"><u>ICML</u> 2023 and 2024 </span> </li>
             <li><i class="fa-solid fa-glasses fa-2xs"></i> Computer Vision and Pattern Recognition, <span
                 class="nowrap"><u>CVPR</u> 2023 and 2024 </span> </li>
             <li><i class="fa-solid fa-glasses fa-2xs"></i> Neural Information Processing Systems Datasets and Benchmarks
@@ -542,14 +582,108 @@ document.addEventListener("DOMContentLoaded", function() {
         </div>
       </div>
       <div class="tile is-child">
+        <div class="padded_block"></div>
+        <ul>
+          <li><span class="title"><button
+                class="ghostbutton tag is-light has-text-weight-bold is-medium resume_header is-large"><i
+                  class="fa-solid fa-laptop"></i> &nbsp; Coding </button></span></li>
+          <li><i class="fa-solid fa-code fa-2xs"></i> Main Programming Language: <i class="fa-brands fa-python"></i>
+            Python. </li>
+          <li><i class="fa-solid fa-code fa-2xs"></i> ML frameworks: <span class="nowrap"><i
+                class="fa-solid fa-fire-flame-curved"></i> PyTorch</span>, <span class="nowrap"><i
+                class="fa-solid fa-circle-nodes"></i> PyG</span>, <span class="nowrap"><i class="fa-solid fa-cubes"></i>
+              jax.</span> </li>
+          <li><i class="fa-solid fa-code fa-2xs"></i> Favorite tools: <span class="nowrap"><i
+                class="fa-solid fa-chart-area"></i> Bokeh</span>, <span class="nowrap"><i
+                class="fa-solid fa-pepper-hot"></i> Flask</span>, <span class="nowrap"><i
+                class="fa-brands fa-docker"></i> Docker</span>, <span class="nowrap"><i
+                class="fa-solid fa-chart-line"></i>TensorBoard,</span> <span class="nowrap"><i
+                class="fa-solid fa-share-nodes"></i> raytune.</span></li>
+        </ul>
+
+        <div style="padding-top: 1rem;">
+          <nav class="panel">
+            <p class="panel-heading" style="font-size:1em; background-color: #f5f5f5;">
+              Repositories
+            </p>
+            <a class="panel-block" href="https://github.com/neuro-galaxy/torch_brain" target="_blank"
+              rel="noopener noreferrer">
+              <span class="panel-icon">
+                <i class="fa fa-github" aria-hidden="true"></i>
+              </span>
+              torch_brain &nbsp;&nbsp; <iframe
+                src="https://ghbtns.com/github-btn.html?user=neuro-galaxy&repo=torch_brain&type=star&count=true"
+                frameborder="0" scrolling="0" width="150" height="20" title="GitHub"></iframe>
+            </a>
+            <a class="panel-block" href="https://github.com/neuro-galaxy/temporaldata" target="_blank"
+              rel="noopener noreferrer">
+              <span class="panel-icon">
+                <i class="fa fa-github" aria-hidden="true"></i>
+              </span>
+              temporaldata &nbsp;&nbsp; <iframe
+                src="https://ghbtns.com/github-btn.html?user=neuro-galaxy&repo=temporaldata&type=star&count=true"
+                frameborder="0" scrolling="0" width="150" height="20" title="GitHub"></iframe>
+            </a>
+            <a class="panel-block" href="https://github.com/neuro-galaxy/brainsets" target="_blank"
+              rel="noopener noreferrer">
+              <span class="panel-icon">
+                <i class="fa fa-github" aria-hidden="true"></i>
+              </span>
+              brainsets &nbsp;&nbsp; <iframe
+                src="https://ghbtns.com/github-btn.html?user=neuro-galaxy&repo=brainsets&type=star&count=true"
+                frameborder="0" scrolling="0" width="150" height="20" title="GitHub"></iframe>
+            </a>
+            <a class="panel-block" href="https://github.com/neuro-galaxy/poyo" target="_blank"
+              rel="noopener noreferrer">
+              <span class="panel-icon">
+                <i class="fa fa-github" aria-hidden="true"></i>
+              </span>
+              poyo &nbsp;&nbsp; <iframe
+                src="https://ghbtns.com/github-btn.html?user=neuro-galaxy&repo=poyo&type=star&count=true"
+                frameborder="0" scrolling="0" width="150" height="20" title="GitHub"></iframe>
+            </a>
+            <a class="panel-block" href="https://github.com/nerdslab/bgrl" target="_blank" rel="noopener noreferrer">
+              <span class="panel-icon">
+                <i class="fa fa-github" aria-hidden="true"></i>
+              </span>
+              bgrl &nbsp; &nbsp; <iframe
+                src="https://ghbtns.com/github-btn.html?user=nerdslab&repo=bgrl&type=star&count=true" frameborder="0"
+                scrolling="0" width="150" height="20" title="GitHub"></iframe></a>
+            </a>
+            <a class="panel-block" href="https://github.com/nerdslab/myow" target="_blank" rel="noopener noreferrer">
+              <span class="panel-icon">
+                <i class="fa fa-github" aria-hidden="true"></i>
+              </span>
+              myow &nbsp;&nbsp; <iframe
+                src="https://ghbtns.com/github-btn.html?user=nerdslab&repo=myow&type=star&count=true" frameborder="0"
+                scrolling="0" width="150" height="20" title="GitHub"></iframe>
+            </a>
+            <a class="panel-block" href="https://github.com/nerdslab/myow-neuro" target="_blank"
+              rel="noopener noreferrer">
+              <span class="panel-icon">
+                <i class="fa fa-github" aria-hidden="true"></i>
+              </span>
+              myow-neuro &nbsp;&nbsp; <iframe
+                src="https://ghbtns.com/github-btn.html?user=nerdslab&repo=myow-neuro&type=star&count=true"
+                frameborder="0" scrolling="0" width="150" height="20" title="GitHub"></iframe>
+            </a>
+          </nav>
+        </div>
+      </div>
+
+    </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile is-child">
         <div class="padded_block">
           <ul>
             <li> <span class="title"><button
                   class="ghostbutton tag is-info is-light has-text-weight-bold is-medium resume_header is-large"> <i
                     class="fa-solid fa-user-group"></i> &nbsp; Mentorship </button></span> </li>
             <li><em>I was privileged to work with and mentor a group of outstanding students at Georgia Tech:</em></li>
-            <li><i class="fa-solid fa-user-graduate fa-2xs"></i> <a href="https://venkys.website">Venkataramana
-              Ganesh</a>, Master's in CS, 2022-2024</li>
+            <li><i class="fa-solid fa-user-graduate fa-2xs"></i> Venkataramana
+              Ganesh, Master's in CS, 2022-2024</li>
             <li><i class="fa-solid fa-user-graduate fa-2xs"></i> Vinam Arora, Master's in ECE, 2023</li>
             <li><i class="fa-solid fa-user-graduate fa-2xs"></i> Puru Malhotra, Master's in CS, 2023</li>
             <li><i class="fa-solid fa-user-graduate fa-2xs"></i> Ian Knight, Undergrad in CS, 2024</li>
@@ -559,77 +693,6 @@ document.addEventListener("DOMContentLoaded", function() {
             <li><i class="fa-solid fa-user-graduate fa-2xs"></i> Carolina Urzay, Undergrad in BME, 2021-2022</li>
             <li><i class="fa-solid fa-user-graduate fa-2xs"></i> Zijing Wu, Undergrad in CS / Math, 2020-2021</li>
           </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="tile">
-      <div class="tile is-child">
-        <div class="padded_block">
-          <ul>
-            <li><span class="title"><button
-                  class="ghostbutton tag is-light has-text-weight-bold is-medium resume_header is-large"><i
-                    class="fa-solid fa-laptop"></i> &nbsp; Coding </button></span></li>
-            <li><i class="fa-solid fa-code fa-2xs"></i> Main Programming Language: <i class="fa-brands fa-python"></i>
-              Python. </li>
-            <li><i class="fa-solid fa-code fa-2xs"></i> ML frameworks: <span class="nowrap"><i
-                  class="fa-solid fa-fire-flame-curved"></i> PyTorch</span>, <span class="nowrap"><i
-                  class="fa-solid fa-circle-nodes"></i> PyG</span>, <span class="nowrap"><i
-                  class="fa-solid fa-cubes"></i> jax.</span> </li>
-            <li><i class="fa-solid fa-code fa-2xs"></i> Favorite tools: <span class="nowrap"><i
-                  class="fa-solid fa-chart-area"></i> Bokeh</span>, <span class="nowrap"><i
-                  class="fa-solid fa-pepper-hot"></i> Flask</span>, <span class="nowrap"><i
-                  class="fa-brands fa-docker"></i> Docker</span>, <span class="nowrap"><i
-                  class="fa-solid fa-chart-line"></i>TensorBoard,</span> <span class="nowrap"><i
-                  class="fa-solid fa-share-nodes"></i> raytune.</span></li>
-          </ul>
-
-          <div style="padding-top: 1rem;">
-            <nav class="panel">
-              <p class="panel-heading" style="font-size:1em; background-color: #f5f5f5;">
-                Repositories
-              </p>
-              <a class="panel-block" href="https://github.com/nerdslab/bgrl" target="_blank" rel="noopener noreferrer">
-                <span class="panel-icon">
-                  <i class="fa fa-github" aria-hidden="true"></i>
-                </span>
-                bgrl &nbsp; &nbsp; <iframe
-                  src="https://ghbtns.com/github-btn.html?user=nerdslab&repo=bgrl&type=star&count=true" frameborder="0"
-                  scrolling="0" width="150" height="20" title="GitHub"></iframe></a>
-              </a>
-              <a class="panel-block" href="https://github.com/nerdslab/myow" target="_blank" rel="noopener noreferrer">
-                <span class="panel-icon">
-                  <i class="fa fa-github" aria-hidden="true"></i>
-                </span>
-                myow &nbsp;&nbsp; <iframe
-                  src="https://ghbtns.com/github-btn.html?user=nerdslab&repo=myow&type=star&count=true" frameborder="0"
-                  scrolling="0" width="150" height="20" title="GitHub"></iframe>
-              </a>
-              <a class="panel-block" href="https://github.com/nerdslab/myow-neuro" target="_blank"
-                rel="noopener noreferrer">
-                <span class="panel-icon">
-                  <i class="fa fa-github" aria-hidden="true"></i>
-                </span>
-                myow-neuro &nbsp;&nbsp; <iframe
-                  src="https://ghbtns.com/github-btn.html?user=nerdslab&repo=myow-neuro&type=star&count=true"
-                  frameborder="0" scrolling="0" width="150" height="20" title="GitHub"></iframe>
-              </a>
-              <a class="panel-block" href="https://github.com/mazabou/interpretable-gcn-covid-19" target="_blank"
-                rel="noopener noreferrer">
-                <span class="panel-icon">
-                  <i class="fa fa-github" aria-hidden="true"></i>
-                </span>
-                interpretable-gcn-covid-19
-              </a>
-              <a class="panel-block" href="https://github.com/mazabou/JupyterSIFT" target="_blank"
-                rel="noopener noreferrer">
-                <span class="panel-icon">
-                  <i class="fa fa-github" aria-hidden="true"></i>
-                </span>
-                JupyterSIFT
-              </a>
-            </nav>
-          </div>
         </div>
 
       </div>
@@ -643,10 +706,11 @@ document.addEventListener("DOMContentLoaded", function() {
             <li><i class="fa-solid fa-palette fa-xs"></i> Favorite tools: <i class="fa-solid fa-bezier-curve"></i>
               Illustrator, <i class="fa-solid fa-bars-staggered"></i> After Effects </li>
             <li><i class="fa-solid fa-palette fa-xs"></i> Designed a logo (with colorful variants) for the Neural Data
-              Science (NeRDS) Lab at Georgia Tech. </li>
-            <img width="128" src="./assets/nerds_lab_logo.png">
+              Science (NeRDS) Lab at Georgia Tech.
+            </li>
+            <!-- <img width="128" src="./assets/nerds_lab_logo.png">
             <img width="128" src="./assets/nerds_lab_logo_v2.png">
-            <img width="128" src="./assets/nerds_lab_logo_v3.png">
+            <img width="128" src="./assets/nerds_lab_logo_v3.png"> -->
             <li>
               <i class="fa-solid fa-laptop-code fa-xs"></i>
               Designed this website using <a href="https://bulma.io">Bulma</a> elements, icons from <a
@@ -655,6 +719,24 @@ document.addEventListener("DOMContentLoaded", function() {
               <a href="https://chat.openai.com/chat">ChatGPT</a> and art generated using <a
                 href="https://labs.openai.com/history">DALL·E 2</a>. Code can be found <a
                 href="https://github.com/mazabou/mehai">here</a>.
+            </li>
+            <li>
+              <i class="fa-solid fa-laptop-code fa-xs"></i>
+              Designed the following websites:
+              <ul style="margin-top: 0.em; margin-left: 0.8em; list-style-type: none;">
+                <li style="position: relative; padding-left: 0.75em;"><span
+                    style="position: absolute; left: -0.5em;">-</span><a href="https://cosyne-tutorial-2025.github.io/"
+                    target="_blank" rel="noopener noreferrer">COSYNE Tutorial 2025</a></li>
+                <li style="position: relative; padding-left: 0.75em;"><span
+                    style="position: absolute; left: -0.5em;">-</span><a href="https://neurofm-workshop.github.io/"
+                    target="_blank" rel="noopener noreferrer">NeuroFM Workshop</a></li>
+                <li style="position: relative; padding-left: 0.75em;"><span
+                    style="position: absolute; left: -0.5em;">-</span><a href="https://poyo-brain.github.io/"
+                    target="_blank" rel="noopener noreferrer">POYO Project</a></li>
+                <li style="position: relative; padding-left: 0.75em;"><span
+                    style="position: absolute; left: -0.5em;">-</span><a href="https://multiscale-behavior.github.io/"
+                    target="_blank" rel="noopener noreferrer">BAMS Project</a></li>
+              </ul>
             </li>
           </ul>
         </div>

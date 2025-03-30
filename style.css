@@ -578,6 +578,7 @@ a.nav:hover {
     width: 100%;
     height: 100%;
     padding-right: 12px;
+    padding-bottom: 50px;
     overflow-y: scroll;
     scrollbar-width: thin;
     /* Hide the default scrollbar */
@@ -616,11 +617,80 @@ a.nav:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; /* Ensure stickers are behind other content */
-  }
+    z-index: -1;
+    /* Ensure stickers are behind other content */
+}
 
 .sticker {
-position: absolute;
-width: 200px; /* Adjust the width as needed */
-height: 200px; /* Adjust the height as needed */
+    position: absolute;
+    width: 200px;
+    /* Adjust the width as needed */
+    height: 200px;
+    /* Adjust the height as needed */
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 0.9em;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 5px 10px;
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    pointer-events: none;
+    animation: fadeInOut 2s infinite alternate;
+    z-index: 10;
+}
+
+.scroll-indicator i {
+    display: block;
+    margin-bottom: 3px;
+    animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(3px);
+    }
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0.7;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Make scrollbar more visible */
+.scrollable-content::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3);
+    /* Darker, more visible scrollbar */
+    border-radius: 20px;
+}
+
+/* Add a gradient fade at the bottom of the content */
+.scrollable-container::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(transparent, rgba(255, 255, 255, 0.9));
+    pointer-events: none;
+}
+
+/* Class to remove gradient from specific scrollable containers */
+.scrollable-container.no-gradient::after {
+    display: none;
 }
