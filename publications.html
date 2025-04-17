@@ -127,62 +127,233 @@
     </div> -->
 
 
-    <div class="wrapper">
-        <div class="entry block container bd-post-content target-div highlighter" data-tags="neuro,ts">
-            <article class="media bottom_padding">
-                <figure class="is-hidden-mobile media-left">
-                    <p class="image is-128x128">
-                        <img src="covers/poyo_plus.png" data-ai="DALL·E 3"
-                            data-prompt="multiple neuron types converging into the center. use imagery from calcium imaging with fluorescence.">
-                    </p>
-                </figure>
-                <div class="media-content">
-                    <div>
-                        <div class="block container bd-post-content">
-                            <h1 class="title">
-                                <p class="is-size-55">
-                                    <i class="fa-solid fa-maximize"></i>
-                                    Multi-session, multi-task neural decoding from distinct cell-types and brain regions
-                                    <!--<a class="js-modal-trigger" data-target="forest-trans-modal"><i class="fa-solid fa-ellipsis"></i></a></span>-->
-                                </p>
-                                <p class="tagp">
+        <div class="wrapper">
+            <div class="entry block container bd-post-content target-div highlighter" data-tags="neuro,ts">
+                <article class="media bottom_padding">
+                    <figure class="is-hidden-mobile media-left">
+                        <p class="image is-128x128">
+                            <img src="covers/poyo_plus.png" data-ai="DALL·E 3"
+                                data-prompt="multiple neuron types converging into the center. use imagery from calcium imaging with fluorescence.">
+                        </p>
+                    </figure>
+                    <div class="media-content">
+                        <div>
+                            <div class="block container bd-post-content">
+                                <h1 class="title">
+                                    <p class="is-size-55">
+                                        <i class="fa-solid fa-microscope"></i>
+                                        Multi-session, multi-task neural decoding from distinct cell-types and brain
+                                        regions
+                                        <!--<a class="js-modal-trigger" data-target="forest-trans-modal"><i class="fa-solid fa-ellipsis"></i></a></span>-->
+                                    </p>
+                                    <p class="tagp">
 
-                                <div class="dropdown is-hoverable">
-                                    <div class="dropdown-trigger">
-                                        <span class="ghostbutton">
-                                            <span
-                                                class="tag is-success is-rounded is-light has-text-weight-bold">Neuroscience</span>
-                                        </span>
+                                    <div class="dropdown is-hoverable">
+                                        <div class="dropdown-trigger">
+                                            <span class="ghostbutton">
+                                                <span
+                                                    class="tag is-success is-rounded is-light has-text-weight-bold">Neuroscience</span>
+                                            </span>
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div class="dropdown is-hoverable">
-                                    <div class="dropdown-trigger">
-                                        <span class="ghostbutton">
-                                            <span
-                                                class="tag is-rounded is-light has-text-weight-bold">Transformers</span>
-                                        </span>
+                                    <div class="dropdown is-hoverable">
+                                        <div class="dropdown-trigger">
+                                            <span class="ghostbutton">
+                                                <span
+                                                    class="tag is-rounded is-light has-text-weight-bold">Transformers</span>
+                                            </span>
+                                        </div>
                                     </div>
-                                </div>
 
-                                </p>
-                            </h1>
-                            <div class="subtitle subtitle-no-margin">
-                                <p class="authors"><em><b>Mehdi Azabou</b><sup>+</sup>, Krystal Xuejing Pan<sup>+</sup>, Vinam Arora,
-                                    Ian Knight, Eva L. Dyer<sup>*</sup>, <span class=nowrap>Blake Richards<sup>*</sup></span></em></p>
+                                    </p>
+                                </h1>
+                                <div class="subtitle subtitle-no-margin">
+                                    <p class="authors"><em><b>Mehdi Azabou</b><sup>+</sup>, Krystal Xuejing
+                                            Pan<sup>+</sup>, Vinam Arora,
+                                            Ian Knight, Eva L. Dyer<sup>*</sup>, <span class=nowrap>Blake
+                                                Richards<sup>*</sup></span></em></p>
                                     <p><em><sup>+</sup>Contributed equally as co-first authors</em></p>
 
-                                <p class="conferencetitle">In preparation</p>
+                                    <p class="conferencetitle">International Conference on Learning Representations
+                                        (ICLR), accepted as
+                                        Spotlight, 2025</p>
+                                </div>
+                                <div id="poyo-plus-abstract" style="display:none;">
+                                    <b>Abstract:</b> Recent work has shown that scale is important for improved brain
+                                    decoding, with more data leading to greater decoding accuracy.
+                                    However, large-scale decoding across many different datasets is challenging because
+                                    neural circuits are heterogeneous, each brain region contains a unique mix of
+                                    cellular sub-types,
+                                    and the responses to different stimuli are diverse across regions and sub-types. It
+                                    is unknown whether it is possible to pre-train and transfer brain decoding models
+                                    between distinct tasks,
+                                    cellular sub-types, and brain regions. To address these questions, we developed a
+                                    multi-task transformer architecture and trained it on the entirety of the Allen
+                                    Institute's Brain Observatory dataset.
+                                    This dataset contains responses from over 100,000 neurons in 6 areas of the brains
+                                    of mice, observed with two-photon calcium imaging, recorded while the mice observed
+                                    different types of visual stimuli.
+                                    Our results demonstrate that transfer is indeed possible -combining data from
+                                    different sources is beneficial for a number of downstream decoding tasks. As well,
+                                    we can transfer the model between regions and sub-types,
+                                    demonstrating that there is in fact common information in diverse circuits that can
+                                    be extracted by an appropriately designed model. Interestingly, we found that the
+                                    model's latent representations showed clear
+                                    distinctions between different brain regions and cellular sub-types, even though it
+                                    was never given any information about these distinctions. Altogether, our work
+                                    demonstrates that training a large-scale neural
+                                    decoding model on diverse data is possible, and this provides a means of studying
+                                    the differences and similarities between heterogeneous neural circuits.
+                                </div>
+                                <div class="subtitle">
+                                    <hr>
+                                    <span class="nowrap"><a href="https://openreview.net/pdf?id=IuU0wcO0mo"
+                                            target="_blank" rel="noopener noreferrer"> <i class="fa fa-file-pdf"></i>
+                                            Paper </a>&nbsp;</span>
+                                    <span class="nowrap"><a href="https://openreview.net/forum?id=IuU0wcO0mo"
+                                            target="_blank" rel="noopener noreferrer"> <i class="fa fa-desktop"></i>
+                                            OpenReview </a>&nbsp;</span>
+                                    <span class="nowrap"><a class="js-modal-trigger" data-target="poyo-plus-cite"> <i
+                                                class="fa-solid fa-quote-right"></i> Cite</a></span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </article>
+                    <div class="media-right">
+                        <a class="js-expand-trigger fa-solid fa-chevron-down" data-target="poyo-plus-abstract"></a>
+                    </div>
+                </article>
+            </div>
+            <!-- <canvas id="my-canvas"></canvas> -->
         </div>
-        <!-- <canvas id="my-canvas"></canvas> -->
-    </div>
-    </div>
+        </div>
 
+
+        <div class="wrapper">
+            <div class="entry block container bd-post-content target-div highlighter" data-tags="neuro,ts">
+                <article class="media bottom_padding">
+                    <figure class="is-hidden-mobile media-left">
+                        <p class="image is-128x128">
+                            <img src="covers/neds.png" data-ai="GPT 4o"
+                                data-prompt="[Reference lego image] mice made out of lego blocks, turning a lego wheel. lego wires are coming out of its brain and connected to a computer where you see spiking activity.">
+                        </p>
+                    </figure>
+                    <div class="media-content">
+                        <div>
+                            <div class="block container bd-post-content">
+                                <h1 class="title">
+                                    <p class="is-size-55">
+                                        <i class="fa-solid fa-arrows-turn-to-dots"></i>
+                                        Neural Encoding and Decoding at Scale
+                                    </p>
+                                    <p class="tagp">
+
+                                    <div class="dropdown is-hoverable">
+                                        <div class="dropdown-trigger">
+                                            <span class="ghostbutton">
+                                                <span
+                                                    class="tag is-success is-rounded is-light has-text-weight-bold">Neuroscience</span>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="dropdown is-hoverable">
+                                        <div class="dropdown-trigger">
+                                            <span class="ghostbutton">
+                                                <span
+                                                    class="tag is-rounded is-light has-text-weight-bold">Transformers</span>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    </p>
+                                </h1>
+                                <div class="subtitle subtitle-no-margin">
+                                    <p class="authors"><em>Yizi Zhang<sup>+</sup>, Yanchen Wang<sup>+</sup>, <b>Mehdi
+                                                Azabou</b>, Alexandre Andre, Zixuan Wang, Hanrui Lyu, The International
+                                            Brain Laboratory, Eva Dyer, Liam Paninski, Cole Hurwitz</em></p>
+
+                                    <p class="conferencetitle">Preprint, 2025</p>
+                                </div>
+                                <div id="neds-abstract" style="display:none;">
+                                    <b>Abstract:</b> Recent work has demonstrated that large-scale, multi-animal models
+                                    are powerful tools for characterizing the relationship between neural activity and
+                                    behavior. Current large-scale approaches, however, focus exclusively on either
+                                    predicting neural activity from behavior (encoding) or predicting behavior from
+                                    neural activity (decoding), limiting their ability to capture the bidirectional
+                                    relationship between neural activity and behavior. To bridge this gap, we introduce
+                                    a multimodal, multi-task model that enables simultaneous Neural Encoding and
+                                    Decoding at Scale (NEDS). Central to our approach is a novel multi-task-masking
+                                    strategy, which alternates between neural, behavioral, within-modality, and
+                                    cross-modality masking. We pretrain our method on the International Brain Laboratory
+                                    (IBL) repeated site dataset, which includes recordings from 83 animals performing
+                                    the same visual decision-making task. In comparison to other large-scale models, we
+                                    demonstrate that NEDS achieves state-of-the-art performance for both encoding and
+                                    decoding when pretrained on multi-animal data and then fine-tuned on new animals.
+                                    Surprisingly, NEDS's learned embeddings exhibit emergent properties: even without
+                                    explicit training, they are highly predictive of the brain regions in each
+                                    recording. Altogether, our approach is a step towards a foundation model of the
+                                    brain that enables seamless translation between neural activity and behavior
+                                </div>
+                                <div class="subtitle">
+                                    <hr>
+                                    <span class="nowrap"><a href="https://arxiv.org/pdf/2504.08201" target="_blank"
+                                            rel="noopener noreferrer"> <i class="fa fa-file-pdf"></i>
+                                            Paper </a>&nbsp;</span>
+                                    <span class="nowrap"><a href="https://arxiv.org/abs/2504.08201" target="_blank"
+                                            rel="noopener noreferrer"> <i class="fa fa-desktop"></i>
+                                            arXiv </a>&nbsp;</span>
+                                    <span class="nowrap"><a class="js-modal-trigger" data-target="neds-cite"> <i
+                                                class="fa-solid fa-quote-right"></i> Cite</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media-right">
+                        <a class="js-expand-trigger fa-solid fa-chevron-down" data-target="neds-abstract"></a>
+                    </div>
+                </article>
+            </div>
+            <!-- <canvas id="my-canvas"></canvas> -->
+        </div>
+        </div>
+
+        <div id="neds-cite" class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+                <header class="modal-card-head">
+                    <p class="modal-card-title">Cite this paper</p>
+                    <button class="delete" aria-label="close"></button>
+                </header>
+                <section class="modal-card-body">
+                    BibTex
+                    <pre><code>@misc{zhang2025neuralencodingdecodingscale,
+    title={Neural Encoding and Decoding at Scale}, 
+    author={Yizi Zhang and Yanchen Wang and Mehdi Azabou and Alexandre Andre and Zixuan Wang and Hanrui Lyu and The International Brain Laboratory and Eva Dyer and Liam Paninski and Cole Hurwitz},
+    year={2025},
+    eprint={2504.08201},
+    archivePrefix={arXiv},
+    primaryClass={q-bio.NC},
+    url={https://arxiv.org/abs/2504.08201}, 
+}
+</code></pre>
+                    APA
+                    <pre><code>Zhang, Y., Wang, Y., Azabou, M., Andre, A., Wang, Z., Lyu, H., The International Brain Laboratory, Dyer, E., Paninski, L., & Hurwitz, C. (2025). Neural Encoding and Decoding at Scale. <i>arXiv 2504.08201</i>         </code></pre>
+                </section>
+                <footer class="modal-card-foot"></footer>
+            </div>
+        </div>
+
+
+
+        <div class="block container bd-post-content entry year" data-tags="header">
+            <h2 class="title">
+                <p class="is-size-66">
+                    2024
+                </p>
+            </h2>
+        </div>
 
         <div class="wrapper">
             <div class="entry block container bd-post-content target-div highlighter" data-tags="graphs">
@@ -267,21 +438,29 @@
                                     </p>
                                 </div>
                                 <div id="graphfm-abstract" style="display:none;">
-                                    <b>Abstract:</b> Graph neural networks are typically trained on individual datasets, often requiring
-                                    highly specialized models and extensive hyperparameter tuning. This datasetspecific approach arises because each graph dataset often has unique node features
-                                    and diverse connectivity structures, making it difficult to build a generalist model.
-                                    To address these challenges, we introduce a scalable multi-graph multi-task pretraining approach specifically tailored for node classification tasks across diverse
+                                    <b>Abstract:</b> Graph neural networks are typically trained on individual datasets,
+                                    often requiring
+                                    highly specialized models and extensive hyperparameter tuning. This datasetspecific
+                                    approach arises because each graph dataset often has unique node features
+                                    and diverse connectivity structures, making it difficult to build a generalist
+                                    model.
+                                    To address these challenges, we introduce a scalable multi-graph multi-task
+                                    pretraining approach specifically tailored for node classification tasks across
+                                    diverse
                                     graph datasets from different domains. Our method, Graph Foundation Model
                                     (GraphFM), leverages a Perceiver-based encoder that employs learned latent tokens
                                     to compress domain-specific features into a common latent space. This approach
                                     enhances the model's ability to generalize across different graphs and allows for
                                     scaling across diverse data. We demonstrate the efficacy of our approach by training
                                     a model on 152 different graph datasets comprising over 7.4 million nodes and 189
-                                    million edges, establishing the first set of scaling laws for multi-graph pretraining
+                                    million edges, establishing the first set of scaling laws for multi-graph
+                                    pretraining
                                     on datasets spanning many domains (e.g., molecules, citation and product graphs).
                                     Our results show that pretraining on a diverse array of real and synthetic graphs
                                     improves the model's adaptability and stability, while performing competitively
-                                    with state-of-the-art specialist models. This work illustrates that multi-graph pretraining can significantly reduce the burden imposed by the current graph training
+                                    with state-of-the-art specialist models. This work illustrates that multi-graph
+                                    pretraining can significantly reduce the burden imposed by the current graph
+                                    training
                                     paradigm, unlocking new capabilities for the field of graph neural networks by
                                     creating a single generalist model that performs competitively across a wide range
                                     of datasets and tasks.
@@ -308,6 +487,30 @@
             <!-- <canvas id="my-canvas"></canvas>
 </div> -->
 
+            <div id="poyo-plus-cite" class="modal">
+                <div class="modal-background"></div>
+                <div class="modal-card">
+                    <header class="modal-card-head">
+                        <p class="modal-card-title">Cite this paper</p>
+                        <button class="delete" aria-label="close"></button>
+                    </header>
+                    <section class="modal-card-body">
+                        BibTex
+                        <pre><code>@inproceedings{
+    azabou2025multisession,
+    title={Multi-session, multi-task neural decoding from distinct cell-types and brain regions},
+    author={Mehdi Azabou and Krystal Xuejing Pan and Vinam Arora and Ian Jarratt Knight and Eva L Dyer and Blake Aaron Richards},
+    booktitle={The Thirteenth International Conference on Learning Representations},
+    year={2025},
+    url={https://openreview.net/forum?id=IuU0wcO0mo}
+}
+</code></pre>
+                        APA
+                        <pre><code>Azabou, M., Pan, K. X., Arora, V., Knight, I. J., Dyer, E. L. & Richards, B. A. (2025). Multi-session, multi-task neural decoding from distinct cell-types and brain regions. <i>The Thirteenth International Conference on Learning Representations</i>         </code></pre>
+                    </section>
+                    <footer class="modal-card-foot"></footer>
+                </div>
+            </div>
 
             <div id="graphfm-cite" class="modal">
                 <div class="modal-background"></div>
@@ -347,10 +550,13 @@ Url={Https://Arxiv.Org/Abs/2407.11907},
                     <section class="modal-card-body">
 
                         <div>
-                            <b>Abstract:</b> Graph neural networks are typically trained on individual datasets, often requiring
-                            highly specialized models and extensive hyperparameter tuning. This datasetspecific approach arises because each graph dataset often has unique node features
+                            <b>Abstract:</b> Graph neural networks are typically trained on individual datasets, often
+                            requiring
+                            highly specialized models and extensive hyperparameter tuning. This datasetspecific approach
+                            arises because each graph dataset often has unique node features
                             and diverse connectivity structures, making it difficult to build a generalist model.
-                            To address these challenges, we introduce a scalable multi-graph multi-task pretraining approach specifically tailored for node classification tasks across diverse
+                            To address these challenges, we introduce a scalable multi-graph multi-task pretraining
+                            approach specifically tailored for node classification tasks across diverse
                             graph datasets from different domains. Our method, Graph Foundation Model
                             (GraphFM), leverages a Perceiver-based encoder that employs learned latent tokens
                             to compress domain-specific features into a common latent space. This approach
@@ -361,7 +567,8 @@ Url={Https://Arxiv.Org/Abs/2407.11907},
                             on datasets spanning many domains (e.g., molecules, citation and product graphs).
                             Our results show that pretraining on a diverse array of real and synthetic graphs
                             improves the model's adaptability and stability, while performing competitively
-                            with state-of-the-art specialist models. This work illustrates that multi-graph pretraining can significantly reduce the burden imposed by the current graph training
+                            with state-of-the-art specialist models. This work illustrates that multi-graph pretraining
+                            can significantly reduce the burden imposed by the current graph training
                             paradigm, unlocking new capabilities for the field of graph neural networks by
                             creating a single generalist model that performs competitively across a wide range
                             of datasets and tasks.
@@ -387,10 +594,11 @@ Url={Https://Arxiv.Org/Abs/2407.11907},
                                     <h1 class="title">
                                         <p class="is-size-55">
                                             <i class="fa-solid fa-mask"></i>
-                                            Towards a "universal translator" for neural dynamics at single-cell, single-spike resolution
+                                            Towards a "universal translator" for neural dynamics at single-cell,
+                                            single-spike resolution
                                         </p>
                                         <p class="tagp">
-    
+
                                         <div class="dropdown is-hoverable">
                                             <div class="dropdown is-hoverable">
                                                 <div class="dropdown-trigger">
@@ -432,49 +640,64 @@ Url={Https://Arxiv.Org/Abs/2407.11907},
                                             </div>
                                         </div>
                                     </div> -->
-    
+
                                         </p>
                                     </h1>
                                     <div class="subtitle subtitle-no-margin">
-                                        <p class="authors"><em>Yizi Zhang, Yanchen Wang, Donato Jimenez-Beneto, Zixuan Wang, <b>Mehdi Azabou</b>, Blake Richards, Olivier Winter, The International Brain Laboratory, Eva Dyer, Liam Paninski, Cole Hurwitz</em>
+                                        <p class="authors"><em>Yizi Zhang, Yanchen Wang, Donato Jimenez-Beneto, Zixuan
+                                                Wang, <b>Mehdi Azabou</b>, Blake Richards, Olivier Winter, The
+                                                International Brain Laboratory, Eva Dyer, Liam Paninski, Cole
+                                                Hurwitz</em>
                                         </p>
                                         <p class="conferencetitle">Neural Information Processing Systems (NeurIPS), 2024
                                         </p>
                                     </div>
                                     <div id="mtm-abstract" style="display:none;">
-                                        <b>Abstract:</b> Neuroscience research has made immense progress over the last decade, but our
-                                        understanding of the brain remains fragmented and piecemeal: the dream of probing
+                                        <b>Abstract:</b> Neuroscience research has made immense progress over the last
+                                        decade, but our
+                                        understanding of the brain remains fragmented and piecemeal: the dream of
+                                        probing
                                         an arbitrary brain region and automatically reading out the information encoded
-                                        in its neural activity remains out of reach. In this work, we build towards a first
-                                        foundation model for neural spiking data that can solve a diverse set of tasks across
+                                        in its neural activity remains out of reach. In this work, we build towards a
+                                        first
+                                        foundation model for neural spiking data that can solve a diverse set of tasks
+                                        across
                                         multiple brain areas. We introduce a novel self-supervised modeling approach
                                         for population activity in which the model alternates between masking out and
-                                        reconstructing neural activity across different time steps, neurons, and brain regions.
+                                        reconstructing neural activity across different time steps, neurons, and brain
+                                        regions.
                                         To evaluate our approach, we design unsupervised and supervised prediction
                                         tasks using the International Brain Laboratory repeated site dataset, which is
                                         comprised of Neuropixels recordings targeting the same brain locations across 48
-                                        animals and experimental sessions. The prediction tasks include single-neuron and
+                                        animals and experimental sessions. The prediction tasks include single-neuron
+                                        and
                                         region-level activity prediction, forward prediction, and behavior decoding. We
                                         demonstrate that our multi-task-masking (MtM) approach significantly improves
-                                        the performance of current state-of-the-art population models and enables multitask learning. We also show that by training on multiple animals, we can improve
+                                        the performance of current state-of-the-art population models and enables
+                                        multitask learning. We also show that by training on multiple animals, we can
+                                        improve
                                         the generalization ability of the model to unseen animals, paving the way for a
-                                        foundation model of the brain at single-cell, single-spike resolution. Project page
+                                        foundation model of the brain at single-cell, single-spike resolution. Project
+                                        page
                                         and code: https://ibl-mtm.github.io/
                                     </div>
                                     <div class="subtitle">
                                         <hr>
                                         <span class="nowrap"><a href="https://ibl-mtm.github.io/" target="_blank"
-                                            rel="noopener noreferrer"> <i class="fa fa-book"></i> Project page
-                                        </a>&nbsp;</span>
+                                                rel="noopener noreferrer"> <i class="fa fa-book"></i> Project page
+                                            </a>&nbsp;</span>
                                         <span class="nowrap"><a href="https://arxiv.org/pdf/2407.14668" target="_blank"
                                                 rel="noopener noreferrer"> <i class="fa fa-file-pdf"></i>
                                                 Paper </a>&nbsp;</span>
-                                        <span class="nowrap"><a href="https://github.com/colehurwitz/IBL_foundation_model/" target="_blank"
-                                            rel="noopener noreferrer"> <i class="fa fa-github"></i> Code
-                                        </a>&nbsp;</span>
-                                        <span class="nowrap"><a href="https://huggingface.co/ibl-foundation-model" target="_blank"
-                                            rel="noopener noreferrer"> <i class="fa-solid fa-face-smile-beam"></i> Model
-                                        </a>&nbsp;</span>
+                                        <span class="nowrap"><a
+                                                href="https://github.com/colehurwitz/IBL_foundation_model/"
+                                                target="_blank" rel="noopener noreferrer"> <i class="fa fa-github"></i>
+                                                Code
+                                            </a>&nbsp;</span>
+                                        <span class="nowrap"><a href="https://huggingface.co/ibl-foundation-model"
+                                                target="_blank" rel="noopener noreferrer"> <i
+                                                    class="fa-solid fa-face-smile-beam"></i> Model
+                                            </a>&nbsp;</span>
                                         <span class="nowrap"><a href="https://arxiv.org/abs/2407.14668" target="_blank"
                                                 rel="noopener noreferrer"> <i class="fa fa-desktop"></i>
                                                 arXiv </a>&nbsp;</span>
@@ -491,8 +714,8 @@ Url={Https://Arxiv.Org/Abs/2407.11907},
                 </div>
                 <!-- <canvas id="my-canvas"></canvas>
     </div> -->
-    
-    
+
+
                 <div id="mtm-cite" class="modal">
                     <div class="modal-background"></div>
                     <div class="modal-card">
@@ -517,9 +740,9 @@ url       = {http://arxiv.org/abs/2407.14668}
                         <footer class="modal-card-foot"></footer>
                     </div>
                 </div>
-    
-    
-    
+
+
+
                 <div id="mtm-modal" class="modal">
                     <div class="modal-background"></div>
                     <div class="modal-card">
@@ -528,9 +751,10 @@ url       = {http://arxiv.org/abs/2407.14668}
                             <button class="delete" aria-label="close"></button>
                         </header>
                         <section class="modal-card-body">
-    
+
                             <div>
-                                <b>Abstract:</b> Neuroscience research has made immense progress over the last decade, but our
+                                <b>Abstract:</b> Neuroscience research has made immense progress over the last decade,
+                                but our
                                 understanding of the brain remains fragmented and piecemeal: the dream of probing
                                 an arbitrary brain region and automatically reading out the information encoded
                                 in its neural activity remains out of reach. In this work, we build towards a first
@@ -544,7 +768,8 @@ url       = {http://arxiv.org/abs/2407.14668}
                                 animals and experimental sessions. The prediction tasks include single-neuron and
                                 region-level activity prediction, forward prediction, and behavior decoding. We
                                 demonstrate that our multi-task-masking (MtM) approach significantly improves
-                                the performance of current state-of-the-art population models and enables multitask learning. We also show that by training on multiple animals, we can improve
+                                the performance of current state-of-the-art population models and enables multitask
+                                learning. We also show that by training on multiple animals, we can improve
                                 the generalization ability of the model to unseen animals, paving the way for a
                                 foundation model of the brain at single-cell, single-spike resolution. Project page
                                 and code: https://ibl-mtm.github.io/
@@ -553,18 +778,166 @@ url       = {http://arxiv.org/abs/2407.14668}
                         <footer class="modal-card-foot"></footer>
                     </div>
                 </div>
-    
-    
 
 
+
+
+
+                <div class="wrapper">
+                    <div class="entry block container bd-post-content target-div" data-tags="neuro,ts">
+                        <article class="media bottom_padding">
+                            <figure class="is-hidden-mobile media-left">
+                                <p class="image is-128x128">
+                                    <img src="covers/poyo_cosyne.png" data-ai="DALL·E 3"
+                                        data-prompt="a brain at the center of the image, kaleidoscope effect, 4k, art">
+                                </p>
+                            </figure>
+                            <div class="media-content">
+                                <div>
+                                    <div class="block container bd-post-content">
+                                        <h1 class="title">
+                                            <p class="is-size-55">
+                                                <i class="fas fa-exchange-alt"></i>
+                                                Large-scale pretraining on neural data allows for transfer across
+                                                subjects,
+                                                tasks <span class=nowrap>and species</span>
+                                                <!--<a class="js-modal-trigger" data-target="forest-trans-modal"><i class="fa-solid fa-ellipsis"></i></a></span>-->
+                                            </p>
+                                            <p class="tagp">
+
+                                            <div class="dropdown is-hoverable">
+                                                <div class="dropdown-trigger">
+                                                    <span class="ghostbutton">
+                                                        <span
+                                                            class="tag is-rounded is-light has-text-weight-bold">Abstract</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+
+                                            <div class="dropdown is-hoverable">
+                                                <div class="dropdown-trigger">
+                                                    <span class="ghostbutton">
+                                                        <span
+                                                            class="tag is-success is-rounded is-light has-text-weight-bold">Neuroscience</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+
+                                            <div class="dropdown is-hoverable">
+                                                <div class="dropdown-trigger">
+                                                    <span class="ghostbutton">
+                                                        <span
+                                                            class="tag is-rounded is-light has-text-weight-bold">Transformers</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+
+                                            </p>
+                                        </h1>
+                                        <div class="subtitle subtitle-no-margin">
+                                            <p class="authors"><em><b>Mehdi Azabou</b>, Vinam Arora, Patrick Mineault,
+                                                    Venkataramana Ganesh,
+                                                    Ximeng Mao, Santosh Nachimuthu, Michael Mendelson,
+                                                    Blake Richards, Matthew Perich, Guillaume Lajoie, <span
+                                                        class=nowrap>Eva
+                                                        L.
+                                                        Dyer</span></em></p>
+                                            <p class="conferencetitle">Computational and Systems Neuroscience (COSYNE),
+                                                2024
+                                            </p>
+                                        </div>
+                                        <div id="poyo-cosyne-abstract" style="display:none;">
+                                            <b>Abstract:</b> Current population-level models of neural data are built to
+                                            operate on a single dataset, condition, or
+                                            task at a time. This both limits the amount of training data we can build
+                                            models on, and also makes it difficult to
+                                            build unified models where it may be possible to compare across individuals
+                                            and over distinct tasks. To address
+                                            this gap, we introduce a novel approach for large-scale training over many
+                                            diverse datasets spanning many sessions
+                                            and tasks. Much like words or groups of letters are passed into transformers
+                                            in natural language processing, our
+                                            approach centers around a novel way to breakdown neural population activity
+                                            into parts or “tokens” that can be
+                                            processed by a large transformer model. Rather than binning data, we
+                                            represent each individual spike as a token and
+                                            associate these spike events with a learned unit-level embedding which can
+                                            capture information about the identity
+                                            of a neural unit or channel (in the case of multiunits). We combine this
+                                            input tokenization method with an encoder-
+                                            decoder architecture that compresses the input spikes into a latent space
+                                            and learns interactions across spikes in
+                                            time and across neurons. To demonstrate the flexibility and scalability of
+                                            our multi-session training framework,
+                                            we apply it to a wide range of motor, visual, and decision making tasks from
+                                            electrophysiology datasets collected
+                                            in monkeys, humans, and mice. In particular, we train three large models,
+                                            the first being from 7 nonhuman
+                                            primates (27,373 units) engaging in four different motor tasks across three
+                                            laboratories, the second combining
+                                            human and monkey motor cortical datasets (9,789 monkey units + 1,920 human
+                                            units) in diverse tasks, and the
+                                            third from 58 mice (99,180 units) engaged in visual tasks during recordings
+                                            to multiple regions in the cortex, deep,
+                                            and midbrain structures. In these cases, we demonstrate that our pretrained
+                                            models can be rapidly adapted to
+                                            new, unseen sessions, enabling few-shot performance across animals and
+                                            species with minimal labels. Our results
+                                            highlight the power of scale and demonstrate how pretraining on large
+                                            datasets can benefit neural data analysis.
+                                        </div>
+                                        <div class="subtitle">
+                                            <hr>
+                                            <span class="nowrap"><a href="https://poyo-brain.github.io/" target="_blank"
+                                                    rel="noopener noreferrer"> <i class="fa fa-book"></i> Project page
+                                                </a>&nbsp;</span>
+                                            <!-- <span class="nowrap"><a href="https://arxiv.org/pdf/2310.16046.pdf" target="_blank"
+                                        rel="noopener noreferrer"> <i class="fa fa-file-pdf"></i> Paper
+                                    </a>&nbsp;</span>
+                                <span class="nowrap"><a
+                                        href="https://nips.cc/media/PosterPDFs/NeurIPS%202023/70241.png?t=1702162469.6729155"
+                                        target="_blank" rel="noopener noreferrer"> <i
+                                            class="fa-solid fa-person-chalkboard"></i> Poster </a>&nbsp;</span>
+                                <span class="nowrap"><a href="https://arxiv.org/abs/2310.16046" target="_blank"
+                                        rel="noopener noreferrer"> <i class="fa fa-desktop"></i> arXiv
+                                    </a>&nbsp;</span>
+                                <span class="nowrap"><a href="https://openreview.net/forum?id=sw2Y0sirtM"
+                                        target="_blank" rel="noopener noreferrer"> <i class="fa fa-desktop"></i>
+                                        OpenReview </a>&nbsp;</span> -->
+                                            <!-- 
+                                <span class="nowrap"><a class="js-modal-trigger" data-target="poyo-cite"> <i
+                                            class="fa-solid fa-quote-right"></i> Cite</a></span> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="media-right">
+                                <a class="js-expand-trigger fa-solid fa-chevron-down"
+                                    data-target="poyo-cosyne-abstract"></a>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- <canvas id="my-canvas"></canvas> -->
+                </div>
+            </div>
+
+
+
+            <div class="block container bd-post-content entry year" data-tags="header">
+                <h2 class="title">
+                    <p class="is-size-66">
+                        2023
+                    </p>
+                </h2>
+            </div>
 
             <div class="wrapper">
-                <div class="entry block container bd-post-content target-div" data-tags="neuro,ts">
+                <div class="entry block container bd-post-content target-div highlighter" data-tags="neuro,ts">
                     <article class="media bottom_padding">
                         <figure class="is-hidden-mobile media-left">
                             <p class="image is-128x128">
-                                <img src="covers/poyo_cosyne.png" data-ai="DALL·E 3"
-                                    data-prompt="a brain at the center of the image, kaleidoscope effect, 4k, art">
+                                <img src="covers/poyo.jpg" data-ai="Adobe Firefly"
+                                    data-prompt="multiple monkeys brain connected together to a central computer">
                             </p>
                         </figure>
                         <div class="media-content">
@@ -572,21 +945,11 @@ url       = {http://arxiv.org/abs/2407.14668}
                                 <div class="block container bd-post-content">
                                     <h1 class="title">
                                         <p class="is-size-55">
-                                            <i class="fas fa-exchange-alt"></i>
-                                            Large-scale pretraining on neural data allows for transfer across subjects,
-                                            tasks <span class=nowrap>and species</span>
+                                            <i class="fa-solid fa-brain"></i>
+                                            A Unified, Scalable Framework for Neural Population Decoding
                                             <!--<a class="js-modal-trigger" data-target="forest-trans-modal"><i class="fa-solid fa-ellipsis"></i></a></span>-->
                                         </p>
                                         <p class="tagp">
-
-                                        <div class="dropdown is-hoverable">
-                                            <div class="dropdown-trigger">
-                                                <span class="ghostbutton">
-                                                    <span
-                                                        class="tag is-rounded is-light has-text-weight-bold">Abstract</span>
-                                                </span>
-                                            </div>
-                                        </div>
 
                                         <div class="dropdown is-hoverable">
                                             <div class="dropdown-trigger">
@@ -604,200 +967,95 @@ url       = {http://arxiv.org/abs/2407.14668}
                                                         class="tag is-rounded is-light has-text-weight-bold">Transformers</span>
                                                 </span>
                                             </div>
+                                            <div class="dropdown-menu" role="menu">
+                                                <div class="dropdown-content">
+                                                    <div class="dropdown-item">
+                                                        <p class="has-text-weight-normal is-size-7">We present a novel
+                                                            transformer architecture based the PerceiverIO and trained
+                                                            on a
+                                                            large-scale dataset of
+                                                            neural recordings from nonhuman primates. </p>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
 
                                         </p>
                                     </h1>
                                     <div class="subtitle subtitle-no-margin">
-                                        <p class="authors"><em><b>Mehdi Azabou</b>, Vinam Arora, Patrick Mineault,
-                                                Venkataramana Ganesh,
+                                        <p class="authors"><em><b>Mehdi Azabou</b>, Vinam Arora, Venkataramana Ganesh,
                                                 Ximeng Mao, Santosh Nachimuthu, Michael Mendelson,
                                                 Blake Richards, Matthew Perich, Guillaume Lajoie, <span class=nowrap>Eva
                                                     L.
                                                     Dyer</span></em></p>
-                                        <p class="conferencetitle">Computational and Systems Neuroscience (COSYNE), 2024
+                                        <p class="conferencetitle">Neural Information Processing Systems (NeurIPS), 2023
                                         </p>
                                     </div>
-                                    <div id="poyo-cosyne-abstract" style="display:none;">
-                                <b>Abstract:</b> Current population-level models of neural data are built to operate on a single dataset, condition, or
-task at a time. This both limits the amount of training data we can build models on, and also makes it difficult to
-build unified models where it may be possible to compare across individuals and over distinct tasks. To address
-this gap, we introduce a novel approach for large-scale training over many diverse datasets spanning many sessions
-and tasks. Much like words or groups of letters are passed into transformers in natural language processing, our
-approach centers around a novel way to breakdown neural population activity into parts or “tokens” that can be
-processed by a large transformer model. Rather than binning data, we represent each individual spike as a token and
-associate these spike events with a learned unit-level embedding which can capture information about the identity
-of a neural unit or channel (in the case of multiunits). We combine this input tokenization method with an encoder-
-decoder architecture that compresses the input spikes into a latent space and learns interactions across spikes in
-time and across neurons. To demonstrate the flexibility and scalability of our multi-session training framework,
-we apply it to a wide range of motor, visual, and decision making tasks from electrophysiology datasets collected
-in monkeys, humans, and mice. In particular, we train three large models, the first being from 7 nonhuman
-primates (27,373 units) engaging in four different motor tasks across three laboratories, the second combining
-human and monkey motor cortical datasets (9,789 monkey units + 1,920 human units) in diverse tasks, and the
-third from 58 mice (99,180 units) engaged in visual tasks during recordings to multiple regions in the cortex, deep,
-and midbrain structures. In these cases, we demonstrate that our pretrained models can be rapidly adapted to
-new, unseen sessions, enabling few-shot performance across animals and species with minimal labels. Our results
-highlight the power of scale and demonstrate how pretraining on large datasets can benefit neural data analysis.
-                            </div>
+                                    <div id="poyo-abstract" style="display:none;">
+                                        <b>Abstract:</b> Our ability to use deep learning approaches to decipher neural
+                                        activity would likely benefit from greater scale,
+                                        in terms of both the model size and the datasets. However, the integration of
+                                        many
+                                        neural recordings into one unified model
+                                        is challenging, as each recording contains the activity of different neurons
+                                        from
+                                        different individual animals.
+                                        In this paper, we introduce a training framework and architecture designed to
+                                        model
+                                        the population dynamics of neural
+                                        activity across diverse, large-scale neural recordings. Our method first
+                                        tokenizes
+                                        individual spikes within the dataset
+                                        to build an efficient representation of neural events that captures the fine
+                                        temporal structure of neural activity.
+                                        We then employ cross-attention and a PerceiverIO backbone to further construct a
+                                        latent tokenization of neural population activities.
+                                        Utilizing this architecture and training framework, we construct a large- scale
+                                        multi-session model trained on large datasets
+                                        from seven nonhuman primates, spanning over 158 different sessions of recording
+                                        from
+                                        over 27,373 neural units and over 100 hours of recordings.
+                                        In a number of different tasks, we demonstrate that our pretrained model can be
+                                        rapidly adapted to new, unseen sessions with unspecified
+                                        neuron correspondence, enabling few-shot performance with minimal labels. This
+                                        work
+                                        presents a powerful new approach for building deep
+                                        learning tools to analyze neural data and stakes out a clear path to training at
+                                        scale for neural decoding models.
+                                    </div>
                                     <div class="subtitle">
                                         <hr>
                                         <span class="nowrap"><a href="https://poyo-brain.github.io/" target="_blank"
                                                 rel="noopener noreferrer"> <i class="fa fa-book"></i> Project page
                                             </a>&nbsp;</span>
-                                        <!-- <span class="nowrap"><a href="https://arxiv.org/pdf/2310.16046.pdf" target="_blank"
-                                        rel="noopener noreferrer"> <i class="fa fa-file-pdf"></i> Paper
-                                    </a>&nbsp;</span>
-                                <span class="nowrap"><a
-                                        href="https://nips.cc/media/PosterPDFs/NeurIPS%202023/70241.png?t=1702162469.6729155"
-                                        target="_blank" rel="noopener noreferrer"> <i
-                                            class="fa-solid fa-person-chalkboard"></i> Poster </a>&nbsp;</span>
-                                <span class="nowrap"><a href="https://arxiv.org/abs/2310.16046" target="_blank"
-                                        rel="noopener noreferrer"> <i class="fa fa-desktop"></i> arXiv
-                                    </a>&nbsp;</span>
-                                <span class="nowrap"><a href="https://openreview.net/forum?id=sw2Y0sirtM"
-                                        target="_blank" rel="noopener noreferrer"> <i class="fa fa-desktop"></i>
-                                        OpenReview </a>&nbsp;</span> -->
-                                        <!-- 
-                                <span class="nowrap"><a class="js-modal-trigger" data-target="poyo-cite"> <i
-                                            class="fa-solid fa-quote-right"></i> Cite</a></span> -->
+                                        <span class="nowrap"><a href="https://arxiv.org/pdf/2310.16046.pdf"
+                                                target="_blank" rel="noopener noreferrer"> <i
+                                                    class="fa fa-file-pdf"></i> Paper
+                                            </a>&nbsp;</span>
+                                        <span class="nowrap"><a
+                                                href="https://nips.cc/media/PosterPDFs/NeurIPS%202023/70241.png?t=1702162469.6729155"
+                                                target="_blank" rel="noopener noreferrer"> <i
+                                                    class="fa-solid fa-person-chalkboard"></i> Poster </a>&nbsp;</span>
+                                        <span class="nowrap"><a href="https://arxiv.org/abs/2310.16046" target="_blank"
+                                                rel="noopener noreferrer"> <i class="fa fa-desktop"></i> arXiv
+                                            </a>&nbsp;</span>
+                                        <span class="nowrap"><a href="https://openreview.net/forum?id=sw2Y0sirtM"
+                                                target="_blank" rel="noopener noreferrer"> <i class="fa fa-desktop"></i>
+                                                OpenReview </a>&nbsp;</span>
+
+                                        <span class="nowrap"><a class="js-modal-trigger" data-target="poyo-cite"> <i
+                                                    class="fa-solid fa-quote-right"></i> Cite</a></span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="media-right">
-                    <a class="js-expand-trigger fa-solid fa-chevron-down" data-target="poyo-cosyne-abstract"></a>
-                </div>
+                            <a class="js-expand-trigger fa-solid fa-chevron-down" data-target="poyo-abstract"></a>
+                        </div>
                     </article>
                 </div>
                 <!-- <canvas id="my-canvas"></canvas> -->
             </div>
-        </div>
-
-
-
-        <div class="block container bd-post-content entry year" data-tags="header">
-            <h2 class="title">
-                <p class="is-size-66">
-                    2023
-                </p>
-            </h2>
-        </div>
-
-        <div class="wrapper">
-            <div class="entry block container bd-post-content target-div highlighter" data-tags="neuro,ts">
-                <article class="media bottom_padding">
-                    <figure class="is-hidden-mobile media-left">
-                        <p class="image is-128x128">
-                            <img src="covers/poyo.jpg" data-ai="Adobe Firefly"
-                                data-prompt="multiple monkeys brain connected together to a central computer">
-                        </p>
-                    </figure>
-                    <div class="media-content">
-                        <div>
-                            <div class="block container bd-post-content">
-                                <h1 class="title">
-                                    <p class="is-size-55">
-                                        <i class="fa-solid fa-brain"></i>
-                                        A Unified, Scalable Framework for Neural Population Decoding
-                                        <!--<a class="js-modal-trigger" data-target="forest-trans-modal"><i class="fa-solid fa-ellipsis"></i></a></span>-->
-                                    </p>
-                                    <p class="tagp">
-
-                                    <div class="dropdown is-hoverable">
-                                        <div class="dropdown-trigger">
-                                            <span class="ghostbutton">
-                                                <span
-                                                    class="tag is-success is-rounded is-light has-text-weight-bold">Neuroscience</span>
-                                            </span>
-                                        </div>
-                                    </div>
-
-                                    <div class="dropdown is-hoverable">
-                                        <div class="dropdown-trigger">
-                                            <span class="ghostbutton">
-                                                <span
-                                                    class="tag is-rounded is-light has-text-weight-bold">Transformers</span>
-                                            </span>
-                                        </div>
-                                        <div class="dropdown-menu" role="menu">
-                                            <div class="dropdown-content">
-                                                <div class="dropdown-item">
-                                                    <p class="has-text-weight-normal is-size-7">We present a novel
-                                                        transformer architecture based the PerceiverIO and trained on a
-                                                        large-scale dataset of
-                                                        neural recordings from nonhuman primates. </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    </p>
-                                </h1>
-                                <div class="subtitle subtitle-no-margin">
-                                    <p class="authors"><em><b>Mehdi Azabou</b>, Vinam Arora, Venkataramana Ganesh,
-                                            Ximeng Mao, Santosh Nachimuthu, Michael Mendelson,
-                                            Blake Richards, Matthew Perich, Guillaume Lajoie, <span class=nowrap>Eva L.
-                                                Dyer</span></em></p>
-                                    <p class="conferencetitle">Neural Information Processing Systems (NeurIPS), 2023</p>
-                                </div>
-                                <div id="poyo-abstract" style="display:none;">
-                                    <b>Abstract:</b> Our ability to use deep learning approaches to decipher neural
-                                    activity would likely benefit from greater scale,
-                                    in terms of both the model size and the datasets. However, the integration of many
-                                    neural recordings into one unified model
-                                    is challenging, as each recording contains the activity of different neurons from
-                                    different individual animals.
-                                    In this paper, we introduce a training framework and architecture designed to model
-                                    the population dynamics of neural
-                                    activity across diverse, large-scale neural recordings. Our method first tokenizes
-                                    individual spikes within the dataset
-                                    to build an efficient representation of neural events that captures the fine
-                                    temporal structure of neural activity.
-                                    We then employ cross-attention and a PerceiverIO backbone to further construct a
-                                    latent tokenization of neural population activities.
-                                    Utilizing this architecture and training framework, we construct a large- scale
-                                    multi-session model trained on large datasets
-                                    from seven nonhuman primates, spanning over 158 different sessions of recording from
-                                    over 27,373 neural units and over 100 hours of recordings.
-                                    In a number of different tasks, we demonstrate that our pretrained model can be
-                                    rapidly adapted to new, unseen sessions with unspecified
-                                    neuron correspondence, enabling few-shot performance with minimal labels. This work
-                                    presents a powerful new approach for building deep
-                                    learning tools to analyze neural data and stakes out a clear path to training at
-                                    scale for neural decoding models.
-                                </div>
-                                <div class="subtitle">
-                                    <hr>
-                                    <span class="nowrap"><a href="https://poyo-brain.github.io/" target="_blank"
-                                            rel="noopener noreferrer"> <i class="fa fa-book"></i> Project page
-                                        </a>&nbsp;</span>
-                                    <span class="nowrap"><a href="https://arxiv.org/pdf/2310.16046.pdf" target="_blank"
-                                            rel="noopener noreferrer"> <i class="fa fa-file-pdf"></i> Paper
-                                        </a>&nbsp;</span>
-                                    <span class="nowrap"><a
-                                            href="https://nips.cc/media/PosterPDFs/NeurIPS%202023/70241.png?t=1702162469.6729155"
-                                            target="_blank" rel="noopener noreferrer"> <i
-                                                class="fa-solid fa-person-chalkboard"></i> Poster </a>&nbsp;</span>
-                                    <span class="nowrap"><a href="https://arxiv.org/abs/2310.16046" target="_blank"
-                                            rel="noopener noreferrer"> <i class="fa fa-desktop"></i> arXiv
-                                        </a>&nbsp;</span>
-                                    <span class="nowrap"><a href="https://openreview.net/forum?id=sw2Y0sirtM"
-                                            target="_blank" rel="noopener noreferrer"> <i class="fa fa-desktop"></i>
-                                            OpenReview </a>&nbsp;</span>
-
-                                    <span class="nowrap"><a class="js-modal-trigger" data-target="poyo-cite"> <i
-                                                class="fa-solid fa-quote-right"></i> Cite</a></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="media-right">
-                        <a class="js-expand-trigger fa-solid fa-chevron-down" data-target="poyo-abstract"></a>
-                    </div>
-                </article>
-            </div>
-            <!-- <canvas id="my-canvas"></canvas> -->
-        </div>
         </div>
 
 
