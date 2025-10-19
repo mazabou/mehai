@@ -103,17 +103,101 @@
       };
 
       const stickerImages = Object.keys(stickerInfo);
-      const numStickers = 20;
       const stickers = [];
 
       const section = document.querySelector(".section");
 
-      const sectionWidth = section.offsetWidth;
-      const viewportWidth = window.innerWidth;
-      const sectionWidthPercentage = (sectionWidth / viewportWidth) * 100;
+      // Improved sticker placement algorithm
+      function generateStickerPositions() {
+        const sectionWidth = section.offsetWidth;
+        const viewportWidth = window.innerWidth;
+        const viewportHeight = window.innerHeight;
+        const documentHeight = document.body.scrollHeight - 800;
+        const sectionWidthPercentage = (sectionWidth / viewportWidth) * 100;
 
+        // Sticker dimensions and spacing
+        const stickerSize = 200; // pixels
+        const minDistance = 140; // minimum distance between sticker centers (more space)
+        const maxAttempts = 1000; // maximum attempts to place stickers (increased for better coverage)
+        const targetStickers = 50; // target number of stickers (increased for better coverage)
 
-      for (let i = 0; i < numStickers; i++) {
+        const positions = [];
+        const attempts = 0;
+
+        // Generate many candidate positions
+        const candidates = [];
+        for (let i = 0; i < maxAttempts; i++) {
+          const side = Math.random() > 0.5 ? "left" : "right";
+          let x, deltaFromSection;
+
+          if (side === "left") {
+            const leftMargin = (100 - sectionWidthPercentage) / 2;
+            const leftRange = leftMargin - 5; // 5% buffer from edge
+            x = Math.random() * leftRange;
+            deltaFromSection = (viewportWidth - sectionWidth) / 2 - (x * viewportWidth / 100);
+          } else {
+            const rightMargin = (100 - sectionWidthPercentage) / 2;
+            const rightRange = rightMargin - 5; // 5% buffer from edge
+            x = Math.random() * rightRange;
+            deltaFromSection = (viewportWidth - sectionWidth) / 2 - (x * viewportWidth / 100);
+          }
+
+          const y = Math.random() * (documentHeight / viewportHeight) * 100;
+          const rotation = Math.random() * 60 - 30;
+
+          candidates.push({
+            side: side,
+            x: x,
+            y: y,
+            deltaFromSection: deltaFromSection,
+            rotation: rotation
+          });
+        }
+
+        // Filter out overlapping positions and same-type clustering
+        const finalPositions = [];
+        for (const candidate of candidates) {
+          if (finalPositions.length >= targetStickers) break;
+
+          // Randomly assign a sticker type to this candidate
+          const stickerType = stickerImages[Math.floor(Math.random() * stickerImages.length)];
+          candidate.stickerType = stickerType;
+
+          let hasOverlap = false;
+          for (const existing of finalPositions) {
+            // Calculate distance between sticker centers
+            const dx = Math.abs(candidate.x - existing.x) * viewportWidth / 100;
+            const dy = Math.abs(candidate.y - existing.y) * viewportHeight / 100;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+
+            // Check for same sticker type proximity (5 units = 5 * stickerSize = 1000px)
+            const sameTypeDistance = 5 * stickerSize; // 1000px for same type stickers
+            if (candidate.stickerType === existing.stickerType && distance < sameTypeDistance) {
+              hasOverlap = true;
+              break;
+            }
+
+            // Regular overlap check for different types
+            const dynamicMinDistance = minDistance + (Math.random() * 15 - 20);
+            if (distance < dynamicMinDistance) {
+              hasOverlap = true;
+              break;
+            }
+          }
+
+          if (!hasOverlap) {
+            finalPositions.push(candidate);
+          }
+        }
+
+        return finalPositions;
+      }
+
+      // Create stickers with improved positioning
+      const stickerPositions = generateStickerPositions();
+
+      for (let i = 0; i < stickerPositions.length; i++) {
+        const pos = stickerPositions[i];
         const sticker = document.createElement("img");
         const tooltip = document.createElement("div");
 
@@ -170,35 +254,34 @@
           }
         });
 
-        const viewportHeight = window.innerHeight;
-        const documentHeight = document.body.scrollHeight - 800;
-
-        const randomImage = stickerImages[Math.floor(Math.random() * stickerImages.length)];
-        sticker.src = randomImage;
+        // Use the pre-assigned sticker type from the algorithm
+        sticker.src = pos.stickerType;
         sticker.classList.add("sticker");
         sticker.style.cursor = "pointer"; // Add pointer cursor to indicate clickability
 
-        let side;
-        let deltaFromSection;
-        if (Math.random() > 0.5) {
-          side = "left";
-          sticker.style.left = `${(100 - sectionWidthPercentage) / 2 - 100 * 100 / viewportHeight - (Math.random() * 360 / viewportHeight * 100)}%`; // Random horizontal position within the remaining space
-          deltaFromSection = (viewportWidth - sectionWidth) / 2 - parseFloat(sticker.style.left) * viewportWidth / 100;
+        // Apply the calculated position
+        if (pos.side === "left") {
+          sticker.style.left = `${pos.x}%`;
         } else {
-          side = "right";
-          sticker.style.right = `${(100 - sectionWidthPercentage) / 2 - 100 * 100 / viewportHeight - (Math.random() * 360 / viewportHeight * 100)}%`; // Random horizontal position within the remaining space
-          deltaFromSection = (viewportWidth - sectionWidth) / 2 - parseFloat(sticker.style.right) * viewportWidth / 100;
+          sticker.style.right = `${pos.x}%`;
         }
-        sticker.style.top = `${Math.random() * (documentHeight / viewportHeight) * 100 - 5}%`; // Random vertical position
-        const rotation = Math.random() * 60 - 30; // Random rotation between -90 and 90 degrees
-        sticker.style.transform = `rotate(${rotation}deg)`;
+        sticker.style.top = `${pos.y}%`;
+        sticker.style.transform = `rotate(${pos.rotation}deg)`;
+
         // Adjust shadow position based on rotation
-        const shadowOffsetX = Math.sin(rotation * (Math.PI / 180)) * 5; // Shadow X offset
-        const shadowOffsetY = Math.cos(rotation * (Math.PI / 180)) * 5; // Shadow Y offset
+        const shadowOffsetX = Math.sin(pos.rotation * (Math.PI / 180)) * 5;
+        const shadowOffsetY = Math.cos(pos.rotation * (Math.PI / 180)) * 5;
         sticker.style.filter = `drop-shadow(${shadowOffsetX}px ${shadowOffsetY}px 5px rgba(0, 0, 0, 0.5))`;
+
         document.body.appendChild(sticker);
         document.body.appendChild(tooltip);
-        stickers.push({ element: sticker, tooltip: tooltip, side: side, deltaFromSection: deltaFromSection, rotation: rotation });
+        stickers.push({
+          element: sticker,
+          tooltip: tooltip,
+          side: pos.side,
+          deltaFromSection: pos.deltaFromSection,
+          rotation: pos.rotation
+        });
       }
 
       // Helper function to extract sticker info from the src URL
@@ -211,11 +294,13 @@
       function updateStickerPositions() {
         const viewportWidth = window.innerWidth;
         const sectionWidth = section.offsetWidth;
+        const sectionWidthPercentage = (sectionWidth / viewportWidth) * 100;
 
         stickers.forEach(stickerData => {
           const sticker = stickerData.element;
           const deltaFromSection = stickerData.deltaFromSection;
           const sectionLeft = (viewportWidth - sectionWidth) / 2;
+
           if (stickerData.side === "left") {
             const newLeft = sectionLeft - deltaFromSection;
             sticker.style.left = `${newLeft}px`;
