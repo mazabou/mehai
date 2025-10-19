@@ -306,38 +306,6 @@
     <script>
       mapboxgl.accessToken = 'pk.eyJ1IjoibWVoZGlhIiwiYSI6ImNsaHdqNGltbDBoM3cza3Fmd3pkaG05ejMifQ.N5TBe_Sg3jBrPyAU7uLv3A';
 
-      // Add error handling for map initialization
-      try {
-        var map = new mapboxgl.Map({
-          container: 'map', // container id
-          style: 'mapbox://styles/mapbox/streets-v11', // using streets style for better compatibility
-          center: [2.3522, 48.8566], // center on Paris for better view of the trajectory
-          zoom: 2, // starting zoom to show the full trajectory
-          projection: 'mercator' // explicitly set projection to avoid globe issues
-        });
-      } catch (error) {
-        console.error('Map initialization error:', error);
-        // Fallback to basic map without custom style
-        var map = new mapboxgl.Map({
-          container: 'map',
-          style: {
-            version: 8,
-            sources: {},
-            layers: [
-              {
-                id: 'background',
-                type: 'background',
-                paint: {
-                  'background-color': '#f8f9fa'
-                }
-              }
-            ]
-          },
-          center: [2.3522, 48.8566],
-          zoom: 2
-        });
-      }
-
       // Define the trajectory data
       const trajectory = [
         {
@@ -365,6 +333,44 @@
           coordinates: [-122.4194, 37.7749]
         }
       ];
+
+      // Calculate center point for better map positioning
+      const lngs = trajectory.map(point => point.coordinates[0]);
+      const lats = trajectory.map(point => point.coordinates[1]);
+      const centerLng = (Math.min(...lngs) + Math.max(...lngs)) / 2;
+      const centerLat = (Math.min(...lats) + Math.max(...lats)) / 2;
+
+      // Add error handling for map initialization
+      try {
+        var map = new mapboxgl.Map({
+          container: 'map', // container id
+          style: 'mapbox://styles/mapbox/streets-v11', // using streets style for better compatibility
+          center: [centerLng, centerLat], // dynamically calculated center
+          zoom: 2, // starting zoom to show the full trajectory
+          projection: 'mercator' // explicitly set projection to avoid globe issues
+        });
+      } catch (error) {
+        console.error('Map initialization error:', error);
+        // Fallback to basic map without custom style
+        var map = new mapboxgl.Map({
+          container: 'map',
+          style: {
+            version: 8,
+            sources: {},
+            layers: [
+              {
+                id: 'background',
+                type: 'background',
+                paint: {
+                  'background-color': '#f8f9fa'
+                }
+              }
+            ]
+          },
+          center: [centerLng, centerLat],
+          zoom: 2
+        });
+      }
 
       // Add error handling for map events
       map.on('error', function (e) {
@@ -435,27 +441,6 @@
             cursor: pointer;
             position: relative;
           `;
-
-            // Add number indicator
-            const number = document.createElement('div');
-            number.style.cssText = `
-            position: absolute;
-            top: -8px;
-            right: -8px;
-            background-color: #1f2937;
-            color: white;
-            border-radius: 50%;
-            width: 16px;
-            height: 16px;
-            font-size: 10px;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 2px solid white;
-          `;
-            number.textContent = index + 1;
-            el.appendChild(number);
 
             // Create popup
             const popup = new mapboxgl.Popup({
