@@ -742,3 +742,21 @@ a.nav:hover {
         transform: scale(1);
     }
 }
+
+/* Ad Banner Styles */
+.ad-banner-tile {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.ad-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0.5em;
+    transition: opacity 0.3s ease;
+}
+
+.ad-image:hover {
+    opacity: 0.9;
+}
