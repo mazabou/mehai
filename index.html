@@ -305,12 +305,38 @@
 
     <script>
       mapboxgl.accessToken = 'pk.eyJ1IjoibWVoZGlhIiwiYSI6ImNsaHdqNGltbDBoM3cza3Fmd3pkaG05ejMifQ.N5TBe_Sg3jBrPyAU7uLv3A';
-      var map = new mapboxgl.Map({
-        container: 'map', // container id
-        style: 'mapbox://styles/mapbox/light-v11', // lighter style for better trajectory visibility
-        center: [2.3522, 48.8566], // center on Paris for better view of the trajectory
-        zoom: 2 // starting zoom to show the full trajectory
-      });
+
+      // Add error handling for map initialization
+      try {
+        var map = new mapboxgl.Map({
+          container: 'map', // container id
+          style: 'mapbox://styles/mapbox/streets-v11', // using streets style for better compatibility
+          center: [2.3522, 48.8566], // center on Paris for better view of the trajectory
+          zoom: 2, // starting zoom to show the full trajectory
+          projection: 'mercator' // explicitly set projection to avoid globe issues
+        });
+      } catch (error) {
+        console.error('Map initialization error:', error);
+        // Fallback to basic map without custom style
+        var map = new mapboxgl.Map({
+          container: 'map',
+          style: {
+            version: 8,
+            sources: {},
+            layers: [
+              {
+                id: 'background',
+                type: 'background',
+                paint: {
+                  'background-color': '#f8f9fa'
+                }
+              }
+            ]
+          },
+          center: [2.3522, 48.8566],
+          zoom: 2
+        });
+      }
 
       // Define the trajectory data
       const trajectory = [
@@ -340,60 +366,66 @@
         }
       ];
 
+      // Add error handling for map events
+      map.on('error', function (e) {
+        console.error('Map error:', e);
+      });
+
       // Add trajectory line
       map.on('load', function () {
-        // Add trajectory line source
-        map.addSource('trajectory-line', {
-          'type': 'geojson',
-          'data': {
-            'type': 'Feature',
-            'properties': {},
-            'geometry': {
-              'type': 'LineString',
-              'coordinates': trajectory.map(point => point.coordinates)
+        try {
+          // Add trajectory line source
+          map.addSource('trajectory-line', {
+            'type': 'geojson',
+            'data': {
+              'type': 'Feature',
+              'properties': {},
+              'geometry': {
+                'type': 'LineString',
+                'coordinates': trajectory.map(point => point.coordinates)
+              }
             }
-          }
-        });
+          });
 
-        // Add trajectory line layer
-        map.addLayer({
-          'id': 'trajectory-line',
-          'type': 'line',
-          'source': 'trajectory-line',
-          'layout': {
-            'line-join': 'round',
-            'line-cap': 'round'
-          },
-          'paint': {
-            'line-color': '#3b82f6',
-            'line-width': 3,
-            'line-opacity': 0.8
-          }
-        });
+          // Add trajectory line layer
+          map.addLayer({
+            'id': 'trajectory-line',
+            'type': 'line',
+            'source': 'trajectory-line',
+            'layout': {
+              'line-join': 'round',
+              'line-cap': 'round'
+            },
+            'paint': {
+              'line-color': '#3b82f6',
+              'line-width': 3,
+              'line-opacity': 0.8
+            }
+          });
 
-        // Add animated trajectory line
-        map.addLayer({
-          'id': 'trajectory-line-animated',
-          'type': 'line',
-          'source': 'trajectory-line',
-          'layout': {
-            'line-join': 'round',
-            'line-cap': 'round'
-          },
-          'paint': {
-            'line-color': '#1d4ed8',
-            'line-width': 2,
-            'line-dasharray': [2, 1],
-            'line-opacity': 0.6
-          }
-        });
+          // Add animated trajectory line
+          map.addLayer({
+            'id': 'trajectory-line-animated',
+            'type': 'line',
+            'source': 'trajectory-line',
+            'layout': {
+              'line-join': 'round',
+              'line-cap': 'round'
+            },
+            'paint': {
+              'line-color': '#1d4ed8',
+              'line-width': 2,
+              'line-dasharray': [2, 1],
+              'line-opacity': 0.6
+            }
+          });
 
-        // Add markers for each city
-        trajectory.forEach((point, index) => {
-          // Create marker element
-          const el = document.createElement('div');
-          el.className = 'trajectory-marker';
-          el.style.cssText = `
+          // Add markers for each city
+          trajectory.forEach((point, index) => {
+            // Create marker element
+            const el = document.createElement('div');
+            el.className = 'trajectory-marker';
+            el.style.cssText = `
             background-color: ${index === 0 ? '#ef4444' : index === trajectory.length - 1 ? '#10b981' : '#3b82f6'};
             width: 20px;
             height: 20px;
@@ -404,9 +436,9 @@
             position: relative;
           `;
 
-          // Add number indicator
-          const number = document.createElement('div');
-          number.style.cssText = `
+            // Add number indicator
+            const number = document.createElement('div');
+            number.style.cssText = `
             position: absolute;
             top: -8px;
             right: -8px;
@@ -422,30 +454,30 @@
             justify-content: center;
             border: 2px solid white;
           `;
-          number.textContent = index + 1;
-          el.appendChild(number);
+            number.textContent = index + 1;
+            el.appendChild(number);
 
-          // Create popup
-          const popup = new mapboxgl.Popup({
-            offset: 25,
-            closeButton: true,
-            closeOnClick: false
-          }).setHTML(`
+            // Create popup
+            const popup = new mapboxgl.Popup({
+              offset: 25,
+              closeButton: true,
+              closeOnClick: false
+            }).setHTML(`
             <div style="padding: 8px;">
               <h3 style="margin: 0; font-size: 14px; font-weight: bold; color: #1f2937;">${point.name}</h3>
             </div>
           `);
 
-          // Add marker to map
-          new mapboxgl.Marker(el)
-            .setLngLat(point.coordinates)
-            .setPopup(popup)
-            .addTo(map);
-        });
+            // Add marker to map
+            new mapboxgl.Marker(el)
+              .setLngLat(point.coordinates)
+              .setPopup(popup)
+              .addTo(map);
+          });
 
-        // Add title overlay
-        const titleEl = document.createElement('div');
-        titleEl.style.cssText = `
+          // Add title overlay
+          const titleEl = document.createElement('div');
+          titleEl.style.cssText = `
           position: absolute;
           top: 10px;
           left: 10px;
@@ -458,8 +490,28 @@
           box-shadow: 0 2px 4px rgba(0,0,0,0.1);
           z-index: 1;
         `;
-        titleEl.textContent = 'My Journey';
-        document.getElementById('map').appendChild(titleEl);
+          titleEl.textContent = 'My Journey';
+          document.getElementById('map').appendChild(titleEl);
+        } catch (error) {
+          console.error('Error rendering trajectory:', error);
+          // Fallback: just show a simple message
+          const errorEl = document.createElement('div');
+          errorEl.style.cssText = `
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+          `;
+          errorEl.textContent = 'Map loading...';
+          document.getElementById('map').appendChild(errorEl);
+        }
       });
 
     </script>
