@@ -21,7 +21,7 @@ body {
 .footer {
     background-color: white;
     padding: 0rem;
-    alignment: left;
+    text-align: left;
 }
 
 
@@ -747,6 +747,32 @@ a.nav:hover {
 .ad-banner-tile {
     padding: 0 !important;
     margin: 0 !important;
+    position: relative;
+}
+
+.ad-banner-link {
+    position: relative;
+    display: block;
+}
+
+.ad-banner-external-link {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    z-index: 3;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.ad-banner-external-link i {
+    font-size: 0.7rem;
+    color: #fff;
 }
 
 .ad-image {
@@ -760,3 +786,602 @@ a.nav:hover {
 .ad-image:hover {
     opacity: 0.9;
 }
+
+/* Workshop Bento Box Styles - Edgeless */
+.workshop-bento-tile {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.workshop-bento-box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 308px;
+    overflow: hidden;
+    background-color: #F8F9F9;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 0.5em;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+    cursor: pointer;
+}
+
+.workshop-external-link {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    z-index: 3;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.workshop-external-link i {
+    font-size: 0.7rem;
+    color: #666;
+}
+
+.workshop-biosignal-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* JavaScript-controlled animation rows */
+.workshop-biosignal-row-js {
+    position: absolute;
+    width: 100%;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.workshop-biosignal-icon-js {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    opacity: 0.9;
+    flex-shrink: 0;
+    position: absolute;
+    transition: none;
+}
+
+.workshop-bento-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.workshop-bento-text {
+    text-align: center;
+}
+
+.workshop-bento-title {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #333;
+    line-height: 1.2;
+    margin-bottom: 0.2rem;
+}
+
+.workshop-bento-subtitle {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #666;
+    margin-bottom: 0.2rem;
+}
+
+.workshop-date {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: #7f8c8d;
+}
+
+.workshop-bento-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+}
+
+.workshop-bento-link:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .workshop-bento-title {
+        font-size: 0.85rem;
+    }
+
+    .workshop-bento-subtitle {
+        font-size: 0.7rem;
+    }
+
+    .workshop-date {
+        font-size: 0.65rem;
+    }
+
+    .workshop-biosignal-icon-js {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .workshop-bento-content {
+        padding: 0.8rem;
+    }
+
+    .workshop-bento-title {
+        font-size: 0.8rem;
+    }
+
+    .workshop-bento-subtitle {
+        font-size: 0.65rem;
+    }
+
+    .workshop-date {
+        font-size: 0.6rem;
+    }
+
+    .workshop-biosignal-icon-js {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* COSYNE Tutorial Bento Box Styles */
+.cosyne-tutorial-bento-tile {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.cosyne-tutorial-bento-tile {
+    position: relative;
+}
+
+.cosyne-tutorial-bento-box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 308px;
+    overflow: hidden;
+    background-color: #f5f5f5;
+    /* Light gray background */
+    border: none;
+    /* No border */
+    border-radius: 0.5em;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+    cursor: pointer;
+}
+
+.cosyne-tutorial-animation-background {
+    position: absolute;
+    inset: 0;
+    /* fill full box */
+    z-index: 1;
+    opacity: 0.3;
+    filter: blur(0.5px);
+}
+
+.cosyne-tutorial-svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.cosyne-tutorial-external-link {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    z-index: 3;
+    background: rgba(255, 255, 255, 0.9);
+    /* Light background for icon */
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for icon */
+}
+
+.cosyne-tutorial-external-link i {
+    font-size: 0.7rem;
+    color: #666;
+    /* Dark gray icon color */
+}
+
+.cosyne-tutorial-bento-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    z-index: 2;
+}
+
+.cosyne-tutorial-bento-text {
+    text-align: center;
+}
+
+.cosyne-tutorial-bento-title {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #333;
+    line-height: 1.2;
+    margin-bottom: 0.2rem;
+}
+
+.cosyne-tutorial-bento-subtitle {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #666;
+    line-height: 1.2;
+    margin-bottom: 0.2rem;
+}
+
+.cosyne-tutorial-date {
+    display: block;
+    font-size: 0.7rem;
+    color: #7f8c8d;
+    line-height: 1.2;
+}
+
+.cosyne-tutorial-bento-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+}
+
+/* NeuroFM Brain Bento Box Styles */
+.neurofm-brain-bento-tile {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.neurofm-brain-bento-box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 308px;
+    overflow: hidden;
+    background-color: #f5f5f5;
+    border: none;
+    border-radius: 0.5em;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+#neurofm-brain-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.neurofm-brain-external-link {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    z-index: 3;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.neurofm-brain-external-link i {
+    font-size: 0.7rem;
+    color: #666;
+}
+
+.neurofm-brain-bento-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.neurofm-brain-bento-text {
+    text-align: center;
+}
+
+.neurofm-brain-bento-title {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #333;
+    line-height: 1.2;
+    margin-bottom: 0.2rem;
+}
+
+.neurofm-brain-bento-subtitle {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #666;
+    margin-bottom: 0.2rem;
+}
+
+.neurofm-brain-date {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: #7f8c8d;
+}
+
+.neurofm-brain-bento-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+}
+
+.neurofm-brain-bento-link:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Responsive adjustments for brain bento */
+@media (max-width: 768px) {
+    .neurofm-brain-bento-title {
+        font-size: 0.85rem;
+    }
+
+    .neurofm-brain-bento-subtitle {
+        font-size: 0.7rem;
+    }
+
+    .neurofm-brain-date {
+        font-size: 0.65rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .neurofm-brain-bento-content {
+        padding: 0.8rem;
+    }
+
+    .neurofm-brain-bento-title {
+        font-size: 0.8rem;
+    }
+
+    .neurofm-brain-bento-subtitle {
+        font-size: 0.65rem;
+    }
+
+    .neurofm-brain-date {
+        font-size: 0.6rem;
+    }
+}
+
+/* Neuro-Galaxy Bento */
+.neuro-galaxy-bento-tile {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.neuro-galaxy-bento-box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 308px;
+    overflow: hidden;
+    background: linear-gradient(180deg, #ffffff 0%, #f7f7f7 100%);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 0.5em;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.neuro-galaxy-external-link {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    z-index: 3;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.neuro-galaxy-external-link i {
+    font-size: 0.7rem;
+    color: #666;
+}
+
+.neuro-galaxy-background {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.ng-orbit {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px dashed rgba(0, 0, 0, 0.08);
+    animation: orbit-rotate 20s linear infinite;
+}
+
+.ng-orbit-1 {
+    width: 120%;
+    height: 120%;
+    left: -10%;
+    top: -10%;
+}
+
+.ng-orbit-2 {
+    width: 90%;
+    height: 90%;
+    left: 5%;
+    top: 5%;
+    animation-duration: 26s;
+}
+
+.ng-orbit-3 {
+    width: 60%;
+    height: 60%;
+    left: 20%;
+    top: 20%;
+    animation-duration: 32s;
+}
+
+@keyframes orbit-rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.neuro-galaxy-bento-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0.9rem;
+}
+
+.neuro-galaxy-header {
+    margin-bottom: 0.4rem;
+}
+
+.neuro-galaxy-title {
+    font-weight: 700;
+    font-size: 1rem;
+    color: #222;
+}
+
+.neuro-galaxy-subtitle {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.neuro-galaxy-packages {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+.ng-package {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.ng-package:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.ng-logo {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    border-radius: 6px;
+}
+
+.ng-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.ng-name {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #222;
+}
+
+.ng-desc {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.neuro-galaxy-cta {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+    border-radius: 12px;
+    background: linear-gradient(90deg, #eef1ff 0%, #f6f9ff 100%);
+    border: 1px solid rgba(72, 95, 199, 0.15);
+    color: #3b4cca;
+    font-weight: 600;
+}
+
+.neuro-galaxy-cta i {
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .neuro-galaxy-title {
+        font-size: 0.95rem;
+    }
+
+    .neuro-galaxy-subtitle {
+        font-size: 0.8rem;
+    }
+
+    .ng-desc {
+        display: none;
+    }
+}
+
+/* Make coding + neuro-galaxy tiles fit exactly in one row */
+/* Intentionally no special sizing; rely on Bulma .is-6 and default tile margins */
+
+/* No overrides for .code-galaxy-row to keep spacing consistent with other rows */

@@ -21,6 +21,10 @@
   <script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
   <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
   <script src="slider.js"></script>
+  <script src="workshop-bento.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="neurofm-brain-bento.js"></script>
+  <script src="cosyne-tutorial-bento.js"></script>
 
 
 
@@ -257,7 +261,10 @@
   <div class="section" style="padding-top:0em; padding-bottom: 0em;">
     <div class="tile">
       <div class="tile is-child ad-banner-tile">
-        <a href="https://torchbrain.org" target="_blank" rel="noopener noreferrer">
+        <a href="https://torchbrain.org" target="_blank" rel="noopener noreferrer" class="ad-banner-link">
+          <div class="ad-banner-external-link">
+            <i class="fa-solid fa-external-link-alt"></i>
+          </div>
           <img src="assets/torchbrain_ad.png" alt="Torch Brain - Deep learning on neural data" class="ad-image">
         </a>
       </div>
@@ -282,7 +289,7 @@
               </p>
               <hr style="margin-top: 2px; margin-bottom:10px;">
               <p>
-                I am building neuro-foundation models, large-scale models
+                I am building foundation models for the brain, large-scale models
                 designed to understand brain data across modalities, species, tasks, and
                 environments, with the goal of advancing AI, brain-machine interfaces and neuroscience.
               </p>
@@ -573,6 +580,31 @@
           </div>
         </div>
       </div>
+      <div class="tile is-child is-4 workshop-bento-tile">
+        <a href="https://brainbodyfm-workshop.github.io/" target="_blank" rel="noopener noreferrer"
+          class="workshop-bento-link">
+          <div class="workshop-bento-box">
+            <!-- External Link Icon -->
+            <div class="workshop-external-link">
+              <i class="fa-solid fa-external-link-alt"></i>
+            </div>
+
+            <!-- Animated Biosignal Background -->
+            <div class="workshop-biosignal-background">
+              <!-- Rows will be created dynamically by JavaScript -->
+            </div>
+
+            <!-- Content -->
+            <div class="workshop-bento-content">
+              <div class="workshop-bento-text">
+                <span class="workshop-bento-title">Foundation Models for the Brain and Body Workshop, NeurIPS
+                  2025</span>
+                <span class="workshop-date">December 6th, 2025 - San Diego, California</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
       <!-- <div class="tile is-child is-hidden-mobile" style="padding: 0em; overflow: hidden;position: relative; ">
         <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="100%"
           style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;"
@@ -603,6 +635,8 @@
             <li> <span class="title"><button
                   class="ghostbutton tag is-error is-light has-text-weight-bold is-medium resume_header is-large"><i
                     class="fa-solid fa-briefcase"></i> &nbsp; Work Experience </button></span> </li>
+            <li><i class="fa-solid fa-chevron-right fa-2xs"></i>&nbsp; Postdoc @ <a
+                href="https://arni-institute.org/">NSF ARNI Institute</a> Columbia, 2024 - 2025 </li>
             <li><i class="fa-solid fa-chevron-right fa-2xs"></i>&nbsp; AI Research Scientist Intern @ <a
                 href="https://research.ibm.com/">IBM Research</a>, 2023 </li>
             <li><i class="fa-solid fa-chevron-right fa-2xs"></i>&nbsp; Deep Learning Intern @ <a
@@ -615,84 +649,247 @@
     </div>
 
 
-    <div class="tile is-only-child">
-      <div class="padded_block">
-        <ul>
-          <li> <span class="title"><button
-                class="ghostbutton tag is-danger is-light has-text-weight-bold is-medium resume_header is-large"><i
-                  class="fa-solid fa-chalkboard"></i> &nbsp; Teaching </button></span> </li>
-          <li>
-            <div class="teach-section">
-              <div class="teach-description">
-                <i class="fa-solid fa-chevron-right fa-2xs"></i>
-                Content Developer for the <u>COSYNE 2025 main tutorial</u>, "<a
-                  href="https://cosyne-tutorial-2025.github.io/">Transformers in Neuroscience</a>".
-                Montreal, Canada 2025.
-              </div>
-              <div>
-                <span class="nowrap is-hidden-mobile"><a href="https://cosyne-tutorial-2025.github.io/"><i
-                      class="fa-solid fa-box-archive"></i> Materials</a></span>
+    <div class="tile">
+      <div class="tile is-child is-4 neurofm-brain-bento-tile">
+        <a href="https://neurofm-workshop.github.io/" target="_blank" rel="noopener noreferrer"
+          class="neurofm-brain-bento-link">
+          <div class="neurofm-brain-bento-box">
+            <!-- Brain Animation Container -->
+            <div id="neurofm-brain-container"></div>
+
+            <!-- External Link Icon -->
+            <div class="neurofm-brain-external-link">
+              <i class="fa-solid fa-external-link-alt"></i>
+            </div>
+
+            <!-- Content -->
+            <div class="neurofm-brain-bento-content">
+              <div class="neurofm-brain-bento-text">
+                <span class="neurofm-brain-bento-title">Building a Foundation Model for the Brain Workshop, COSYNE
+                  2025</span>
+                <span class="neurofm-brain-date">March 31-April 1, 2025 - Montreal, Canada</span>
               </div>
             </div>
-          </li>
-          <li>
-            <div class="teach-section">
-              <div class="teach-description">
-                <i class="fa-solid fa-chevron-right fa-2xs"></i>
-                Co-Instructor for the <u>representation learning hands-on session</u> during the Caltech/Chen
-                Institute's
-                <a
-                  href="https://neuroscience.caltech.edu/about/research-centers/chen-center-for-datasai/data-science-and-ai-for-neuroscience-summer-school">Data
-                  Science and AI for Neuroscience Summer School</a>, Pasadena, California, 2022.
+          </div>
+        </a>
+      </div>
+      <div class="tile is-child">
+        <div class="padded_block">
+          <ul>
+            <li> <span class="title"><button
+                  class="ghostbutton tag is-danger is-light has-text-weight-bold is-medium resume_header is-large"><i
+                    class="fa-solid fa-chalkboard"></i> &nbsp; Teaching </button></span> </li>
+            <li>
+              <div class="teach-section">
+                <div class="teach-description">
+                  <i class="fa-solid fa-chevron-right fa-2xs"></i>
+                  Content Developer for the <u>COSYNE 2025 main tutorial</u>, "<a
+                    href="https://cosyne-tutorial-2025.github.io/">Transformers in Neuroscience</a>".
+                  Montreal, Canada 2025.
+                </div>
+                <div>
+                  <span class="nowrap is-hidden-mobile"><a href="https://cosyne-tutorial-2025.github.io/"><i
+                        class="fa-solid fa-box-archive"></i> Materials</a></span>
+                </div>
               </div>
-              <div>
+            </li>
+            <li>
+              <div class="teach-section">
+                <div class="teach-description">
+                  <i class="fa-solid fa-chevron-right fa-2xs"></i>
+                  Co-Instructor for the <u>representation learning hands-on session</u> during the Caltech/Chen
+                  Institute's
+                  <a
+                    href="https://neuroscience.caltech.edu/about/research-centers/chen-center-for-datasai/data-science-and-ai-for-neuroscience-summer-school">Data
+                    Science and AI for Neuroscience Summer School</a>, Pasadena, California, 2022.
+                </div>
+                <div>
+                  <span class="nowrap is-hidden-mobile"><a
+                      href="https://github.com/SaberaTalukder/Chen_Institute_DataSAI_for_Neuroscience/tree/main/07_14_22_day8_generative_modeling_and_MYOW"><i
+                        class="fa-solid fa-box-archive"></i> Materials</a></span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="teach-section">
+                <div class="teach-description">
+                  <i class="fa-solid fa-chevron-right fa-2xs"></i>
+                  Content Developer for the <u>Python bootcamp session</u> for the
+                  <a
+                    href="https://www.mbl.edu/education/advanced-research-training-courses/course-offerings/dlmbl-deep-learning-microscopy-image-analysis">DL@MBL:
+                    Deep Learning for Microscopy Image Analysis</a>
+                  course at Marine Biological Laboratory, Woods Hole, Massachusetts, 2021.
+                </div>
                 <span class="nowrap is-hidden-mobile"><a
-                    href="https://github.com/SaberaTalukder/Chen_Institute_DataSAI_for_Neuroscience/tree/main/07_14_22_day8_generative_modeling_and_MYOW"><i
+                    href="https://github.com/dlmbl/boot/tree/0b8525daa4738b711ba272c4b7032265199f380f"><i
                       class="fa-solid fa-box-archive"></i> Materials</a></span>
               </div>
-            </div>
-          </li>
-          <li>
-            <div class="teach-section">
-              <div class="teach-description">
-                <i class="fa-solid fa-chevron-right fa-2xs"></i>
-                Content Developer for the <u>Python bootcamp session</u> for the
-                <a
-                  href="https://www.mbl.edu/education/advanced-research-training-courses/course-offerings/dlmbl-deep-learning-microscopy-image-analysis">DL@MBL:
-                  Deep Learning for Microscopy Image Analysis</a>
-                course at Marine Biological Laboratory, Woods Hole, Massachusetts, 2021.
+            </li>
+            <li>
+              <div class="teach-section">
+                <div class="teach-description">
+                  <i class="fa-solid fa-chevron-right fa-2xs"></i>
+                  Content Developer for BMED 6517 <u>Machine Learning in Biosciences</u> at Georgia Tech, 2021.
+                </div>
+                <div class="is-hidden-mobile">
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
               </div>
-              <span class="nowrap is-hidden-mobile"><a
-                  href="https://github.com/dlmbl/boot/tree/0b8525daa4738b711ba272c4b7032265199f380f"><i
-                    class="fa-solid fa-box-archive"></i> Materials</a></span>
-            </div>
-          </li>
-          <li>
-            <div class="teach-section">
-              <div class="teach-description">
-                <i class="fa-solid fa-chevron-right fa-2xs"></i>
-                Content Developer for BMED 6517 <u>Machine Learning in Biosciences</u> at Georgia Tech, 2021.
+            </li>
+            <li>
+              <div class="teach-section">
+                <div class="teach-description">
+                  <i class="fa-solid fa-chevron-right fa-2xs"></i>
+                  Teaching Assistant for CS 4261 <u>Mobile applications and Services</u> at Georgia Tech, Spring 2019.
+                </div>
+                <div class="is-hidden-mobile">
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
               </div>
-              <div class="is-hidden-mobile">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-            </div>
-          </li>
-          <li>
-            <div class="teach-section">
-              <div class="teach-description">
-                <i class="fa-solid fa-chevron-right fa-2xs"></i>
-                Teaching Assistant for CS 4261 <u>Mobile applications and Services</u> at Georgia Tech, Spring 2019.
-              </div>
-              <div class="is-hidden-mobile">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-            </div>
-          </li>
-        </ul>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
 
     <div class="tile">
+      <div class="tile is-child">
+        <div class="padded_block">
+          <ul>
+            <li><span class="title"><button
+                  class="ghostbutton tag is-light has-text-weight-bold is-medium resume_header is-large"><i
+                    class="fa-solid fa-laptop"></i> &nbsp; Coding </button></span></li>
+            <li><i class="fa-solid fa-code fa-2xs"></i> Main Programming Language: <i class="fa-brands fa-python"></i>
+              Python. </li>
+            <li><i class="fa-solid fa-code fa-2xs"></i> ML frameworks: <span class="nowrap"><i
+                  class="fa-solid fa-fire-flame-curved"></i> PyTorch</span>, <span class="nowrap"><i
+                  class="fa-solid fa-circle-nodes"></i> PyG</span>, <span class="nowrap"><i
+                  class="fa-solid fa-cubes"></i>
+                jax.</span> </li>
+            <li><i class="fa-solid fa-code fa-2xs"></i> Favorite tools: <span class="nowrap"><i
+                  class="fa-solid fa-chart-area"></i> Bokeh</span>, <span class="nowrap"><i
+                  class="fa-solid fa-pepper-hot"></i> Flask</span>, <span class="nowrap"><i
+                  class="fa-brands fa-docker"></i> Docker</span>, <span class="nowrap"><i
+                  class="fa-solid fa-chart-line"></i>TensorBoard,</span> <span class="nowrap"><i
+                  class="fa-solid fa-share-nodes"></i> raytune.</span></li>
+          </ul>
+          <div style="padding-top: 1rem;">
+            <nav class="panel">
+              <p class="panel-heading" style="font-size:1em; background-color: #f5f5f5;">
+                Repositories
+              </p>
 
+              <a class="panel-block" href="https://github.com/neuro-galaxy/poyo" target="_blank"
+                rel="noopener noreferrer">
+                <span class="panel-icon">
+                  <i class="fa fa-github" aria-hidden="true"></i>
+                </span>
+                poyo &nbsp;&nbsp; <iframe
+                  src="https://ghbtns.com/github-btn.html?user=neuro-galaxy&repo=poyo&type=star&count=true"
+                  frameborder="0" scrolling="0" width="150" height="20" title="GitHub"></iframe>
+              </a>
+              <a class="panel-block" href="https://github.com/nerdslab/bgrl" target="_blank" rel="noopener noreferrer">
+                <span class="panel-icon">
+                  <i class="fa fa-github" aria-hidden="true"></i>
+                </span>
+                bgrl &nbsp; &nbsp; <iframe
+                  src="https://ghbtns.com/github-btn.html?user=nerdslab&repo=bgrl&type=star&count=true" frameborder="0"
+                  scrolling="0" width="150" height="20" title="GitHub"></iframe></a>
+              </a>
+              <a class="panel-block" href="https://github.com/nerdslab/myow" target="_blank" rel="noopener noreferrer">
+                <span class="panel-icon">
+                  <i class="fa fa-github" aria-hidden="true"></i>
+                </span>
+                myow &nbsp;&nbsp; <iframe
+                  src="https://ghbtns.com/github-btn.html?user=nerdslab&repo=myow&type=star&count=true" frameborder="0"
+                  scrolling="0" width="150" height="20" title="GitHub"></iframe>
+              </a>
+              <a class="panel-block" href="https://github.com/nerdslab/myow-neuro" target="_blank"
+                rel="noopener noreferrer">
+                <span class="panel-icon">
+                  <i class="fa fa-github" aria-hidden="true"></i>
+                </span>
+                myow-neuro &nbsp;&nbsp; <iframe
+                  src="https://ghbtns.com/github-btn.html?user=nerdslab&repo=myow-neuro&type=star&count=true"
+                  frameborder="0" scrolling="0" width="150" height="20" title="GitHub"></iframe>
+              </a>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="tile is-child is-5 neuro-galaxy-bento-tile">
+        <div class="neuro-galaxy-bento-box">
+          <div class="neuro-galaxy-external-link">
+            <a href="https://github.com/neuro-galaxy" target="_blank" rel="noopener noreferrer"><i
+                class="fa-solid fa-external-link-alt"></i></a>
+          </div>
+          <div class="neuro-galaxy-background">
+            <span class="ng-orbit ng-orbit-1"></span>
+            <span class="ng-orbit ng-orbit-2"></span>
+            <span class="ng-orbit ng-orbit-3"></span>
+          </div>
+          <div class="neuro-galaxy-bento-content">
+            <div class="neuro-galaxy-header">
+              <div class="neuro-galaxy-title">Check out neuro-galaxy</div>
+              <div>Tools for building, training, and deploying multi-modal foundation models for the
+                brain.</div>
+            </div>
+            <div class="neuro-galaxy-packages">
+              <a class="ng-package" href="https://github.com/neuro-galaxy/temporaldata" target="_blank"
+                rel="noopener noreferrer">
+                <img src="assets/temporaldata.png" alt="temporaldata logo" class="ng-logo">
+                <div class="ng-text">
+                  <div class="ng-name">temporaldata</div>
+                  <div class="ng-desc">Efficient tools for multi-modal temporal neural data</div>
+                </div>
+              </a>
+              <a class="ng-package" href="https://github.com/neuro-galaxy/brainsets" target="_blank"
+                rel="noopener noreferrer">
+                <img src="assets/brainsets.png" alt="brainsets logo" class="ng-logo">
+                <div class="ng-text">
+                  <div class="ng-name">brainsets</div>
+                  <div class="ng-desc">Pre-processed neuroscience datasets ready to use</div>
+                </div>
+              </a>
+              <a class="ng-package" href="https://github.com/neuro-galaxy/torch_brain" target="_blank"
+                rel="noopener noreferrer">
+                <img src="assets/torchbrain.png" alt="torch_brain logo" class="ng-logo">
+                <div class="ng-text">
+                  <div class="ng-name">torch_brain</div>
+                  <div class="ng-desc">PyTorch transformers for neuroscience applications</div>
+                </div>
+              </a>
+            </div>
+            <a href="https://discord.gg/kQNKA6B8ZC" target="_blank" rel="noopener noreferrer" class="neuro-galaxy-cta">
+              <i class="fa-brands fa-discord"></i>
+              <span>Join the neuro-galaxy Discord server</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tile">
+      <div class="tile is-child is-4 cosyne-tutorial-bento-tile">
+        <a href="https://cosyne-tutorial-2025.github.io/" target="_blank" rel="noopener noreferrer"
+          class="cosyne-tutorial-bento-link">
+          <div class="cosyne-tutorial-bento-box">
+            <!-- Animated Background -->
+            <div class="cosyne-tutorial-animation-background">
+              <svg class="cosyne-tutorial-svg" viewBox="0 0 1200 308" preserveAspectRatio="none"
+                xmlns="http://www.w3.org/2000/svg" id="cosyne-tutorial-anim-svg"></svg>
+            </div>
+            <!-- External Link Icon -->
+            <div class="cosyne-tutorial-external-link">
+              <i class="fa-solid fa-external-link-alt"></i>
+            </div>
+            <!-- Content -->
+            <div class="cosyne-tutorial-bento-content">
+              <div class="cosyne-tutorial-bento-text">
+                <span class="cosyne-tutorial-bento-title">Transformers in Neuroscience, COSYNE 2025 Main Tutorial</span>
+                <span class="cosyne-tutorial-date">March 27, 2025 - Montreal, Canada</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
       <div class="tile is-child">
         <div class="padded_block">
           <ul>
@@ -701,7 +898,8 @@
                     class="fa-solid fa-glasses"></i> &nbsp; Reviewing </button></span> </li>
             <i><em>I have served as a reviewer for notable conferences and journals:</em></i>
             <li><i class="fa-solid fa-glasses fa-2xs"></i> Neural Information Processing Systems, <span
-                class="nowrap"><u>NeurIPS</u> 2021,</span> 2022, 2023, 2024 and 2025 (Top Reviewer).
+                class="nowrap"><u>NeurIPS</u> 2021,</span> 2022, 2023, 2024 and 2025 <i class="fa-solid fa-award"></i>
+              Top Reviewer.
             </li>
             <li><i class="fa-solid fa-glasses fa-2xs"></i> International Conference on Machine Learning, <span
                 class="nowrap"><u>ICML</u> 2023, 2024 and 2025 </span> </li>
@@ -724,97 +922,6 @@
           </ul>
         </div>
       </div>
-      <div class="tile is-child">
-        <div class="padded_block"></div>
-        <ul>
-          <li><span class="title"><button
-                class="ghostbutton tag is-light has-text-weight-bold is-medium resume_header is-large"><i
-                  class="fa-solid fa-laptop"></i> &nbsp; Coding </button></span></li>
-          <li><i class="fa-solid fa-code fa-2xs"></i> Main Programming Language: <i class="fa-brands fa-python"></i>
-            Python. </li>
-          <li><i class="fa-solid fa-code fa-2xs"></i> ML frameworks: <span class="nowrap"><i
-                class="fa-solid fa-fire-flame-curved"></i> PyTorch</span>, <span class="nowrap"><i
-                class="fa-solid fa-circle-nodes"></i> PyG</span>, <span class="nowrap"><i class="fa-solid fa-cubes"></i>
-              jax.</span> </li>
-          <li><i class="fa-solid fa-code fa-2xs"></i> Favorite tools: <span class="nowrap"><i
-                class="fa-solid fa-chart-area"></i> Bokeh</span>, <span class="nowrap"><i
-                class="fa-solid fa-pepper-hot"></i> Flask</span>, <span class="nowrap"><i
-                class="fa-brands fa-docker"></i> Docker</span>, <span class="nowrap"><i
-                class="fa-solid fa-chart-line"></i>TensorBoard,</span> <span class="nowrap"><i
-                class="fa-solid fa-share-nodes"></i> raytune.</span></li>
-        </ul>
-
-        <div style="padding-top: 1rem;">
-          <nav class="panel">
-            <p class="panel-heading" style="font-size:1em; background-color: #f5f5f5;">
-              Repositories
-            </p>
-            <a class="panel-block" href="https://github.com/neuro-galaxy/torch_brain" target="_blank"
-              rel="noopener noreferrer">
-              <span class="panel-icon">
-                <i class="fa fa-github" aria-hidden="true"></i>
-              </span>
-              torch_brain &nbsp;&nbsp; <iframe
-                src="https://ghbtns.com/github-btn.html?user=neuro-galaxy&repo=torch_brain&type=star&count=true"
-                frameborder="0" scrolling="0" width="150" height="20" title="GitHub"></iframe>
-            </a>
-            <a class="panel-block" href="https://github.com/neuro-galaxy/temporaldata" target="_blank"
-              rel="noopener noreferrer">
-              <span class="panel-icon">
-                <i class="fa fa-github" aria-hidden="true"></i>
-              </span>
-              temporaldata &nbsp;&nbsp; <iframe
-                src="https://ghbtns.com/github-btn.html?user=neuro-galaxy&repo=temporaldata&type=star&count=true"
-                frameborder="0" scrolling="0" width="150" height="20" title="GitHub"></iframe>
-            </a>
-            <a class="panel-block" href="https://github.com/neuro-galaxy/brainsets" target="_blank"
-              rel="noopener noreferrer">
-              <span class="panel-icon">
-                <i class="fa fa-github" aria-hidden="true"></i>
-              </span>
-              brainsets &nbsp;&nbsp; <iframe
-                src="https://ghbtns.com/github-btn.html?user=neuro-galaxy&repo=brainsets&type=star&count=true"
-                frameborder="0" scrolling="0" width="150" height="20" title="GitHub"></iframe>
-            </a>
-            <a class="panel-block" href="https://github.com/neuro-galaxy/poyo" target="_blank"
-              rel="noopener noreferrer">
-              <span class="panel-icon">
-                <i class="fa fa-github" aria-hidden="true"></i>
-              </span>
-              poyo &nbsp;&nbsp; <iframe
-                src="https://ghbtns.com/github-btn.html?user=neuro-galaxy&repo=poyo&type=star&count=true"
-                frameborder="0" scrolling="0" width="150" height="20" title="GitHub"></iframe>
-            </a>
-            <a class="panel-block" href="https://github.com/nerdslab/bgrl" target="_blank" rel="noopener noreferrer">
-              <span class="panel-icon">
-                <i class="fa fa-github" aria-hidden="true"></i>
-              </span>
-              bgrl &nbsp; &nbsp; <iframe
-                src="https://ghbtns.com/github-btn.html?user=nerdslab&repo=bgrl&type=star&count=true" frameborder="0"
-                scrolling="0" width="150" height="20" title="GitHub"></iframe></a>
-            </a>
-            <a class="panel-block" href="https://github.com/nerdslab/myow" target="_blank" rel="noopener noreferrer">
-              <span class="panel-icon">
-                <i class="fa fa-github" aria-hidden="true"></i>
-              </span>
-              myow &nbsp;&nbsp; <iframe
-                src="https://ghbtns.com/github-btn.html?user=nerdslab&repo=myow&type=star&count=true" frameborder="0"
-                scrolling="0" width="150" height="20" title="GitHub"></iframe>
-            </a>
-            <a class="panel-block" href="https://github.com/nerdslab/myow-neuro" target="_blank"
-              rel="noopener noreferrer">
-              <span class="panel-icon">
-                <i class="fa fa-github" aria-hidden="true"></i>
-              </span>
-              myow-neuro &nbsp;&nbsp; <iframe
-                src="https://ghbtns.com/github-btn.html?user=nerdslab&repo=myow-neuro&type=star&count=true"
-                frameborder="0" scrolling="0" width="150" height="20" title="GitHub"></iframe>
-            </a>
-          </nav>
-        </div>
-      </div>
-
-    </div>
     </div>
 
     <div class="tile">
@@ -919,7 +1026,7 @@
     <div style="margin-left: 1em;">
 
       <div style="font-weight: 400; font-size: .6em;">VERSION</div>
-      <div style="font-size: 1em;">2025 © Version 1.5</div>
+      <div style="font-size: 1em;">2025 © Version 1.6</div>
       <!--        <div style="max-width: 550px; margin: auto;">Feel free to copy <a href="https://github.com/mazabou/mehai">this website</a>. Some of the images have been generated using DALL·E, an artificial intelligence tool developed by OpenAI.</div>-->
     </div>
   </div>
