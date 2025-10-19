@@ -307,17 +307,160 @@
       mapboxgl.accessToken = 'pk.eyJ1IjoibWVoZGlhIiwiYSI6ImNsaHdqNGltbDBoM3cza3Fmd3pkaG05ejMifQ.N5TBe_Sg3jBrPyAU7uLv3A';
       var map = new mapboxgl.Map({
         container: 'map', // container id
-        style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
-        center: [-74.0060, 40.7128], // starting position [lng, lat] for New York City
-        zoom: 1 // starting zoom
+        style: 'mapbox://styles/mapbox/light-v11', // lighter style for better trajectory visibility
+        center: [2.3522, 48.8566], // center on Paris for better view of the trajectory
+        zoom: 2 // starting zoom to show the full trajectory
       });
 
-      var el = document.createElement('div');
-      el.className = 'custom-marker';
+      // Define the trajectory data
+      const trajectory = [
+        {
+          name: "Tunis",
+          coordinates: [10.1815, 36.8065]
+        },
+        {
+          name: "Metz",
+          coordinates: [6.1757, 49.1193]
+        },
+        {
+          name: "Paris",
+          coordinates: [2.3522, 48.8566]
+        },
+        {
+          name: "Atlanta",
+          coordinates: [-84.3880, 33.7490]
+        },
+        {
+          name: "New York",
+          coordinates: [-74.0060, 40.7128]
+        },
+        {
+          name: "San Francisco",
+          coordinates: [-122.4194, 37.7749]
+        }
+      ];
 
-      var marker = new mapboxgl.Marker(el)
-        .setLngLat([-74.0060, 40.7128]) // Marker position [lng, lat] for New York City
-        .addTo(map);
+      // Add trajectory line
+      map.on('load', function () {
+        // Add trajectory line source
+        map.addSource('trajectory-line', {
+          'type': 'geojson',
+          'data': {
+            'type': 'Feature',
+            'properties': {},
+            'geometry': {
+              'type': 'LineString',
+              'coordinates': trajectory.map(point => point.coordinates)
+            }
+          }
+        });
+
+        // Add trajectory line layer
+        map.addLayer({
+          'id': 'trajectory-line',
+          'type': 'line',
+          'source': 'trajectory-line',
+          'layout': {
+            'line-join': 'round',
+            'line-cap': 'round'
+          },
+          'paint': {
+            'line-color': '#3b82f6',
+            'line-width': 3,
+            'line-opacity': 0.8
+          }
+        });
+
+        // Add animated trajectory line
+        map.addLayer({
+          'id': 'trajectory-line-animated',
+          'type': 'line',
+          'source': 'trajectory-line',
+          'layout': {
+            'line-join': 'round',
+            'line-cap': 'round'
+          },
+          'paint': {
+            'line-color': '#1d4ed8',
+            'line-width': 2,
+            'line-dasharray': [2, 1],
+            'line-opacity': 0.6
+          }
+        });
+
+        // Add markers for each city
+        trajectory.forEach((point, index) => {
+          // Create marker element
+          const el = document.createElement('div');
+          el.className = 'trajectory-marker';
+          el.style.cssText = `
+            background-color: ${index === 0 ? '#ef4444' : index === trajectory.length - 1 ? '#10b981' : '#3b82f6'};
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            cursor: pointer;
+            position: relative;
+          `;
+
+          // Add number indicator
+          const number = document.createElement('div');
+          number.style.cssText = `
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background-color: #1f2937;
+            color: white;
+            border-radius: 50%;
+            width: 16px;
+            height: 16px;
+            font-size: 10px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid white;
+          `;
+          number.textContent = index + 1;
+          el.appendChild(number);
+
+          // Create popup
+          const popup = new mapboxgl.Popup({
+            offset: 25,
+            closeButton: true,
+            closeOnClick: false
+          }).setHTML(`
+            <div style="padding: 8px;">
+              <h3 style="margin: 0; font-size: 14px; font-weight: bold; color: #1f2937;">${point.name}</h3>
+            </div>
+          `);
+
+          // Add marker to map
+          new mapboxgl.Marker(el)
+            .setLngLat(point.coordinates)
+            .setPopup(popup)
+            .addTo(map);
+        });
+
+        // Add title overlay
+        const titleEl = document.createElement('div');
+        titleEl.style.cssText = `
+          position: absolute;
+          top: 10px;
+          left: 10px;
+          background: rgba(255, 255, 255, 0.9);
+          padding: 8px 12px;
+          border-radius: 6px;
+          font-size: 12px;
+          font-weight: 600;
+          color: #1f2937;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+          z-index: 1;
+        `;
+        titleEl.textContent = 'My Journey';
+        document.getElementById('map').appendChild(titleEl);
+      });
 
     </script>
 

@@ -446,6 +446,34 @@ hr {
     cursor: pointer;
 }
 
+/* Trajectory map styles */
+.trajectory-marker {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.trajectory-marker:hover {
+    transform: scale(1.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Map container enhancements */
+#map {
+    position: relative;
+    overflow: hidden;
+}
+
+#map::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(59, 130, 246, 0.05) 0%, rgba(16, 185, 129, 0.05) 100%);
+    pointer-events: none;
+    z-index: 0;
+}
+
 .navbar {
     background-color: rgba(255, 255, 255, 0.5);
     box-shadow: 0px 4px 6px -6px rgba(0, 0, 0, 0.5);
